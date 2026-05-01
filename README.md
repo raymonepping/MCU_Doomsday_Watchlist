@@ -46,3 +46,21 @@ scripts/MCU_tracker unwatched 1,2
 ```
 
 Progress is stored locally in `data/mcu-watch-progress.json`. That file is ignored by Git so every clone can keep its own personal watched state.
+
+## Reader App
+
+Start the browser reader:
+
+```bash
+cd reader
+npm start
+```
+
+Open `http://127.0.0.1:4173`.
+
+The reader includes search, current status, and local read tracking. After editing the markdown watchlist, refresh the reader data:
+
+```bash
+cd reader
+npm run build:data
+```

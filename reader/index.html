@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MCU Doomsday Reader</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <div class="brand-strip" aria-label="MCU Doomsday Watchlist">
+          <span class="brand-marvel">Marvel</span>
+          <span class="brand-mcu">MCU</span>
+        </div>
+        <div class="masthead-copy">
+          <p class="eyebrow">Road to Doomsday</p>
+          <h1>MCU Doomsday Tracker</h1>
+          <p>
+            Track the watchlist, search the timeline, and keep your current
+            position stored locally in this browser.
+          </p>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar" aria-label="Watch status">
+          <section class="panel status-panel">
+            <h2>Status</h2>
+            <div class="progress-ring" id="progressRing" aria-hidden="true">
+              <span id="progressPercent">0%</span>
+            </div>
+            <dl class="stats">
+              <div>
+                <dt>Main</dt>
+                <dd id="mainStatus">0 / 0</dd>
+              </div>
+              <div>
+                <dt>Bonus</dt>
+                <dd id="bonusStatus">0 / 0</dd>
+              </div>
+              <div>
+                <dt>Next</dt>
+                <dd id="nextTitle">Loading...</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="panel controls-panel">
+            <h2>Search</h2>
+            <label class="search-box">
+              <span>Movie or series</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="thor, black widow, loki..."
+                autocomplete="off"
+              />
+            </label>
+            <p class="search-result" id="searchResult">Showing full timeline.</p>
+            <div class="filter-row" aria-label="Timeline filters">
+              <button class="chip is-active" type="button" data-filter="all">All</button>
+              <button class="chip" type="button" data-filter="main">Main</button>
+              <button class="chip" type="button" data-filter="bonus">Bonus</button>
+              <button class="chip" type="button" data-filter="unread">Unread</button>
+            </div>
+          </section>
+        </aside>
+
+        <section class="timeline-section" aria-label="MCU timeline">
+          <div class="section-heading">
+            <h2>Timeline</h2>
+            <button id="resetButton" class="ghost-button" type="button">Reset read status</button>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="itemTemplate">
+      <article class="timeline-card">
+        <div class="position"></div>
+        <div class="card-body">
+          <div class="card-kicker"></div>
+          <h3></h3>
+          <p class="summary"></p>
+          <dl class="details">
+            <div>
+              <dt>Why</dt>
+              <dd class="why"></dd>
+            </div>
+            <div>
+              <dt>When</dt>
+              <dd class="when"></dd>
+            </div>
+          </dl>
+        </div>
+        <button class="read-button" type="button"></button>
+      </article>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
