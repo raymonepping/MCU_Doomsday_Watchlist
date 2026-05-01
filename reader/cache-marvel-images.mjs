@@ -18,6 +18,9 @@ const imageMetaPatterns = [
 
 const preferredImages = {
   "13": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
+  "B1": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+  "B2": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
+  "B3": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
 };
 
 function extensionFor(url) {
@@ -67,15 +70,19 @@ async function downloadImage(url, destination) {
 }
 
 const watchlist = JSON.parse(await readFile(dataPath, "utf8"));
-const mainItems = watchlist.items.filter((item) => !item.bonus && item.officialUrl);
+const allItems = watchlist.items.filter((item) =>
+  (!item.bonus && item.officialUrl) || item.bonus
+);
 const images = {};
 
 await mkdir(posterDir, { recursive: true });
 
-for (const item of mainItems) {
+for (const item of allItems) {
   try {
-    const html = await fetchText(item.officialUrl);
-    const imageUrls = [preferredImages[item.key], ...findImageUrls(html)].filter(Boolean);
+    // For bonus items, use only the preferred image (no officialUrl to fetch)
+    const imageUrls = item.bonus
+      ? [preferredImages[item.key]].filter(Boolean)
+      : [preferredImages[item.key], ...(item.officialUrl ? findImageUrls(await fetchText(item.officialUrl)) : [])].filter(Boolean);
     if (!imageUrls.length) {
       console.warn(`No image found for ${item.key}. ${item.title}`);
       continue;
@@ -117,7 +124,7 @@ await writeFile(
   `${JSON.stringify(
     {
       generatedAt: new Date().toISOString(),
-      source: "Marvel.com page metadata",
+      source: "Marvel.com page metadata and IMDB for X-Men bonus titles",
       images,
     },
     null,

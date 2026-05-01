@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T09:50:57.204Z",
-  "source": "Marvel.com page metadata",
+  "generatedAt": "2026-05-01T10:17:34.524Z",
+  "source": "Marvel.com page metadata and IMDB for X-Men bonus titles",
   "images": {
     "1": {
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
@@ -121,6 +121,18 @@
     "30": {
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/30.jpg"
+    },
+    "B1": {
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "localImage": "./assets/posters/B1.jpg"
+    },
+    "B2": {
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
+      "localImage": "./assets/posters/B2.jpg"
+    },
+    "B3": {
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "localImage": "./assets/posters/B3.jpg"
     }
   }
 }

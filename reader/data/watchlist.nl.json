@@ -34,7 +34,7 @@
     "noTimelineNote": "Geen tijdlijnnotitie beschikbaar."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_nl.md",
-  "generatedAt": "2026-05-01T09:53:00.544Z",
+  "generatedAt": "2026-05-01T10:17:34.810Z",
   "count": 30,
   "bonusCount": 3,
   "items": [
@@ -469,8 +469,8 @@
       "when": "",
       "who": "",
       "officialUrl": "",
-      "imageUrl": "",
-      "localImage": ""
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "localImage": "./assets/posters/B1.jpg"
     },
     {
       "key": "B2",
@@ -483,8 +483,8 @@
       "when": "",
       "who": "",
       "officialUrl": "",
-      "imageUrl": "",
-      "localImage": ""
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
+      "localImage": "./assets/posters/B2.jpg"
     },
     {
       "key": "B3",
@@ -497,8 +497,8 @@
       "when": "",
       "who": "",
       "officialUrl": "",
-      "imageUrl": "",
-      "localImage": ""
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "localImage": "./assets/posters/B3.jpg"
     }
   ]
 }

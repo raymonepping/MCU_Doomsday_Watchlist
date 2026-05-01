@@ -71,11 +71,13 @@ Interactive browser-based reader with search, progress tracking, and language sw
 
 #### Features
 
-- ✅ Visual progress tracking
-- 🔍 Real-time search functionality
-- 🌍 English/Dutch language switching
-- 💾 Local storage for seen status (browser-specific)
-- 📱 Responsive design
+- ✅ **Visual Progress Tracking** — Mark entries as seen with checkboxes
+- 🔍 **Real-time Search** — Filter titles instantly as you type
+- 🌍 **Bilingual Support** — Switch between English and Dutch
+- 🎬 **Marvel Integration** — Direct links to official Marvel.com pages
+- 🖼️ **Local Image Caching** — Download and cache Marvel poster artwork
+- 💾 **Browser Storage** — Seen status persists locally (not synced to Git)
+- 📱 **Responsive Design** — Works seamlessly on desktop and mobile
 
 #### Running the Reader
 
@@ -87,9 +89,9 @@ npm start
 
 Open `http://localhost:4173` in your browser.
 
-#### Updating Data
+#### Data Management
 
-After editing the markdown guides in `./docs`, regenerate the JSON data files:
+**Regenerate watchlist data** after editing markdown guides:
 
 ```bash
 cd reader
@@ -100,14 +102,14 @@ This creates:
 - `reader/data/watchlist.en.json` (from `docs/mcu-doomsday-watchlist_us.md`)
 - `reader/data/watchlist.nl.json` (from `docs/mcu-doomsday-watchlist_nl.md`)
 
-Official Marvel links in the markdown are rendered as card actions in the reader.
-
-Marvel page artwork can be cached locally for reader thumbnails:
+**Cache Marvel artwork** for local poster thumbnails:
 
 ```bash
 cd reader
 npm run cache:images
 ```
+
+This fetches Marvel.com page metadata, downloads poster images to `reader/assets/posters/`, and rebuilds the data files with local image references.
 
 ## Technology Stack
 
@@ -132,11 +134,17 @@ MCU/
 │   ├── app.js                    # Frontend application logic
 │   ├── server.mjs                # Node.js development server
 │   ├── build-data.mjs            # Markdown to JSON converter
+│   ├── cache-marvel-images.mjs   # Marvel artwork downloader
 │   ├── index.html                # Main HTML template
 │   ├── styles.css                # Application styles
-│   ├── package.json              # Node.js dependencies
-│   ├── assets/                   # Images and logos
-│   └── data/                     # Generated JSON files
+│   ├── package.json              # Node.js dependencies & scripts
+│   ├── assets/
+│   │   ├── posters/              # Cached Marvel poster images
+│   │   └── ...                   # Header images and logos
+│   └── data/
+│       ├── watchlist.en.json     # English watchlist data
+│       ├── watchlist.nl.json     # Dutch watchlist data
+│       └── marvel-images.json    # Image URL mappings
 ├── data/                          # Progress tracking
 │   └── mcu-watch-progress.json   # Personal watch state (gitignored)
 ├── .gitignore
