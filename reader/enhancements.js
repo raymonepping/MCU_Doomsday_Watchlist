@@ -1,5 +1,6 @@
 /* ============================================
    MCU DOOMSDAY READER - JAVASCRIPT ENHANCEMENTS
+   ============================================ */
 
 // ===== TRIVIA DATA =====
 const triviaData = {
@@ -28,8 +29,6 @@ const triviaData = {
   27: { postCredits: 0, scenes: [], trivia: ["Charlie Cox and Vincent D'Onofrio return from Netflix series", "18-episode season, longest MCU Disney+ series", "Continues storylines from the Netflix show", "Features a darker, more mature tone"], connections: ["Echo", "Spider-Man 4"] },
   30: { postCredits: 2, scenes: ["Details TBD - Film not yet released"], trivia: ["Robert Downey Jr. returns as Doctor Doom", "Largest MCU cast ever assembled", "Directed by the Russo Brothers", "Culmination of the Multiverse Saga"], connections: ["Avengers: Secret Wars"] }
 };
-
-   ============================================ */
 
 // ===== TOAST NOTIFICATION SYSTEM =====
 class ToastManager {
