@@ -271,12 +271,16 @@ function initBottomSheet() {
 
 // ===== CHARACTER TIMELINE GRAPH =====
 function createCharacterTimeline() {
-  const panel = document.querySelector('.stats-panel');
+  const panel = document.getElementById('characterTimelinePanel');
   if (!panel) return;
+  
+  // Set panel heading
+  const heading = document.createElement('h2');
+  heading.textContent = 'Character Appearances';
+  panel.appendChild(heading);
   
   const container = document.createElement('div');
   container.className = 'character-timeline';
-  container.innerHTML = '<h3>Character Appearances</h3>';
   
   // Count character appearances
   const characterCounts = {};
@@ -314,12 +318,17 @@ function createCharacterTimeline() {
 
 // ===== CONCEPT HEATMAP =====
 function createConceptHeatmap() {
-  const panel = document.querySelector('.stats-panel');
+  const panel = document.getElementById('conceptHeatmapPanel');
   if (!panel || !window.conceptScores) return;
+  
+  // Set panel heading
+  const heading = document.createElement('h2');
+  heading.textContent = 'Concept Density';
+  panel.appendChild(heading);
   
   const container = document.createElement('div');
   container.className = 'concept-heatmap';
-  container.innerHTML = '<h3>Concept Density Map</h3><div class="heatmap-grid"></div>';
+  container.innerHTML = '<div class="heatmap-grid"></div>';
   
   const grid = container.querySelector('.heatmap-grid');
   

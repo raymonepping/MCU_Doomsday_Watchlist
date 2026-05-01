@@ -622,6 +622,39 @@ h1 {
   opacity: 1;
   pointer-events: auto;
 }
+/* ===== PANEL SPACING & ORGANIZATION ===== */
+.search-panel .filter-row {
+  padding: 0 18px 18px;
+}
+
+.block-filters-panel .block-filters,
+.character-filters-panel .character-filters,
+.concept-filters-panel .concept-filters {
+  padding: 18px;
+}
+
+.block-filters-panel .block-chips,
+.character-filters-panel .character-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.concept-filters-panel .concept-category {
+  margin-bottom: 16px;
+}
+
+.concept-filters-panel .concept-category:last-child {
+  margin-bottom: 0;
+}
+
+/* Hide filter labels in new structure */
+.block-filters .filter-label,
+.character-filters .filter-label,
+.concept-filters .filter-label {
+  display: none;
+}
+
 
 /* ===== CHARACTER TIMELINE GRAPH ===== */
 .character-timeline {
