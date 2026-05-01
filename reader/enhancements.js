@@ -1,3 +1,6 @@
+// Import trivia data
+import { triviaData } from './trivia-data.js';
+
 /* ============================================
    MCU DOOMSDAY READER - JAVASCRIPT ENHANCEMENTS
    ============================================ */
@@ -79,6 +82,109 @@ function addConceptBadges() {
       const cardBody = card.querySelector('.card-body');
       if (cardBody) {
         cardBody.appendChild(badge);
+
+// ===== TRIVIA & EASTER EGGS =====
+function addTriviaToCards() {
+  const cards = document.querySelectorAll('.timeline-card');
+  
+  cards.forEach(card => {
+    // Check if trivia already exists
+    if (card.querySelector('.trivia-toggle')) return;
+    
+    const key = parseInt(card.dataset.key);
+    const trivia = triviaData[key];
+    
+    if (!trivia) return;
+    
+    // Create trivia toggle button
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'trivia-toggle';
+    toggleButton.innerHTML = `
+      <span class="trivia-icon">🎬</span>
+      <span>Easter Eggs & Trivia</span>
+    `;
+    
+    // Create trivia content container
+    const triviaContent = document.createElement('div');
+    triviaContent.className = 'trivia-content';
+    
+    let contentHTML = '';
+    
+    // Post-credits scenes
+    if (trivia.postCredits > 0) {
+      contentHTML += `
+        <div class="trivia-section">
+          <h4 class="trivia-heading">
+            <span class="trivia-heading-icon">🎞️</span>
+            Post-Credits Scenes
+            <span class="post-credits-count">${trivia.postCredits}</span>
+          </h4>
+          ${trivia.scenes.map(scene => `
+            <div class="post-credit-scene">${scene}</div>
+          `).join('')}
+        </div>
+      `;
+    }
+    
+    // Fun trivia
+    if (trivia.trivia && trivia.trivia.length > 0) {
+      contentHTML += `
+        <div class="trivia-section">
+          <h4 class="trivia-heading">
+            <span class="trivia-heading-icon">💡</span>
+            Fun Facts
+          </h4>
+          <ul class="trivia-list">
+            ${trivia.trivia.map(fact => `<li>${fact}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+    
+    // Connections
+    if (trivia.connections && trivia.connections.length > 0) {
+      contentHTML += `
+        <div class="trivia-section">
+          <h4 class="trivia-heading">
+            <span class="trivia-heading-icon">🔗</span>
+            Connections
+          </h4>
+          <ul class="connections-list">
+            ${trivia.connections.map(conn => `
+              <li class="connection-tag">${conn}</li>
+            `).join('')}
+          </ul>
+        </div>
+      `;
+    }
+    
+    if (!contentHTML) {
+      contentHTML = '<div class="no-trivia">No trivia available yet</div>';
+    }
+    
+    triviaContent.innerHTML = contentHTML;
+    
+    // Toggle functionality
+    toggleButton.addEventListener('click', () => {
+      const isExpanded = toggleButton.classList.contains('active');
+      toggleButton.classList.toggle('active');
+      triviaContent.classList.toggle('expanded');
+      
+      // Analytics
+      if (!isExpanded) {
+        console.log(`Trivia opened for: ${card.querySelector('h3')?.textContent}`);
+      }
+    });
+    
+    // Add to card
+    const cardActions = card.querySelector('.card-actions');
+    if (cardActions) {
+      cardActions.appendChild(toggleButton);
+      cardActions.appendChild(triviaContent);
+    }
+  });
+}
+
       }
     }
   });
@@ -384,6 +490,7 @@ function enhanceReadButtons() {
           highlightNextToWatch();
           addConceptBadges(); // Re-add badges after render
           applyBlockColors(); // Re-apply block colors after render
+          addTriviaToCards(); // Re-add trivia after render
           
           // Check milestones
           const main = Array.from(document.querySelectorAll('.timeline-card'))
@@ -489,6 +596,7 @@ function initEnhancements() {
           clearInterval(checkTimeline);
           applyBlockColors();
           addConceptBadges();
+          addTriviaToCards();
           highlightNextToWatch();
           createCharacterTimeline();
           createConceptHeatmap();
@@ -517,7 +625,9 @@ window.MCUEnhancements = {
   addConceptBadges,
   applyBlockColors,
   highlightNextToWatch,
-  checkMilestones
+  checkMilestones,
+  addTriviaToCards,
+  triviaData
 };
 
 // Made with Bob
