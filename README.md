@@ -158,7 +158,7 @@ Understand the "How" and "Where" of Doomsday by exploring the deeper MCU lore an
 - ✨ **Glassmorphism Effects** — Frosted glass effects on overlays and modals
 - 🌈 **Gradient Text Effects** — Eye-catching gradient text for headers and titles
 - 🔔 **Toast Notifications** — Elegant notification system for user actions
-- 🎭 **Easter Eggs & Trivia** — Post-credits scenes, fun facts, and MCU connections for each title
+- 🎭 **Easter Eggs & Trivia** — Post-credits scenes, fun facts, Easter eggs, Stan Lee cameos, and MCU connections for each title
 - 🌙 **Smooth Dark Mode Transitions** — Seamless color transitions when switching themes
 
 All enhancements are mobile-optimized and work seamlessly with existing features.
