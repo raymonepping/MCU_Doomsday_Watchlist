@@ -137,6 +137,32 @@ See [MOBILE_OPTIMIZATION.md](./MOBILE_OPTIMIZATION.md) for complete mobile optim
 
 Understand the "How" and "Where" of Doomsday by exploring the deeper MCU lore and mechanics.
 
+#### Phase 7: Visual Enhancements & Polish
+
+- 🎨 **Animated Progress Ring** — Smooth SVG animation with gradient colors and percentage display
+- 🎴 **3D Card Hover Effects** — Cards lift and tilt on hover with dynamic shadows
+- 🏷️ **Concept Badges** — Visual indicators showing number of MCU concepts per title
+- 🎨 **Block Color Coding** — Timeline cards color-coded by narrative block (red/gold/blue/green)
+- 🌊 **Parallax Scrolling** — Header background moves at different speed for depth effect
+- 🔄 **Flip Card Animation** — Cards flip when marking as watched/unwatched
+- ⭐ **Pulse Effect** — "Next to watch" card pulses to draw attention
+- 🎬 **Character Timeline Graph** — Visual timeline showing character appearances across titles
+- 🗺️ **Concept Heatmap** — Interactive grid showing concept distribution across timeline
+- 🏆 **Progress Milestone Badges** — Achievement badges at 25%, 50%, 75%, and 100% completion
+- 🌈 **Block Gradient Backgrounds** — Subtle gradient overlays matching block themes
+- ⏰ **Dramatic Countdown** — Animated countdown with flip-card style digits
+- 📱 **Pull-to-Refresh** — Mobile gesture to refresh the timeline
+- 📋 **Bottom Sheet Filter Panel** — Slide-up filter panel for mobile devices
+- ➕ **Floating Action Button (FAB)** — Quick access to filters on mobile
+- 📜 **Custom Scrollbar** — Styled scrollbar matching the MCU theme
+- ✨ **Glassmorphism Effects** — Frosted glass effects on overlays and modals
+- 🌈 **Gradient Text Effects** — Eye-catching gradient text for headers and titles
+- 🔔 **Toast Notifications** — Elegant notification system for user actions
+- 🎭 **Easter Eggs & Trivia** — Post-credits scenes, fun facts, and MCU connections for each title
+- 🌙 **Smooth Dark Mode Transitions** — Seamless color transitions when switching themes
+
+All enhancements are mobile-optimized and work seamlessly with existing features.
+
 #### Running the Reader
 
 Start the development server:

@@ -1008,6 +1008,18 @@ h1 {
 .post-credit-scene:last-child {
   margin-bottom: 0;
 }
+/* Stan Lee Cameo */
+.stan-lee-cameo {
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
 
 .connections-list {
   display: flex;

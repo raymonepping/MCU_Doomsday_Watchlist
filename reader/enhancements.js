@@ -4,14 +4,14 @@
 
 // ===== TRIVIA DATA =====
 const triviaData = {
-  1: { postCredits: 2, scenes: ["Thor appears asking for Strange's help to find Odin", "Mordo confronts Jonathan Pangborn and steals his magic"], trivia: ["Benedict Cumberbatch performed many of his own stunts", "The Ancient One's death scene was shot in one take", "The film features over 1,000 VFX shots"], connections: ["Thor: Ragnarok", "Avengers: Infinity War"] },
-  2: { postCredits: 2, scenes: ["Adrian Toomes protects Spider-Man's identity in prison", "Captain America's patience PSA (joke scene)"], trivia: ["Tom Holland did his own stunts including the Washington Monument climb", "The film has over 2,800 VFX shots", "Donald Glover's character is Miles Morales' uncle in the comics"], connections: ["Avengers: Endgame", "Spider-Man: Far From Home"] },
-  3: { postCredits: 2, scenes: ["Thor and Loki's ship is approached by a massive vessel (Thanos)", "Grandmaster faces angry revolutionaries"], trivia: ["80% of the dialogue was improvised", "Taika Waititi voiced Korg via motion capture", "The film was inspired by 1980s sci-fi aesthetics"], connections: ["Avengers: Infinity War", "Thor: Love and Thunder"] },
-  4: { postCredits: 2, scenes: ["T'Challa reveals Wakanda's true nature to the UN", "Bucky Barnes awakens in Wakanda"], trivia: ["First superhero film nominated for Best Picture at the Oscars", "Wakandan language is based on Xhosa", "The film won 3 Academy Awards"], connections: ["Avengers: Infinity War", "Black Panther: Wakanda Forever"] },
+  1: { postCredits: 2, scenes: ["Thor appears asking for Strange's help to find Odin", "Mordo confronts Jonathan Pangborn and steals his magic"], trivia: ["Benedict Cumberbatch performed many of his own stunts", "The Ancient One's death scene was shot in one take", "The film features over 1,000 VFX shots"], connections: ["Thor: Ragnarok", "Avengers: Infinity War"], stanLeeCameo: "Seen on a bus, laughing while reading Aldous Huxley's 'The Doors of Perception' as Strange and Mordo smash into the window during the mirror dimension chase" },
+  2: { postCredits: 2, scenes: ["Adrian Toomes protects Spider-Man's identity in prison", "Captain America's patience PSA (joke scene)"], trivia: ["Tom Holland did his own stunts including the Washington Monument climb", "The film has over 2,800 VFX shots", "Donald Glover's character is Miles Morales' uncle in the comics"], connections: ["Avengers: Endgame", "Spider-Man: Far From Home"], stanLeeCameo: "Plays a neighbor named Gary who yells out of a window at Peter Parker after Peter accidentally disturbs the neighborhood" },
+  3: { postCredits: 2, scenes: ["Thor and Loki's ship is approached by a massive vessel (Thanos)", "Grandmaster faces angry revolutionaries"], trivia: ["80% of the dialogue was improvised", "Taika Waititi voiced Korg via motion capture", "The film was inspired by 1980s sci-fi aesthetics"], connections: ["Avengers: Infinity War", "Thor: Love and Thunder"], stanLeeCameo: "Plays the intergalactic barber on Sakaar who uses a terrifying spinning-blade contraption to cut Thor's hair" },
+  4: { postCredits: 2, scenes: ["T'Challa reveals Wakanda's true nature to the UN", "Bucky Barnes awakens in Wakanda"], trivia: ["First superhero film nominated for Best Picture at the Oscars", "Wakandan language is based on Xhosa", "The film won 3 Academy Awards"], connections: ["Avengers: Infinity War", "Black Panther: Wakanda Forever"], stanLeeCameo: "Appears in the South Korean casino as a 'thirsty' gambler who takes T'Challa's unclaimed winnings from the craps table" },
   5: { postCredits: 1, scenes: ["Valentina Allegra de Fontaine recruits Yelena to kill Hawkeye"], trivia: ["Set between Civil War and Infinity War", "Florence Pugh did 90% of her own stunts", "The Red Room was inspired by real Soviet programs"], connections: ["Hawkeye", "Thunderbolts*"] },
-  6: { postCredits: 2, scenes: ["Scott enters the Quantum Realm as the Pym family is dusted", "Giant ant plays drums (joke scene)"], trivia: ["Michelle Pfeiffer's de-aging used no CGI, only makeup", "The film has over 2,000 VFX shots", "Paul Rudd improvised many of his lines"], connections: ["Avengers: Endgame", "Ant-Man and the Wasp: Quantumania"] },
-  7: { postCredits: 1, scenes: ["Nick Fury sends a distress signal to Captain Marvel before being dusted"], trivia: ["Largest cast in MCU history at the time", "Robert Downey Jr. kept food hidden on set and ate during takes", "The Snap was filmed with actors not knowing who would be dusted"], connections: ["Avengers: Endgame", "Captain Marvel"] },
-  8: { postCredits: 0, scenes: ["No traditional post-credits scene, only the sound of Tony forging his first armor"], trivia: ["Highest-grossing film of all time (briefly)", "The final battle scene took 3 months to film", "Robert Downey Jr. improvised 'I am Iron Man'", "Over 3,000 VFX shots in the film"], connections: ["Spider-Man: Far From Home", "Loki", "WandaVision"] },
+  6: { postCredits: 2, scenes: ["Scott enters the Quantum Realm as the Pym family is dusted", "Giant ant plays drums (joke scene)"], trivia: ["Michelle Pfeiffer's de-aging used no CGI, only makeup", "The film has over 2,000 VFX shots", "Paul Rudd improvised many of his lines"], connections: ["Avengers: Endgame", "Ant-Man and the Wasp: Quantumania"], stanLeeCameo: "A pedestrian whose car is accidentally shrunk by a shrinking disk; he quips, 'Well, the '60s were fun, but now I'm paying for it'" },
+  7: { postCredits: 1, scenes: ["Nick Fury sends a distress signal to Captain Marvel before being dusted"], trivia: ["Largest cast in MCU history at the time", "Robert Downey Jr. kept food hidden on set and ate during takes", "The Snap was filmed with actors not knowing who would be dusted"], connections: ["Avengers: Endgame", "Captain Marvel"], stanLeeCameo: "The school bus driver for Peter Parker's class who asks the kids, 'What's the matter with you kids? You never seen a spaceship before?'" },
+  8: { postCredits: 0, scenes: ["No traditional post-credits scene, only the sound of Tony forging his first armor"], trivia: ["Highest-grossing film of all time (briefly)", "The final battle scene took 3 months to film", "Robert Downey Jr. improvised 'I am Iron Man'", "Over 3,000 VFX shots in the film"], connections: ["Spider-Man: Far From Home", "Loki", "WandaVision"], stanLeeCameo: "His final MCU cameo; appears via de-aging CGI as a 1970s hippie driving past Camp Lehigh, shouting, 'Hey man, make love, not war!'" },
   9: { postCredits: 2, scenes: ["Mysterio reveals Spider-Man's identity to the world", "Nick Fury is revealed to be Talos; real Fury is in space"], trivia: ["First MCU film set after Endgame", "Jake Gyllenhaal performed his own stunts", "The illusion sequences used practical effects and CGI"], connections: ["Spider-Man: No Way Home", "Secret Invasion"] },
   10: { postCredits: 1, scenes: ["Wanda studies the Darkhold in astral form while hearing her children"], trivia: ["Each episode mimics a different sitcom era", "Elizabeth Olsen studied classic sitcoms for months", "The show has over 300 VFX shots per episode", "Paul Bettany finally got to act with himself as Vision and White Vision"], connections: ["Doctor Strange in the Multiverse of Madness", "Agatha: Darkhold Diaries"] },
   11: { postCredits: 0, scenes: [], trivia: ["Anthony Mackie did his own stunts including the opening helicopter sequence", "The show explores PTSD and racial issues in America", "Isaiah Bradley's story is based on the Tuskegee experiments"], connections: ["Captain America: Brave New World", "Thunderbolts*"] },
@@ -166,6 +166,19 @@ function addTriviaToCards() {
           <ul class="trivia-list">
             ${trivia.trivia.map(fact => `<li>${fact}</li>`).join('')}
           </ul>
+        </div>
+      `;
+    }
+    
+    // Stan Lee Cameo
+    if (trivia.stanLeeCameo) {
+      contentHTML += `
+        <div class="trivia-section">
+          <h4 class="trivia-heading">
+            <span class="trivia-heading-icon">👴</span>
+            Stan Lee Cameo
+          </h4>
+          <div class="stan-lee-cameo">${trivia.stanLeeCameo}</div>
         </div>
       `;
     }
