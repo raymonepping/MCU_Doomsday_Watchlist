@@ -74,7 +74,7 @@ Interactive browser-based reader with search, progress tracking, and language sw
 - ✅ Visual progress tracking
 - 🔍 Real-time search functionality
 - 🌍 English/Dutch language switching
-- 💾 Local storage for read status (browser-specific)
+- 💾 Local storage for seen status (browser-specific)
 - 📱 Responsive design
 
 #### Running the Reader

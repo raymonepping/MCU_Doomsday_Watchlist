@@ -23,4 +23,4 @@ English is the default language. Regenerate both data files after editing either
 npm run build:data
 ```
 
-Read status and the selected language are stored in browser `localStorage`, so they stay personal to the browser and are not committed to Git.
+Seen status and the selected language are stored in browser `localStorage`, so they stay personal to the browser and are not committed to Git.

@@ -217,9 +217,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-=======
+
+# Personal watch progress
 data/mcu-watch-progress.json
-__pycache__/
-*.py[cod]
+
+# Medium drafts
+medium/
+
+# macOS
 .DS_Store
->>>>>>> e0f9f18 (01/05/2026 - Updated configuration and fixed bugs)
