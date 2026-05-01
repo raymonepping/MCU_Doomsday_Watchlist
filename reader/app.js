@@ -56,7 +56,8 @@ const conceptMap = {
 
 // Concept scores for each title (number of concepts present)
 // Based on mcu_concepts_matrix.md - higher score = more essential for Doomsday prep
-const conceptScores = {
+// Exposed globally for enhancements
+window.conceptScores = {
   1: 2,  // Doctor Strange
   2: 2,  // Spider-Man: Homecoming
   3: 2,  // Thor: Ragnarok
