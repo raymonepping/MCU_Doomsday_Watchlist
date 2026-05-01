@@ -32,14 +32,19 @@
             Track the watchlist, search the timeline, and keep your current
             position stored locally in this browser.
           </p>
-          <div class="language-switcher" aria-label="Language">
-            <button class="language-button is-active" type="button" data-locale="en">
-              <span aria-hidden="true">🇺🇸🇬🇧</span>
-              <span>English</span>
-            </button>
-            <button class="language-button" type="button" data-locale="nl">
-              <span aria-hidden="true">🇳🇱</span>
-              <span>Nederlands</span>
+          <div class="masthead-controls">
+            <div class="language-switcher" aria-label="Language">
+              <button class="language-button is-active" type="button" data-locale="en">
+                <span aria-hidden="true">🇺🇸🇬🇧</span>
+                <span>English</span>
+              </button>
+              <button class="language-button" type="button" data-locale="nl">
+                <span aria-hidden="true">🇳🇱</span>
+                <span>Nederlands</span>
+              </button>
+            </div>
+            <button class="theme-toggle" type="button" id="themeToggle" aria-label="Toggle theme">
+              <span class="theme-icon">🌙</span>
             </button>
           </div>
         </div>
@@ -66,6 +71,50 @@
                 <dd id="nextTitle">Loading...</dd>
               </div>
             </dl>
+            <div class="countdown-widget" id="countdownWidget">
+              <div class="countdown-label">Days until Doomsday</div>
+              <div class="countdown-value" id="countdownValue">---</div>
+              <div class="countdown-date">December 18, 2026</div>
+            </div>
+            <div class="time-remaining" id="timeRemaining">
+              <div class="time-label">Remaining watch time</div>
+              <div class="time-value" id="timeValue">-- hours</div>
+            </div>
+          </section>
+
+          <section class="panel export-panel">
+            <h2>Progress</h2>
+            <div class="export-buttons">
+              <button class="export-button" type="button" id="exportButton">
+                <span>📥</span> Export
+              </button>
+              <button class="import-button" type="button" id="importButton">
+                <span>📤</span> Import
+              </button>
+            </div>
+            <input type="file" id="importFile" accept=".json" style="display: none;" />
+          </section>
+
+          <section class="panel stats-panel">
+            <h2>Statistics</h2>
+            <div class="stat-grid">
+              <div class="stat-item">
+                <div class="stat-value" id="statFilms">0</div>
+                <div class="stat-label">Films Watched</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value" id="statSeries">0</div>
+                <div class="stat-label">Series Watched</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value" id="statHours">0h</div>
+                <div class="stat-label">Time Watched</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value" id="statPercent">0%</div>
+                <div class="stat-label">Complete</div>
+              </div>
+            </div>
           </section>
 
           <section class="panel controls-panel">
@@ -86,13 +135,22 @@
               <button class="chip" type="button" data-filter="bonus">Bonus</button>
               <button class="chip" type="button" data-filter="unread">Unseen</button>
             </div>
+            <div class="character-filters" id="characterFilters">
+              <div class="filter-label">Characters:</div>
+              <div class="character-chips" id="characterChips"></div>
+            </div>
           </section>
         </aside>
 
         <section class="timeline-section" aria-label="MCU timeline">
           <div class="section-heading">
             <h2>Timeline</h2>
-            <button id="resetButton" class="ghost-button" type="button">Reset seen status</button>
+            <div class="timeline-controls">
+              <button id="timelineViewToggle" class="view-toggle" type="button" title="Toggle timeline view">
+                <span class="view-icon">📊</span>
+              </button>
+              <button id="resetButton" class="ghost-button" type="button">Reset seen status</button>
+            </div>
           </div>
           <div class="timeline" id="timeline"></div>
         </section>
@@ -128,6 +186,8 @@
         </div>
       </article>
     </template>
+
+    <canvas id="confetti" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
 
     <script type="module" src="./app.js"></script>
   </body>
