@@ -65,7 +65,17 @@ function matchesFilters(item) {
   const query = state.query.trim().toLocaleLowerCase();
   const textMatch =
     !query ||
-    [item.key, item.title, item.kind, item.runtime, item.what, item.why, item.when, item.who]
+    [
+      item.key,
+      item.title,
+      item.kind,
+      item.runtime,
+      item.what,
+      item.why,
+      item.when,
+      item.who,
+      item.officialUrl,
+    ]
       .join(" ")
       .toLocaleLowerCase()
       .includes(query);
@@ -163,6 +173,24 @@ function renderTimeline() {
     card.querySelector(".why").textContent = item.why || label("noContext");
     card.querySelector(".when").closest("div").querySelector("dt").textContent = label("when");
     card.querySelector(".when").textContent = item.when || label("noTimelineNote");
+    const officialLink = card.querySelector(".official-link");
+    if (item.officialUrl) {
+      officialLink.href = item.officialUrl;
+      officialLink.textContent = label("officialLink");
+    } else {
+      officialLink.remove();
+    }
+
+    const posterLink = card.querySelector(".poster-link");
+    const posterImage = card.querySelector(".poster-image");
+    const posterSource = item.localImage || item.imageUrl;
+    if (posterSource) {
+      posterLink.href = item.officialUrl || posterSource;
+      posterImage.src = posterSource;
+      posterImage.alt = `${item.title} artwork`;
+    } else {
+      posterLink.remove();
+    }
 
     const button = card.querySelector(".read-button");
     button.textContent = read ? label("read") : label("markRead");

@@ -1,7 +1,7 @@
 # Road to Doomsday
 *Complete MCU watch guide — December 18, 2026*
 
-29 titles · ~93 hours · ★ essential
+30 titles · ~93 hours + Doomsday · ★ essential
 
 ---
 
@@ -13,7 +13,7 @@
 | 2 | The New Guard | 6 | ~22h |
 | 3 | The Multiverse Fracture | 8 | ~26h |
 | 4 | The Finale | 7 | ~26h |
-| **Total** | | **29** | **~93h** |
+| **Total** | | **30** | **~93h + Doomsday** |
 | Bonus X-Men | Fox Universe | 3 | ~6h |
 
 ---
@@ -45,6 +45,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The introduction of magic as a serious force in the MCU. Other dimensions, the Sanctum Sanctorum, the Eye of Agamotto — without this film, MoM is incomprehensible. Strange is one of the central figures in Doomsday.
 - **When** — Before Infinity War. The magic logic needs to be in place.
 - **Who** — Benedict Cumberbatch as Stephen Strange, Tilda Swinton as the Ancient One.
+- **Official** — https://www.marvel.com/movies/doctor-strange
 
 ---
 
@@ -55,6 +56,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The Stark/Parker dynamic is emotionally the core of Doomsday's "face" storyline. When Doctor Doom appears wearing Stark's face, it's Peter's reaction that matters. Homecoming provides that context.
 - **When** — Before Infinity War and Far From Home.
 - **Who** — Tom Holland as Peter Parker, Robert Downey Jr. as Tony Stark.
+- **Official** — https://www.marvel.com/movies/spider-man-homecoming
 
 ---
 
@@ -65,6 +67,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — Wakanda is a global player in Doomsday. Vibranium, the technology, the political autonomy. Shuri and Namor — both confirmed for Doomsday — become easier to understand in later films with this one as their foundation.
 - **When** — Before Infinity War.
 - **Who** — Chadwick Boseman as T'Challa, Letitia Wright as Shuri, Michael B. Jordan as Killmonger.
+- **Official** — https://www.marvel.com/movies/black-panther
 
 ---
 
@@ -75,6 +78,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The introduction of Yelena Belova. She is one of the central figures in Thunderbolts and returns in Doomsday. Red Guardian also appears here for the first time. The family dynamic between Natasha and Yelena gives the Thunderbolts storyline its emotional depth.
 - **When** — Set before Infinity War, but watch it after Endgame in this order.
 - **Who** — Scarlett Johansson as Natasha, Florence Pugh as Yelena, David Harbour as Red Guardian.
+- **Official** — https://www.marvel.com/movies/black-widow
 
 ---
 
@@ -85,6 +89,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The Quantum Realm is the key to Endgame's time travel solution and the foundation of the multiverse's mechanics. Ghost plays a role later in Thunderbolts. The post-credits scene connects directly to Infinity War.
 - **When** — Before Ragnarok and Infinity War.
 - **Who** — Paul Rudd as Scott Lang, Evangeline Lilly as Hope van Dyne, Hannah John-Kamen as Ghost.
+- **Official** — https://www.marvel.com/movies/ant-man-and-the-wasp
 
 ---
 
@@ -95,6 +100,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The direct bridge to Infinity War. Ragnarok explains why Thor begins his fight against Thanos without his hammer, with one eye and with the survivors of Asgard aboard a refugee ship. Loki's choice involving the Tesseract makes the opening scene of Infinity War logical and emotionally heavier. It also shows that even the realms of gods can fall — exactly the kind of power vacuum that Doom will later exploit.
 - **When** — Directly before Infinity War. The final scene runs straight into the opening scene of Infinity War.
 - **Who** — Chris Hemsworth as Thor, Tom Hiddleston as Loki, Cate Blanchett as Hela, Tessa Thompson as Valkyrie, Mark Ruffalo as Hulk.
+- **Official** — https://www.marvel.com/movies/thor-ragnarok
 
 ---
 
@@ -105,6 +111,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — The first true multiverse-scale threat. The destruction Thanos unleashes is the benchmark against which all later threats — including Doom — are measured. You need to feel what it is like to lose.
 - **When** — After all of the above films.
 - **Who** — The full Avengers ensemble, Josh Brolin as Thanos.
+- **Official** — https://www.marvel.com/movies/avengers-infinity-war
 
 ---
 
@@ -115,6 +122,7 @@ The foundation rests on one question: what are we about to lose when Tony Stark 
 - **Why** — Everything. Stark's sacrifice is the emotional anchor of the entire story through to Doomsday. The time travel creates the multiverse fractures that drive the entire Multiverse Saga. Sam Wilson becomes Captain America here. Endgame is the end of one era and the beginning of everything that follows.
 - **When** — Closing out Block 1.
 - **Who** — The full ensemble. Robert Downey Jr. as Tony Stark, Chris Evans as Steve Rogers, Anthony Mackie as Sam Wilson.
+- **Official** — https://www.marvel.com/movies/avengers-endgame
 
 ---
 
@@ -133,6 +141,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — The direct emotional aftermath of Endgame. Peter is grieving Stark. The world is grieving Stark. The film poses the question that Doomsday will answer: who takes on that role now? The post-credits scene has direct consequences for No Way Home.
 - **When** — Directly after Endgame, before WandaVision.
 - **Who** — Tom Holland as Peter Parker, Jake Gyllenhaal as Mysterio.
+- **Official** — https://www.marvel.com/movies/spider-man-far-from-home
 
 ---
 
@@ -143,6 +152,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — The birth of the Scarlet Witch. Chaos Magic is fully displayed here for the first time. Without WandaVision, Doctor Strange in the Multiverse of Madness makes no sense — and without MoM, you won't understand Incursions. This is the emotional and technical foundation of the entire magic storyline.
 - **When** — After Far From Home, before Falcon & The Winter Soldier.
 - **Who** — Elizabeth Olsen as Wanda/Scarlet Witch, Paul Bettany as Vision.
+- **Official** — https://www.marvel.com/tv-shows/wandavision/1
 
 ---
 
@@ -153,6 +163,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — Sam Wilson officially becomes Captain America here — which is his position in Doomsday. Bucky's arc continues in Thunderbolts. Valentina Allegra de Fontaine appears here and begins her recruitment game.
 - **When** — After WandaVision.
 - **Who** — Anthony Mackie as Sam Wilson, Sebastian Stan as Bucky, Julia Louis-Dreyfus as Valentina.
+- **Official** — https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1
 
 ---
 
@@ -163,6 +174,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — Introduction of Kate Bishop as the next Hawkeye and one of the faces of the Young Avengers. Yelena Belova returns — her confrontation with Clint is emotionally charged and relevant to her character development heading into Thunderbolts.
 - **When** — After Falcon & The Winter Soldier.
 - **Who** — Jeremy Renner as Clint Barton, Hailee Steinfeld as Kate Bishop, Florence Pugh as Yelena.
+- **Official** — https://www.marvel.com/tv-shows/hawkeye/1
 
 ---
 
@@ -173,6 +185,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — The Ten Rings emit signals into other dimensions. The gateway to Ta Lo opens a dimensional layer relevant to the broader multiverse storylines. Shang-Chi is confirmed for Doomsday.
 - **When** — After Hawkeye.
 - **Who** — Simu Liu as Shang-Chi, Tony Leung as Xu Wenwu.
+- **Official** — https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings
 
 ---
 
@@ -183,6 +196,7 @@ Stark is dead. Rogers is old. Thor is somewhere in space. The world needs new he
 - **Why** — Thor becomes a father figure to Gorr's daughter here. That emotional stake — something to protect — gives his presence in Doomsday weight. Contextually the lightest film in the list, but the character development counts.
 - **When** — Closing out Block 2.
 - **Who** — Chris Hemsworth as Thor, Natalie Portman as Jane Foster/Mighty Thor, Christian Bale as Gorr.
+- **Official** — https://www.marvel.com/movies/thor-love-and-thunder
 
 ---
 
@@ -201,6 +215,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — The single most essential series for Doomsday. The TVA, the concept of variants, the Sacred Timeline, and what happens when timelines fall out of balance — all of it is explained here. Season 2 brings Loki to a sacrifice that fundamentally changes the structure of the multiverse. Loki is confirmed for Doomsday.
 - **When** — Start of Block 3, before everything that follows.
 - **Who** — Tom Hiddleston as Loki, Owen Wilson as Mobius, Sophia Di Martino as Sylvie.
+- **Official** — https://www.marvel.com/tv-shows/loki
 
 ---
 
@@ -211,6 +226,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — Dark magic and divine politics that sit outside the Avengers framework. References to Latveria are subtle but present. Contextually relevant to Doom's world of mystical forces operating beyond the visible MCU.
 - **When** — After Loki, before No Way Home.
 - **Who** — Oscar Isaac as Marc Spector/Steven Grant/Moon Knight.
+- **Official** — https://www.marvel.com/tv-shows/moon-knight/1
 
 ---
 
@@ -221,6 +237,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — Reality fractures here for the first time as a direct result of human action — no cosmic entity, just a teenager botching a spell. This is the moment the multiverse shifts from theory to threat.
 - **When** — After Moon Knight, before MoM.
 - **Who** — Tom Holland as Peter Parker, Benedict Cumberbatch as Strange, three generations of Spider-Man.
+- **Official** — https://www.marvel.com/movies/spider-man-no-way-home
 
 ---
 
@@ -231,6 +248,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — The word Incursion is introduced here in earnest for the first time. An Incursion is what happens when two universes physically collide and one or both are destroyed. This is the core of what Doom threatens to cause or exploit in Doomsday. Without understanding this, you will miss the stakes of the film entirely.
 - **When** — Directly after No Way Home.
 - **Who** — Benedict Cumberbatch as Strange, Elizabeth Olsen as Wanda, Xochitl Gomez as America Chavez.
+- **Official** — https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness
 
 ---
 
@@ -241,6 +259,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — The Kang storyline has officially been replaced by Doctor Doom as Doomsday's primary antagonist. Even so, Quantumania provides context for the scale of a multiversal power struggle. The concepts overlap with what Doom is building toward.
 - **When** — After MoM.
 - **Who** — Paul Rudd as Scott Lang, Jonathan Majors as Kang.
+- **Official** — https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania
 
 ---
 
@@ -251,6 +270,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — Namor is confirmed for Doomsday. His introduction here — his motivations, his protection of Talokan, his willingness to use violence — is essential. Ironheart also makes her debut. Wakanda's politics and its alliance with Talokan factor into the global balance of power heading into Doomsday.
 - **When** — After Quantumania.
 - **Who** — Letitia Wright as Shuri, Tenoch Huerta as Namor, Dominique Thorne as Ironheart.
+- **Official** — https://www.marvel.com/movies/black-panther-wakanda-forever
 
 ---
 
@@ -261,6 +281,7 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — Universes begin leaking here. The post-credits scene introduces a direct X-Men connection that explains Doomsday's broader cast. The lightest film in this block, but the multiverse consequences are real.
 - **When** — After Wakanda Forever.
 - **Who** — Brie Larson as Carol Danvers, Teyonah Parris as Monica, Iman Vellani as Kamala Khan.
+- **Official** — https://www.marvel.com/movies/the-marvels
 
 ---
 
@@ -271,12 +292,13 @@ This is the technical heart of the watch guide. The Multiverse Saga is not just 
 - **Why** — The most direct Doomsday preparation in terms of terminology. The concept of Anchor Beings — figures whose existence keeps a timeline alive — is fully worked out here. It also officially connects the Fox universe to the MCU, making the return of the original X-Men cast in Doomsday possible.
 - **When** — Closing out Block 3.
 - **Who** — Ryan Reynolds as Deadpool, Hugh Jackman as Wolverine.
+- **Official** — https://www.marvel.com/movies/deadpool-and-wolverine
 
 ---
 
 ## Block 4 — The Finale: Phase 6
 
-*7 titles · ~26 hours*
+*8 titles · ~26 hours + Doomsday*
 
 Everything is in place. The timelines are unstable, the teams have formed, and the world is about to change. This block is the direct run-up to Doomsday — every title here builds a piece of the front that comes together in December 2026. Brave New World gives Sam Wilson his mandate as a leader. Thunderbolts assembles the most unlikely defence force. The Fantastic Four bring the man who changes everything. The rest fills out the picture of a world trying to function while the foundations shake.
 
@@ -289,6 +311,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — Sam Wilson plays a central leadership role in Doomsday. Brave New World establishes his mandate as the new Captain America and shows how he navigates power and political pressure. Bucky's decision to run for Congress carries directly into Thunderbolts. Red Hulk is introduced.
 - **When** — Start of Block 4, before Thunderbolts.
 - **Who** — Anthony Mackie as Sam Wilson, Harrison Ford as President Ross/Red Hulk, Sebastian Stan as Bucky.
+- **Official** — https://www.marvel.com/movies/captain-america-brave-new-world
 
 ---
 
@@ -299,6 +322,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — This team is Earth's new line of defence. They are not the Avengers — they are morally grey, broken and working for people with hidden agendas. The film is a direct Doomsday setup: what this team does and who they become determines, in part, how the world withstands Doom's attack.
 - **When** — After Brave New World.
 - **Who** — Florence Pugh as Yelena, Sebastian Stan as Bucky, David Harbour as Red Guardian, Julia Louis-Dreyfus as Valentina.
+- **Official** — https://www.marvel.com/movies/thunderbolts
 
 ---
 
@@ -309,6 +333,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — Arguably the most direct Doomsday setup of any film in this block. The Fantastic Four's greatest enemy in the comics is Doctor Doom. Victor von Doom and Reed Richards know each other. That relationship is the backbone of what happens in Doomsday.
 - **When** — After Thunderbolts, before Wonder Man.
 - **Who** — Pedro Pascal as Reed Richards, Vanessa Kirby as Sue Storm, Joseph Quinn as Johnny Storm, Ebon Moss-Bachrach as Ben Grimm.
+- **Official** — https://www.marvel.com/movies/the-fantastic-four-first-steps
 
 ---
 
@@ -319,6 +344,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — Wonder Man introduces ionic energy as a power type in the MCU — a source that may prove relevant in the broader multiverse conflict. Contextually, it fills out the picture of how new forces and figures are emerging in the lead-up to Doomsday.
 - **When** — After Fantastic Four.
 - **Who** — Yahya Abdul-Mateen II as Simon Williams/Wonder Man.
+- **Official** — https://www.marvel.com/tv-shows/wonder-man/1
 
 ---
 
@@ -329,6 +355,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — Political chaos as the backdrop for Doomsday. Valentina's network and Kingpin's control of New York form a subplot relevant to the broader power structure. Chronologically the most recent MCU title — set in approximately 2027.
 - **When** — After Wonder Man, shortly before Spider-Man: Brand New Day.
 - **Who** — Charlie Cox as Matt Murdock/Daredevil, Vincent D'Onofrio as Kingpin.
+- **Official** — https://www.marvel.com/tv-shows/daredevil-born-again/2
 
 ---
 
@@ -339,6 +366,7 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — Closes the trilogy that began with WandaVision and continued with Agatha All Along. Vision is a direct product of Stark technology and the Mind Stone — thematically intertwined with the AI and identity questions that Doomsday confronts. Multiple watchlist sources flag it as essential for Doomsday context.
 - **When** — After Daredevil: Born Again S2, before Spider-Man: Brand New Day. Note: the exact release date within 2026 has not yet been confirmed.
 - **Who** — Paul Bettany as White Vision, James Spader as Ultron.
+- **Official** — https://www.marvel.com/tv-shows/visionquest/1
 
 ---
 
@@ -349,17 +377,26 @@ Everything is in place. The timelines are unstable, the teams have formed, and t
 - **Why** — The last MCU film before Doomsday. Peter's position as someone who has been literally erased from the world's memory places him in a unique role when Doom's attack comes. Thematically, it closes the circle opened in Far From Home.
 - **When** — After everything. Directly before Doomsday.
 - **Who** — Tom Holland as Peter Parker.
+- **Official** — https://www.marvel.com/movies/spider-man-brand-new-day
+
+---
+
+### 30. Avengers: Doomsday ★
+*Film · runtime TBD · cinemas December 18, 2026*
+
+- **What** — The Avengers, the Fantastic Four, returning X-Men figures and other MCU players converge as Victor von Doom enters the story on a multiversal scale.
+- **Why** — This is the destination of the entire watchlist. Every thread leads here: Stark's legacy, Doom's connection to the Fantastic Four, the instability of the multiverse, the TVA context, and the teams formed across Phases 4 through 6.
+- **When** — Watch after everything else in this guide. This is the endpoint, not preparation.
+- **Who** — Directed by Joe and Anthony Russo. Robert Downey Jr. is listed in the cast, alongside multiple returning MCU and legacy Marvel actors on Marvel's official page.
+- **Official** — https://www.marvel.com/movies/avengers-doomsday
 
 ---
 
 ## End Goal — December 18, 2026
 
-**AVENGERS: DOOMSDAY**
-
-*Directed by Joe and Anthony Russo · Robert Downey Jr. as Victor von Doom*
+The endpoint is now part of the timeline itself: **30. Avengers: Doomsday ★**.
 
 Doom wears Stark's face. The timelines are unstable. The teams are ready.
-
 ---
 
 ## Bonus — X-Men Fox Universe

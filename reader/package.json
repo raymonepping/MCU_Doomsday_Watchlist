@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build:data": "node build-data.mjs",
+    "cache:images": "npm run build:data && node cache-marvel-images.mjs && npm run build:data",
     "start": "node server.mjs"
   }
 }

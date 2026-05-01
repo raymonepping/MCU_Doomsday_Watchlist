@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(here, "data");
+const imageCachePath = join(dataDir, "marvel-images.json");
 
 const sources = [
   {
@@ -37,6 +38,7 @@ const sources = [
       when: "When",
       read: "Seen",
       markRead: "Mark seen",
+      officialLink: "Open on Marvel.com",
       mainComplete: "Main timeline complete",
       bonusSuffix: "Bonus X-Men",
       noSummary: "No summary available.",
@@ -75,6 +77,7 @@ const sources = [
       when: "Wanneer",
       read: "Gezien",
       markRead: "Markeer gezien",
+      officialLink: "Open op Marvel.com",
       mainComplete: "Hoofdtijdlijn compleet",
       bonusSuffix: "Bonus X-Men",
       noSummary: "Geen samenvatting beschikbaar.",
@@ -86,16 +89,19 @@ const sources = [
 
 const headingPattern = /^###\s+([B]?\d+)\.\s+(.+?)\s*$/;
 const metaPattern = /^\*(Film|Serie|Series)\s+·\s+(.+?)\*$/;
-const detailPattern = /^-\s+\*\*(What|Why|When|Who|Wat|Waarom|Wanneer|Wie)\*\*\s+—\s+(.+)$/;
+const detailPattern =
+  /^-\s+\*\*(What|Why|When|Who|Official|Wat|Waarom|Wanneer|Wie|Officieel)\*\*\s+—\s+(.+)$/;
 const detailKeys = {
   What: "what",
   Why: "why",
   When: "when",
   Who: "who",
+  Official: "officialUrl",
   Wat: "what",
   Waarom: "why",
   Wanneer: "when",
   Wie: "who",
+  Officieel: "officialUrl",
 };
 
 function parseWatchlist(markdown) {
@@ -116,6 +122,9 @@ function parseWatchlist(markdown) {
         why: "",
         when: "",
         who: "",
+        officialUrl: "",
+        imageUrl: "",
+        localImage: "",
       };
       items.push(current);
       continue;
@@ -144,12 +153,12 @@ function parseWatchlist(markdown) {
 function validateItems(source, items) {
   const main = items.filter((item) => !item.bonus);
   const bonus = items.filter((item) => item.bonus);
-  const expectedMainKeys = Array.from({ length: 29 }, (_, index) => String(index + 1));
+  const expectedMainKeys = Array.from({ length: 30 }, (_, index) => String(index + 1));
   const mainKeys = main.map((item) => item.key);
   const bonusKeys = bonus.map((item) => item.key);
 
   if (JSON.stringify(mainKeys) !== JSON.stringify(expectedMainKeys)) {
-    throw new Error(`${source} main timeline is not numbered 1-29.`);
+    throw new Error(`${source} main timeline is not numbered 1-30.`);
   }
 
   if (JSON.stringify(bonusKeys) !== JSON.stringify(["B1", "B2", "B3"])) {
@@ -168,13 +177,40 @@ function validateItems(source, items) {
   }
 }
 
+async function loadImageCache() {
+  try {
+    const payload = JSON.parse(await readFile(imageCachePath, "utf8"));
+    return payload.images || {};
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return {};
+    }
+    throw error;
+  }
+}
+
+function applyImageCache(items, imageCache) {
+  return items.map((item) => {
+    const image = imageCache[item.key];
+    if (!image) {
+      return item;
+    }
+    return {
+      ...item,
+      imageUrl: image.imageUrl || "",
+      localImage: image.localImage || "",
+    };
+  });
+}
+
 await mkdir(dataDir, { recursive: true });
+const imageCache = await loadImageCache();
 
 for (const config of sources) {
   const sourcePath = join(here, "..", "docs", config.source);
   const outputPath = join(dataDir, config.output);
   const markdown = await readFile(sourcePath, "utf8");
-  const items = parseWatchlist(markdown);
+  const items = applyImageCache(parseWatchlist(markdown), imageCache);
 
   validateItems(config.source, items);
 

@@ -1,7 +1,7 @@
 # Road to Doomsday
 *Complete MCU kijkgids — 18 december 2026*
 
-29 titels · ~93 uur · ★ essentieel
+30 titels · ~93 uur + Doomsday · ★ essentieel
 
 ---
 
@@ -13,7 +13,7 @@
 | 2 | De Nieuwe Garde | 6 | ~22u |
 | 3 | De Multiversele Breuk | 8 | ~26u |
 | 4 | De Finale | 7 | ~26u |
-| **Totaal** | | **29** | **~93u** |
+| **Totaal** | | **30** | **~93u + Doomsday** |
 | Bonus X-Men | Fox Universe | 3 | ~6u |
 
 ---
@@ -45,6 +45,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — Introductie van magie als serieuze kracht in het MCU. Andere dimensies, het Sanctum Sanctorum, de Eye of Agamotto — zonder deze film is MoM onbegrijpelijk. Strange is een van de centrale figuren in Doomsday.
 - **Wanneer** — Vóór Infinity War. De magie-logica moet op zijn plek zitten.
 - **Wie** — Benedict Cumberbatch als Stephen Strange, Tilda Swinton als de Ancient One.
+- **Officieel** — https://www.marvel.com/movies/doctor-strange
 
 ---
 
@@ -55,6 +56,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — De Stark/Parker-dynamiek is emotioneel de kern van Doomsday's "gezicht"-verhaal. Als Doctor Doom verschijnt met het gezicht van Stark, is het Peters reactie die telt. Homecoming geeft die context.
 - **Wanneer** — Vóór Infinity War en Far From Home.
 - **Wie** — Tom Holland als Peter Parker, Robert Downey Jr. als Tony Stark.
+- **Officieel** — https://www.marvel.com/movies/spider-man-homecoming
 
 ---
 
@@ -65,6 +67,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — Wakanda is in Doomsday een mondiale speler. Vibranium, de technologie, de politieke autonomie. Shuri en Namor — beiden bevestigd voor Doomsday — worden in latere films begrijpelijker met deze film als basis.
 - **Wanneer** — Vóór Infinity War.
 - **Wie** — Chadwick Boseman als T'Challa, Letitia Wright als Shuri, Michael B. Jordan als Killmonger.
+- **Officieel** — https://www.marvel.com/movies/black-panther
 
 ---
 
@@ -75,6 +78,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — De introductie van Yelena Belova. Zij is een van de centrale figuren in Thunderbolts en keert terug in Doomsday. Red Guardian verschijnt hier ook. De familiedynamiek tussen Natasha en Yelena geeft de Thunderbolts-verhaalijn emotionele diepte.
 - **Wanneer** — Speelt zich af vóór Infinity War, maar kijk het ná Endgame in deze volgorde.
 - **Wie** — Scarlett Johansson als Natasha, Florence Pugh als Yelena, David Harbour als Red Guardian.
+- **Officieel** — https://www.marvel.com/movies/black-widow
 
 ---
 
@@ -85,6 +89,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — Het Quantum Realm is de sleutel tot Endgame's tijdreisoplossing en het fundament van de multiversele mechanica. Ghost speelt later een rol in Thunderbolts. De post-credits scene verbindt direct met Infinity War.
 - **Wanneer** — Vóór Ragnarok en Infinity War.
 - **Wie** — Paul Rudd als Scott Lang, Evangeline Lilly als Hope van Dyne, Hannah John-Kamen als Ghost.
+- **Officieel** — https://www.marvel.com/movies/ant-man-and-the-wasp
 
 ---
 
@@ -95,6 +100,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — De directe brug naar Infinity War. Ragnarok verklaart waarom Thor zonder hamer, met één oog en met de overlevenden van Asgard in een ruimteschip begint aan de strijd tegen Thanos. Loki's keuze rond de Tesseract maakt de openingsscène van Infinity War logisch en emotioneel zwaarder. Het laat ook zien dat zelfs godenrijken kunnen vallen — precies het soort machtsvacuüm waar Doom later betekenis aan geeft.
 - **Wanneer** — Direct vóór Infinity War. De laatste scène loopt rechtstreeks door in de eerste scène van Infinity War.
 - **Wie** — Chris Hemsworth als Thor, Tom Hiddleston als Loki, Cate Blanchett als Hela, Tessa Thompson als Valkyrie, Mark Ruffalo als Hulk.
+- **Officieel** — https://www.marvel.com/movies/thor-ragnarok
 
 ---
 
@@ -105,6 +111,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — De eerste echte multiversele bedreiging op kosmische schaal. De vernietiging die Thanos aanricht is de maatstaf waaraan alle latere bedreigingen — inclusief Doom — worden afgemeten. Je moet voelen hoe het is om te verliezen.
 - **Wanneer** — Na alle bovenstaande films.
 - **Wie** — Het volledige Avengers-ensemble, Josh Brolin als Thanos.
+- **Officieel** — https://www.marvel.com/movies/avengers-infinity-war
 
 ---
 
@@ -115,6 +122,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 - **Waarom** — Alles. Het offer van Stark is het emotionele anker van het hele verhaal tot en met Doomsday. Het tijdreizen creëert de multiversele breuken die de hele Multiverse Saga aandrijven. Sam Wilson wordt hier Captain America. Endgame is het einde van één tijdperk en het begin van alles wat volgt.
 - **Wanneer** — Afsluiting van Blok 1.
 - **Wie** — Het volledige ensemble. Robert Downey Jr. als Tony Stark, Chris Evans als Steve Rogers, Anthony Mackie als Sam Wilson.
+- **Officieel** — https://www.marvel.com/movies/avengers-endgame
 
 ---
 
@@ -133,6 +141,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — De directe emotionele nazorg van Endgame. Peter rouwt om Stark. De wereld rouwt om Stark. De film stelt de vraag die Doomsday zal beantwoorden: wie neemt die rol over? De post-credits scene heeft directe gevolgen voor No Way Home.
 - **Wanneer** — Direct na Endgame, vóór WandaVision.
 - **Wie** — Tom Holland als Peter Parker, Jake Gyllenhaal als Mysterio.
+- **Officieel** — https://www.marvel.com/movies/spider-man-far-from-home
 
 ---
 
@@ -143,6 +152,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — De geboorte van de Scarlet Witch. Chaos Magic wordt hier voor het eerst volledig getoond. Zonder WandaVision snap je Doctor Strange in the Multiverse of Madness niet — en zonder MoM snap je Incursions niet. Dit is de emotionele en technische basis van de hele magielijn.
 - **Wanneer** — Na Far From Home, vóór Falcon & Winter Soldier.
 - **Wie** — Elizabeth Olsen als Wanda/Scarlet Witch, Paul Bettany als Vision.
+- **Officieel** — https://www.marvel.com/tv-shows/wandavision/1
 
 ---
 
@@ -153,6 +163,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — Sam Wilson wordt hier officieel Captain America — zijn positie in Doomsday. Bucky's arc loopt door in Thunderbolts. Valentina Allegra de Fontaine verschijnt hier en begint haar rekruteringsspel.
 - **Wanneer** — Na WandaVision.
 - **Wie** — Anthony Mackie als Sam Wilson, Sebastian Stan als Bucky, Julia Louis-Dreyfus als Valentina.
+- **Officieel** — https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1
 
 ---
 
@@ -163,6 +174,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — Introductie van Kate Bishop als de volgende Hawkeye en een van de gezichten van de Young Avengers. Yelena Belova keert terug — haar confrontatie met Clint is relevant voor haar karakterontwikkeling richting Thunderbolts.
 - **Wanneer** — Na Falcon & Winter Soldier.
 - **Wie** — Jeremy Renner als Clint Barton, Hailee Steinfeld als Kate Bishop, Florence Pugh als Yelena.
+- **Officieel** — https://www.marvel.com/tv-shows/hawkeye/1
 
 ---
 
@@ -173,6 +185,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — De Tien Ringen zenden signalen uit naar andere dimensies. De poort naar Ta Lo opent een dimensionele laag relevant voor de bredere multiversele verhaallijnen. Shang-Chi is bevestigd voor Doomsday.
 - **Wanneer** — Na Hawkeye.
 - **Wie** — Simu Liu als Shang-Chi, Tony Leung als Xu Wenwu.
+- **Officieel** — https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings
 
 ---
 
@@ -183,6 +196,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 - **Waarom** — Thor wordt hier vaderfiguur voor Gorr's dochter. Die emotionele inzet — iets te beschermen — geeft zijn aanwezigheid in Doomsday gewicht. Contextueel de lichtste film in de lijst, maar de karakterontwikkeling telt.
 - **Wanneer** — Afsluiting van Blok 2.
 - **Wie** — Chris Hemsworth als Thor, Natalie Portman als Jane Foster/Mighty Thor, Christian Bale als Gorr.
+- **Officieel** — https://www.marvel.com/movies/thor-love-and-thunder
 
 ---
 
@@ -201,6 +215,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — De meest essentiële serie voor Doomsday. De TVA, het concept van varianten, de Sacred Timeline, en wat er gebeurt als tijdlijnen uit balans raken — alles wordt hier uitgelegd. Seizoen 2 brengt Loki tot een offer dat de structuur van het multiversum fundamenteel verandert. Loki is bevestigd voor Doomsday.
 - **Wanneer** — Begin van Blok 3, vóór alles wat volgt.
 - **Wie** — Tom Hiddleston als Loki, Owen Wilson als Mobius, Sophia Di Martino als Sylvie.
+- **Officieel** — https://www.marvel.com/tv-shows/loki
 
 ---
 
@@ -211,6 +226,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — Duistere magie en godenpolitiek buiten het Avengers-kader. Verwijzingen naar Latveria zijn subtiel maar aanwezig. Contextueel relevant voor Doom's wereld van mystieke machten buiten het zichtbare MCU.
 - **Wanneer** — Na Loki, vóór No Way Home.
 - **Wie** — Oscar Isaac als Marc Spector/Steven Grant/Moon Knight.
+- **Officieel** — https://www.marvel.com/tv-shows/moon-knight/1
 
 ---
 
@@ -221,6 +237,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — De realiteit scheurt hier voor het eerst écht open als direct gevolg van menselijke actie — geen kosmische entiteit, gewoon een tiener die een spreuk fout laat gaan. Dit is het moment waarop het multiversum van theorie naar bedreiging wordt.
 - **Wanneer** — Na Moon Knight, vóór MoM.
 - **Wie** — Tom Holland als Peter Parker, Benedict Cumberbatch als Strange, drie generaties Spider-Man.
+- **Officieel** — https://www.marvel.com/movies/spider-man-no-way-home
 
 ---
 
@@ -231,6 +248,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — Het woord Incursion wordt hier voor het eerst serieus geïntroduceerd. Een Incursion is wat er gebeurt als twee universums letterlijk in elkaar botsen en één of beide vernietigd worden. Dit is de kern van wat Doom in Doomsday dreigt te veroorzaken of te exploiteren. Zonder dit begrip mis je de inzet van de film volledig.
 - **Wanneer** — Direct na No Way Home. Staat hier, niet ná Wakanda Forever.
 - **Wie** — Benedict Cumberbatch als Strange, Elizabeth Olsen als Wanda, Xochitl Gomez als America Chavez.
+- **Officieel** — https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness
 
 ---
 
@@ -241,6 +259,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — De Kang-verhaalijn is door Marvel vervangen door Doctor Doom als hoofdantagonist van Doomsday. Desondanks levert Quantumania context over de schaal van een multiversele machtsstrijd. De concepten overlappen met wat Doom gaat doen.
 - **Wanneer** — Na MoM.
 - **Wie** — Paul Rudd als Scott Lang, Jonathan Majors als Kang.
+- **Officieel** — https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania
 
 ---
 
@@ -251,6 +270,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — Namor is bevestigd voor Doomsday. Zijn introductie hier — zijn motivaties, zijn bescherming van Talokan, zijn bereidheid tot geweld — is essentieel. Ironheart debuteert ook. De Wakanda-politiek en de alliantie met Talokan spelen mee in de mondiale verhoudingen richting Doomsday.
 - **Wanneer** — Na Quantumania.
 - **Wie** — Letitia Wright als Shuri, Tenoch Huerta als Namor, Dominique Thorne als Ironheart.
+- **Officieel** — https://www.marvel.com/movies/black-panther-wakanda-forever
 
 ---
 
@@ -261,6 +281,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — De universums beginnen hier te lekken. De post-credits scene introduceert een directe X-Men-connectie die Doomsday's bredere cast verklaart. Lichtste film in dit blok, maar de multiversele consequenties zijn relevant.
 - **Wanneer** — Na Wakanda Forever.
 - **Wie** — Brie Larson als Carol Danvers, Teyonah Parris als Monica, Iman Vellani als Kamala Khan.
+- **Officieel** — https://www.marvel.com/movies/the-marvels
 
 ---
 
@@ -271,12 +292,13 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 - **Waarom** — De meest directe Doomsday-voorbereiding qua terminologie. Het concept van Anchor Beings — figuren wier bestaan een tijdlijn in leven houdt — is hier concreet uitgewerkt. Het verbindt ook het Fox-universum officieel met het MCU, wat de terugkeer van de originele X-Men-acteurs in Doomsday mogelijk maakt.
 - **Wanneer** — Afsluiting van Blok 3.
 - **Wie** — Ryan Reynolds als Deadpool, Hugh Jackman als Wolverine.
+- **Officieel** — https://www.marvel.com/movies/deadpool-and-wolverine
 
 ---
 
 ## Blok 4 — De Finale: Fase 6
 
-*7 titels · ~26 uur*
+*8 titels · ~26 uur + Doomsday*
 
 Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de wereld staat op het punt te veranderen. Dit blok is de directe aanloop naar Doomsday — elke titel bouwt een stuk van het front dat in december 2026 samenkomt. Brave New World geeft Sam Wilson zijn mandaat als leider. Thunderbolts assembleert de onwaarschijnlijkste verdediging. De Fantastic Four brengen de man die alles verandert. De rest vult het beeld in van een wereld die probeert te functioneren terwijl de fundamenten trillen.
 
@@ -289,6 +311,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Sam Wilson speelt een centrale leiderschapsrol in Doomsday. Brave New World toont zijn mandate als nieuwe Captain America en hoe hij omgaat met macht en politieke druk. Bucky's beslissing om voor het Congres te kandideren loopt direct door in Thunderbolts. Red Hulk wordt geïntroduceerd.
 - **Wanneer** — Begin van Blok 4, vóór Thunderbolts.
 - **Wie** — Anthony Mackie als Sam Wilson, Harrison Ford als President Ross/Red Hulk, Sebastian Stan als Bucky.
+- **Officieel** — https://www.marvel.com/movies/captain-america-brave-new-world
 
 ---
 
@@ -299,6 +322,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Dit team is de nieuwe verdediging op aarde. Ze zijn niet de Avengers — ze zijn moreel grijs, gebroken, en werken voor mensen met verborgen agenda's. De film is een directe Doomsday-setup: wat dit team doet en wie ze worden, bepaalt mede hoe de wereld de aanval van Doom opvangt.
 - **Wanneer** — Na Brave New World.
 - **Wie** — Florence Pugh als Yelena, Sebastian Stan als Bucky, David Harbour als Red Guardian, Julia Louis-Dreyfus als Valentina.
+- **Officieel** — https://www.marvel.com/movies/thunderbolts
 
 ---
 
@@ -309,6 +333,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Vermoedelijk de meest directe setup voor Doomsday van alle films in dit blok. De historische aartsvijand van de Fantastic Four in de comics is Doctor Doom. Victor von Doom en Reed Richards kennen elkaar. Die relatie is de backbone van wat er in Doomsday gaat gebeuren.
 - **Wanneer** — Na Thunderbolts, vóór Wonder Man.
 - **Wie** — Pedro Pascal als Reed Richards, Vanessa Kirby als Sue Storm, Joseph Quinn als Johnny Storm, Ebon Moss-Bachrach als Ben Grimm.
+- **Officieel** — https://www.marvel.com/movies/the-fantastic-four-first-steps
 
 ---
 
@@ -319,6 +344,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Wonder Man introduceert ionische energie als krachtstype in het MCU — een bron die in het bredere multiversele conflict relevant kan zijn. Contextueel: geeft het grotere beeld van hoe nieuwe krachten en figuren opduiken in de aanloop naar Doomsday.
 - **Wanneer** — Na Fantastic Four.
 - **Wie** — Yahya Abdul-Mateen II als Simon Williams/Wonder Man.
+- **Officieel** — https://www.marvel.com/tv-shows/wonder-man/1
 
 ---
 
@@ -329,6 +355,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Politieke chaos als achtergrond voor Doomsday. Valentina's netwerk en Kingpin's greep op New York vormen een subplot dat relevant is voor de bredere machtsstructuur. Chronologisch de meest recente MCU-titel — speelt zich af in ~2027.
 - **Wanneer** — Na Wonder Man, vlak vóór Spider-Man: Brand New Day.
 - **Wie** — Charlie Cox als Matt Murdock/Daredevil, Vincent D'Onofrio als Kingpin.
+- **Officieel** — https://www.marvel.com/tv-shows/daredevil-born-again/2
 
 ---
 
@@ -339,6 +366,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — Sluit de trilogie af die begon met WandaVision en verder ging met Agatha All Along. Vision is een direct uitvloeisel van Stark-technologie en de Mind Stone — thematisch verweven met de AI- en identiteitsvragen die Doomsday raakt. Meerdere watchlist-bronnen markeren het als essentieel voor Doomsday-context.
 - **Wanneer** — Na Daredevil: Born Again S2, vóór Spider-Man: Brand New Day. Let op: de exacte releasedatum binnen 2026 is nog niet bevestigd.
 - **Wie** — Paul Bettany als White Vision, James Spader als Ultron.
+- **Officieel** — https://www.marvel.com/tv-shows/visionquest/1
 
 ---
 
@@ -349,17 +377,26 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 - **Waarom** — De laatste MCU-film vóór Doomsday. Peters positie als iemand die letterlijk is gewist uit de herinnering van de wereld plaatst hem in een unieke rol bij de aanval van Doom. Thematisch sluit het de cirkel die in Far From Home werd geopend.
 - **Wanneer** — Na alles. Direct vóór Doomsday.
 - **Wie** — Tom Holland als Peter Parker.
+- **Officieel** — https://www.marvel.com/movies/spider-man-brand-new-day
+
+---
+
+### 30. Avengers: Doomsday ★
+*Film · speelduur nog onbekend · bioscoop 18 december 2026*
+
+- **Wat** — De Avengers, de Fantastic Four, terugkerende X-Men-figuren en andere MCU-spelers komen samen terwijl Victor von Doom het verhaal op multiversele schaal binnentreedt.
+- **Waarom** — Dit is de bestemming van de hele kijklijst. Alle lijnen komen hier samen: Starks nalatenschap, Dooms relatie met de Fantastic Four, de instabiliteit van het multiversum, de TVA-context en de teams die in Fase 4 tot en met 6 zijn opgebouwd.
+- **Wanneer** — Kijk deze na alles in deze gids. Dit is het eindpunt, geen voorbereiding.
+- **Wie** — Geregisseerd door Joe en Anthony Russo. Robert Downey Jr. staat op Marvels officiële castlijst, naast meerdere terugkerende MCU- en legacy-Marvel-acteurs op Marvels officiële pagina.
+- **Officieel** — https://www.marvel.com/movies/avengers-doomsday
 
 ---
 
 ## Einddoel — 18 december 2026
 
-**AVENGERS: DOOMSDAY**
-
-*Geregisseerd door Joe en Anthony Russo · Robert Downey Jr. als Victor von Doom*
+Het eindpunt staat nu in de tijdlijn zelf: **30. Avengers: Doomsday ★**.
 
 Doom heeft het gezicht van Stark. De tijdlijnen zijn instabiel. De teams staan klaar.
-
 ---
 
 ## Bonus — X-Men Fox Universe

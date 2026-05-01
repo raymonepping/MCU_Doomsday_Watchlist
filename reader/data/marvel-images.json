@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-05-01T09:50:57.204Z",
+  "source": "Marvel.com page metadata",
+  "images": {
+    "1": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
+      "localImage": "./assets/posters/01.jpg"
+    },
+    "2": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-manhomecoming_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/02.jpg"
+    },
+    "3": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/blackpanther_lob_mas_mob_03.jpg",
+      "localImage": "./assets/posters/03.jpg"
+    },
+    "4": {
+      "imageUrl": "https://cdn.marvel.com/content/prod/2x/blackwidow_lob_mas_mob_05.jpg",
+      "localImage": "./assets/posters/04.jpg"
+    },
+    "5": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/ant-manandthewasp_lob_mas_hlf_01_0.jpg",
+      "localImage": "./assets/posters/05.jpg"
+    },
+    "6": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thorragnarok_lob_mas_hlf_01_2.jpg",
+      "localImage": "./assets/posters/06.jpg"
+    },
+    "7": {
+      "imageUrl": "https://cdn.marvel.com/content/prod/1x/avengersinfinitywar_lob_crd_02.jpg",
+      "localImage": "./assets/posters/07.jpg"
+    },
+    "8": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/avengersendgame_lob_mas_mob_01.jpg",
+      "localImage": "./assets/posters/08.jpg"
+    },
+    "9": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-manfarfromhome_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/09.jpg"
+    },
+    "10": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/wandavision_lob_crd_06.jpg",
+      "localImage": "./assets/posters/10.jpg"
+    },
+    "11": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
+      "localImage": "./assets/posters/11.jpg"
+    },
+    "12": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/hawkeye_lob_crd_04.jpg",
+      "localImage": "./assets/posters/12.jpg"
+    },
+    "13": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
+      "localImage": "./assets/posters/13.jpg"
+    },
+    "14": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thorloveandthunder_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/14.jpg"
+    },
+    "15": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/15.jpg"
+    },
+    "16": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/moonknight_lob_crd_05.jpg",
+      "localImage": "./assets/posters/16.jpg"
+    },
+    "17": {
+      "imageUrl": "https://cdn.marvel.com/content/prod/2x/serenitynowtitle_mas_mob.jpg",
+      "localImage": "./assets/posters/17.jpg"
+    },
+    "18": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrangeinthemultiverseofmadness_lob_mas_mob_08b.jpg",
+      "localImage": "./assets/posters/18.jpg"
+    },
+    "19": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/antmanandthewaspquantumania_lob_mas_mob_04.jpg",
+      "localImage": "./assets/posters/19.jpg"
+    },
+    "20": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/blackpantherwakandaforever_lob_mas_mob_04.jpg",
+      "localImage": "./assets/posters/20.jpg"
+    },
+    "21": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/themarvels_lob_mas_mob_03.jpg",
+      "localImage": "./assets/posters/21.jpg"
+    },
+    "22": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/deadpoolandwolverine_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/22.jpg"
+    },
+    "23": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/captainamericabravenewworld_lob_mas_mob_03.jpg",
+      "localImage": "./assets/posters/23.jpg"
+    },
+    "24": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thenewavengers_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/24.jpg"
+    },
+    "25": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thefantasticfourfirststeps_lob_mas_mob_03.jpg",
+      "localImage": "./assets/posters/25.jpg"
+    },
+    "26": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
+      "localImage": "./assets/posters/26.jpg"
+    },
+    "27": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
+      "localImage": "./assets/posters/27.jpg"
+    },
+    "28": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
+      "localImage": "./assets/posters/28.jpg"
+    },
+    "29": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
+      "localImage": "./assets/posters/29.jpg"
+    },
+    "30": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
+      "localImage": "./assets/posters/30.jpg"
+    }
+  }
+}

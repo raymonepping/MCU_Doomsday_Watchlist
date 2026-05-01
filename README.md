@@ -100,6 +100,15 @@ This creates:
 - `reader/data/watchlist.en.json` (from `docs/mcu-doomsday-watchlist_us.md`)
 - `reader/data/watchlist.nl.json` (from `docs/mcu-doomsday-watchlist_nl.md`)
 
+Official Marvel links in the markdown are rendered as card actions in the reader.
+
+Marvel page artwork can be cached locally for reader thumbnails:
+
+```bash
+cd reader
+npm run cache:images
+```
+
 ## Technology Stack
 
 - **Python 3** — CLI tracker script with argparse
