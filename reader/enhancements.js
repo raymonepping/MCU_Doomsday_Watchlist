@@ -64,6 +64,9 @@ function addConceptBadges() {
   const cards = document.querySelectorAll('.timeline-card');
   
   cards.forEach(card => {
+    // Check if badge already exists
+    if (card.querySelector('.concept-badge')) return;
+    
     const key = parseInt(card.dataset.key);
     const score = window.conceptScores?.[key] || 0;
     
@@ -379,6 +382,8 @@ function enhanceReadButtons() {
         
         setTimeout(() => {
           highlightNextToWatch();
+          addConceptBadges(); // Re-add badges after render
+          applyBlockColors(); // Re-apply block colors after render
           
           // Check milestones
           const main = Array.from(document.querySelectorAll('.timeline-card'))
