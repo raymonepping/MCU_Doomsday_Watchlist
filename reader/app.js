@@ -15,6 +15,7 @@ const state = {
   theme: getInitialTheme(),
   timelineView: "cards", // "cards" or "blocks"
   characterFilter: null, // null or character name
+  blockFilter: null, // null or block number (1-4)
 };
 
 // Block definitions based on key ranges
@@ -59,6 +60,7 @@ const elements = {
   confettiCanvas: document.querySelector("#confetti"),
   timelineViewToggle: document.querySelector("#timelineViewToggle"),
   characterChips: document.querySelector("#characterChips"),
+  blockChips: [...document.querySelectorAll("[data-block]")],
 };
 
 function getInitialLocale() {
@@ -302,7 +304,15 @@ function matchesFilters(item) {
       .join(" ")
       .includes(state.characterFilter);
 
-  return textMatch && filterMatch && characterMatch;
+  // Block filter checks if item is in selected block range
+  const blockMatch = !state.blockFilter || (() => {
+    if (item.bonus) return false; // Bonus items don't belong to blocks
+    const keyNum = parseInt(item.key);
+    const block = blocks[state.blockFilter - 1]; // blockFilter is 1-4, array is 0-3
+    return keyNum >= block.range[0] && keyNum <= block.range[1];
+  })();
+
+  return textMatch && filterMatch && characterMatch && blockMatch;
 }
 
 function renderStaticText() {
@@ -631,6 +641,25 @@ elements.characterChips.addEventListener("click", (event) => {
   }
   renderTimeline();
 });
+
+// Block filter chips
+for (const chip of elements.blockChips) {
+  chip.addEventListener("click", () => {
+    const blockNum = parseInt(chip.dataset.block);
+    if (state.blockFilter === blockNum) {
+      // Deselect if clicking the same block
+      state.blockFilter = null;
+      elements.blockChips.forEach(c => c.classList.remove("is-active"));
+    } else {
+      // Select new block
+      state.blockFilter = blockNum;
+      elements.blockChips.forEach(c => {
+        c.classList.toggle("is-active", parseInt(c.dataset.block) === blockNum);
+      });
+    }
+    renderTimeline();
+  });
+}
 
 // Initialize theme
 applyTheme(state.theme);
