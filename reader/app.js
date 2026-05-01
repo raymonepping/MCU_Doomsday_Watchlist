@@ -16,6 +16,7 @@ const state = {
   timelineView: "cards", // "cards" or "blocks"
   characterFilter: null, // null or character name
   blockFilter: null, // null or block number (1-4)
+  conceptFilter: null, // null or concept name
 };
 
 // Block definitions based on key ranges
@@ -25,6 +26,32 @@ const blocks = [
   { name: "The Multiverse Fracture", range: [15, 22], color: "#5fb4ff" },
   { name: "The Finale", range: [23, 30], color: "#55d68b" },
 ];
+
+// Concept to title mapping - which titles feature which concepts
+const conceptMap = {
+  // Multiversal Mechanics
+  "incursions": [15, 22], // Doctor Strange MoM, The Marvels
+  "anchor-beings": [29], // Deadpool & Wolverine
+  "sacred-timeline": [11, 12, 27], // Loki S1, Loki S2, What If S2
+  "nexus-events": [11, 12], // Loki S1, Loki S2
+  "the-void": [11, 29], // Loki S1, Deadpool & Wolverine
+  
+  // Sources of Power
+  "vibranium": [1, 2, 3, 4, 5, 22], // Iron Man through Black Panther, The Marvels
+  "infinity-stones": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14], // Phase 1-3 films
+  "chaos-magic": [10, 15, 18], // WandaVision, Doctor Strange MoM, Agatha
+  "pym-particles": [6, 9, 19], // Ant-Man films, Quantumania
+  
+  // Geopolitics & Organizations
+  "tva": [11, 12, 27, 29], // Loki seasons, What If S2, Deadpool
+  "sokovia-accords": [5, 6, 7], // Civil War era
+  "latveria": [], // Not yet introduced (Doomsday/Secret Wars)
+  "quantum-realm": [6, 9, 19], // Ant-Man films
+  
+  // Legacy Threads
+  "stark-legacy": [1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 16, 17], // Iron Man through FFH
+  "new-guard": [13, 14, 16, 17, 20, 21, 23, 24, 25, 26, 28, 30], // Young Avengers era
+};
 
 const elements = {
   timeline: document.querySelector("#timeline"),
@@ -61,6 +88,7 @@ const elements = {
   timelineViewToggle: document.querySelector("#timelineViewToggle"),
   characterChips: document.querySelector("#characterChips"),
   blockChips: [...document.querySelectorAll("[data-block]")],
+  conceptChips: [...document.querySelectorAll("[data-concept]")],
 };
 
 function getInitialLocale() {
@@ -312,7 +340,14 @@ function matchesFilters(item) {
     return keyNum >= block.range[0] && keyNum <= block.range[1];
   })();
 
-  return textMatch && filterMatch && characterMatch && blockMatch;
+  // Concept filter checks if item's key is in the concept's title list
+  const conceptMatch = !state.conceptFilter || (() => {
+    const conceptTitles = conceptMap[state.conceptFilter] || [];
+    const keyNum = parseInt(item.key);
+    return conceptTitles.includes(keyNum);
+  })();
+
+  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch;
 }
 
 function renderStaticText() {
@@ -655,6 +690,25 @@ for (const chip of elements.blockChips) {
       state.blockFilter = blockNum;
       elements.blockChips.forEach(c => {
         c.classList.toggle("is-active", parseInt(c.dataset.block) === blockNum);
+      });
+    }
+    renderTimeline();
+  });
+}
+
+// Concept filter chips
+for (const chip of elements.conceptChips) {
+  chip.addEventListener("click", () => {
+    const concept = chip.dataset.concept;
+    if (state.conceptFilter === concept) {
+      // Deselect if clicking the same concept
+      state.conceptFilter = null;
+      elements.conceptChips.forEach(c => c.classList.remove("is-active"));
+    } else {
+      // Select new concept
+      state.conceptFilter = concept;
+      elements.conceptChips.forEach(c => {
+        c.classList.toggle("is-active", c.dataset.concept === concept);
       });
     }
     renderTimeline();
