@@ -199,6 +199,22 @@ Plus 3 optional Fox X-Men bonus titles (~6 hours) for additional context on retu
 2. **The Mechanics** — How timelines collide and universes die
 3. **The Teams** — Avengers, Thunderbolts, Fantastic Four, Young Avengers
 
+## Deployment
+
+The reader app can be hosted online for free using GitHub Pages. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+### Quick Deploy
+
+1. Enable GitHub Pages in repository settings (Settings → Pages → Source: GitHub Actions)
+2. Push the included workflow file to trigger automatic deployment
+3. Your site will be live at: `https://raymonepping.github.io/MCU_Doomsday_Watchlist/`
+
+The app is fully static (no server required) and includes:
+- All 33 cached poster images
+- Bilingual JSON data
+- Complete reader functionality
+- Personal progress stored in browser LocalStorage
+
 ## License
 
 See [LICENSE](LICENSE) for details.
