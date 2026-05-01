@@ -27,30 +27,66 @@ const blocks = [
   { name: "The Finale", range: [23, 30], color: "#55d68b" },
 ];
 
-// Concept to title mapping - which titles feature which concepts
+// Concept to title mapping - based on mcu_concepts_matrix.md
+// Each array contains the key numbers of titles that feature that concept
 const conceptMap = {
   // Multiversal Mechanics
-  "incursions": [15, 22], // Doctor Strange MoM, The Marvels
-  "anchor-beings": [29], // Deadpool & Wolverine
-  "sacred-timeline": [11, 12, 27], // Loki S1, Loki S2, What If S2
-  "nexus-events": [11, 12], // Loki S1, Loki S2
-  "the-void": [11, 29], // Loki S1, Deadpool & Wolverine
+  "incursions": [11, 17, 18, 21, 22], // Loki, No Way Home, MoM, The Marvels, Deadpool
+  "anchor-beings": [11, 17, 18, 22], // Loki, No Way Home, MoM, Deadpool
+  "sacred-timeline": [1, 3, 8, 11, 19, 21, 22], // Strange, Ragnarok, Endgame, Loki, Quantumania, Marvels, Deadpool
+  "nexus-events": [1, 3, 10, 17, 18, 22], // Strange, Ragnarok, WandaVision, No Way Home, MoM, Deadpool
+  "the-void": [11, 22], // Loki, Deadpool (part of TVA concept)
   
   // Sources of Power
-  "vibranium": [1, 2, 3, 4, 5, 22], // Iron Man through Black Panther, The Marvels
-  "infinity-stones": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14], // Phase 1-3 films
-  "chaos-magic": [10, 15, 18], // WandaVision, Doctor Strange MoM, Agatha
-  "pym-particles": [6, 9, 19], // Ant-Man films, Quantumania
+  "vibranium": [4, 7, 20, 23], // Black Panther, Infinity War, Wakanda Forever, Brave New World
+  "infinity-stones": [7, 8], // Infinity War, Endgame
+  "chaos-magic": [10, 17, 18], // WandaVision, No Way Home, MoM
+  "pym-particles": [6, 8, 19], // Ant-Man & Wasp, Endgame, Quantumania
   
   // Geopolitics & Organizations
-  "tva": [11, 12, 27, 29], // Loki seasons, What If S2, Deadpool
-  "sokovia-accords": [5, 6, 7], // Civil War era
-  "latveria": [], // Not yet introduced (Doomsday/Secret Wars)
-  "quantum-realm": [6, 9, 19], // Ant-Man films
+  "tva": [11, 19, 21, 22], // Loki, Quantumania, The Marvels, Deadpool
+  "sokovia-accords": [5, 11, 19, 23, 24], // Black Widow, Falcon/Winter Soldier, Quantumania, Brave New World, Thunderbolts
+  "latveria": [19, 24], // Quantumania, Thunderbolts (Doom connection)
+  "quantum-realm": [6, 8, 19], // Ant-Man & Wasp, Endgame, Quantumania
   
   // Legacy Threads
-  "stark-legacy": [1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 16, 17], // Iron Man through FFH
-  "new-guard": [13, 14, 16, 17, 20, 21, 23, 24, 25, 26, 28, 30], // Young Avengers era
+  "stark-legacy": [2, 7, 9, 11, 20, 24], // Homecoming, Infinity War, Far From Home, Falcon/Winter Soldier, Wakanda Forever, Thunderbolts
+  "new-guard": [2, 9, 11, 12, 13, 14, 20, 24, 27], // Homecoming, Far From Home, Falcon/WS, Hawkeye, Shang-Chi, Love & Thunder, Wakanda Forever, Thunderbolts, Daredevil
+};
+
+// Concept scores for each title (number of concepts present)
+// Based on mcu_concepts_matrix.md - higher score = more essential for Doomsday prep
+const conceptScores = {
+  1: 2,  // Doctor Strange
+  2: 2,  // Spider-Man: Homecoming
+  3: 2,  // Thor: Ragnarok
+  4: 1,  // Black Panther
+  5: 2,  // Black Widow
+  6: 1,  // Ant-Man and the Wasp
+  7: 3,  // Avengers: Infinity War
+  8: 5,  // Avengers: Endgame ⭐ HIGHEST
+  9: 2,  // Spider-Man: Far From Home
+  10: 2, // WandaVision
+  11: 4, // Loki S1&2 ⭐
+  12: 2, // Hawkeye
+  13: 1, // Shang-Chi
+  14: 1, // Thor: Love and Thunder
+  15: 4, // Loki (duplicate - should be combined with 11)
+  16: 0, // Moon Knight
+  17: 4, // Spider-Man: No Way Home ⭐
+  18: 4, // Doctor Strange MoM ⭐
+  19: 3, // Ant-Man Quantumania
+  20: 3, // Black Panther: Wakanda Forever
+  21: 3, // The Marvels
+  22: 4, // Deadpool & Wolverine ⭐
+  23: 4, // Captain America: Brave New World ⭐
+  24: 3, // Thunderbolts*
+  25: 0, // Fantastic Four (not yet released)
+  26: 0, // Wonder Man
+  27: 2, // Daredevil: Born Again
+  28: 0, // VisionQuest
+  29: 0, // Spider-Man: Brand New Day
+  30: 0, // Avengers: Doomsday
 };
 
 const elements = {
