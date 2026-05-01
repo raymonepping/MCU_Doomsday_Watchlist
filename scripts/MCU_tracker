@@ -1,0 +1,215 @@
+#!/usr/bin/env python3
+"""Track watched MCU Doomsday watchlist entries."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from dataclasses import dataclass
+from datetime import date
+from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+WATCHLIST_PATH = REPO_ROOT / "docs" / "mcu-doomsday-watchlist.md"
+PROGRESS_PATH = REPO_ROOT / "data" / "mcu-watch-progress.json"
+
+HEADING_RE = re.compile(r"^###\s+([B]?\d+)\.\s+(.+?)\s*$")
+META_RE = re.compile(r"^\*(Film|Serie)\s+·\s+(.+?)\*$")
+
+
+@dataclass(frozen=True)
+class Title:
+    key: str
+    title: str
+    kind: str
+    runtime: str
+    bonus: bool
+
+
+def parse_watchlist() -> list[Title]:
+    if not WATCHLIST_PATH.exists():
+        raise SystemExit(f"Watchlist not found: {WATCHLIST_PATH}")
+
+    lines = WATCHLIST_PATH.read_text(encoding="utf-8").splitlines()
+    titles: list[Title] = []
+
+    for index, line in enumerate(lines):
+        heading = HEADING_RE.match(line)
+        if not heading:
+            continue
+
+        key, title = heading.groups()
+        kind = "Unknown"
+        runtime = "unknown runtime"
+
+        for next_line in lines[index + 1 : index + 5]:
+            meta = META_RE.match(next_line)
+            if meta:
+                kind, runtime = meta.groups()
+                break
+
+        titles.append(
+            Title(
+                key=key,
+                title=title,
+                kind=kind,
+                runtime=runtime,
+                bonus=key.startswith("B"),
+            )
+        )
+
+    return titles
+
+
+def load_progress() -> dict[str, str]:
+    if not PROGRESS_PATH.exists():
+        return {}
+
+    try:
+        data = json.loads(PROGRESS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"Progress file is invalid JSON: {PROGRESS_PATH}\n{exc}") from exc
+
+    watched = data.get("watched", {})
+    if not isinstance(watched, dict):
+        raise SystemExit(f"Progress file has an invalid watched map: {PROGRESS_PATH}")
+
+    return {str(key): str(value) for key, value in watched.items()}
+
+
+def save_progress(watched: dict[str, str]) -> None:
+    PROGRESS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "watchlist": str(WATCHLIST_PATH.relative_to(REPO_ROOT)),
+        "updated": date.today().isoformat(),
+        "watched": dict(sorted(watched.items(), key=sort_key)),
+    }
+    PROGRESS_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def sort_key(item: tuple[str, str]) -> tuple[int, int | str]:
+    key = item[0]
+    if key.startswith("B"):
+        return (1, int(key[1:]))
+    return (0, int(key))
+
+
+def find_title(titles: list[Title], query: str) -> Title:
+    normalized = query.casefold().strip()
+
+    for title in titles:
+        if title.key.casefold() == normalized:
+            return title
+
+    matches = [title for title in titles if normalized in title.title.casefold()]
+    if len(matches) == 1:
+        return matches[0]
+
+    if not matches:
+        raise SystemExit(f"No watchlist entry matches: {query}")
+
+    options = "\n".join(f"  {match.key}. {match.title}" for match in matches)
+    raise SystemExit(f"Multiple entries match '{query}':\n{options}")
+
+
+def print_list(titles: list[Title], watched: dict[str, str], include_bonus: bool) -> None:
+    visible = [title for title in titles if include_bonus or not title.bonus]
+    width = max(len(title.key) for title in visible)
+
+    for title in visible:
+        marker = "x" if title.key in watched else " "
+        suffix = f" watched {watched[title.key]}" if title.key in watched else ""
+        print(
+            f"[{marker}] {title.key.rjust(width)}. {title.title} "
+            f"({title.kind}, {title.runtime}){suffix}"
+        )
+
+
+def print_status(titles: list[Title], watched: dict[str, str]) -> None:
+    required = [title for title in titles if not title.bonus]
+    bonus = [title for title in titles if title.bonus]
+    required_watched = sum(1 for title in required if title.key in watched)
+    bonus_watched = sum(1 for title in bonus if title.key in watched)
+
+    print(f"Main watchlist: {required_watched}/{len(required)} watched")
+    print(f"Bonus X-Men:    {bonus_watched}/{len(bonus)} watched")
+
+    next_titles = [title for title in required if title.key not in watched][:3]
+    if next_titles:
+        print("\nNext up:")
+        for title in next_titles:
+            print(f"  {title.key}. {title.title}")
+    else:
+        print("\nMain watchlist complete.")
+
+
+def mark_watched(titles: list[Title], watched: dict[str, str], query: str) -> None:
+    title = find_title(titles, query)
+    watched[title.key] = date.today().isoformat()
+    save_progress(watched)
+    print(f"Marked watched: {title.key}. {title.title}")
+
+
+def mark_unwatched(titles: list[Title], watched: dict[str, str], query: str) -> None:
+    title = find_title(titles, query)
+    if title.key not in watched:
+        print(f"Already unwatched: {title.key}. {title.title}")
+        return
+
+    del watched[title.key]
+    save_progress(watched)
+    print(f"Marked unwatched: {title.key}. {title.title}")
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="MCU_tracker",
+        description="Track watched entries from docs/mcu-doomsday-watchlist.md.",
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    list_parser = subparsers.add_parser("list", help="Show watchlist progress.")
+    list_parser.add_argument(
+        "--bonus",
+        action="store_true",
+        help="Include the optional Fox X-Men bonus titles.",
+    )
+
+    subparsers.add_parser("status", help="Show totals and the next entries.")
+
+    watched_parser = subparsers.add_parser("watched", help="Mark an entry as watched.")
+    watched_parser.add_argument("entry", help="Entry number, bonus key, or title text.")
+
+    unwatched_parser = subparsers.add_parser(
+        "unwatched", help="Mark an entry as not watched."
+    )
+    unwatched_parser.add_argument("entry", help="Entry number, bonus key, or title text.")
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    titles = parse_watchlist()
+    watched = load_progress()
+
+    if args.command == "list":
+        print_list(titles, watched, include_bonus=args.bonus)
+    elif args.command == "status":
+        print_status(titles, watched)
+    elif args.command == "watched":
+        mark_watched(titles, watched, args.entry)
+    elif args.command == "unwatched":
+        mark_unwatched(titles, watched, args.entry)
+    else:
+        parser.error(f"Unsupported command: {args.command}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
