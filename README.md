@@ -1,6 +1,7 @@
 # MCU Doomsday Watchlist
 
 Personal watch tracker for the MCU road to **Avengers: Doomsday** (December 18, 2026).
+<img width="2710" height="1720" alt="image" src="https://github.com/user-attachments/assets/49cf1ee5-8782-4ffb-b233-ab16419ae47d" />
 
 ## Project Structure
 
