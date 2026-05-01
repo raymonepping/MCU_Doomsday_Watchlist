@@ -1,7 +1,7 @@
 # Road to Doomsday
 *Gecorrigeerde & gecomplete MCU kijkgids — 18 december 2026*
 
-28 titels · ~91 uur · ★ essentieel
+29 titels · ~93 uur · ★ essentieel
 
 ---
 
@@ -9,11 +9,11 @@
 
 | Blok | Thema | Titels | Kijktijd |
 |------|-------|--------|---------|
-| 1 | De Erfenis | 7 | ~17u |
+| 1 | De Erfenis | 8 | ~19u |
 | 2 | De Nieuwe Garde | 6 | ~22u |
 | 3 | De Multiversele Breuk | 8 | ~26u |
 | 4 | De Finale | 7 | ~26u |
-| **Totaal** | | **28** | **~91u** |
+| **Totaal** | | **29** | **~93u** |
 | Bonus X-Men | Fox Universe | 3 | ~6u |
 
 ---
@@ -32,7 +32,7 @@ Dit zijn de verhaallijnen die door de hele lijst heen lopen en samenkomen in Doo
 
 ## Blok 1 — De Erfenis: De Fundering
 
-*7 titels · ~17 uur*
+*8 titels · ~19 uur*
 
 De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er niet meer is? Dit blok bouwt de wereld op zoals die was — magisch, technologisch, politiek — zodat de klap van Endgame écht aankomt. Je leert de regels van het MCU kennen op het moment dat ze nog stabiel zijn. Magie bestaat, Vibranium bepaalt mondiale verhoudingen, het Quantum Realm is bereikbaar. Al deze elementen keren terug. Neem de tijd voor dit blok. Het is de basis waarop alles rust.
 
@@ -83,12 +83,22 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 
 - **Wat** — Scott Lang en Hope van Dyne gaan het Quantum Realm in om Hope's moeder te redden, terwijl een onstabiele vrouw hen probeert te stoppen.
 - **Waarom** — Het Quantum Realm is de sleutel tot Endgame's tijdreisoplossing en het fundament van de multiversele mechanica. Ghost speelt later een rol in Thunderbolts. De post-credits scene verbindt direct met Infinity War.
-- **Wanneer** — Direct vóór Infinity War.
+- **Wanneer** — Vóór Ragnarok en Infinity War.
 - **Wie** — Paul Rudd als Scott Lang, Evangeline Lilly als Hope van Dyne, Hannah John-Kamen als Ghost.
 
 ---
 
-### 6. Avengers: Infinity War ★
+### 6. Thor: Ragnarok ★
+*Film · 2u 10m*
+
+- **Wat** — Thor ontdekt dat Odin verdwenen is, verliest Mjölnir aan Hela en moet via Sakaar terugkeren om Asgard te redden.
+- **Waarom** — De directe brug naar Infinity War. Ragnarok verklaart waarom Thor zonder hamer, met één oog en met de overlevenden van Asgard in een ruimteschip begint aan de strijd tegen Thanos. Loki's keuze rond de Tesseract maakt de openingsscène van Infinity War logisch en emotioneel zwaarder. Het laat ook zien dat zelfs godenrijken kunnen vallen — precies het soort machtsvacuüm waar Doom later betekenis aan geeft.
+- **Wanneer** — Direct vóór Infinity War. De laatste scène loopt rechtstreeks door in de eerste scène van Infinity War.
+- **Wie** — Chris Hemsworth als Thor, Tom Hiddleston als Loki, Cate Blanchett als Hela, Tessa Thompson als Valkyrie, Mark Ruffalo als Hulk.
+
+---
+
+### 7. Avengers: Infinity War ★
 *Film · 2u 29m*
 
 - **Wat** — Thanos verzamelt de Infinity Stones om de helft van alle leven in het universum te vernietigen. De Avengers falen.
@@ -98,7 +108,7 @@ De fundering bestaat uit één vraag: wat gaan we verliezen als Tony Stark er ni
 
 ---
 
-### 7. Avengers: Endgame ★
+### 8. Avengers: Endgame ★
 *Film · 3u 1m*
 
 - **Wat** — Vijf jaar na de Snap proberen de overlevende Avengers via tijdreizen de Infinity Stones terug te halen. Tony Stark offert zichzelf op.
@@ -116,7 +126,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 8. Spider-Man: Far From Home ★
+### 9. Spider-Man: Far From Home ★
 *Film · 2u 9m*
 
 - **Wat** — Peter Parker probeert op vakantie te gaan na Endgame, maar wordt opnieuw ingeschakeld. Een nieuwe dreiging verschijnt — of lijkt te verschijnen.
@@ -126,7 +136,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 9. WandaVision ★
+### 10. WandaVision ★
 *Serie · ~5 uur*
 
 - **Wat** — Wanda Maximoff schept in haar verdriet een fictieve realiteit in de stad Westview, gebaseerd op oude sitcoms. De buitenwereld probeert er doorheen te breken.
@@ -136,7 +146,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 10. Falcon & The Winter Soldier ★
+### 11. Falcon & The Winter Soldier ★
 *Serie · ~5 uur*
 
 - **Wat** — Sam Wilson en Bucky Barnes werken samen terwijl Sam worstelt met de vraag of hij het schild van Steve Rogers kan en wil dragen.
@@ -146,7 +156,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 11. Hawkeye
+### 12. Hawkeye
 *Serie · ~4 uur*
 
 - **Wat** — Clint Barton probeert rustig kerst te vieren in New York maar wordt geconfronteerd met zijn verleden als Ronin. Kate Bishop dringt zijn leven binnen.
@@ -156,7 +166,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 12. Shang-Chi and the Legend of the Ten Rings
+### 13. Shang-Chi and the Legend of the Ten Rings
 *Film · 2u 12m*
 
 - **Wat** — Shang-Chi wordt geconfronteerd met zijn vader, de onsterfelijke Xu Wenwu, en een wereld achter een poort die gevaarlijker blijkt dan verwacht.
@@ -166,7 +176,7 @@ Stark is dood. Rogers is oud. Thor is ergens in de ruimte. De wereld heeft nieuw
 
 ---
 
-### 13. Thor: Love and Thunder
+### 14. Thor: Love and Thunder
 *Film · 1u 59m*
 
 - **Wat** — Thor zoekt zijn plek in het universum terwijl een voormalige geliefde zijn hamer terugkrijgt en een Godenslachter de pantheons bedreigt.
@@ -184,7 +194,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 14. Loki — Seizoen 1 & 2 ★
+### 15. Loki — Seizoen 1 & 2 ★
 *Serie · ~10 uur*
 
 - **Wat** — Een variante versie van Loki wordt gevangen genomen door de Time Variance Authority. Hij ontdekt dat de TVA veel meer verbergt dan ze toegeeft.
@@ -194,7 +204,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 15. Moon Knight
+### 16. Moon Knight
 *Serie · ~4 uur*
 
 - **Wat** — Marc Spector ontdekt dat hij de avatar is van de Egyptische maangod Khonshu, terwijl hij ook te maken heeft met dissociatieve identiteitsstoornis.
@@ -204,7 +214,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 16. Spider-Man: No Way Home ★
+### 17. Spider-Man: No Way Home ★
 *Film · 2u 28m*
 
 - **Wat** — Peter vraagt Doctor Strange om een spreuk die de wereld doet vergeten wie Spider-Man is. De spreuk gaat mis en opent de deur naar andere universums.
@@ -214,7 +224,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 17. Doctor Strange in the Multiverse of Madness ★
+### 18. Doctor Strange in the Multiverse of Madness ★
 *Film · 2u 6m*
 
 - **Wat** — Strange reist door het multiversum om America Chavez te beschermen, terwijl de Scarlet Witch elke versie van zichzelf wil vernietigen die in de weg staat.
@@ -224,7 +234,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 18. Ant-Man and the Wasp: Quantumania
+### 19. Ant-Man and the Wasp: Quantumania
 *Film · 2u 5m*
 
 - **Wat** — Scott Lang en zijn familie worden het Quantum Realm ingezogen en ontmoeten Kang de Veroveraar, een tijdreizende heerser die over het universum wil regeren.
@@ -234,7 +244,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 19. Black Panther: Wakanda Forever ★
+### 20. Black Panther: Wakanda Forever ★
 *Film · 2u 41m*
 
 - **Wat** — Wakanda rouwt om T'Challa terwijl een nieuwe dreiging opduikt vanuit de onderwaterwereld Talokan, geleid door de onsterfelijke Namor.
@@ -244,7 +254,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 20. The Marvels
+### 21. The Marvels
 *Film · 1u 45m*
 
 - **Wat** — Carol Danvers, Kamala Khan en Monica Rambeau worden aan elkaar gekoppeld via hun krachten en moeten samenwerken terwijl ze ongewild van positie wisselen.
@@ -254,7 +264,7 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ---
 
-### 21. Deadpool & Wolverine ★
+### 22. Deadpool & Wolverine ★
 *Film · 2u 7m*
 
 - **Wat** — Wade Wilson wordt gerekruteerd door de TVA en reist door de Void — een kerkhof van dode tijdlijnen — samen met een variante versie van Logan.
@@ -266,13 +276,13 @@ Dit is het technische hart van de kijkgids. De Multiverse Saga gaat niet alleen 
 
 ## Blok 4 — De Finale: Fase 6
 
-*6 titels · ~20 uur*
+*7 titels · ~26 uur*
 
 Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de wereld staat op het punt te veranderen. Dit blok is de directe aanloop naar Doomsday — elke titel bouwt een stuk van het front dat in december 2026 samenkomt. Brave New World geeft Sam Wilson zijn mandaat als leider. Thunderbolts assembleert de onwaarschijnlijkste verdediging. De Fantastic Four brengen de man die alles verandert. De rest vult het beeld in van een wereld die probeert te functioneren terwijl de fundamenten trillen.
 
 ---
 
-### 22. Captain America: Brave New World ★
+### 23. Captain America: Brave New World ★
 *Film · 1u 58m*
 
 - **Wat** — Sam Wilson opereert als de nieuwe Captain America terwijl een politiek complot rond de nieuwe Amerikaanse president zich ontvouwt.
@@ -282,7 +292,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 23. Thunderbolts* ★
+### 24. Thunderbolts* ★
 *Film · 2u 7m*
 
 - **Wat** — Een groep overheidsoperatoren — Yelena, Bucky, Ghost, Red Guardian, Taskmaster, John Walker — wordt samengesteld voor een missie die uitloopt op iets veel groters.
@@ -292,7 +302,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 24. The Fantastic Four: First Steps ★
+### 25. The Fantastic Four: First Steps ★
 *Film · 2u 4m*
 
 - **Wat** — De Fantastic Four opereren in een retro-futuristische jaren-zestigwereld op een alternatieve aarde en worden geconfronteerd met een kosmische dreiging.
@@ -302,7 +312,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 25. Wonder Man
+### 26. Wonder Man
 *Serie · ~6 uur*
 
 - **Wat** — Simon Williams, acteur en voormalig Hydra-medewerker, ontdekt dat zijn ionische energie hem buitengewone krachten geeft terwijl Hollywood een vreemd decor blijkt.
@@ -312,7 +322,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 26. Daredevil: Born Again — Seizoen 2
+### 27. Daredevil: Born Again — Seizoen 2
 *Serie · ~6 uur*
 
 - **Wat** — Matt Murdock opereert als Daredevil in een New York dat politiek steeds verder destabiliseert, terwijl Kingpin zijn greep op de stad vergroot.
@@ -322,7 +332,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 27. VisionQuest
+### 28. VisionQuest
 *Serie · ~6 uur · Disney+ late 2026*
 
 - **Wat** — White Vision probeert zijn herinneringen en menselijkheid terug te vinden. Binnen zijn geest verschijnen andere AI-programma's uit het MCU in menselijke gedaante — waaronder Ultron, achter een stevig firewall.
@@ -332,7 +342,7 @@ Alles is gelegd. De tijdlijnen zijn instabiel, de teams zijn gevormd, en de were
 
 ---
 
-### 28. Spider-Man: Brand New Day ★
+### 29. Spider-Man: Brand New Day ★
 *Film · ~2u 15m · bioscoop 31 juli 2026*
 
 - **Wat** — Peter Parker herstart zijn leven. De wereld is hem vergeten na de spreuk van No Way Home. Hij moet opnieuw beginnen — nieuwe vrienden, nieuwe vijanden, nieuwe identiteit.

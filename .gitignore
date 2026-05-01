@@ -221,4 +221,5 @@ __marimo__/
 data/mcu-watch-progress.json
 __pycache__/
 *.py[cod]
+.DS_Store
 >>>>>>> e0f9f18 (01/05/2026 - Updated configuration and fixed bugs)

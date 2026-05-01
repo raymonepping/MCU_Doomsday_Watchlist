@@ -115,6 +115,11 @@ def find_title(titles: list[Title], query: str) -> Title:
     raise SystemExit(f"Multiple entries match '{query}':\n{options}")
 
 
+def parse_entries(entry: str) -> list[str]:
+    entries = [part.strip() for part in entry.split(",")]
+    return [part for part in entries if part]
+
+
 def print_list(titles: list[Title], watched: dict[str, str], include_bonus: bool) -> None:
     visible = [title for title in titles if include_bonus or not title.bonus]
     width = max(len(title.key) for title in visible)
@@ -146,22 +151,57 @@ def print_status(titles: list[Title], watched: dict[str, str]) -> None:
         print("\nMain watchlist complete.")
 
 
-def mark_watched(titles: list[Title], watched: dict[str, str], query: str) -> None:
-    title = find_title(titles, query)
-    watched[title.key] = date.today().isoformat()
+def search_titles(titles: list[Title], watched: dict[str, str], query: str) -> None:
+    normalized = query.casefold().strip()
+    if not normalized:
+        raise SystemExit("Search query cannot be empty.")
+
+    matches = [title for title in titles if normalized in title.title.casefold()]
+    if not matches:
+        raise SystemExit(f"No watchlist entries match: {query}")
+
+    width = max(len(title.key) for title in matches)
+    for title in matches:
+        marker = "x" if title.key in watched else " "
+        bonus = " bonus" if title.bonus else ""
+        suffix = f" watched {watched[title.key]}" if title.key in watched else ""
+        print(
+            f"[{marker}] {title.key.rjust(width)}. {title.title} "
+            f"({title.kind}, {title.runtime}{bonus}){suffix}"
+        )
+
+
+def mark_watched(titles: list[Title], watched: dict[str, str], entry: str) -> None:
+    matched_titles = [find_title(titles, query) for query in parse_entries(entry)]
+    if not matched_titles:
+        raise SystemExit("No watchlist entries provided.")
+
+    watched_on = date.today().isoformat()
+    for title in matched_titles:
+        watched[title.key] = watched_on
+
     save_progress(watched)
-    print(f"Marked watched: {title.key}. {title.title}")
+    for title in matched_titles:
+        print(f"Marked watched: {title.key}. {title.title}")
 
 
-def mark_unwatched(titles: list[Title], watched: dict[str, str], query: str) -> None:
-    title = find_title(titles, query)
-    if title.key not in watched:
-        print(f"Already unwatched: {title.key}. {title.title}")
-        return
+def mark_unwatched(titles: list[Title], watched: dict[str, str], entry: str) -> None:
+    matched_titles = [find_title(titles, query) for query in parse_entries(entry)]
+    if not matched_titles:
+        raise SystemExit("No watchlist entries provided.")
 
-    del watched[title.key]
-    save_progress(watched)
-    print(f"Marked unwatched: {title.key}. {title.title}")
+    changed = False
+    for title in matched_titles:
+        if title.key not in watched:
+            print(f"Already unwatched: {title.key}. {title.title}")
+            continue
+
+        del watched[title.key]
+        changed = True
+        print(f"Marked unwatched: {title.key}. {title.title}")
+
+    if changed:
+        save_progress(watched)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -180,13 +220,22 @@ def build_parser() -> argparse.ArgumentParser:
 
     subparsers.add_parser("status", help="Show totals and the next entries.")
 
+    search_parser = subparsers.add_parser(
+        "search", help="Find entries and show their timeline position."
+    )
+    search_parser.add_argument("query", help="Title text to search for.")
+
     watched_parser = subparsers.add_parser("watched", help="Mark an entry as watched.")
-    watched_parser.add_argument("entry", help="Entry number, bonus key, or title text.")
+    watched_parser.add_argument(
+        "entry", help="Entry number, bonus key, title text, or comma-separated entries."
+    )
 
     unwatched_parser = subparsers.add_parser(
         "unwatched", help="Mark an entry as not watched."
     )
-    unwatched_parser.add_argument("entry", help="Entry number, bonus key, or title text.")
+    unwatched_parser.add_argument(
+        "entry", help="Entry number, bonus key, title text, or comma-separated entries."
+    )
 
     return parser
 
@@ -201,6 +250,8 @@ def main(argv: list[str] | None = None) -> int:
         print_list(titles, watched, include_bonus=args.bonus)
     elif args.command == "status":
         print_status(titles, watched)
+    elif args.command == "search":
+        search_titles(titles, watched, args.query)
     elif args.command == "watched":
         mark_watched(titles, watched, args.entry)
     elif args.command == "unwatched":
