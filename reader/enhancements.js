@@ -108,6 +108,10 @@ function addConceptBadges() {
       const cardBody = card.querySelector('.card-body');
       if (cardBody) {
         cardBody.appendChild(badge);
+      }
+    }
+  });
+}
 
 // ===== TRIVIA & EASTER EGGS =====
 function addTriviaToCards() {
@@ -207,11 +211,6 @@ function addTriviaToCards() {
     if (cardActions) {
       cardActions.appendChild(toggleButton);
       cardActions.appendChild(triviaContent);
-    }
-  });
-}
-
-      }
     }
   });
 }
