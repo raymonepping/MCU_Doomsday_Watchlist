@@ -1,5 +1,5 @@
 # Road to Doomsday
-*Gecorrigeerde & gecomplete MCU kijkgids — 18 december 2026*
+*Complete MCU kijkgids — 18 december 2026*
 
 29 titels · ~93 uur · ★ essentieel
 

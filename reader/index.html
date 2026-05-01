@@ -9,17 +9,39 @@
   <body>
     <div class="shell">
       <header class="masthead">
-        <div class="brand-strip" aria-label="MCU Doomsday Watchlist">
-          <span class="brand-marvel">Marvel</span>
-          <span class="brand-mcu">MCU</span>
+        <div class="brand-strip">
+          <img
+            class="brand-logo"
+            src="./assets/Marvel_Logo.svg"
+            alt="Marvel"
+            width="1000"
+            height="402"
+          />
         </div>
         <div class="masthead-copy">
+          <img
+            class="doomsday-logo"
+            src="./assets/avengers-doomsday.jpg"
+            alt="Avengers Doomsday"
+            width="5120"
+            height="2880"
+          />
           <p class="eyebrow">Road to Doomsday</p>
           <h1>MCU Doomsday Tracker</h1>
           <p>
             Track the watchlist, search the timeline, and keep your current
             position stored locally in this browser.
           </p>
+          <div class="language-switcher" aria-label="Language">
+            <button class="language-button is-active" type="button" data-locale="en">
+              <span aria-hidden="true">🇺🇸🇬🇧</span>
+              <span>English</span>
+            </button>
+            <button class="language-button" type="button" data-locale="nl">
+              <span aria-hidden="true">🇳🇱</span>
+              <span>Nederlands</span>
+            </button>
+          </div>
         </div>
       </header>
 

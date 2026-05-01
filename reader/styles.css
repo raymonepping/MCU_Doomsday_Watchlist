@@ -11,6 +11,7 @@
   --blue: #5fb4ff;
   --green: #55d68b;
   --shadow: 0 18px 60px rgb(0 0 0 / 0.38);
+  --masthead-logo-width: clamp(170px, 18vw, 260px);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -35,7 +36,7 @@ input {
 }
 
 .shell {
-  width: min(1440px, 100%);
+  width: min(1960px, 100%);
   margin: 0 auto;
   padding: 24px;
 }
@@ -57,45 +58,46 @@ input {
 
 .brand-strip {
   display: grid;
-  place-content: center;
+  align-content: center;
+  justify-items: center;
   min-height: 190px;
   padding: 18px;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgb(255 255 255 / 0.16) 0 1px,
-      transparent 1px 34px
-    ),
-    var(--red);
-  text-transform: uppercase;
+  background: #111217;
 }
 
-.brand-marvel {
+.brand-logo {
   display: block;
-  width: min-content;
-  padding: 5px 11px 4px;
-  border: 3px solid #fff;
-  color: #fff;
-  font-size: clamp(2.1rem, 5vw, 4rem);
-  font-weight: 950;
-  line-height: 0.9;
-  letter-spacing: 0;
-}
-
-.brand-mcu {
-  display: block;
-  margin-top: 8px;
-  color: #fff;
-  font-size: clamp(1.25rem, 3vw, 2.1rem);
-  font-weight: 850;
-  letter-spacing: 0;
-  text-align: right;
+  width: min(100%, var(--masthead-logo-width));
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: 6px;
+  background: #050506;
+  object-fit: contain;
+  padding: 12px;
+  box-shadow: 0 16px 44px rgb(0 0 0 / 0.44);
 }
 
 .masthead-copy {
+  position: relative;
   display: grid;
   align-content: center;
   padding: clamp(22px, 4vw, 38px);
+  padding-right: calc(var(--masthead-logo-width) + 52px);
+}
+
+.doomsday-logo {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: var(--masthead-logo-width);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 16px 44px rgb(0 0 0 / 0.44);
 }
 
 .eyebrow,
@@ -124,16 +126,42 @@ h1 {
 
 .masthead-copy p:last-child {
   max-width: 660px;
-  margin-bottom: 0;
+  margin-bottom: 18px;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.45;
 }
 
+.language-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.language-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  background: #111217;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.language-button.is-active {
+  border-color: rgb(230 36 41 / 0.86);
+  background: var(--red);
+  color: #fff;
+}
+
 .layout {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 24px;
+  grid-template-columns: 310px minmax(1080px, 1fr);
+  gap: 28px;
   align-items: start;
 }
 
@@ -302,14 +330,14 @@ input[type="search"]:focus {
 
 .timeline-card {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) 110px;
-  gap: 18px;
+  grid-template-columns: 68px minmax(0, 1fr) 118px;
+  gap: 22px;
   align-items: start;
   border: 1px solid var(--line);
   background:
     linear-gradient(90deg, rgb(230 36 41 / 0.12), transparent 22%),
     var(--panel);
-  padding: 18px;
+  padding: 20px;
   box-shadow: 0 10px 36px rgb(0 0 0 / 0.28);
 }
 
@@ -392,6 +420,10 @@ h3 {
     min-height: 150px;
   }
 
+  .masthead-copy {
+    padding-right: calc(var(--masthead-logo-width) + 52px);
+  }
+
   .sidebar {
     position: static;
   }
@@ -408,6 +440,17 @@ h3 {
 
   .brand-strip {
     min-height: 132px;
+  }
+
+  .masthead-copy {
+    padding-right: clamp(22px, 4vw, 38px);
+  }
+
+  .doomsday-logo {
+    position: static;
+    transform: none;
+    width: min(100%, var(--masthead-logo-width));
+    margin-bottom: 18px;
   }
 
   .timeline-card {

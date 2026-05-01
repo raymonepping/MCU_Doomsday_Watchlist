@@ -12,10 +12,15 @@ Open `http://localhost:4173`.
 
 ## Refresh Data
 
-The app reads from `reader/data/watchlist.json`. Regenerate it after editing the markdown guide:
+The app reads from:
+
+- `reader/data/watchlist.en.json`
+- `reader/data/watchlist.nl.json`
+
+English is the default language. Regenerate both data files after editing either markdown guide:
 
 ```bash
 npm run build:data
 ```
 
-Read status is stored in browser `localStorage`, so it stays personal to the browser and is not committed to Git.
+Read status and the selected language are stored in browser `localStorage`, so they stay personal to the browser and are not committed to Git.
