@@ -67,17 +67,45 @@ Progress is stored locally in `data/mcu-watch-progress.json`. This file is ignor
 
 ### 🌐 Reader App (`./reader`)
 
-Interactive browser-based reader with search, progress tracking, and language switching.
+Interactive browser-based reader with comprehensive progress tracking, multiple view modes, and advanced filtering.
 
-#### Features
+#### Core Features
 
-- ✅ **Visual Progress Tracking** — Mark entries as seen with checkboxes
-- 🔍 **Real-time Search** — Filter titles instantly as you type
+- ✅ **Visual Progress Tracking** — Mark entries as seen with one click
+- 🔍 **Real-time Search** — Filter titles instantly across all fields
 - 🌍 **Bilingual Support** — Switch between English and Dutch
 - 🎬 **Marvel Integration** — Direct links to official Marvel.com pages
-- 🖼️ **Local Image Caching** — Download and cache Marvel poster artwork
-- 💾 **Browser Storage** — Seen status persists locally (not synced to Git)
-- 📱 **Responsive Design** — Works seamlessly on desktop and mobile
+- 🖼️ **Local Image Caching** — 33 cached Marvel poster images
+- 💾 **Browser Storage** — Progress persists locally via LocalStorage
+- 📱 **Responsive Design** — Optimized for desktop and mobile
+
+#### Phase 1: Essential Tools
+
+- 📥 **Export/Import Progress** — Backup and restore your watch state as JSON
+- ⏱️ **Watch Time Calculator** — See remaining hours to complete the watchlist
+- 🌓 **Dark/Light Mode** — Toggle between themes with persistent preference
+- ⏳ **Release Date Countdown** — Days remaining until December 18, 2026
+
+#### Phase 2: Polish & Delight
+
+- 📊 **Watch Statistics Dashboard** — Track films watched, series watched, total hours, and completion percentage
+- ✨ **Smooth Animations** — Fade-in effects, hover transforms, and progress bar transitions
+- 🎉 **Confetti Celebration** — 150-particle physics-based animation when you complete the main watchlist
+
+#### Phase 3: Advanced Features
+
+- 📋 **Timeline View: Blocks** — Switch between detailed card view and high-level block overview
+- 🎭 **Character Tracker** — Filter by 13 main characters (Thor, Loki, Spider-Man, etc.)
+- 🔎 **Multi-field Search** — Character filter searches across title, cast, descriptions, and context
+
+#### Phase 4: Narrative Structure
+
+- 🎬 **Block/Phase Filtering** — Filter timeline by narrative arcs:
+  - **Block 1: The Legacy** (titles 1-8) — Red theme
+  - **Block 2: The New Guard** (titles 9-14) — Gold theme
+  - **Block 3: Multiverse Fracture** (titles 15-22) — Blue theme
+  - **Block 4: The Finale** (titles 23-30) — Green theme
+- 🎨 **Color-coded Blocks** — Each block has its own theme color and progress tracking
 
 #### Running the Reader
 
