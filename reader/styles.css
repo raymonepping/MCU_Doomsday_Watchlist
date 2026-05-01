@@ -587,6 +587,13 @@ h3 {
 
   .sidebar {
     position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  /* Make sidebar panels collapsible on tablet */
+  .panel {
+    margin-bottom: 16px;
   }
 }
 
@@ -614,26 +621,198 @@ h3 {
     margin-bottom: 18px;
   }
 
+  /* Improve touch targets for mobile */
+  .language-button {
+    min-height: 44px;
+    padding: 8px 14px;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
+
+  /* Better mobile timeline cards */
   .timeline-card {
     grid-template-columns: 52px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
   }
 
   .position {
     width: 48px;
+    font-size: 1rem;
   }
 
   .card-side {
     grid-column: 1 / -1;
+    margin-top: 12px;
   }
 
+  /* Mobile-friendly filters */
   .filter-row {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
+  .chip,
+  .ghost-button,
+  .read-button {
+    min-height: 44px;
+    font-size: 0.95rem;
+  }
+
+  /* Better mobile search */
+  input[type="search"] {
+    min-height: 48px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Mobile-friendly section headings */
   .section-heading {
     align-items: stretch;
     flex-direction: column;
+    gap: 12px;
   }
+
+  .section-heading h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Mobile export buttons */
+  .export-buttons {
+    gap: 10px;
+  }
+
+  .export-button,
+  .import-button {
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  /* Mobile character filters */
+  .character-chip {
+    min-height: 44px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile block filters */
+  .block-chip {
+    min-height: 48px;
+    padding: 10px 14px;
+  }
+
+  .block-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .block-name {
+    font-size: 0.9rem;
+  }
+
+  /* Mobile stats grid */
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* Mobile progress ring */
+  .progress-ring {
+    width: 140px;
+    height: 140px;
+  }
+
+  .progress-ring span {
+    font-size: 1.6rem;
+  }
+
+  /* Mobile countdown */
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  /* Mobile timeline view */
+  .timeline-view-toggle {
+    min-height: 44px;
+  }
+
+  .block-section-header {
+    padding: 14px 16px;
+  }
+
+  .block-title {
+    font-size: 1.1rem;
+  }
+
+  /* Mobile poster grid */
+  .poster-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* Mobile scroll button adjustments */
+@media (max-width: 640px) {
+  .scroll-to-top {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.6rem;
+  }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 380px) {
+  .masthead-copy h1 {
+    font-size: 1.4rem;
+  }
+
+  .masthead-copy p {
+    font-size: 0.9rem;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-switcher {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .language-button {
+    width: 100%;
+  }
+
+  .poster-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .scroll-to-top {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 1.4rem;
+  }
+}
 
 /* Countdown Widget */
 .countdown-widget {
@@ -735,7 +914,6 @@ h3 {
 .export-button span,
 .import-button span {
   font-size: 1.2rem;
-}
 }
 
 /* Statistics Panel */
@@ -1164,4 +1342,77 @@ h3 {
   .block-item-title {
     font-size: 0.85rem;
   }
+}
+
+/* Mobile Enhancements */
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  background: var(--panel-strong);
+  color: var(--red);
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.4);
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgb(230 36 41 / 0.4);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* Search clear button */
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: none;
+}
+
+.search-clear:hover {
+  background: var(--muted);
+  color: var(--bg);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input[type="search"] {
+  padding-right: 48px;
 }

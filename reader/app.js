@@ -670,3 +670,93 @@ loadWatchlist().then(() => {
 }).catch((error) => {
   elements.timeline.innerHTML = `<p class="load-error">${error.message}</p>`;
 });
+
+
+// Mobile enhancements
+function initMobileEnhancements() {
+  // Create scroll-to-top button
+  const scrollButton = document.createElement("button");
+  scrollButton.id = "scrollToTop";
+  scrollButton.className = "scroll-to-top";
+  scrollButton.setAttribute("aria-label", "Scroll to top");
+  scrollButton.innerHTML = "↑";
+  document.body.appendChild(scrollButton);
+
+  // Show/hide scroll button based on scroll position
+  let scrollTimeout;
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      if (window.scrollY > 500) {
+        scrollButton.classList.add("visible");
+      } else {
+        scrollButton.classList.remove("visible");
+      }
+    }, 100);
+  });
+
+  // Scroll to top on click
+  scrollButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Prevent zoom on double-tap for buttons (iOS)
+  const buttons = document.querySelectorAll("button, .chip, .character-chip, .block-chip");
+  buttons.forEach(button => {
+    button.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      button.click();
+    }, { passive: false });
+  });
+
+  // Add haptic feedback for mobile interactions (if supported)
+  if ("vibrate" in navigator) {
+    const interactiveElements = document.querySelectorAll("button, .chip, .character-chip, .block-chip, .read-button");
+    interactiveElements.forEach(element => {
+      element.addEventListener("click", () => {
+        navigator.vibrate(10); // Short vibration
+      });
+    });
+  }
+
+  // Improve mobile search experience
+  const searchInput = elements.searchInput;
+  if (searchInput) {
+    // Clear search on escape key
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        searchInput.value = "";
+        searchInput.blur();
+        state.query = "";
+        renderTimeline();
+      }
+    });
+
+    // Add clear button for mobile
+    const clearButton = document.createElement("button");
+    clearButton.className = "search-clear";
+    clearButton.setAttribute("aria-label", "Clear search");
+    clearButton.innerHTML = "×";
+    clearButton.style.display = "none";
+    searchInput.parentElement.appendChild(clearButton);
+
+    searchInput.addEventListener("input", () => {
+      clearButton.style.display = searchInput.value ? "block" : "none";
+    });
+
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.focus();
+      state.query = "";
+      clearButton.style.display = "none";
+      renderTimeline();
+    });
+  }
+}
+
+// Initialize mobile enhancements after DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMobileEnhancements);
+} else {
+  initMobileEnhancements();
+}
