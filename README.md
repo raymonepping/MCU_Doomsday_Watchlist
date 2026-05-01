@@ -124,6 +124,19 @@ Interactive browser-based reader with comprehensive progress tracking, multiple 
 
 See [MOBILE_OPTIMIZATION.md](./MOBILE_OPTIMIZATION.md) for complete mobile optimization guide.
 
+#### Phase 6: Lore & Concepts Filter
+
+- 🌌 **Multiversal Mechanics** — Incursions, Anchor Beings, Sacred Timeline, Nexus Events, The Void
+- ⚡ **Sources of Power** — Vibranium, Infinity Stones, Chaos Magic, Pym Particles
+- 🌍 **Geopolitics & Organizations** — TVA, Sokovia Accords, Latveria, Quantum Realm
+- 🦸 **Legacy Threads** — Stark's Legacy, The New Guard
+- 🎨 **Category-Specific Colors** — Purple (Multiversal), Yellow (Power), Green (Geopolitics), Red (Legacy)
+- 🔍 **Smart Filtering** — Click any concept to see only titles featuring that lore element
+- 📱 **Mobile Optimized** — 40px touch targets, responsive layout for all screen sizes
+- 🎯 **15 Key Concepts** — Curated list of essential MCU mechanics leading to Doomsday
+
+Understand the "How" and "Where" of Doomsday by exploring the deeper MCU lore and mechanics.
+
 #### Running the Reader
 
 Start the development server:
