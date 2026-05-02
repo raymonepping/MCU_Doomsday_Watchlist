@@ -883,14 +883,57 @@ function addThematicFilters() {
 function filterByTheme(theme) {
   console.log('[Convergence] Filtering by theme:', theme);
   
+  // Toggle chip active state
   const chips = document.querySelectorAll('.theme-chip');
+  let isActive = false;
   chips.forEach(chip => {
     if (chip.textContent.trim() === theme) {
       chip.classList.toggle('active');
+      isActive = chip.classList.contains('active');
     }
   });
   
-  toast.show(`Filtering by theme: ${theme}`, 'info', 3000);
+  // Filter cards
+  const cards = document.querySelectorAll('.timeline-card');
+  let visibleCount = 0;
+  
+  cards.forEach(card => {
+    const key = card.dataset.key;
+    const data = convergenceData[key];
+    
+    if (!data) {
+      card.style.display = '';
+      return;
+    }
+    
+    // Check if any active theme filters match
+    const activeChips = document.querySelectorAll('.theme-chip.active');
+    if (activeChips.length === 0) {
+      // No filters active, show all
+      card.style.display = '';
+      visibleCount++;
+    } else {
+      // Check if card matches any active theme
+      let matches = false;
+      activeChips.forEach(activeChip => {
+        const activeTheme = activeChip.textContent.trim();
+        if (data.topic && data.topic.toLowerCase().includes(activeTheme.toLowerCase())) {
+          matches = true;
+        }
+      });
+      
+      card.style.display = matches ? '' : 'none';
+      if (matches) visibleCount++;
+    }
+  });
+  
+  // Update message
+  const activeFilters = document.querySelectorAll('.theme-chip.active').length;
+  if (activeFilters === 0) {
+    toast.show(`Showing all titles`, 'info', 2000);
+  } else {
+    toast.show(`Filtering by ${activeFilters} theme(s): ${visibleCount} titles match`, 'info', 3000);
+  }
 }
 
 // Initialize Phase 15
