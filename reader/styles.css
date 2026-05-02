@@ -1430,9 +1430,7 @@ h3 {
 
 /* Concept Filters */
 .concept-filters {
-  margin-top: 24px;
   padding: 18px;
-  border-top: 1px solid var(--line);
 }
 
 .concept-category {

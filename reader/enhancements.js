@@ -2676,6 +2676,7 @@ function initParallax() {
 // ===== CONCEPT BADGES =====
 function addConceptBadges() {
   const cards = document.querySelectorAll('.timeline-card');
+  let badgesAdded = 0;
   
   cards.forEach(card => {
     // Check if badge already exists
@@ -2693,9 +2694,12 @@ function addConceptBadges() {
       const cardBody = card.querySelector('.card-body');
       if (cardBody) {
         cardBody.appendChild(badge);
+        badgesAdded++;
       }
     }
   });
+  
+  console.log(`[Concepts] Added ${badgesAdded} concept badges to cards`);
 }
 
 // ===== TRIVIA & EASTER EGGS =====
@@ -3299,11 +3303,15 @@ function initBadgeToggles() {
       if (isActive) {
         document.body.classList.add(bodyClass);
         localStorage.setItem(bodyClass, 'true');
-        toast.show(`${button.querySelector('.toggle-label').textContent} badges visible`, 'success', 2000);
+        console.log(`[Badges] ${badgeType} badges enabled - body class added:`, bodyClass);
+        console.log(`[Badges] Body classes:`, document.body.className);
+        console.log(`[Badges] Visible ${badgeType} badges:`, document.querySelectorAll(`.${badgeType === 'concepts' ? 'concept' : badgeType === 'saga' ? 'saga-arc' : 'governance'}-badge:not([style*="display: none"])`).length);
+        toast.show(`${button.textContent.trim()} badges visible`, 'success', 2000);
       } else {
         document.body.classList.remove(bodyClass);
         localStorage.setItem(bodyClass, 'false');
-        toast.show(`${button.querySelector('.toggle-label').textContent} badges hidden`, 'info', 2000);
+        console.log(`[Badges] ${badgeType} badges disabled - body class removed:`, bodyClass);
+        toast.show(`${button.textContent.trim()} badges hidden`, 'info', 2000);
       }
     });
   });
