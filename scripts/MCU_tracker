@@ -24,6 +24,7 @@ class Title:
     kind: str
     runtime: str
     bonus: bool
+    chronological_order: int
 
 
 def parse_watchlist() -> list[Title]:
@@ -49,6 +50,7 @@ def parse_watchlist() -> list[Title]:
                 kind=str(item.get("kind", "Unknown")),
                 runtime=str(item.get("runtime", "unknown runtime")),
                 bonus=bool(item.get("bonus", False)),
+                chronological_order=int(item.get("chronologicalOrder", item.get("key", "0"))),
             )
         )
 
@@ -111,15 +113,33 @@ def parse_entries(entry: str) -> list[str]:
     return [part for part in entries if part]
 
 
-def print_list(titles: list[Title], watched: dict[str, str], include_bonus: bool) -> None:
+def print_list(
+    titles: list[Title],
+    watched: dict[str, str],
+    include_bonus: bool,
+    order: str = "release"
+) -> None:
     visible = [title for title in titles if include_bonus or not title.bonus]
-    width = max(len(title.key) for title in visible)
+    
+    # Sort by chronological order if requested
+    if order == "chronological":
+        visible = sorted(visible, key=lambda t: t.chronological_order)
+    
+    # Calculate width for position display
+    if order == "chronological":
+        width = max(len(str(title.chronological_order)) for title in visible)
+    else:
+        width = max(len(title.key) for title in visible)
 
     for title in visible:
         marker = "x" if title.key in watched else " "
         suffix = f" watched {watched[title.key]}" if title.key in watched else ""
+        
+        # Display position based on order
+        position = str(title.chronological_order) if order == "chronological" else title.key
+        
         print(
-            f"[{marker}] {title.key.rjust(width)}. {title.title} "
+            f"[{marker}] {position.rjust(width)}. {title.title} "
             f"({title.kind}, {title.runtime}){suffix}"
         )
 
@@ -208,6 +228,12 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Include the optional Fox X-Men bonus titles.",
     )
+    list_parser.add_argument(
+        "--order",
+        choices=["release", "chronological"],
+        default="release",
+        help="Sort order: 'release' (default) or 'chronological'.",
+    )
 
     subparsers.add_parser("status", help="Show totals and the next entries.")
 
@@ -238,7 +264,7 @@ def main(argv: list[str] | None = None) -> int:
     watched = load_progress()
 
     if args.command == "list":
-        print_list(titles, watched, include_bonus=args.bonus)
+        print_list(titles, watched, include_bonus=args.bonus, order=args.order)
     elif args.command == "status":
         print_status(titles, watched)
     elif args.command == "search":
