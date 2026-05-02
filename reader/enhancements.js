@@ -1,4 +1,276 @@
 /* ============================================
+   PHASE 13: ENHANCED ANIMATIONS
+   ============================================ */
+
+// Enhanced Parallax Scrolling
+function initEnhancedParallax() {
+  console.log('Initializing enhanced parallax...');
+  
+  const parallaxElements = [
+    { selector: '.doomsday-logo', speed: 0.3 },
+    { selector: '.site-header', speed: 0.15 },
+    { selector: '.phase-timeline-bar', speed: 0.1 }
+  ];
+  
+  let ticking = false;
+  
+  function updateParallax() {
+    const scrolled = window.scrollY;
+    
+    parallaxElements.forEach(({ selector, speed }) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        const offset = scrolled * speed;
+        element.style.transform = `translateY(${offset}px)`;
+      }
+    });
+    
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+// Intersection Observer for fade-in animations
+function initScrollAnimations() {
+  console.log('Initializing scroll animations...');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Optionally unobserve after animation
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Observe sections
+  const sections = document.querySelectorAll('.controls-panel, .status-panel, .phase-timeline-bar');
+  sections.forEach(section => {
+    section.classList.add('fade-in-section');
+    observer.observe(section);
+  });
+}
+
+// Smooth scroll to element
+function smoothScrollTo(element, offset = 0) {
+  const targetPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+  
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
+}
+
+// Add smooth scroll to anchor links
+function initSmoothScrollLinks() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        smoothScrollTo(target, 80);
+      }
+    });
+  });
+}
+
+// Animated counter for stats
+function animateCounter(element, start, end, duration = 1000) {
+  const range = end - start;
+  const increment = range / (duration / 16); // 60fps
+  let current = start;
+  
+  const timer = setInterval(() => {
+    current += increment;
+    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+      current = end;
+      clearInterval(timer);
+    }
+    element.textContent = Math.round(current);
+  }, 16);
+}
+
+// Animate stats when they come into view
+function initStatsAnimation() {
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statValue = entry.target.querySelector('.stat-value');
+        if (statValue && !statValue.dataset.animated) {
+          const endValue = parseInt(statValue.textContent);
+          statValue.dataset.animated = 'true';
+          animateCounter(statValue, 0, endValue, 1500);
+        }
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  document.querySelectorAll('.stat-item').forEach(stat => {
+    statsObserver.observe(stat);
+  });
+}
+
+// Add ripple effect to buttons
+function addRippleEffect(event) {
+  const button = event.currentTarget;
+  const ripple = document.createElement('span');
+  const rect = button.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
+  const x = event.clientX - rect.left - size / 2;
+  const y = event.clientY - rect.top - size / 2;
+  
+  ripple.style.width = ripple.style.height = `${size}px`;
+  ripple.style.left = `${x}px`;
+  ripple.style.top = `${y}px`;
+  ripple.classList.add('ripple');
+  
+  button.appendChild(ripple);
+  
+  setTimeout(() => ripple.remove(), 600);
+}
+
+// Apply ripple to all buttons
+function initRippleEffects() {
+  const buttons = document.querySelectorAll('.btn, button, .phase-chip, .filter-chip');
+  buttons.forEach(button => {
+    button.addEventListener('click', addRippleEffect);
+  });
+}
+
+// Stagger card animations on filter change
+function staggerCardAnimations() {
+  const cards = document.querySelectorAll('.timeline-card');
+  cards.forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.05}s`;
+    card.classList.remove('timeline-card');
+    // Force reflow
+    void card.offsetWidth;
+    card.classList.add('timeline-card');
+  });
+}
+
+// Enhanced progress ring animation
+function animateProgressRing(ring, percent) {
+  const circle = ring.querySelector('.progress-ring-circle');
+  if (!circle) return;
+  
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+  
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+  
+  // Trigger animation
+  setTimeout(() => {
+    circle.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    circle.style.strokeDashoffset = offset;
+  }, 100);
+}
+
+// Animate all progress rings
+function initProgressRingAnimations() {
+  const rings = document.querySelectorAll('.progress-ring');
+  rings.forEach(ring => {
+    const percentText = ring.querySelector('.progress-text');
+    if (percentText) {
+      const percent = parseInt(percentText.textContent);
+      animateProgressRing(ring, percent);
+    }
+  });
+}
+
+// Page transition effect
+function initPageTransition() {
+  document.body.classList.add('page-transition');
+}
+
+// Scroll indicator bounce
+function initScrollIndicator() {
+  const indicator = document.querySelector('.scroll-indicator');
+  if (!indicator) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      indicator.style.opacity = '0';
+    } else {
+      indicator.style.opacity = '1';
+    }
+  }, { passive: true });
+}
+
+// Enhanced card entrance on scroll
+function initCardEntranceAnimations() {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  document.querySelectorAll('.timeline-card').forEach(card => {
+    card.style.animationPlayState = 'paused';
+    cardObserver.observe(card);
+  });
+}
+
+// Micro-interaction: Button press feedback
+function initButtonFeedback() {
+  document.addEventListener('click', (e) => {
+    const button = e.target.closest('button, .btn, .phase-chip, .filter-chip');
+    if (button) {
+      button.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        button.style.transform = '';
+      }, 100);
+    }
+  });
+}
+
+// Initialize all Phase 13 animations
+function initEnhancedAnimations() {
+  console.log('Initializing Phase 13: Enhanced Animations...');
+  
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    console.log('Reduced motion preferred - skipping complex animations');
+    return;
+  }
+  
+  initEnhancedParallax();
+  initScrollAnimations();
+  initSmoothScrollLinks();
+  initStatsAnimation();
+  initRippleEffects();
+  initProgressRingAnimations();
+  initPageTransition();
+  initScrollIndicator();
+  initCardEntranceAnimations();
+  initButtonFeedback();
+  
+  console.log('Phase 13 animations initialized successfully!');
+}
+
+/* ============================================
    PHASE 12: INTERACTIVE FLIP CARDS
    ============================================ */
 
@@ -1747,6 +2019,13 @@ function initializeTimelineBar() {
     if (typeof window.state === 'undefined' || !window.state.items) return;
     
     const totalTitles = window.state.items.filter(item => !item.bonus).length;
+
+// Initialize Phase 13: Enhanced Animations
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEnhancedAnimations);
+} else {
+  initEnhancedAnimations();
+}
     const watchedTitles = window.state.items.filter(item => !item.bonus && item.watched).length;
     const progressPercent = totalTitles > 0 ? (watchedTitles / totalTitles) * 100 : 0;
     
