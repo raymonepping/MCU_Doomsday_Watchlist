@@ -2110,3 +2110,362 @@ button {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+/* ============================================
+   PHASE 14: PWA SUPPORT STYLES
+   ============================================ */
+
+/* Install Button */
+.install-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #8b0000, #c41e3a);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.install-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(139, 0, 0, 0.5);
+}
+
+.install-btn:active {
+  transform: translateY(-2px);
+}
+
+.install-icon {
+  font-size: 1.5rem;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Update Notification */
+.update-notification {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.98), rgba(40, 40, 60, 0.98));
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+  max-width: 400px;
+  transform: translateX(500px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.update-notification.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.update-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.update-icon {
+  font-size: 2rem;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.update-text {
+  flex: 1;
+}
+
+.update-text strong {
+  display: block;
+  color: #00ff88;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.update-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.update-btn {
+  background: #00ff88;
+  color: #0a0a14;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.update-btn:hover {
+  background: #00cc6a;
+  transform: scale(1.05);
+}
+
+.update-dismiss {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.update-dismiss:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* PWA Badge */
+.pwa-badge {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #0a0a14;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Offline Indicator */
+body.offline::before {
+  content: '📡 Offline Mode';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ff6b35, #d4380d);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
+  z-index: 10000;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+body.offline {
+  padding-top: 3rem;
+}
+
+/* Share Button */
+.share-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.share-btn:active {
+  transform: translateY(0);
+}
+
+/* PWA Mode Adjustments */
+.pwa-mode {
+  /* Add safe area insets for notched devices */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.pwa-mode .site-header {
+  padding-top: calc(1rem + env(safe-area-inset-top));
+}
+
+/* Loading Spinner for PWA */
+.pwa-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.pwa-loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Splash Screen Styles (for manifest) */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  animation: fadeOut 0.5s ease-out 2s forwards;
+}
+
+.splash-logo {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.splash-text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Mobile-specific PWA styles */
+@media (max-width: 768px) {
+  .install-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .update-notification {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+  
+  .pwa-badge {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Tablet-specific PWA styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .install-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Desktop PWA styles */
+@media (min-width: 1025px) {
+  .install-btn.floating {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+/* Print styles for PWA */
+@media print {
+  .install-btn,
+  .update-notification,
+  .pwa-badge,
+  .share-btn {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .install-btn,
+  .update-btn,
+  .share-btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode enhancements for PWA */
+@media (prefers-color-scheme: dark) {
+  .update-notification {
+    background: linear-gradient(135deg, rgba(10, 10, 20, 0.98), rgba(20, 20, 40, 0.98));
+  }
+}

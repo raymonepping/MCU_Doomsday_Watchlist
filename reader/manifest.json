@@ -1,0 +1,118 @@
+{
+  "name": "MCU Doomsday Reader",
+  "short_name": "MCU Doomsday",
+  "description": "Track your MCU watchlist journey to Avengers: Doomsday (December 18, 2026)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0a14",
+  "theme_color": "#8b0000",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "./assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "MCU Doomsday Reader on Desktop"
+    },
+    {
+      "src": "./assets/screenshots/mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "MCU Doomsday Reader on Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Watchlist",
+      "short_name": "Watchlist",
+      "description": "View your MCU watchlist",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "./assets/icons/shortcut-watchlist.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Progress Stats",
+      "short_name": "Stats",
+      "description": "View your progress statistics",
+      "url": "./index.html#stats",
+      "icons": [
+        {
+          "src": "./assets/icons/shortcut-stats.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "share_target": {
+    "action": "./share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

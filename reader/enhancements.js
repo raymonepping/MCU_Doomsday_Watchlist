@@ -1,4 +1,313 @@
 /* ============================================
+   PHASE 14: PWA SUPPORT
+   ============================================ */
+
+// Service Worker Registration
+async function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) {
+    console.log('[PWA] Service Workers not supported');
+    return;
+  }
+  
+  try {
+    const registration = await navigator.serviceWorker.register('./sw.js', {
+      scope: './'
+    });
+    
+    console.log('[PWA] Service Worker registered:', registration.scope);
+    
+    // Check for updates
+    registration.addEventListener('updatefound', () => {
+      const newWorker = registration.installing;
+      console.log('[PWA] New Service Worker found');
+      
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          // New version available
+          showUpdateNotification();
+        }
+      });
+    });
+    
+    // Cache poster images after registration
+    if (registration.active) {
+      cachePosters();
+    }
+    
+  } catch (error) {
+    console.error('[PWA] Service Worker registration failed:', error);
+  }
+}
+
+// Show update notification
+function showUpdateNotification() {
+  const notification = document.createElement('div');
+  notification.className = 'update-notification';
+  notification.innerHTML = `
+    <div class="update-content">
+      <span class="update-icon">🔄</span>
+      <div class="update-text">
+        <strong>Update Available</strong>
+        <p>A new version is ready to install</p>
+      </div>
+      <button class="update-btn" onclick="updateApp()">Update Now</button>
+      <button class="update-dismiss" onclick="this.parentElement.parentElement.remove()">×</button>
+    </div>
+  `;
+  document.body.appendChild(notification);
+  
+  setTimeout(() => notification.classList.add('visible'), 100);
+}
+
+// Update app
+function updateApp() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration().then((registration) => {
+      if (registration && registration.waiting) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+        window.location.reload();
+      }
+    });
+  }
+}
+
+// Cache poster images
+async function cachePosters() {
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+    return;
+  }
+  
+  const posterUrls = [];
+  for (let i = 1; i <= 45; i++) {
+    const num = i.toString().padStart(2, '0');
+    posterUrls.push(`./assets/posters/${num}.jpg`);
+  }
+  
+  // Add bonus posters
+  posterUrls.push('./assets/posters/B1.jpg');
+  posterUrls.push('./assets/posters/B2.jpg');
+  posterUrls.push('./assets/posters/B3.jpg');
+  
+  navigator.serviceWorker.controller.postMessage({
+    type: 'CACHE_URLS',
+    urls: posterUrls
+  });
+  
+  console.log('[PWA] Requested caching of', posterUrls.length, 'posters');
+}
+
+// Install prompt
+let deferredPrompt;
+
+function initInstallPrompt() {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    console.log('[PWA] Install prompt available');
+    e.preventDefault();
+    deferredPrompt = e;
+    showInstallButton();
+  });
+  
+  // Track installation
+  window.addEventListener('appinstalled', () => {
+    console.log('[PWA] App installed successfully');
+    deferredPrompt = null;
+    hideInstallButton();
+    toast.show('App installed successfully! 🎉', 'success', 5000);
+  });
+}
+
+// Show install button
+function showInstallButton() {
+  const installBtn = document.createElement('button');
+  installBtn.className = 'install-btn';
+  installBtn.innerHTML = `
+    <span class="install-icon">📱</span>
+    <span class="install-text">Install App</span>
+  `;
+  installBtn.onclick = promptInstall;
+  
+  // Add to header or create floating button
+  const header = document.querySelector('.site-header');
+  if (header) {
+    header.appendChild(installBtn);
+  } else {
+    installBtn.classList.add('floating');
+    document.body.appendChild(installBtn);
+  }
+}
+
+// Hide install button
+function hideInstallButton() {
+  const installBtn = document.querySelector('.install-btn');
+  if (installBtn) {
+    installBtn.remove();
+  }
+}
+
+// Prompt installation
+async function promptInstall() {
+  if (!deferredPrompt) {
+    console.log('[PWA] Install prompt not available');
+    return;
+  }
+  
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  
+  console.log('[PWA] User choice:', outcome);
+  
+  if (outcome === 'accepted') {
+    toast.show('Installing app...', 'info', 3000);
+  }
+  
+  deferredPrompt = null;
+  hideInstallButton();
+}
+
+// Check if running as PWA
+function isPWA() {
+  return window.matchMedia('(display-mode: standalone)').matches ||
+         window.navigator.standalone === true;
+}
+
+// PWA-specific UI adjustments
+function adjustPWAUI() {
+  if (isPWA()) {
+    document.body.classList.add('pwa-mode');
+    console.log('[PWA] Running in standalone mode');
+    
+    // Hide browser-specific elements
+    const browserElements = document.querySelectorAll('.browser-only');
+    browserElements.forEach(el => el.style.display = 'none');
+    
+    // Add PWA badge
+    const header = document.querySelector('.site-header');
+    if (header && !header.querySelector('.pwa-badge')) {
+      const badge = document.createElement('div');
+      badge.className = 'pwa-badge';
+      badge.textContent = 'App Mode';
+      badge.title = 'Running as installed app';
+      header.appendChild(badge);
+    }
+  }
+}
+
+// Online/Offline status
+function initOnlineStatus() {
+  function updateOnlineStatus() {
+    const isOnline = navigator.onLine;
+    document.body.classList.toggle('offline', !isOnline);
+    
+    if (!isOnline) {
+      toast.show('You are offline. Using cached data.', 'warning', 5000);
+    } else if (document.body.classList.contains('was-offline')) {
+      toast.show('Back online! Syncing data...', 'success', 3000);
+      // Trigger sync if needed
+      syncData();
+    }
+    
+    document.body.classList.toggle('was-offline', !isOnline);
+  }
+  
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  
+  // Initial check
+  updateOnlineStatus();
+}
+
+// Sync data when back online
+async function syncData() {
+  if (!navigator.onLine) return;
+  
+  console.log('[PWA] Syncing data...');
+  
+  // Reload JSON data
+  try {
+    const response = await fetch('./data/watchlist.en.json');
+    if (response.ok) {
+      const data = await response.json();
+      console.log('[PWA] Data synced successfully');
+    }
+  } catch (error) {
+    console.error('[PWA] Sync failed:', error);
+  }
+}
+
+// Background sync registration
+async function registerBackgroundSync() {
+  if (!('serviceWorker' in navigator) || !('sync' in ServiceWorkerRegistration.prototype)) {
+    console.log('[PWA] Background Sync not supported');
+    return;
+  }
+  
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    await registration.sync.register('sync-watchlist');
+    console.log('[PWA] Background sync registered');
+  } catch (error) {
+    console.error('[PWA] Background sync registration failed:', error);
+  }
+}
+
+// Share API integration
+async function shareProgress() {
+  const watched = window.state?.items?.filter(item => item.watched && !item.bonus).length || 0;
+  const total = window.state?.items?.filter(item => !item.bonus).length || 45;
+  const percent = Math.round((watched / total) * 100);
+  
+  const shareData = {
+    title: 'MCU Doomsday Reader',
+    text: `I've watched ${watched}/${total} MCU titles (${percent}%) on my journey to Avengers: Doomsday! 🎬`,
+    url: window.location.href
+  };
+  
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+      console.log('[PWA] Shared successfully');
+      toast.show('Shared successfully!', 'success', 3000);
+    } catch (error) {
+      if (error.name !== 'AbortError') {
+        console.error('[PWA] Share failed:', error);
+      }
+    }
+  } else {
+    // Fallback: copy to clipboard
+    const text = `${shareData.text}\n${shareData.url}`;
+    await navigator.clipboard.writeText(text);
+    toast.show('Link copied to clipboard!', 'success', 3000);
+  }
+}
+
+// Add share button
+function addShareButton() {
+  const statsPanel = document.querySelector('.status-panel');
+  if (!statsPanel || statsPanel.querySelector('.share-btn')) return;
+  
+  const shareBtn = document.createElement('button');
+  shareBtn.className = 'share-btn';
+  shareBtn.innerHTML = '📤 Share Progress';
+  shareBtn.onclick = shareProgress;
+  
+  statsPanel.appendChild(shareBtn);
+}
+
+// Initialize all PWA features
+function initPWA() {
+  console.log('[PWA] Initializing Progressive Web App features...');
+  
+  registerServiceWorker();
+  initInstallPrompt();
+  adjustPWAUI();
+  initOnlineStatus();
+  registerBackgroundSync();
+  addShareButton();
+  
+  console.log('[PWA] Initialization complete');
+}
+
+/* ============================================
    PHASE 13: ENHANCED ANIMATIONS
    ============================================ */
 
@@ -2016,6 +2325,13 @@ function initializeTimelineBar() {
   
   // Update progress indicator based on watched titles
   function updateTimelineProgress() {
+
+// Initialize Phase 14: PWA Support
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPWA);
+} else {
+  initPWA();
+}
     if (typeof window.state === 'undefined' || !window.state.items) return;
     
     const totalTitles = window.state.items.filter(item => !item.bonus).length;
