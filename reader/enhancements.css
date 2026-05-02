@@ -1459,3 +1459,270 @@ h1 {
     font-size: 0.6rem;
   }
 }
+
+/* ============================================
+   PHASE 12: INTERACTIVE FLIP CARDS
+   ============================================ */
+
+/* Card Container with 3D Perspective */
+.timeline-card {
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.timeline-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card Faces */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.98), rgba(40, 40, 60, 0.98));
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+/* Flip Button */
+.flip-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.flip-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1) rotate(180deg);
+}
+
+.flip-button:active {
+  transform: scale(0.95);
+}
+
+/* Trivia Content on Back */
+.card-back-content {
+  color: #fff;
+}
+
+.card-back-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ff88;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trivia-section {
+  margin-bottom: 1rem;
+}
+
+.trivia-section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trivia-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trivia-list li {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trivia-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.stan-lee-cameo {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+  border-left: 3px solid #ffd700;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.post-credits-info {
+  background: rgba(0, 255, 136, 0.1);
+  border-left: 3px solid #00ff88;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.post-credits-count {
+  font-weight: 600;
+  color: #00ff88;
+  margin-bottom: 0.25rem;
+}
+
+/* Hover Preview Effect */
+.timeline-card:not(.flipped):hover .card-front {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-card:not(.flipped) .card-front {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Poster Hover Zoom */
+.card-poster-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-poster {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-card:hover .card-poster {
+  transform: scale(1.05);
+}
+
+/* Hover Info Overlay */
+.hover-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.timeline-card:hover .hover-info-overlay {
+  transform: translateY(0);
+}
+
+.hover-info-text {
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .flip-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .card-back {
+    padding: 1rem;
+  }
+  
+  .card-back-title {
+    font-size: 1rem;
+  }
+  
+  .trivia-section-title {
+    font-size: 0.8rem;
+  }
+  
+  .trivia-list li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch Device Support */
+@media (hover: none) and (pointer: coarse) {
+  .timeline-card:not(.flipped):hover .card-front {
+    transform: none;
+  }
+  
+  .timeline-card:hover .card-poster {
+    transform: none;
+  }
+  
+  .hover-info-overlay {
+    display: none; /* Hide hover overlay on touch devices */
+  }
+}
+
+/* Accessibility */
+.flip-button:focus {
+  outline: 2px solid #00ff88;
+  outline-offset: 2px;
+}
+
+.timeline-card.flipped .flip-button {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Loading State for Flip */
+.timeline-card.flipping {
+  pointer-events: none;
+}
+
+.timeline-card.flipping .card-inner {
+  animation: flipPulse 0.6s ease;
+}
+
+@keyframes flipPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}

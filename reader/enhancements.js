@@ -1,4 +1,183 @@
 /* ============================================
+   PHASE 12: INTERACTIVE FLIP CARDS
+   ============================================ */
+
+// Initialize flip card functionality
+function initializeFlipCards() {
+  console.log('Initializing flip cards...');
+  
+  // Add flip buttons and card structure to all timeline cards
+  const timelineCards = document.querySelectorAll('.timeline-card');
+  
+  timelineCards.forEach((card, index) => {
+    // Skip if already initialized
+    if (card.querySelector('.flip-button')) return;
+    
+    const itemKey = card.dataset.key;
+    const item = window.state?.items?.find(i => i.key === itemKey);
+    
+    if (!item) return;
+    
+    // Wrap existing content in card-front
+    const existingContent = card.innerHTML;
+    card.innerHTML = `
+      <div class="card-inner">
+        <div class="card-face card-front">
+          ${existingContent}
+          <button class="flip-button" aria-label="Show trivia" title="Show trivia">
+            <span aria-hidden="true">ℹ️</span>
+          </button>
+          <div class="hover-info-overlay">
+            <p class="hover-info-text">Click ℹ️ to see trivia, Easter eggs, and more!</p>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-back-content">
+            ${generateTriviaContent(item)}
+          </div>
+          <button class="flip-button" aria-label="Show poster" title="Back to poster">
+            <span aria-hidden="true">🎬</span>
+          </button>
+        </div>
+      </div>
+    `;
+    
+    // Add click handlers to flip buttons
+    const flipButtons = card.querySelectorAll('.flip-button');
+    flipButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleCardFlip(card);
+      });
+    });
+    
+    // Keyboard accessibility
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const flipButton = card.querySelector('.flip-button');
+        if (flipButton) flipButton.click();
+      }
+    });
+  });
+  
+  console.log(`Initialized ${timelineCards.length} flip cards`);
+}
+
+// Toggle card flip state
+function toggleCardFlip(card) {
+  card.classList.add('flipping');
+  card.classList.toggle('flipped');
+  
+  // Remove flipping class after animation
+  setTimeout(() => {
+    card.classList.remove('flipping');
+  }, 600);
+  
+  // Update ARIA label
+  const isFlipped = card.classList.contains('flipped');
+  const flipButton = card.querySelector('.flip-button');
+  if (flipButton) {
+    flipButton.setAttribute('aria-label', isFlipped ? 'Show poster' : 'Show trivia');
+  }
+}
+
+// Generate trivia content for card back
+function generateTriviaContent(item) {
+  const trivia = triviaData[item.key];
+  
+  if (!trivia) {
+    return `
+      <h3 class="card-back-title">${item.title}</h3>
+      <p style="color: rgba(255,255,255,0.7); font-style: italic;">Trivia coming soon!</p>
+    `;
+  }
+  
+  let content = `<h3 class="card-back-title">${item.title}</h3>`;
+  
+  // Post-credits scenes
+  if (trivia.postCredits) {
+    const count = trivia.postCredits.count || 0;
+    const scenes = trivia.postCredits.scenes || [];
+    content += `
+      <div class="trivia-section">
+        <div class="post-credits-info">
+          <div class="post-credits-count">🎬 ${count} Post-Credits Scene${count !== 1 ? 's' : ''}</div>
+          ${scenes.length > 0 ? `<div style="font-size: 0.8rem; margin-top: 0.25rem;">${scenes.join(' • ')}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }
+  
+  // Trivia facts
+  if (trivia.trivia && trivia.trivia.length > 0) {
+    content += `
+      <div class="trivia-section">
+        <div class="trivia-section-title">🎯 Trivia</div>
+        <ul class="trivia-list">
+          ${trivia.trivia.map(fact => `<li>${fact}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+  
+  // Easter eggs
+  if (trivia.easterEggs && trivia.easterEggs.length > 0) {
+    content += `
+      <div class="trivia-section">
+        <div class="trivia-section-title">🥚 Easter Eggs</div>
+        <ul class="trivia-list">
+          ${trivia.easterEggs.map(egg => `<li>${egg}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+  
+  // Stan Lee cameo
+  if (trivia.stanLeeCameo) {
+    content += `
+      <div class="trivia-section">
+        <div class="stan-lee-cameo">
+          <strong>👴 Stan Lee Cameo:</strong> ${trivia.stanLeeCameo}
+        </div>
+      </div>
+    `;
+  }
+  
+  // Connections
+  if (trivia.connections && trivia.connections.length > 0) {
+    content += `
+      <div class="trivia-section">
+        <div class="trivia-section-title">🔗 MCU Connections</div>
+        <ul class="trivia-list">
+          ${trivia.connections.map(conn => `<li>${conn}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+  
+  return content;
+}
+
+// Re-initialize flip cards when items are filtered or state changes
+function reinitializeFlipCards() {
+  // Wait for DOM to update
+  setTimeout(() => {
+    initializeFlipCards();
+  }, 100);
+}
+
+// Listen for state changes to reinitialize cards
+if (window.state) {
+  const originalSetState = window.setState;
+  window.setState = function(newState) {
+    originalSetState(newState);
+    reinitializeFlipCards();
+  };
+}
+
+/* ============================================
    MCU DOOMSDAY READER - JAVASCRIPT ENHANCEMENTS
    ============================================ */
 
@@ -1610,4 +1789,36 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializeTimelineBar);
 } else {
   initializeTimelineBar();
+
+// Initialize flip cards when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeFlipCards);
+} else {
+  initializeFlipCards();
+}
+
+// Re-initialize flip cards when state changes (filtering, etc.)
+if (typeof MutationObserver !== 'undefined') {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'childList' && mutation.target.classList?.contains('timeline-grid')) {
+        reinitializeFlipCards();
+      }
+    });
+  });
+  
+  // Start observing when DOM is ready
+  const startObserving = () => {
+    const timelineGrid = document.querySelector('.timeline-grid');
+    if (timelineGrid) {
+      observer.observe(timelineGrid, { childList: true, subtree: true });
+    }
+  };
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startObserving);
+  } else {
+    startObserving();
+  }
+}
 }
