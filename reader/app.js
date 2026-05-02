@@ -1,6 +1,7 @@
 const readStorageKey = "mcu-doomsday-reader.read";
 const localeStorageKey = "mcu-doomsday-reader.locale";
 const themeStorageKey = "mcu-doomsday-reader.theme";
+const timelineOrderStorageKey = "mcu-doomsday-reader.timeline-order";
 const defaultLocale = "en";
 const supportedLocales = new Set(["en", "nl"]);
 const doomsdayDate = new Date("2026-12-18T00:00:00");
@@ -19,6 +20,7 @@ const state = {
   conceptFilter: null, // null or concept name
   phaseFilter: "all", // "all" or phase number (1-6)
   typeFilter: "all", // "all", "film", or "series"
+  timelineOrder: getInitialTimelineOrder(), // "release" or "chronological"
 };
 
 // Block definitions based on key ranges
@@ -114,6 +116,8 @@ const elements = {
   timelineHeading: document.querySelector(".section-heading h2"),
   statLabels: [...document.querySelectorAll(".stats dt")],
   themeToggle: document.querySelector("#themeToggle"),
+  timelineOrderToggle: document.querySelector("#timelineOrderToggle"),
+  orderLabel: document.querySelector("#orderLabel"),
   countdownValue: document.querySelector("#countdownValue"),
   timeValue: document.querySelector("#timeValue"),
   exportButton: document.querySelector("#exportButton"),
@@ -143,6 +147,15 @@ function getInitialLocale() {
 function getInitialTheme() {
   const saved = localStorage.getItem(themeStorageKey);
   return saved === "light" ? "light" : "dark";
+}
+
+function getInitialTimelineOrder() {
+  const saved = localStorage.getItem(timelineOrderStorageKey);
+  return saved === "chronological" ? "chronological" : "release";
+}
+
+function saveTimelineOrder() {
+  localStorage.setItem(timelineOrderStorageKey, state.timelineOrder);
 }
 
 function label(key) {
@@ -604,7 +617,24 @@ function renderBlockView() {
 
 function renderTimeline() {
   // Update filter count display
-  const matches = state.items.filter(matchesFilters);
+  let matches = state.items.filter(matchesFilters);
+  
+  // Sort based on timeline order
+  if (state.timelineOrder === 'chronological') {
+    matches = matches.sort((a, b) => {
+      const orderA = a.chronologicalOrder || 999;
+      const orderB = b.chronologicalOrder || 999;
+      return orderA - orderB;
+    });
+  } else {
+    // Release order - sort by key (which is already in release order)
+    matches = matches.sort((a, b) => {
+      const keyA = a.key.startsWith('B') ? parseInt(a.key.substring(1)) + 1000 : parseInt(a.key);
+      const keyB = b.key.startsWith('B') ? parseInt(b.key.substring(1)) + 1000 : parseInt(b.key);
+      return keyA - keyB;
+    });
+  }
+  
   if (elements.filterCount && elements.filterTotal) {
     elements.filterCount.textContent = matches.length;
     elements.filterTotal.textContent = state.items.length;
@@ -643,7 +673,12 @@ function renderTimeline() {
     card.dataset.key = item.key;
     card.classList.toggle("is-read", read);
     card.style.setProperty("--animation-order", i);
-    card.querySelector(".position").textContent = item.key;
+    
+    // Display position based on timeline order
+    const displayPosition = state.timelineOrder === 'chronological'
+      ? (item.chronologicalOrder || item.key)
+      : item.key;
+    card.querySelector(".position").textContent = displayPosition;
     card.querySelector(".card-kicker").textContent = `${item.kind} | ${item.runtime}${
       item.bonus ? ` | ${label("bonusSuffix")}` : ""
     }`;
@@ -812,6 +847,25 @@ elements.themeToggle.addEventListener("click", () => {
   state.theme = state.theme === "dark" ? "light" : "dark";
   applyTheme(state.theme);
 });
+
+// Timeline order toggle
+elements.timelineOrderToggle.addEventListener("click", () => {
+  state.timelineOrder = state.timelineOrder === "release" ? "chronological" : "release";
+  saveTimelineOrder();
+  
+  // Update button label
+  if (elements.orderLabel) {
+    elements.orderLabel.textContent = state.timelineOrder === "release" ? "Release" : "Chronological";
+  }
+  
+  // Re-render timeline with new order
+  render();
+});
+
+// Initialize order label on page load
+if (elements.orderLabel) {
+  elements.orderLabel.textContent = state.timelineOrder === "release" ? "Release" : "Chronological";
+}
 
 // Export progress
 elements.exportButton.addEventListener("click", () => {

@@ -210,6 +210,37 @@ h1 {
   color: #fff;
 }
 
+.timeline-order-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  background: #111217;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.timeline-order-toggle:hover {
+  border-color: var(--blue);
+  background: var(--panel-strong);
+}
+
+.order-icon {
+  font-size: 1.1rem;
+}
+
+.order-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -231,11 +262,13 @@ h1 {
 }
 
 [data-theme="light"] .language-button,
+[data-theme="light"] .timeline-order-toggle,
 [data-theme="light"] .theme-toggle {
   background: #ffffff;
 }
 
 [data-theme="light"] .language-button:hover,
+[data-theme="light"] .timeline-order-toggle:hover,
 [data-theme="light"] .theme-toggle:hover {
   background: var(--panel-strong);
 }

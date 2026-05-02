@@ -51,7 +51,8 @@
       "who": "[NL TRANSLATION NEEDED] Robert Downey Jr. as Tony Stark/Iron Man, Jeff Bridges as Obadiah Stane",
       "officialUrl": "https://www.marvel.com/movies/iron-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman_lob_crd_01_4.jpg",
-      "localImage": "./assets/posters/01.jpg"
+      "localImage": "./assets/posters/01.jpg",
+      "chronologicalOrder": 3
     },
     {
       "key": "2",
@@ -66,7 +67,8 @@
       "who": "[NL TRANSLATION NEEDED] Edward Norton as Bruce Banner, Tim Roth as Emil Blonsky/Abomination, William Hurt as General Ross",
       "officialUrl": "https://www.marvel.com/movies/the-incredible-hulk",
       "imageUrl": "https://cdn.marvel.com/content/2x/theincrediblehulk_lob_crd_03.jpg",
-      "localImage": "./assets/posters/02.jpg"
+      "localImage": "./assets/posters/02.jpg",
+      "chronologicalOrder": 4
     },
     {
       "key": "3",
@@ -81,7 +83,8 @@
       "who": "[NL TRANSLATION NEEDED] Robert Downey Jr. as Tony Stark, Scarlett Johansson as Natasha Romanoff, Don Cheadle as James Rhodes",
       "officialUrl": "https://www.marvel.com/movies/iron-man-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman2_lob_crd_01_4.jpg",
-      "localImage": "./assets/posters/03.jpg"
+      "localImage": "./assets/posters/03.jpg",
+      "chronologicalOrder": 5
     },
     {
       "key": "4",
@@ -96,7 +99,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Hemsworth as Thor, Tom Hiddleston as Loki, Natalie Portman as Jane Foster",
       "officialUrl": "https://www.marvel.com/movies/thor",
       "imageUrl": "https://cdn.marvel.com/content/2x/thor_lob_crd_01_1.jpg",
-      "localImage": "./assets/posters/04.jpg"
+      "localImage": "./assets/posters/04.jpg",
+      "chronologicalOrder": 6
     },
     {
       "key": "5",
@@ -111,7 +115,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Evans as Steve Rogers/Captain America, Hugo Weaving as Red Skull, Hayley Atwell as Peggy Carter",
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-first-avenger",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathefirstavenger_lob_crd_01_0.jpg",
-      "localImage": "./assets/posters/05.jpg"
+      "localImage": "./assets/posters/05.jpg",
+      "chronologicalOrder": 1
     },
     {
       "key": "6",
@@ -126,7 +131,8 @@
       "who": "[NL TRANSLATION NEEDED] Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, Tom Hiddleston",
       "officialUrl": "https://www.marvel.com/movies/the-avengers",
       "imageUrl": "https://cdn.marvel.com/content/2x/theavengers_lob_crd_03_0.jpg",
-      "localImage": "./assets/posters/06.jpg"
+      "localImage": "./assets/posters/06.jpg",
+      "chronologicalOrder": 7
     },
     {
       "key": "7",
@@ -141,7 +147,8 @@
       "who": "[NL TRANSLATION NEEDED] Robert Downey Jr. as Tony Stark, Gwyneth Paltrow as Pepper Potts, Ben Kingsley as Trevor Slattery",
       "officialUrl": "https://www.marvel.com/movies/iron-man-3",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman3_lob_crd_01_11.jpg",
-      "localImage": "./assets/posters/07.jpg"
+      "localImage": "./assets/posters/07.jpg",
+      "chronologicalOrder": 8
     },
     {
       "key": "8",
@@ -156,7 +163,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Hemsworth as Thor, Tom Hiddleston as Loki, Natalie Portman as Jane Foster",
       "officialUrl": "https://www.marvel.com/movies/thor-the-dark-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorthedarkworld_lob_crd_02.jpg",
-      "localImage": "./assets/posters/08.jpg"
+      "localImage": "./assets/posters/08.jpg",
+      "chronologicalOrder": 9
     },
     {
       "key": "9",
@@ -171,7 +179,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Evans as Steve Rogers, Sebastian Stan as Bucky Barnes, Anthony Mackie as Sam Wilson",
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-winter-soldier",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathewintersoldier_lob_crd_01_2.jpg",
-      "localImage": "./assets/posters/09.jpg"
+      "localImage": "./assets/posters/09.jpg",
+      "chronologicalOrder": 10
     },
     {
       "key": "10",
@@ -186,7 +195,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Pratt as Star-Lord, Zoe Saldana as Gamora, Dave Bautista as Drax, Vin Diesel as Groot, Bradley Cooper as Rocket",
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxy_lob_crd_03_0.jpg",
-      "localImage": "./assets/posters/10.jpg"
+      "localImage": "./assets/posters/10.jpg",
+      "chronologicalOrder": 11
     },
     {
       "key": "11",
@@ -201,7 +211,8 @@
       "who": "[NL TRANSLATION NEEDED] Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, James Spader as Ultron",
       "officialUrl": "https://www.marvel.com/movies/avengers-age-of-ultron",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersageofultron_lob_crd_03_0.jpg",
-      "localImage": "./assets/posters/11.jpg"
+      "localImage": "./assets/posters/11.jpg",
+      "chronologicalOrder": 12
     },
     {
       "key": "12",
@@ -216,7 +227,8 @@
       "who": "[NL TRANSLATION NEEDED] Paul Rudd as Scott Lang, Michael Douglas as Hank Pym, Evangeline Lilly as Hope van Dyne",
       "officialUrl": "https://www.marvel.com/movies/ant-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-man_lob_crd_01_9.jpg",
-      "localImage": "./assets/posters/12.jpg"
+      "localImage": "./assets/posters/12.jpg",
+      "chronologicalOrder": 13
     },
     {
       "key": "13",
@@ -231,7 +243,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Evans, Robert Downey Jr., Chadwick Boseman as T'Challa, Tom Holland as Peter Parker",
       "officialUrl": "https://www.marvel.com/movies/captain-america-civil-war",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericacivilwar_lob_crd_01_10.jpg",
-      "localImage": "./assets/posters/13.jpg"
+      "localImage": "./assets/posters/13.jpg",
+      "chronologicalOrder": 14
     },
     {
       "key": "14",
@@ -246,7 +259,8 @@
       "officialUrl": "https://www.marvel.com/movies/doctor-strange",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
       "localImage": "./assets/posters/14.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 16
     },
     {
       "key": "15",
@@ -261,7 +275,8 @@
       "who": "[NL TRANSLATION NEEDED] Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Kurt Russell as Ego",
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy-vol-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxyvol.2_lob_crd_01_0.jpg",
-      "localImage": "./assets/posters/15.jpg"
+      "localImage": "./assets/posters/15.jpg",
+      "chronologicalOrder": 18
     },
     {
       "key": "16",
@@ -276,7 +291,8 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-homecoming",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manhomecoming_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/16.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 17
     },
     {
       "key": "17",
@@ -291,7 +307,8 @@
       "officialUrl": "https://www.marvel.com/movies/thor-ragnarok",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorragnarok_lob_mas_hlf_01_2.jpg",
       "localImage": "./assets/posters/17.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 19
     },
     {
       "key": "18",
@@ -306,7 +323,8 @@
       "officialUrl": "https://www.marvel.com/movies/black-panther",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpanther_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/18.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 15
     },
     {
       "key": "19",
@@ -321,7 +339,8 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-infinity-war",
       "imageUrl": "https://cdn.marvel.com/content/prod/1x/avengersinfinitywar_lob_crd_02.jpg",
       "localImage": "./assets/posters/19.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 21
     },
     {
       "key": "20",
@@ -336,7 +355,8 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp",
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-manandthewasp_lob_mas_hlf_01_0.jpg",
       "localImage": "./assets/posters/20.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 20
     },
     {
       "key": "21",
@@ -351,7 +371,8 @@
       "who": "[NL TRANSLATION NEEDED] Brie Larson as Carol Danvers, Samuel L. Jackson as Nick Fury, Jude Law as Yon-Rogg",
       "officialUrl": "https://www.marvel.com/movies/captain-marvel",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainmarvel_lob_crd_06.jpg",
-      "localImage": "./assets/posters/21.jpg"
+      "localImage": "./assets/posters/21.jpg",
+      "chronologicalOrder": 2
     },
     {
       "key": "22",
@@ -366,7 +387,8 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-endgame",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersendgame_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/22.jpg",
-      "phase": 3
+      "phase": 3,
+      "chronologicalOrder": 22
     },
     {
       "key": "23",
@@ -381,7 +403,8 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-far-from-home",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manfarfromhome_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/23.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 25
     },
     {
       "key": "24",
@@ -396,7 +419,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/wandavision/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wandavision_lob_crd_06.jpg",
       "localImage": "./assets/posters/24.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 23
     },
     {
       "key": "25",
@@ -411,7 +435,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
       "localImage": "./assets/posters/25.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 24
     },
     {
       "key": "27",
@@ -426,7 +451,8 @@
       "officialUrl": "https://www.marvel.com/movies/black-widow",
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/blackwidow_lob_mas_mob_05.jpg",
       "localImage": "./assets/posters/27.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 32
     },
     {
       "key": "28",
@@ -441,7 +467,8 @@
       "officialUrl": "https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings",
       "imageUrl": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
       "localImage": "./assets/posters/28.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 26
     },
     {
       "key": "29",
@@ -456,7 +483,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/hawkeye/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/hawkeye_lob_crd_04.jpg",
       "localImage": "./assets/posters/29.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 27
     },
     {
       "key": "30",
@@ -471,7 +499,8 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-no-way-home",
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/serenitynowtitle_mas_mob.jpg",
       "localImage": "./assets/posters/30.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 29
     },
     {
       "key": "31",
@@ -486,7 +515,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/moon-knight/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/moonknight_lob_crd_05.jpg",
       "localImage": "./assets/posters/31.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 28
     },
     {
       "key": "32",
@@ -501,7 +531,8 @@
       "officialUrl": "https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrangeinthemultiverseofmadness_lob_mas_mob_08b.jpg",
       "localImage": "./assets/posters/32.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 30
     },
     {
       "key": "33",
@@ -516,7 +547,8 @@
       "officialUrl": "https://www.marvel.com/movies/thor-love-and-thunder",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorloveandthunder_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/33.jpg",
-      "phase": 4
+      "phase": 4,
+      "chronologicalOrder": 31
     },
     {
       "key": "34",
@@ -531,7 +563,8 @@
       "officialUrl": "https://www.marvel.com/movies/black-panther-wakanda-forever",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpantherwakandaforever_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/34.jpg",
-      "phase": 5
+      "phase": 5,
+      "chronologicalOrder": 35
     },
     {
       "key": "35",
@@ -546,7 +579,8 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania",
       "imageUrl": "https://cdn.marvel.com/content/2x/antmanandthewaspquantumania_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/35.jpg",
-      "phase": 5
+      "phase": 5,
+      "chronologicalOrder": 34
     },
     {
       "key": "36",
@@ -561,7 +595,8 @@
       "officialUrl": "https://www.marvel.com/movies/the-marvels",
       "imageUrl": "https://cdn.marvel.com/content/2x/themarvels_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/36.jpg",
-      "phase": 5
+      "phase": 5,
+      "chronologicalOrder": 36
     },
     {
       "key": "37",
@@ -576,7 +611,8 @@
       "officialUrl": "https://www.marvel.com/movies/deadpool-and-wolverine",
       "imageUrl": "https://cdn.marvel.com/content/2x/deadpoolandwolverine_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/37.jpg",
-      "phase": 5
+      "phase": 5,
+      "chronologicalOrder": 37
     },
     {
       "key": "38",
@@ -591,7 +627,8 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-brave-new-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericabravenewworld_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/38.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 38
     },
     {
       "key": "39",
@@ -606,7 +643,8 @@
       "officialUrl": "https://www.marvel.com/movies/thunderbolts",
       "imageUrl": "https://cdn.marvel.com/content/2x/thenewavengers_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/39.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 39
     },
     {
       "key": "40",
@@ -621,7 +659,8 @@
       "officialUrl": "https://www.marvel.com/movies/the-fantastic-four-first-steps",
       "imageUrl": "https://cdn.marvel.com/content/2x/thefantasticfourfirststeps_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/40.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 40
     },
     {
       "key": "41",
@@ -636,7 +675,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/wonder-man/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
       "localImage": "./assets/posters/41.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 41
     },
     {
       "key": "43",
@@ -651,7 +691,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/visionquest/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
       "localImage": "./assets/posters/43.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 42
     },
     {
       "key": "44",
@@ -666,7 +707,8 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-brand-new-day",
       "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/44.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 44
     },
     {
       "key": "45",
@@ -681,7 +723,8 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-doomsday",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/45.jpg",
-      "phase": 6
+      "phase": 6,
+      "chronologicalOrder": 45
     },
     {
       "key": "B1",
@@ -696,7 +739,8 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B1.jpg",
-      "phase": null
+      "phase": null,
+      "chronologicalOrder": 46
     },
     {
       "key": "B2",
@@ -711,7 +755,8 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
       "localImage": "./assets/posters/B2.jpg",
-      "phase": null
+      "phase": null,
+      "chronologicalOrder": 47
     },
     {
       "key": "B3",
@@ -726,7 +771,8 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B3.jpg",
-      "phase": null
+      "phase": null,
+      "chronologicalOrder": 48
     }
   ]
 }
