@@ -236,16 +236,21 @@ function updateConvergenceStats() {
     }
   });
   
-  document.getElementById('infinity-count').textContent = infinityCount;
-  document.getElementById('multiverse-count').textContent = multiverseCount;
-  document.getElementById('control-count').textContent = controlMechanisms.size;
-  document.getElementById('convergence-count').textContent = convergencePoints.size;
+  const infinityEl = document.getElementById('infinity-count');
+  const multiverseEl = document.getElementById('multiverse-count');
+  const controlEl = document.getElementById('control-count');
+  const convergenceEl = document.getElementById('convergence-count');
+  
+  if (infinityEl) infinityEl.textContent = infinityCount;
+  if (multiverseEl) multiverseEl.textContent = multiverseCount;
+  if (controlEl) controlEl.textContent = controlMechanisms.size;
+  if (convergenceEl) convergenceEl.textContent = convergencePoints.size;
   
   // Animate counters
-  animateCounter(document.getElementById('infinity-count'), 0, infinityCount, 1000);
-  animateCounter(document.getElementById('multiverse-count'), 0, multiverseCount, 1000);
-  animateCounter(document.getElementById('control-count'), 0, controlMechanisms.size, 1000);
-  animateCounter(document.getElementById('convergence-count'), 0, convergencePoints.size, 1000);
+  if (infinityEl) animateCounter(infinityEl, 0, infinityCount, 1000);
+  if (multiverseEl) animateCounter(multiverseEl, 0, multiverseCount, 1000);
+  if (controlEl) animateCounter(controlEl, 0, controlMechanisms.size, 1000);
+  if (convergenceEl) animateCounter(convergenceEl, 0, convergencePoints.size, 1000);
 }
 
 // Create "What's at Stake" panel
