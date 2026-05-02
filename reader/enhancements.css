@@ -606,32 +606,32 @@
   line-height: 1;
 }
 
-/* Hide badges by default - use visibility to preserve layout */
-.saga-arc-badge {
-  display: none;
+/* Hide badges by default - higher specificity to override original styles */
+body:not(.show-saga-badges) .saga-arc-badge {
+  display: none !important;
 }
 
-.governance-badge {
-  display: none;
+body:not(.show-governance-badges) .governance-badge {
+  display: none !important;
 }
 
-.concept-badge {
-  display: none;
+body:not(.show-concept-badges) .concept-badge {
+  display: none !important;
 }
 
 /* Show badges when their toggle is active */
 body.show-saga-badges .saga-arc-badge {
-  display: flex;
+  display: flex !important;
 }
 
 body.show-governance-badges .governance-badge {
-  display: inline-flex;
+  display: inline-flex !important;
   max-width: fit-content;
   width: auto;
 }
 
 body.show-concept-badges .concept-badge {
-  display: inline-flex;
+  display: inline-flex !important;
   max-width: fit-content;
   width: auto;
 }
