@@ -35,7 +35,7 @@
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
   "generatedAt": "2026-05-01T10:17:34.802Z",
-  "count": 30,
+  "count": 45,
   "bonusCount": 3,
   "items": [
     {
@@ -50,7 +50,8 @@
       "who": "Benedict Cumberbatch as Stephen Strange, Tilda Swinton as the Ancient One.",
       "officialUrl": "https://www.marvel.com/movies/doctor-strange",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
-      "localImage": "./assets/posters/01.jpg"
+      "localImage": "./assets/posters/01.jpg",
+      "phase": 3
     },
     {
       "key": "2",
@@ -64,7 +65,8 @@
       "who": "Tom Holland as Peter Parker, Robert Downey Jr. as Tony Stark.",
       "officialUrl": "https://www.marvel.com/movies/spider-man-homecoming",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manhomecoming_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/02.jpg"
+      "localImage": "./assets/posters/02.jpg",
+      "phase": 3
     },
     {
       "key": "3",
@@ -78,7 +80,8 @@
       "who": "Chadwick Boseman as T'Challa, Letitia Wright as Shuri, Michael B. Jordan as Killmonger.",
       "officialUrl": "https://www.marvel.com/movies/black-panther",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpanther_lob_mas_mob_03.jpg",
-      "localImage": "./assets/posters/03.jpg"
+      "localImage": "./assets/posters/03.jpg",
+      "phase": 3
     },
     {
       "key": "4",
@@ -92,7 +95,8 @@
       "who": "Scarlett Johansson as Natasha, Florence Pugh as Yelena, David Harbour as Red Guardian.",
       "officialUrl": "https://www.marvel.com/movies/black-widow",
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/blackwidow_lob_mas_mob_05.jpg",
-      "localImage": "./assets/posters/04.jpg"
+      "localImage": "./assets/posters/04.jpg",
+      "phase": 4
     },
     {
       "key": "5",
@@ -106,7 +110,8 @@
       "who": "Paul Rudd as Scott Lang, Evangeline Lilly as Hope van Dyne, Hannah John-Kamen as Ghost.",
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp",
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-manandthewasp_lob_mas_hlf_01_0.jpg",
-      "localImage": "./assets/posters/05.jpg"
+      "localImage": "./assets/posters/05.jpg",
+      "phase": 3
     },
     {
       "key": "6",
@@ -120,7 +125,8 @@
       "who": "Chris Hemsworth as Thor, Tom Hiddleston as Loki, Cate Blanchett as Hela, Tessa Thompson as Valkyrie, Mark Ruffalo as Hulk.",
       "officialUrl": "https://www.marvel.com/movies/thor-ragnarok",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorragnarok_lob_mas_hlf_01_2.jpg",
-      "localImage": "./assets/posters/06.jpg"
+      "localImage": "./assets/posters/06.jpg",
+      "phase": 3
     },
     {
       "key": "7",
@@ -134,7 +140,8 @@
       "who": "The full Avengers ensemble, Josh Brolin as Thanos.",
       "officialUrl": "https://www.marvel.com/movies/avengers-infinity-war",
       "imageUrl": "https://cdn.marvel.com/content/prod/1x/avengersinfinitywar_lob_crd_02.jpg",
-      "localImage": "./assets/posters/07.jpg"
+      "localImage": "./assets/posters/07.jpg",
+      "phase": 3
     },
     {
       "key": "8",
@@ -148,7 +155,8 @@
       "who": "The full ensemble. Robert Downey Jr. as Tony Stark, Chris Evans as Steve Rogers, Anthony Mackie as Sam Wilson.",
       "officialUrl": "https://www.marvel.com/movies/avengers-endgame",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersendgame_lob_mas_mob_01.jpg",
-      "localImage": "./assets/posters/08.jpg"
+      "localImage": "./assets/posters/08.jpg",
+      "phase": 3
     },
     {
       "key": "9",
@@ -162,7 +170,8 @@
       "who": "Tom Holland as Peter Parker, Jake Gyllenhaal as Mysterio.",
       "officialUrl": "https://www.marvel.com/movies/spider-man-far-from-home",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manfarfromhome_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/09.jpg"
+      "localImage": "./assets/posters/09.jpg",
+      "phase": 4
     },
     {
       "key": "10",
@@ -176,7 +185,8 @@
       "who": "Elizabeth Olsen as Wanda/Scarlet Witch, Paul Bettany as Vision.",
       "officialUrl": "https://www.marvel.com/tv-shows/wandavision/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wandavision_lob_crd_06.jpg",
-      "localImage": "./assets/posters/10.jpg"
+      "localImage": "./assets/posters/10.jpg",
+      "phase": 4
     },
     {
       "key": "11",
@@ -190,7 +200,8 @@
       "who": "Anthony Mackie as Sam Wilson, Sebastian Stan as Bucky, Julia Louis-Dreyfus as Valentina.",
       "officialUrl": "https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
-      "localImage": "./assets/posters/11.jpg"
+      "localImage": "./assets/posters/11.jpg",
+      "phase": 4
     },
     {
       "key": "12",
@@ -204,7 +215,8 @@
       "who": "Jeremy Renner as Clint Barton, Hailee Steinfeld as Kate Bishop, Florence Pugh as Yelena.",
       "officialUrl": "https://www.marvel.com/tv-shows/hawkeye/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/hawkeye_lob_crd_04.jpg",
-      "localImage": "./assets/posters/12.jpg"
+      "localImage": "./assets/posters/12.jpg",
+      "phase": 4
     },
     {
       "key": "13",
@@ -218,7 +230,8 @@
       "who": "Simu Liu as Shang-Chi, Tony Leung as Xu Wenwu.",
       "officialUrl": "https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings",
       "imageUrl": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
-      "localImage": "./assets/posters/13.jpg"
+      "localImage": "./assets/posters/13.jpg",
+      "phase": 4
     },
     {
       "key": "14",
@@ -232,7 +245,8 @@
       "who": "Chris Hemsworth as Thor, Natalie Portman as Jane Foster/Mighty Thor, Christian Bale as Gorr.",
       "officialUrl": "https://www.marvel.com/movies/thor-love-and-thunder",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorloveandthunder_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/14.jpg"
+      "localImage": "./assets/posters/14.jpg",
+      "phase": 4
     },
     {
       "key": "15",
@@ -246,7 +260,8 @@
       "who": "Tom Hiddleston as Loki, Owen Wilson as Mobius, Sophia Di Martino as Sylvie.",
       "officialUrl": "https://www.marvel.com/tv-shows/loki",
       "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_03.jpg",
-      "localImage": "./assets/posters/15.jpg"
+      "localImage": "./assets/posters/15.jpg",
+      "phase": 4
     },
     {
       "key": "16",
@@ -260,7 +275,8 @@
       "who": "Oscar Isaac as Marc Spector/Steven Grant/Moon Knight.",
       "officialUrl": "https://www.marvel.com/tv-shows/moon-knight/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/moonknight_lob_crd_05.jpg",
-      "localImage": "./assets/posters/16.jpg"
+      "localImage": "./assets/posters/16.jpg",
+      "phase": 4
     },
     {
       "key": "17",
@@ -274,7 +290,8 @@
       "who": "Tom Holland as Peter Parker, Benedict Cumberbatch as Strange, three generations of Spider-Man.",
       "officialUrl": "https://www.marvel.com/movies/spider-man-no-way-home",
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/serenitynowtitle_mas_mob.jpg",
-      "localImage": "./assets/posters/17.jpg"
+      "localImage": "./assets/posters/17.jpg",
+      "phase": 4
     },
     {
       "key": "18",
@@ -288,7 +305,8 @@
       "who": "Benedict Cumberbatch as Strange, Elizabeth Olsen as Wanda, Xochitl Gomez as America Chavez.",
       "officialUrl": "https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrangeinthemultiverseofmadness_lob_mas_mob_08b.jpg",
-      "localImage": "./assets/posters/18.jpg"
+      "localImage": "./assets/posters/18.jpg",
+      "phase": 4
     },
     {
       "key": "19",
@@ -302,7 +320,8 @@
       "who": "Paul Rudd as Scott Lang, Jonathan Majors as Kang.",
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania",
       "imageUrl": "https://cdn.marvel.com/content/2x/antmanandthewaspquantumania_lob_mas_mob_04.jpg",
-      "localImage": "./assets/posters/19.jpg"
+      "localImage": "./assets/posters/19.jpg",
+      "phase": 5
     },
     {
       "key": "20",
@@ -316,7 +335,8 @@
       "who": "Letitia Wright as Shuri, Tenoch Huerta as Namor, Dominique Thorne as Ironheart.",
       "officialUrl": "https://www.marvel.com/movies/black-panther-wakanda-forever",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpantherwakandaforever_lob_mas_mob_04.jpg",
-      "localImage": "./assets/posters/20.jpg"
+      "localImage": "./assets/posters/20.jpg",
+      "phase": 5
     },
     {
       "key": "21",
@@ -330,7 +350,8 @@
       "who": "Brie Larson as Carol Danvers, Teyonah Parris as Monica, Iman Vellani as Kamala Khan.",
       "officialUrl": "https://www.marvel.com/movies/the-marvels",
       "imageUrl": "https://cdn.marvel.com/content/2x/themarvels_lob_mas_mob_03.jpg",
-      "localImage": "./assets/posters/21.jpg"
+      "localImage": "./assets/posters/21.jpg",
+      "phase": 5
     },
     {
       "key": "22",
@@ -344,7 +365,8 @@
       "who": "Ryan Reynolds as Deadpool, Hugh Jackman as Wolverine.",
       "officialUrl": "https://www.marvel.com/movies/deadpool-and-wolverine",
       "imageUrl": "https://cdn.marvel.com/content/2x/deadpoolandwolverine_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/22.jpg"
+      "localImage": "./assets/posters/22.jpg",
+      "phase": 5
     },
     {
       "key": "23",
@@ -358,7 +380,8 @@
       "who": "Anthony Mackie as Sam Wilson, Harrison Ford as President Ross/Red Hulk, Sebastian Stan as Bucky.",
       "officialUrl": "https://www.marvel.com/movies/captain-america-brave-new-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericabravenewworld_lob_mas_mob_03.jpg",
-      "localImage": "./assets/posters/23.jpg"
+      "localImage": "./assets/posters/23.jpg",
+      "phase": 6
     },
     {
       "key": "24",
@@ -372,7 +395,8 @@
       "who": "Florence Pugh as Yelena, Sebastian Stan as Bucky, David Harbour as Red Guardian, Julia Louis-Dreyfus as Valentina.",
       "officialUrl": "https://www.marvel.com/movies/thunderbolts",
       "imageUrl": "https://cdn.marvel.com/content/2x/thenewavengers_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/24.jpg"
+      "localImage": "./assets/posters/24.jpg",
+      "phase": 6
     },
     {
       "key": "25",
@@ -386,7 +410,8 @@
       "who": "Pedro Pascal as Reed Richards, Vanessa Kirby as Sue Storm, Joseph Quinn as Johnny Storm, Ebon Moss-Bachrach as Ben Grimm.",
       "officialUrl": "https://www.marvel.com/movies/the-fantastic-four-first-steps",
       "imageUrl": "https://cdn.marvel.com/content/2x/thefantasticfourfirststeps_lob_mas_mob_03.jpg",
-      "localImage": "./assets/posters/25.jpg"
+      "localImage": "./assets/posters/25.jpg",
+      "phase": 6
     },
     {
       "key": "26",
@@ -400,7 +425,8 @@
       "who": "Yahya Abdul-Mateen II as Simon Williams/Wonder Man.",
       "officialUrl": "https://www.marvel.com/tv-shows/wonder-man/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
-      "localImage": "./assets/posters/26.jpg"
+      "localImage": "./assets/posters/26.jpg",
+      "phase": 6
     },
     {
       "key": "27",
@@ -414,7 +440,8 @@
       "who": "Charlie Cox as Matt Murdock/Daredevil, Vincent D'Onofrio as Kingpin.",
       "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
-      "localImage": "./assets/posters/27.jpg"
+      "localImage": "./assets/posters/27.jpg",
+      "phase": 6
     },
     {
       "key": "28",
@@ -428,7 +455,8 @@
       "who": "Paul Bettany as White Vision, James Spader as Ultron.",
       "officialUrl": "https://www.marvel.com/tv-shows/visionquest/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
-      "localImage": "./assets/posters/28.jpg"
+      "localImage": "./assets/posters/28.jpg",
+      "phase": 6
     },
     {
       "key": "29",
@@ -442,7 +470,8 @@
       "who": "Tom Holland as Peter Parker.",
       "officialUrl": "https://www.marvel.com/movies/spider-man-brand-new-day",
       "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
-      "localImage": "./assets/posters/29.jpg"
+      "localImage": "./assets/posters/29.jpg",
+      "phase": 6
     },
     {
       "key": "30",
@@ -456,7 +485,8 @@
       "who": "Directed by Joe and Anthony Russo. Robert Downey Jr. is listed in the cast, alongside multiple returning MCU and legacy Marvel actors on Marvel's official page.",
       "officialUrl": "https://www.marvel.com/movies/avengers-doomsday",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
-      "localImage": "./assets/posters/30.jpg"
+      "localImage": "./assets/posters/30.jpg",
+      "phase": 6
     },
     {
       "key": "B1",
@@ -470,7 +500,8 @@
       "who": "",
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-      "localImage": "./assets/posters/B1.jpg"
+      "localImage": "./assets/posters/B1.jpg",
+      "phase": null
     },
     {
       "key": "B2",
@@ -484,7 +515,8 @@
       "who": "",
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
-      "localImage": "./assets/posters/B2.jpg"
+      "localImage": "./assets/posters/B2.jpg",
+      "phase": null
     },
     {
       "key": "B3",
@@ -498,7 +530,233 @@
       "who": "",
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-      "localImage": "./assets/posters/B3.jpg"
+      "localImage": "./assets/posters/B3.jpg",
+      "phase": null
+    },
+    {
+      "key": "31",
+      "title": "Iron Man",
+      "kind": "Film",
+      "runtime": "2h 6m",
+      "bonus": false,
+      "phase": 1,
+      "what": "Billionaire weapons manufacturer Tony Stark builds a powered suit of armor and becomes Iron Man after being captured by terrorists.",
+      "why": "The film that started it all. Introduces Tony Stark, whose legacy drives the entire MCU through to Doomsday.",
+      "when": "2008 - The beginning of the MCU",
+      "who": "Robert Downey Jr. as Tony Stark/Iron Man, Jeff Bridges as Obadiah Stane",
+      "officialUrl": "https://www.marvel.com/movies/iron-man",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironman_lob_crd_01_4.jpg",
+      "localImage": "./assets/posters/31.jpg"
+    },
+    {
+      "key": "32",
+      "title": "The Incredible Hulk",
+      "kind": "Film",
+      "runtime": "1h 52m",
+      "bonus": false,
+      "phase": 1,
+      "what": "Bruce Banner, on the run from the military, searches for a cure while being hunted by General Ross and the Abomination.",
+      "why": "Introduces Bruce Banner/Hulk and General Thaddeus Ross, who becomes President and Red Hulk in Phase 6.",
+      "when": "2008 - Shortly after Iron Man",
+      "who": "Edward Norton as Bruce Banner, Tim Roth as Emil Blonsky/Abomination, William Hurt as General Ross",
+      "officialUrl": "https://www.marvel.com/movies/the-incredible-hulk",
+      "imageUrl": "https://cdn.marvel.com/content/2x/theincrediblehulk_lob_crd_03.jpg",
+      "localImage": "./assets/posters/32.jpg"
+    },
+    {
+      "key": "33",
+      "title": "Iron Man 2",
+      "kind": "Film",
+      "runtime": "2h 4m",
+      "bonus": false,
+      "phase": 1,
+      "what": "Tony Stark faces pressure from the government, a rival weapons manufacturer, and his own declining health from the arc reactor.",
+      "why": "Introduces Black Widow and War Machine. Expands on Stark's character and the consequences of revealing his identity.",
+      "when": "2010 - Two years after Iron Man",
+      "who": "Robert Downey Jr. as Tony Stark, Scarlett Johansson as Natasha Romanoff, Don Cheadle as James Rhodes",
+      "officialUrl": "https://www.marvel.com/movies/iron-man-2",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironman2_lob_crd_01_4.jpg",
+      "localImage": "./assets/posters/33.jpg"
+    },
+    {
+      "key": "34",
+      "title": "Thor",
+      "kind": "Film",
+      "runtime": "1h 55m",
+      "bonus": false,
+      "phase": 1,
+      "what": "The arrogant god Thor is banished to Earth and must prove himself worthy to reclaim his power and stop his brother Loki.",
+      "why": "Introduces Thor, Loki, and Asgard. Establishes the cosmic side of the MCU and the Infinity Stones.",
+      "when": "2011 - Expands the MCU beyond Earth",
+      "who": "Chris Hemsworth as Thor, Tom Hiddleston as Loki, Natalie Portman as Jane Foster",
+      "officialUrl": "https://www.marvel.com/movies/thor",
+      "imageUrl": "https://cdn.marvel.com/content/2x/thor_lob_crd_01_1.jpg",
+      "localImage": "./assets/posters/34.jpg"
+    },
+    {
+      "key": "35",
+      "title": "Captain America: The First Avenger",
+      "kind": "Film",
+      "runtime": "2h 4m",
+      "bonus": false,
+      "phase": 1,
+      "what": "Steve Rogers becomes Captain America during World War II and battles the Red Skull and HYDRA.",
+      "why": "Introduces Captain America and establishes the Tesseract (Space Stone). Steve's sacrifice sets up his return in Avengers.",
+      "when": "1940s, but released 2011 - The origin of the first Avenger",
+      "who": "Chris Evans as Steve Rogers/Captain America, Hugo Weaving as Red Skull, Hayley Atwell as Peggy Carter",
+      "officialUrl": "https://www.marvel.com/movies/captain-america-the-first-avenger",
+      "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathefirstavenger_lob_crd_01_0.jpg",
+      "localImage": "./assets/posters/35.jpg"
+    },
+    {
+      "key": "36",
+      "title": "The Avengers",
+      "kind": "Film",
+      "runtime": "2h 23m",
+      "bonus": false,
+      "phase": 1,
+      "what": "Earth's mightiest heroes unite for the first time to stop Loki and an alien invasion of New York.",
+      "why": "The culmination of Phase 1. Establishes the Avengers team dynamic and proves the shared universe concept works.",
+      "when": "2012 - The first team-up",
+      "who": "Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, Tom Hiddleston",
+      "officialUrl": "https://www.marvel.com/movies/the-avengers",
+      "imageUrl": "https://cdn.marvel.com/content/2x/theavengers_lob_crd_03_0.jpg",
+      "localImage": "./assets/posters/36.jpg"
+    },
+    {
+      "key": "37",
+      "title": "Iron Man 3",
+      "kind": "Film",
+      "runtime": "2h 10m",
+      "bonus": false,
+      "phase": 2,
+      "what": "Tony Stark deals with PTSD from the Battle of New York while facing the Mandarin and Aldrich Killian.",
+      "why": "Shows the psychological impact of the Avengers' first battle. Tony's character development continues toward his sacrifice in Endgame.",
+      "when": "2013 - After The Avengers",
+      "who": "Robert Downey Jr. as Tony Stark, Gwyneth Paltrow as Pepper Potts, Ben Kingsley as Trevor Slattery",
+      "officialUrl": "https://www.marvel.com/movies/iron-man-3",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironman3_lob_crd_01_11.jpg",
+      "localImage": "./assets/posters/37.jpg"
+    },
+    {
+      "key": "38",
+      "title": "Thor: The Dark World",
+      "kind": "Film",
+      "runtime": "1h 52m",
+      "bonus": false,
+      "phase": 2,
+      "what": "Thor must save Jane Foster and the Nine Realms from the Dark Elves and their leader Malekith.",
+      "why": "Introduces the Reality Stone (Aether) and deepens Thor and Loki's relationship. Sets up Ragnarok.",
+      "when": "2013 - After Iron Man 3",
+      "who": "Chris Hemsworth as Thor, Tom Hiddleston as Loki, Natalie Portman as Jane Foster",
+      "officialUrl": "https://www.marvel.com/movies/thor-the-dark-world",
+      "imageUrl": "https://cdn.marvel.com/content/2x/thorthedarkworld_lob_crd_02.jpg",
+      "localImage": "./assets/posters/38.jpg"
+    },
+    {
+      "key": "39",
+      "title": "Captain America: The Winter Soldier",
+      "kind": "Film",
+      "runtime": "2h 16m",
+      "bonus": false,
+      "phase": 2,
+      "what": "Steve Rogers uncovers a conspiracy within S.H.I.E.L.D. and faces a mysterious assassin from his past.",
+      "why": "Reveals HYDRA's infiltration of S.H.I.E.L.D. Introduces Falcon and brings back Bucky Barnes as the Winter Soldier.",
+      "when": "2014 - A political thriller that changes the MCU",
+      "who": "Chris Evans as Steve Rogers, Sebastian Stan as Bucky Barnes, Anthony Mackie as Sam Wilson",
+      "officialUrl": "https://www.marvel.com/movies/captain-america-the-winter-soldier",
+      "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathewintersoldier_lob_crd_01_2.jpg",
+      "localImage": "./assets/posters/39.jpg"
+    },
+    {
+      "key": "40",
+      "title": "Guardians of the Galaxy",
+      "kind": "Film",
+      "runtime": "2h 1m",
+      "bonus": false,
+      "phase": 2,
+      "what": "A group of intergalactic misfits must stop Ronan from using the Power Stone to destroy the galaxy.",
+      "why": "Expands the MCU into space. Introduces the Guardians and establishes the cosmic side that connects to Infinity War.",
+      "when": "2014 - The cosmic side of the MCU",
+      "who": "Chris Pratt as Star-Lord, Zoe Saldana as Gamora, Dave Bautista as Drax, Vin Diesel as Groot, Bradley Cooper as Rocket",
+      "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy",
+      "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxy_lob_crd_03_0.jpg",
+      "localImage": "./assets/posters/40.jpg"
+    },
+    {
+      "key": "41",
+      "title": "Avengers: Age of Ultron",
+      "kind": "Film",
+      "runtime": "2h 21m",
+      "bonus": false,
+      "phase": 2,
+      "what": "Tony Stark's attempt to create a peacekeeping program goes wrong, creating the villainous AI Ultron.",
+      "why": "Introduces Vision, Scarlet Witch, and the Mind Stone. Sets up the Sokovia Accords and the team's fracture in Civil War.",
+      "when": "2015 - The Avengers face their own creation",
+      "who": "Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, James Spader as Ultron",
+      "officialUrl": "https://www.marvel.com/movies/avengers-age-of-ultron",
+      "imageUrl": "https://cdn.marvel.com/content/2x/avengersageofultron_lob_crd_03_0.jpg",
+      "localImage": "./assets/posters/41.jpg"
+    },
+    {
+      "key": "42",
+      "title": "Ant-Man",
+      "kind": "Film",
+      "runtime": "1h 57m",
+      "bonus": false,
+      "phase": 2,
+      "what": "Ex-con Scott Lang becomes Ant-Man and must pull off a heist to save the world.",
+      "why": "Introduces Ant-Man and the Quantum Realm, which becomes crucial for time travel in Endgame.",
+      "when": "2015 - After Age of Ultron",
+      "who": "Paul Rudd as Scott Lang, Michael Douglas as Hank Pym, Evangeline Lilly as Hope van Dyne",
+      "officialUrl": "https://www.marvel.com/movies/ant-man",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ant-man_lob_crd_01_9.jpg",
+      "localImage": "./assets/posters/42.jpg"
+    },
+    {
+      "key": "43",
+      "title": "Captain America: Civil War",
+      "kind": "Film",
+      "runtime": "2h 27m",
+      "bonus": false,
+      "phase": 3,
+      "what": "The Avengers are divided over government oversight, leading to a conflict between Captain America and Iron Man.",
+      "why": "Introduces Black Panther and Spider-Man. The team's fracture has lasting consequences through Infinity War and beyond.",
+      "when": "2016 - The Avengers break apart",
+      "who": "Chris Evans, Robert Downey Jr., Chadwick Boseman as T'Challa, Tom Holland as Peter Parker",
+      "officialUrl": "https://www.marvel.com/movies/captain-america-civil-war",
+      "imageUrl": "https://cdn.marvel.com/content/2x/captainamericacivilwar_lob_crd_01_10.jpg",
+      "localImage": "./assets/posters/43.jpg"
+    },
+    {
+      "key": "44",
+      "title": "Guardians of the Galaxy Vol. 2",
+      "kind": "Film",
+      "runtime": "2h 16m",
+      "bonus": false,
+      "phase": 3,
+      "what": "The Guardians discover Peter Quill's father Ego and must stop his plan to terraform the universe.",
+      "why": "Deepens the Guardians' relationships and explores themes of family that resonate through the MCU.",
+      "when": "2017 - Shortly after the first Guardians film",
+      "who": "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Kurt Russell as Ego",
+      "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy-vol-2",
+      "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxyvol.2_lob_crd_01_0.jpg",
+      "localImage": "./assets/posters/44.jpg"
+    },
+    {
+      "key": "45",
+      "title": "Captain Marvel",
+      "kind": "Film",
+      "runtime": "2h 4m",
+      "bonus": false,
+      "phase": 3,
+      "what": "Carol Danvers discovers her past and becomes one of the universe's most powerful heroes during a galactic war.",
+      "why": "Introduces Captain Marvel, who plays a key role in Endgame. Set in the 1990s, it provides backstory for Nick Fury and the Tesseract.",
+      "when": "1995 (but released 2019) - The origin of Captain Marvel",
+      "who": "Brie Larson as Carol Danvers, Samuel L. Jackson as Nick Fury, Jude Law as Yon-Rogg",
+      "officialUrl": "https://www.marvel.com/movies/captain-marvel",
+      "imageUrl": "https://cdn.marvel.com/content/2x/captainmarvel_lob_crd_06.jpg",
+      "localImage": "./assets/posters/45.jpg"
     }
   ]
 }

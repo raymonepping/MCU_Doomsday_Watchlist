@@ -13,11 +13,8 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-WATCHLIST_PATH = REPO_ROOT / "docs" / "mcu-doomsday-watchlist.md"
+WATCHLIST_JSON_PATH = REPO_ROOT / "reader" / "data" / "watchlist.en.json"
 PROGRESS_PATH = REPO_ROOT / "data" / "mcu-watch-progress.json"
-
-HEADING_RE = re.compile(r"^###\s+([B]?\d+)\.\s+(.+?)\s*$")
-META_RE = re.compile(r"^\*(Film|Serie)\s+·\s+(.+?)\*$")
 
 
 @dataclass(frozen=True)
@@ -30,34 +27,28 @@ class Title:
 
 
 def parse_watchlist() -> list[Title]:
-    if not WATCHLIST_PATH.exists():
-        raise SystemExit(f"Watchlist not found: {WATCHLIST_PATH}")
+    """Load watchlist from JSON file."""
+    if not WATCHLIST_JSON_PATH.exists():
+        raise SystemExit(f"Watchlist not found: {WATCHLIST_JSON_PATH}")
 
-    lines = WATCHLIST_PATH.read_text(encoding="utf-8").splitlines()
+    try:
+        data = json.loads(WATCHLIST_JSON_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"Watchlist JSON is invalid: {WATCHLIST_JSON_PATH}\n{exc}") from exc
+
+    items = data.get("items", [])
+    if not isinstance(items, list):
+        raise SystemExit(f"Watchlist JSON has invalid items: {WATCHLIST_JSON_PATH}")
+
     titles: list[Title] = []
-
-    for index, line in enumerate(lines):
-        heading = HEADING_RE.match(line)
-        if not heading:
-            continue
-
-        key, title = heading.groups()
-        kind = "Unknown"
-        runtime = "unknown runtime"
-
-        for next_line in lines[index + 1 : index + 5]:
-            meta = META_RE.match(next_line)
-            if meta:
-                kind, runtime = meta.groups()
-                break
-
+    for item in items:
         titles.append(
             Title(
-                key=key,
-                title=title,
-                kind=kind,
-                runtime=runtime,
-                bonus=key.startswith("B"),
+                key=str(item.get("key", "")),
+                title=str(item.get("title", "")),
+                kind=str(item.get("kind", "Unknown")),
+                runtime=str(item.get("runtime", "unknown runtime")),
+                bonus=bool(item.get("bonus", False)),
             )
         )
 
@@ -83,7 +74,7 @@ def load_progress() -> dict[str, str]:
 def save_progress(watched: dict[str, str]) -> None:
     PROGRESS_PATH.parent.mkdir(parents=True, exist_ok=True)
     payload = {
-        "watchlist": str(WATCHLIST_PATH.relative_to(REPO_ROOT)),
+        "watchlist": str(WATCHLIST_JSON_PATH.relative_to(REPO_ROOT)),
         "updated": date.today().isoformat(),
         "watched": dict(sorted(watched.items(), key=sort_key)),
     }
@@ -207,7 +198,7 @@ def mark_unwatched(titles: list[Title], watched: dict[str, str], entry: str) -> 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="MCU_tracker",
-        description="Track watched entries from docs/mcu-doomsday-watchlist.md.",
+        description="Track watched entries from reader/data/watchlist.en.json.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 

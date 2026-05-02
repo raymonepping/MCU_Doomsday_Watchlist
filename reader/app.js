@@ -391,25 +391,16 @@ function matchesFilters(item) {
     return conceptTitles.includes(keyNum);
   })();
 
-  // Phase filter - maps items to MCU phases based on key ranges
+  // Phase filter - uses official MCU phase data from JSON
   const phaseMatch = state.phaseFilter === "all" || (() => {
-    if (item.bonus) return true; // Bonus items always match
-    const keyNum = parseInt(item.key);
-    const phaseNum = parseInt(state.phaseFilter);
+    // Bonus items (Fox X-Men) have phase: null, so they match "all" only
+    if (item.bonus) return state.phaseFilter === "all";
     
-    // Phase mapping based on MCU timeline (approximate)
-    // Phase 1: 1-6, Phase 2: 7-12, Phase 3: 13-18, Phase 4: 19-22, Phase 5: 23-26, Phase 6: 27-30
-    const phaseRanges = {
-      1: [1, 6],
-      2: [7, 12],
-      3: [13, 18],
-      4: [19, 22],
-      5: [23, 26],
-      6: [27, 30]
-    };
+    // Match based on the phase field in the item data
+    const itemPhase = item.phase;
+    const filterPhase = parseInt(state.phaseFilter);
     
-    const range = phaseRanges[phaseNum];
-    return range && keyNum >= range[0] && keyNum <= range[1];
+    return itemPhase === filterPhase;
   })();
 
   // Type filter - matches Film vs Series
