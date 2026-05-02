@@ -3226,6 +3226,7 @@ function initEnhancements() {
       initFAB();
       initBottomSheet();
       monitorPerformance();
+      initBadgeToggles(); // Phase 17: Badge visibility toggles
       
       // Wait for timeline to render
       const checkTimeline = setInterval(() => {
@@ -3255,6 +3256,61 @@ function initEnhancements() {
 }
 
 // Auto-initialize
+// ============================================
+// PHASE 17: BADGE VISIBILITY TOGGLES
+// ============================================
+
+/**
+ * Initialize badge visibility toggles
+ */
+function initBadgeToggles() {
+  const toggleButtons = document.querySelectorAll('.badge-toggle');
+  
+  // Load saved states from localStorage
+  const savedStates = {
+    saga: localStorage.getItem('show-saga-badges') === 'true',
+    governance: localStorage.getItem('show-governance-badges') === 'true',
+    concepts: localStorage.getItem('show-concept-badges') === 'true'
+  };
+  
+  // Apply saved states
+  if (savedStates.saga) {
+    document.body.classList.add('show-saga-badges');
+  }
+  if (savedStates.governance) {
+    document.body.classList.add('show-governance-badges');
+  }
+  if (savedStates.concepts) {
+    document.body.classList.add('show-concept-badges');
+  }
+  
+  // Update button states
+  toggleButtons.forEach(button => {
+    const badgeType = button.dataset.badgeType;
+    if (savedStates[badgeType]) {
+      button.classList.add('is-active');
+    }
+    
+    // Add click handler
+    button.addEventListener('click', () => {
+      const isActive = button.classList.toggle('is-active');
+      const bodyClass = `show-${badgeType}-badges`;
+      
+      if (isActive) {
+        document.body.classList.add(bodyClass);
+        localStorage.setItem(bodyClass, 'true');
+        toast.show(`${button.querySelector('.toggle-label').textContent} badges visible`, 'success', 2000);
+      } else {
+        document.body.classList.remove(bodyClass);
+        localStorage.setItem(bodyClass, 'false');
+        toast.show(`${button.querySelector('.toggle-label').textContent} badges hidden`, 'info', 2000);
+      }
+    });
+  });
+  
+  console.log('[Badges] Toggle controls initialized:', savedStates);
+}
+
 initEnhancements();
 
 // Export for external use
