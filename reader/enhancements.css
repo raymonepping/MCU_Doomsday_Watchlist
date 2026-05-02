@@ -606,26 +606,32 @@
   line-height: 1;
 }
 
-/* Hide badges by default */
-.saga-arc-badge,
-.governance-badge,
+/* Hide badges by default - use visibility to preserve layout */
+.saga-arc-badge {
+  display: none;
+}
+
+.governance-badge {
+  display: none;
+}
+
 .concept-badge {
-  display: none !important;
+  display: none;
 }
 
 /* Show badges when their toggle is active */
 body.show-saga-badges .saga-arc-badge {
-  display: flex !important;
+  display: flex;
 }
 
 body.show-governance-badges .governance-badge {
-  display: inline-flex !important;
+  display: inline-flex;
   max-width: fit-content;
   width: auto;
 }
 
 body.show-concept-badges .concept-badge {
-  display: inline-flex !important;
+  display: inline-flex;
   max-width: fit-content;
   width: auto;
 }
