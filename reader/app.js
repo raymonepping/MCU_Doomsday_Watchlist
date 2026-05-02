@@ -757,6 +757,28 @@ for (const button of elements.typeChips) {
   });
 }
 
+// Concept filter chips
+for (const button of elements.conceptChips) {
+  button.addEventListener("click", () => {
+    const concept = button.dataset.concept;
+    
+    // Toggle concept filter
+    if (state.conceptFilter === concept) {
+      // Clicking active concept deactivates it
+      state.conceptFilter = null;
+      button.classList.remove("is-active");
+    } else {
+      // Activate new concept, deactivate others
+      state.conceptFilter = concept;
+      for (const chip of elements.conceptChips) {
+        chip.classList.toggle("is-active", chip === button);
+      }
+    }
+    
+    renderTimeline();
+  });
+}
+
 for (const button of elements.filterButtons) {
   button.addEventListener("click", () => {
     state.filter = button.dataset.filter;
