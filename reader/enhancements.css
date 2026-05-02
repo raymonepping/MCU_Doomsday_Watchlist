@@ -2469,3 +2469,488 @@ body.offline {
     background: linear-gradient(135deg, rgba(10, 10, 20, 0.98), rgba(20, 20, 40, 0.98));
   }
 }
+
+/* ============================================
+   PHASE 15: CONVERGENCE ANALYSIS LAYER
+   ============================================ */
+
+/* Governance Color Scheme */
+:root {
+  --gov-military: #8b0000;
+  --gov-corporate: #4682b4;
+  --gov-monarchy: #ffd700;
+  --gov-mystic: #9370db;
+  --gov-individual: #00ff88;
+  --gov-intelligence: #708090;
+  --gov-scientific: #00bfff;
+  --gov-family: #ff69b4;
+  --gov-chaos: #ff4500;
+}
+
+/* Governance Badge */
+.governance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0.25rem;
+  transition: all 0.3s ease;
+  cursor: help;
+}
+
+.governance-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gov-military { background: var(--gov-military); color: #fff; }
+.gov-corporate { background: var(--gov-corporate); color: #fff; }
+.gov-monarchy { background: var(--gov-monarchy); color: #0a0a14; }
+.gov-mystic { background: var(--gov-mystic); color: #fff; }
+.gov-individual { background: var(--gov-individual); color: #0a0a14; }
+.gov-intelligence { background: var(--gov-intelligence); color: #fff; }
+.gov-scientific { background: var(--gov-scientific); color: #0a0a14; }
+.gov-family { background: var(--gov-family); color: #fff; }
+.gov-chaos { background: var(--gov-chaos); color: #fff; }
+
+/* Convergence Section on Card Back */
+.convergence-section {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(255, 215, 0, 0.1));
+  border-left: 3px solid var(--gov-monarchy);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.convergence-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gov-monarchy);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.convergence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.convergence-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid;
+}
+
+.convergence-item.control { border-color: var(--gov-military); }
+.convergence-item.failure { border-color: #ff4500; }
+.convergence-item.point { border-color: var(--gov-monarchy); }
+.convergence-item.topic { border-color: var(--gov-mystic); }
+
+.convergence-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.25rem;
+}
+
+.convergence-value {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Allegiance Badge */
+.allegiance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 191, 255, 0.2));
+  border: 2px solid var(--gov-individual);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gov-individual);
+  margin-bottom: 1rem;
+}
+
+/* Saga Arc Badge */
+.saga-arc-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.saga-infinity { color: #ff6b35; border-color: #ff6b35; }
+.saga-multiverse { color: #667eea; border-color: #667eea; }
+
+/* Thematic Filter Chips */
+.theme-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+}
+
+.theme-chip {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.theme-chip.active {
+  background: linear-gradient(135deg, var(--gov-monarchy), var(--gov-mystic));
+  border-color: var(--gov-monarchy);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Convergence Dashboard */
+.convergence-dashboard {
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.95), rgba(40, 40, 60, 0.95));
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gov-monarchy);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboard-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--gov-monarchy);
+}
+
+.dashboard-toggle.active {
+  background: var(--gov-monarchy);
+  color: #0a0a14;
+  border-color: var(--gov-monarchy);
+}
+
+/* Stats Grid */
+.convergence-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card.infinity { border-color: #ff6b35; }
+.stat-card.multiverse { border-color: #667eea; }
+.stat-card.control { border-color: var(--gov-military); }
+.stat-card.failure { border-color: #ff4500; }
+
+.stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-description {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+}
+
+/* Allegiance Network Visualization */
+.allegiance-network {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.network-node {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.network-node:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  box-shadow: 0 0 30px currentColor;
+}
+
+.network-node.avengers { border-color: #ff6b35; color: #ff6b35; }
+.network-node.guardians { border-color: #00ff88; color: #00ff88; }
+.network-node.defenders { border-color: #ffd700; color: #ffd700; }
+.network-node.young-avengers { border-color: #667eea; color: #667eea; }
+.network-node.mystic-arts { border-color: #9370db; color: #9370db; }
+.network-node.wakanda { border-color: #4682b4; color: #4682b4; }
+
+.network-connection {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* Narrative Arc Timeline */
+.narrative-arc-timeline {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.arc-track {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+  padding-bottom: 1rem;
+}
+
+.arc-node {
+  flex-shrink: 0;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  border-top: 4px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arc-node:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.arc-node.foundations { border-color: #ff6b35; }
+.arc-node.formation { border-color: #ffd700; }
+.arc-node.expansion { border-color: #00ff88; }
+.arc-node.collapse { border-color: #ff4500; }
+.arc-node.endgame { border-color: #8b0000; }
+.arc-node.identity { border-color: #667eea; }
+.arc-node.multiverse-opens { border-color: #9370db; }
+.arc-node.new-generation { border-color: #00bfff; }
+.arc-node.instability { border-color: #ff69b4; }
+.arc-node.final { border-color: #ffd700; }
+
+.arc-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.arc-count {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* What's at Stake Panel */
+.stakes-panel {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.2), rgba(255, 69, 0, 0.2));
+  border: 2px solid #ff4500;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stakes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stakes-icon {
+  font-size: 2rem;
+}
+
+.stakes-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ff4500;
+}
+
+.stakes-meter {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.stakes-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff88, #ffd700, #ff6b35, #ff4500);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stakes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stakes-list li {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #ff4500;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .convergence-dashboard {
+    padding: 1rem;
+  }
+  
+  .dashboard-title {
+    font-size: 1.3rem;
+  }
+  
+  .convergence-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .allegiance-network {
+    min-height: 300px;
+  }
+  
+  .network-node {
+    width: 60px;
+    height: 60px;
+    font-size: 0.65rem;
+  }
+  
+  .arc-node {
+    width: 150px;
+  }
+  
+  .governance-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .convergence-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .network-node {
+    width: 70px;
+    height: 70px;
+  }
+}

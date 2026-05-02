@@ -1,4 +1,530 @@
 /* ============================================
+   PHASE 15: CONVERGENCE ANALYSIS LAYER
+   ============================================ */
+
+// Load convergence data
+let convergenceData = {};
+
+async function loadConvergenceData() {
+  try {
+    const response = await fetch('./data/convergence-data.json');
+    convergenceData = await response.json();
+    console.log('[Convergence] Data loaded:', Object.keys(convergenceData).length, 'titles');
+    return convergenceData;
+  } catch (error) {
+    console.error('[Convergence] Failed to load data:', error);
+    return {};
+  }
+}
+
+// Get control mechanism class
+function getControlClass(mechanism) {
+  const map = {
+    'Military hierarchy': 'military',
+    'Military experiment': 'military',
+    'Corporate governance': 'corporate',
+    'Weak oversight': 'corporate',
+    'Monarchy': 'monarchy',
+    'Monarchy collapse': 'monarchy',
+    'Monarchy evolution': 'monarchy',
+    'SHIELD coordination': 'intelligence',
+    'Intelligence agency': 'intelligence',
+    'Intelligence': 'intelligence',
+    'Individual autonomy': 'individual',
+    'Individual responsibility': 'individual',
+    'Individual heroism': 'individual',
+    'Individual power': 'individual',
+    'Personal sacrifice': 'individual',
+    'Mystic order': 'mystic',
+    'Mystic governance': 'mystic',
+    'Scientific stewardship': 'scientific',
+    'Scientific leadership': 'scientific',
+    'Scientific collaboration': 'scientific',
+    'Scientific dictatorship': 'scientific',
+    'Family structure': 'family',
+    'Family hierarchy': 'family',
+    'Chaos': 'chaos',
+    'No control': 'chaos'
+  };
+  
+  for (const [key, value] of Object.entries(map)) {
+    if (mechanism.includes(key)) return value;
+  }
+  return 'individual';
+}
+
+// Add governance badges to cards
+function addGovernanceBadges() {
+  const cards = document.querySelectorAll('.timeline-card');
+  
+  cards.forEach(card => {
+    const key = card.dataset.key;
+    const convergence = convergenceData[key];
+    
+    if (!convergence || card.querySelector('.governance-badge')) return;
+    
+    const controlClass = getControlClass(convergence.controlMechanism);
+    const badge = document.createElement('div');
+    badge.className = `governance-badge gov-${controlClass}`;
+    badge.innerHTML = `🏛️ ${convergence.controlMechanism}`;
+    badge.title = `Control Mechanism: ${convergence.controlMechanism}`;
+    
+    // Add to card front
+    const cardFront = card.querySelector('.card-front .card-body') || card.querySelector('.card-body');
+    if (cardFront) {
+      cardFront.appendChild(badge);
+    }
+  });
+  
+  console.log('[Convergence] Added governance badges to', cards.length, 'cards');
+}
+
+// Add saga arc badges
+function addSagaArcBadges() {
+  const cards = document.querySelectorAll('.timeline-card');
+  
+  cards.forEach(card => {
+    const key = card.dataset.key;
+    const convergence = convergenceData[key];
+    
+    if (!convergence || card.querySelector('.saga-arc-badge')) return;
+    
+    const sagaClass = convergence.saga.toLowerCase();
+    const badge = document.createElement('div');
+    badge.className = `saga-arc-badge saga-${sagaClass}`;
+    badge.textContent = convergence.arc;
+    badge.title = `${convergence.saga} Saga: ${convergence.arc}`;
+    
+    // Add to card front
+    const cardFront = card.querySelector('.card-front') || card;
+    cardFront.style.position = 'relative';
+    cardFront.appendChild(badge);
+  });
+}
+
+// Enhanced card back with convergence data
+function enhanceCardBackWithConvergence(item) {
+  const convergence = convergenceData[item.key];
+  if (!convergence) return '';
+  
+  return `
+    <div class="convergence-section">
+      <div class="convergence-title">
+        <span>🎯</span>
+        <span>Convergence Analysis</span>
+      </div>
+      
+      <div class="allegiance-badge">
+        👥 ${convergence.allegiance}
+      </div>
+      
+      <div class="convergence-grid">
+        <div class="convergence-item control">
+          <div class="convergence-label">🏛️ Control Mechanism</div>
+          <div class="convergence-value">${convergence.controlMechanism}</div>
+        </div>
+        
+        <div class="convergence-item failure">
+          <div class="convergence-label">⚠️ Failure Implication</div>
+          <div class="convergence-value">${convergence.failureImplication}</div>
+        </div>
+        
+        <div class="convergence-item point">
+          <div class="convergence-label">🔗 Convergence Point</div>
+          <div class="convergence-value">${convergence.convergence}</div>
+        </div>
+        
+        <div class="convergence-item topic">
+          <div class="convergence-label">📖 Topic</div>
+          <div class="convergence-value">${convergence.topic}</div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 1rem; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
+        <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+          <strong style="color: var(--gov-monarchy);">Narrative Context:</strong><br>
+          ${convergence.saga} Saga → ${convergence.arc}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Create convergence dashboard
+function createConvergenceDashboard() {
+  const existingDashboard = document.querySelector('.convergence-dashboard');
+  if (existingDashboard) return;
+  
+  const dashboard = document.createElement('div');
+  dashboard.className = 'convergence-dashboard';
+  dashboard.innerHTML = `
+    <div class="dashboard-header">
+      <div class="dashboard-title">
+        <span>🧩</span>
+        <span>Convergence Analysis</span>
+      </div>
+      <button class="dashboard-toggle" onclick="toggleConvergenceView()">
+        Toggle View
+      </button>
+    </div>
+    
+    <div class="convergence-stats">
+      <div class="stat-card infinity">
+        <div class="stat-label">Infinity Saga</div>
+        <div class="stat-value" id="infinity-count">0</div>
+        <div class="stat-description">Centralized control failure</div>
+      </div>
+      
+      <div class="stat-card multiverse">
+        <div class="stat-label">Multiverse Saga</div>
+        <div class="stat-value" id="multiverse-count">0</div>
+        <div class="stat-description">Fragmented control failure</div>
+      </div>
+      
+      <div class="stat-card control">
+        <div class="stat-label">Control Mechanisms</div>
+        <div class="stat-value" id="control-count">0</div>
+        <div class="stat-description">Governance models tracked</div>
+      </div>
+      
+      <div class="stat-card failure">
+        <div class="stat-label">Convergence Points</div>
+        <div class="stat-value" id="convergence-count">0</div>
+        <div class="stat-description">Major narrative nodes</div>
+      </div>
+    </div>
+    
+    <div id="stakes-panel"></div>
+    <div id="narrative-arc-timeline"></div>
+    <div id="allegiance-network"></div>
+  `;
+  
+  // Insert before timeline grid
+  const timelineGrid = document.querySelector('.timeline-grid');
+  if (timelineGrid) {
+    timelineGrid.parentNode.insertBefore(dashboard, timelineGrid);
+  }
+  
+  updateConvergenceStats();
+  createStakesPanel();
+  createNarrativeArcTimeline();
+  createAllegianceNetwork();
+}
+
+// Update convergence statistics
+function updateConvergenceStats() {
+  const items = window.state?.items || [];
+  
+  const infinityCount = items.filter(item => {
+    const conv = convergenceData[item.key];
+    return conv && conv.saga === 'Infinity';
+  }).length;
+  
+  const multiverseCount = items.filter(item => {
+    const conv = convergenceData[item.key];
+    return conv && conv.saga === 'Multiverse';
+  }).length;
+  
+  const controlMechanisms = new Set();
+  const convergencePoints = new Set();
+  
+  items.forEach(item => {
+    const conv = convergenceData[item.key];
+    if (conv) {
+      controlMechanisms.add(conv.controlMechanism);
+      convergencePoints.add(conv.convergence);
+    }
+  });
+  
+  document.getElementById('infinity-count').textContent = infinityCount;
+  document.getElementById('multiverse-count').textContent = multiverseCount;
+  document.getElementById('control-count').textContent = controlMechanisms.size;
+  document.getElementById('convergence-count').textContent = convergencePoints.size;
+  
+  // Animate counters
+  animateCounter(document.getElementById('infinity-count'), 0, infinityCount, 1000);
+  animateCounter(document.getElementById('multiverse-count'), 0, multiverseCount, 1000);
+  animateCounter(document.getElementById('control-count'), 0, controlMechanisms.size, 1000);
+  animateCounter(document.getElementById('convergence-count'), 0, convergencePoints.size, 1000);
+}
+
+// Create "What's at Stake" panel
+function createStakesPanel() {
+  const panel = document.getElementById('stakes-panel');
+  if (!panel) return;
+  
+  const items = window.state?.items || [];
+  const unwatchedItems = items.filter(item => !item.watched && !item.bonus);
+  
+  const criticalFailures = unwatchedItems
+    .map(item => convergenceData[item.key])
+    .filter(conv => conv && (
+      conv.failureImplication.includes('extinction') ||
+      conv.failureImplication.includes('collapse') ||
+      conv.failureImplication.includes('destruction')
+    ));
+  
+  const riskLevel = (criticalFailures.length / unwatchedItems.length) * 100;
+  
+  panel.innerHTML = `
+    <div class="stakes-panel">
+      <div class="stakes-header">
+        <div class="stakes-icon">⚠️</div>
+        <div class="stakes-title">What's at Stake</div>
+      </div>
+      
+      <div class="stakes-meter">
+        <div class="stakes-fill" style="width: ${riskLevel}%">
+          ${Math.round(riskLevel)}% Risk
+        </div>
+      </div>
+      
+      <ul class="stakes-list">
+        ${criticalFailures.slice(0, 5).map(conv => `
+          <li><strong>${conv.title}:</strong> ${conv.failureImplication}</li>
+        `).join('')}
+        ${criticalFailures.length > 5 ? `<li>...and ${criticalFailures.length - 5} more critical threats</li>` : ''}
+      </ul>
+    </div>
+  `;
+}
+
+// Create narrative arc timeline
+function createNarrativeArcTimeline() {
+  const container = document.getElementById('narrative-arc-timeline');
+  if (!container) return;
+  
+  const arcs = {};
+  Object.values(convergenceData).forEach(conv => {
+    if (!arcs[conv.arc]) {
+      arcs[conv.arc] = { count: 0, saga: conv.saga };
+    }
+    arcs[conv.arc].count++;
+  });
+  
+  const arcOrder = [
+    'Foundations of Heroes',
+    'Formation & SHIELD Collapse',
+    'Expansion (Cosmic / Street / Science)',
+    'Collapse Toward Infinity War',
+    'Endgame Arc',
+    'Identity & Aftermath',
+    'Multiverse Opens',
+    'New Generation',
+    'Global & Cosmic Instability',
+    'Kang Setup & Collapse',
+    'Anti-Hero & Street Power',
+    'Final Convergence'
+  ];
+  
+  const arcClassMap = {
+    'Foundations of Heroes': 'foundations',
+    'Formation & SHIELD Collapse': 'formation',
+    'Expansion (Cosmic / Street / Science)': 'expansion',
+    'Collapse Toward Infinity War': 'collapse',
+    'Endgame Arc': 'endgame',
+    'Identity & Aftermath': 'identity',
+    'Multiverse Opens': 'multiverse-opens',
+    'New Generation': 'new-generation',
+    'Global & Cosmic Instability': 'instability',
+    'Kang Setup & Collapse': 'collapse',
+    'Anti-Hero & Street Power': 'instability',
+    'Final Convergence': 'final'
+  };
+  
+  container.innerHTML = `
+    <div class="narrative-arc-timeline">
+      <h3 style="color: var(--gov-monarchy); margin-bottom: 1.5rem; font-size: 1.3rem;">
+        📈 Narrative Arc Timeline
+      </h3>
+      <div class="arc-track">
+        ${arcOrder.filter(arc => arcs[arc]).map(arc => `
+          <div class="arc-node ${arcClassMap[arc]}" onclick="filterByArc('${arc}')">
+            <div class="arc-name">${arc}</div>
+            <div class="arc-count">${arcs[arc].count} titles</div>
+            <div class="arc-count" style="margin-top: 0.25rem; color: ${arcs[arc].saga === 'Infinity' ? '#ff6b35' : '#667eea'};">
+              ${arcs[arc].saga} Saga
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+// Create allegiance network
+function createAllegianceNetwork() {
+  const container = document.getElementById('allegiance-network');
+  if (!container) return;
+  
+  const allegiances = {};
+  Object.values(convergenceData).forEach(conv => {
+    if (!allegiances[conv.allegiance]) {
+      allegiances[conv.allegiance] = 0;
+    }
+    allegiances[conv.allegiance]++;
+  });
+  
+  const allegiancePositions = {
+    'Avengers': { x: 50, y: 30 },
+    'Guardians': { x: 20, y: 50 },
+    'Defenders': { x: 80, y: 50 },
+    'Young Avengers': { x: 35, y: 70 },
+    'Mystic Arts': { x: 65, y: 70 },
+    'Wakanda': { x: 50, y: 90 },
+    'Fantastic Four': { x: 15, y: 30 },
+    'X-Men': { x: 85, y: 30 },
+    'Eternals': { x: 10, y: 70 },
+    'Midnight Sons': { x: 90, y: 70 },
+    'SHIELD': { x: 30, y: 10 },
+    'TVA': { x: 70, y: 10 },
+    'New Avengers': { x: 50, y: 50 }
+  };
+  
+  const allegianceClasses = {
+    'Avengers': 'avengers',
+    'Guardians': 'guardians',
+    'Defenders': 'defenders',
+    'Young Avengers': 'young-avengers',
+    'Mystic Arts': 'mystic-arts',
+    'Wakanda': 'wakanda'
+  };
+  
+  container.innerHTML = `
+    <div class="allegiance-network">
+      <h3 style="color: var(--gov-individual); margin-bottom: 1.5rem; font-size: 1.3rem;">
+        🕸️ Allegiance Network
+      </h3>
+      ${Object.entries(allegiances).map(([allegiance, count]) => {
+        const pos = allegiancePositions[allegiance] || { x: 50, y: 50 };
+        const className = allegianceClasses[allegiance] || 'avengers';
+        return `
+          <div class="network-node ${className}" 
+               style="left: ${pos.x}%; top: ${pos.y}%;"
+               onclick="filterByAllegiance('${allegiance}')"
+               title="${allegiance}: ${count} titles">
+            ${allegiance}<br><small>(${count})</small>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+// Filter functions
+function filterByArc(arc) {
+  console.log('[Convergence] Filtering by arc:', arc);
+  // Implement filtering logic
+  toast.show(`Filtering by: ${arc}`, 'info', 3000);
+}
+
+function filterByAllegiance(allegiance) {
+  console.log('[Convergence] Filtering by allegiance:', allegiance);
+  toast.show(`Filtering by: ${allegiance}`, 'info', 3000);
+}
+
+// Toggle convergence view
+function toggleConvergenceView() {
+  const dashboard = document.querySelector('.convergence-dashboard');
+  const button = dashboard.querySelector('.dashboard-toggle');
+  
+  button.classList.toggle('active');
+  
+  const isActive = button.classList.contains('active');
+  
+  if (isActive) {
+    // Show detailed view
+    document.getElementById('stakes-panel').style.display = 'block';
+    document.getElementById('narrative-arc-timeline').style.display = 'block';
+    document.getElementById('allegiance-network').style.display = 'block';
+    button.textContent = 'Hide Details';
+  } else {
+    // Show compact view
+    document.getElementById('stakes-panel').style.display = 'none';
+    document.getElementById('narrative-arc-timeline').style.display = 'none';
+    document.getElementById('allegiance-network').style.display = 'none';
+    button.textContent = 'Show Details';
+  }
+}
+
+// Add thematic filters
+function addThematicFilters() {
+  const existingFilters = document.querySelector('.theme-filters');
+  if (existingFilters) return;
+  
+  const themes = new Set();
+  Object.values(convergenceData).forEach(conv => {
+    themes.add(conv.topic);
+  });
+  
+  const filterContainer = document.createElement('div');
+  filterContainer.className = 'theme-filters';
+  filterContainer.innerHTML = `
+    <h3 style="width: 100%; color: var(--gov-mystic); margin-bottom: 0.5rem; font-size: 1.1rem;">
+      🎭 Thematic Filters
+    </h3>
+    ${Array.from(themes).sort().map(theme => `
+      <div class="theme-chip" onclick="filterByTheme('${theme}')">
+        ${theme}
+      </div>
+    `).join('')}
+  `;
+  
+  const controlsPanel = document.querySelector('.controls-panel');
+  if (controlsPanel) {
+    controlsPanel.appendChild(filterContainer);
+  }
+}
+
+function filterByTheme(theme) {
+  console.log('[Convergence] Filtering by theme:', theme);
+  
+  const chips = document.querySelectorAll('.theme-chip');
+  chips.forEach(chip => {
+    if (chip.textContent.trim() === theme) {
+      chip.classList.toggle('active');
+    }
+  });
+  
+  toast.show(`Filtering by theme: ${theme}`, 'info', 3000);
+}
+
+// Initialize Phase 15
+async function initConvergenceLayer() {
+  console.log('[Convergence] Initializing Phase 15: Convergence Analysis Layer...');
+  
+  await loadConvergenceData();
+  
+  if (Object.keys(convergenceData).length === 0) {
+    console.error('[Convergence] No data loaded, skipping initialization');
+    return;
+  }
+  
+  createConvergenceDashboard();
+  addGovernanceBadges();
+  addSagaArcBadges();
+  addThematicFilters();
+  
+  // Enhance existing flip card generation
+  const originalGenerateTriviaContent = window.generateTriviaContent;
+  if (originalGenerateTriviaContent) {
+    window.generateTriviaContent = function(item) {
+      const originalContent = originalGenerateTriviaContent(item);
+      const convergenceContent = enhanceCardBackWithConvergence(item);
+      return originalContent + convergenceContent;
+    };
+  }
+  
+  console.log('[Convergence] Phase 15 initialization complete!');
+}
+
+// Make functions globally available
+window.toggleConvergenceView = toggleConvergenceView;
+window.filterByArc = filterByArc;
+window.filterByAllegiance = filterByAllegiance;
+window.filterByTheme = filterByTheme;
+
+/* ============================================
    PHASE 14: PWA SUPPORT
    ============================================ */
 
@@ -2305,6 +2831,13 @@ window.MCUEnhancements = {
 function initializeTimelineBar() {
   const phaseSegments = document.querySelectorAll('.phase-segment');
   const progressIndicator = document.getElementById('timelineProgress');
+
+// Initialize Phase 15: Convergence Analysis Layer
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initConvergenceLayer);
+} else {
+  initConvergenceLayer();
+}
   
   // Make phase segments clickable
   phaseSegments.forEach(segment => {
