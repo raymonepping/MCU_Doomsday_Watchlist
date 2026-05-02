@@ -619,11 +619,15 @@ body.show-saga-badges .saga-arc-badge {
 }
 
 body.show-governance-badges .governance-badge {
-  display: flex !important;
+  display: inline-flex !important;
+  max-width: fit-content;
+  width: auto;
 }
 
 body.show-concept-badges .concept-badge {
   display: inline-flex !important;
+  max-width: fit-content;
+  width: auto;
 }
 
 /* Mobile Responsive */
