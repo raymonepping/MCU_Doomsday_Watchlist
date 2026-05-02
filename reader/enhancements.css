@@ -620,8 +620,8 @@ body:not(.show-governance-badges) .timeline-card .governance-badge {
 }
 
 /* Hide concept badges when toggle is OFF */
-body:not(.show-concept-badges) .timeline-card .concept-badge,
-body:not(.show-concept-badges) .card-body .concept-badge {
+body:not(.show-concepts-badges) .timeline-card .concept-badge,
+body:not(.show-concepts-badges) .card-body .concept-badge {
   display: none !important;
 }
 
@@ -638,8 +638,8 @@ body.show-governance-badges .timeline-card .governance-badge {
 }
 
 /* Show concept badges when toggle is ON */
-body.show-concept-badges .timeline-card .concept-badge,
-body.show-concept-badges .card-body .concept-badge {
+body.show-concepts-badges .timeline-card .concept-badge,
+body.show-concepts-badges .card-body .concept-badge {
   display: inline-flex !important;
   max-width: fit-content;
   width: auto;
