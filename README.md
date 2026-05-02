@@ -163,6 +163,19 @@ Understand the "How" and "Where" of Doomsday by exploring the deeper MCU lore an
 
 All enhancements are mobile-optimized and work seamlessly with existing features.
 
+#### Phase 8: Timeline UI Improvements (JSX-Inspired)
+
+- 🎯 **Top Filters Section** — Sticky filter bar with glassmorphism and backdrop blur
+- 🔍 **Enhanced Search Bar** — Prominent search input with focus glow and bidirectional sync
+- 🎬 **Phase Filter Chips** — Filter by MCU phases (Phase 1-6) with active state indicators
+- 📺 **Type Filter Chips** — Toggle between Movies (🎬) and TV Series (📺) with icon prefixes
+- 📊 **Filter Results Counter** — Live count showing "X of Y titles" as filters change
+- ⟡ **Era Dividers** — Timeline section dividers with year ranges (e.g., "⟡ 2018-2019 ⟡")
+- 🎨 **Modern UI Design** — Inspired by React timeline designs while maintaining vanilla JS
+- 📱 **Fully Responsive** — All new filters adapt seamlessly to mobile and desktop
+
+Phase 8 brings a modern, streamlined filtering experience inspired by contemporary timeline UIs while maintaining GitHub Pages compatibility and zero framework dependencies.
+
 #### Running the Reader
 
 Start the development server:

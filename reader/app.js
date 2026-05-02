@@ -17,6 +17,8 @@ const state = {
   characterFilter: null, // null or character name
   blockFilter: null, // null or block number (1-4)
   conceptFilter: null, // null or concept name
+  phaseFilter: "all", // "all" or phase number (1-6)
+  typeFilter: "all", // "all", "film", or "series"
 };
 
 // Block definitions based on key ranges
@@ -126,6 +128,11 @@ const elements = {
   characterChips: document.querySelector("#characterChips"),
   blockChips: [...document.querySelectorAll("[data-block]")],
   conceptChips: [...document.querySelectorAll("[data-concept]")],
+  topSearchInput: document.querySelector("#topSearchInput"),
+  phaseChips: [...document.querySelectorAll("[data-phase]")],
+  typeChips: [...document.querySelectorAll("[data-type]")],
+  filterCount: document.querySelector("#filterCount"),
+  filterTotal: document.querySelector("#filterTotal"),
 };
 
 function getInitialLocale() {
@@ -384,7 +391,39 @@ function matchesFilters(item) {
     return conceptTitles.includes(keyNum);
   })();
 
-  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch;
+  // Phase filter - maps items to MCU phases based on key ranges
+  const phaseMatch = state.phaseFilter === "all" || (() => {
+    if (item.bonus) return true; // Bonus items always match
+    const keyNum = parseInt(item.key);
+    const phaseNum = parseInt(state.phaseFilter);
+    
+    // Phase mapping based on MCU timeline (approximate)
+    // Phase 1: 1-6, Phase 2: 7-12, Phase 3: 13-18, Phase 4: 19-22, Phase 5: 23-26, Phase 6: 27-30
+    const phaseRanges = {
+      1: [1, 6],
+      2: [7, 12],
+      3: [13, 18],
+      4: [19, 22],
+      5: [23, 26],
+      6: [27, 30]
+    };
+    
+    const range = phaseRanges[phaseNum];
+    return range && keyNum >= range[0] && keyNum <= range[1];
+  })();
+
+  // Type filter - matches Film vs Series
+  const typeMatch = state.typeFilter === "all" || (() => {
+    const itemType = item.kind.toLowerCase();
+    if (state.typeFilter === "film") {
+      return itemType === "film" || itemType === "movie";
+    } else if (state.typeFilter === "series") {
+      return itemType === "series" || itemType.includes("season");
+    }
+    return true;
+  })();
+
+  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch && phaseMatch && typeMatch;
 }
 
 function renderStaticText() {
@@ -477,6 +516,28 @@ function renderSearchResult(matches) {
   }: ${positions}`;
 }
 
+// Helper function to determine era/year for timeline dividers
+function getEraForItem(item) {
+  if (item.bonus) return null; // No dividers for bonus content
+  
+  const keyNum = parseInt(item.key);
+  
+  // Map items to approximate release years/eras based on MCU timeline
+  // This creates natural groupings in the timeline
+  if (keyNum >= 1 && keyNum <= 3) return "2016-2017"; // Doctor Strange, Homecoming, Ragnarok
+  if (keyNum >= 4 && keyNum <= 6) return "2018"; // Black Panther, Black Widow, Ant-Man & Wasp
+  if (keyNum >= 7 && keyNum <= 8) return "2018-2019"; // Infinity War, Endgame
+  if (keyNum >= 9 && keyNum <= 11) return "2019-2021"; // Far From Home, WandaVision, Loki
+  if (keyNum >= 12 && keyNum <= 14) return "2021"; // Hawkeye, Shang-Chi, Love & Thunder
+  if (keyNum >= 15 && keyNum <= 18) return "2021-2022"; // Loki S2, Moon Knight, No Way Home, MoM
+  if (keyNum >= 19 && keyNum <= 22) return "2023"; // Quantumania, Wakanda Forever, Marvels, Deadpool
+  if (keyNum >= 23 && keyNum <= 24) return "2025"; // Brave New World, Thunderbolts
+  if (keyNum >= 25 && keyNum <= 27) return "2025-2026"; // Fantastic Four, Wonder Man, Daredevil
+  if (keyNum >= 28 && keyNum <= 30) return "2026-2027"; // VisionQuest, Spider-Man, Doomsday
+  
+  return null;
+}
+
 function renderBlockView() {
   const matches = state.items.filter(matchesFilters);
   const fragment = document.createDocumentFragment();
@@ -544,18 +605,40 @@ function renderBlockView() {
 }
 
 function renderTimeline() {
+  // Update filter count display
+  const matches = state.items.filter(matchesFilters);
+  if (elements.filterCount && elements.filterTotal) {
+    elements.filterCount.textContent = matches.length;
+    elements.filterTotal.textContent = state.items.length;
+  }
+
   // Use block view if enabled
   if (state.timelineView === 'blocks') {
     renderBlockView();
     return;
   }
 
-  // Default card view
-  const matches = state.items.filter(matchesFilters);
+  // Default card view with era dividers
   const fragment = document.createDocumentFragment();
+  let lastEra = null;
 
   for (let i = 0; i < matches.length; i++) {
     const item = matches[i];
+    
+    // Add era divider if we're entering a new era
+    const currentEra = getEraForItem(item);
+    if (currentEra && currentEra !== lastEra) {
+      const divider = document.createElement('div');
+      divider.className = 'era-divider';
+      divider.innerHTML = `
+        <div class="era-divider-line"></div>
+        <div class="era-divider-text">⟡ ${currentEra} ⟡</div>
+        <div class="era-divider-line"></div>
+      `;
+      fragment.append(divider);
+      lastEra = currentEra;
+    }
+    
     const card = elements.template.content.firstElementChild.cloneNode(true);
     const read = state.read.has(item.key);
 
@@ -634,6 +717,38 @@ elements.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   renderTimeline();
 });
+
+// Top search input (synced with sidebar search)
+if (elements.topSearchInput) {
+  elements.topSearchInput.addEventListener("input", (event) => {
+    state.query = event.target.value;
+    // Sync with sidebar search
+    elements.searchInput.value = event.target.value;
+    renderTimeline();
+  });
+}
+
+// Phase filter chips
+for (const button of elements.phaseChips) {
+  button.addEventListener("click", () => {
+    state.phaseFilter = button.dataset.phase;
+    for (const chip of elements.phaseChips) {
+      chip.classList.toggle("is-active", chip === button);
+    }
+    renderTimeline();
+  });
+}
+
+// Type filter chips
+for (const button of elements.typeChips) {
+  button.addEventListener("click", () => {
+    state.typeFilter = button.dataset.type;
+    for (const chip of elements.typeChips) {
+      chip.classList.toggle("is-active", chip === button);
+    }
+    renderTimeline();
+  });
+}
 
 for (const button of elements.filterButtons) {
   button.addEventListener("click", () => {

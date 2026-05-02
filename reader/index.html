@@ -259,6 +259,45 @@
         </aside>
 
         <section class="timeline-section" aria-label="MCU timeline">
+          <!-- New Top Filters Section -->
+          <div class="top-filters-section">
+            <div class="top-filters-container">
+              <!-- Search Bar -->
+              <div class="top-search-wrapper">
+                <input
+                  id="topSearchInput"
+                  type="search"
+                  placeholder="Search hero, villain, title..."
+                  autocomplete="off"
+                  class="top-search-input"
+                />
+              </div>
+              
+              <!-- Phase Filters -->
+              <div class="phase-filters-row">
+                <button class="phase-chip is-active" type="button" data-phase="all">ALL</button>
+                <button class="phase-chip" type="button" data-phase="1">PHASE 1</button>
+                <button class="phase-chip" type="button" data-phase="2">PHASE 2</button>
+                <button class="phase-chip" type="button" data-phase="3">PHASE 3</button>
+                <button class="phase-chip" type="button" data-phase="4">PHASE 4</button>
+                <button class="phase-chip" type="button" data-phase="5">PHASE 5</button>
+                <button class="phase-chip" type="button" data-phase="6">PHASE 6</button>
+              </div>
+              
+              <!-- Type Filters -->
+              <div class="type-filters-row">
+                <button class="type-chip is-active" type="button" data-type="all">🔍 ALL</button>
+                <button class="type-chip" type="button" data-type="film">🎬 MOVIES</button>
+                <button class="type-chip" type="button" data-type="series">📺 TV SERIES</button>
+              </div>
+              
+              <!-- Results Counter -->
+              <div class="filter-results" id="filterResults">
+                Showing <span id="filterCount">0</span> of <span id="filterTotal">0</span> titles
+              </div>
+            </div>
+          </div>
+
           <div class="section-heading">
             <h2>Timeline</h2>
             <div class="timeline-controls">
