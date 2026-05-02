@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02T13:54:44.141Z",
+  "generatedAt": "2026-05-02T20:38:50.167Z",
   "source": "Marvel.com page metadata and IMDB for X-Men bonus titles",
   "images": {
     "1": {
@@ -181,6 +181,18 @@
     "45": {
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/45.jpg"
+    },
+    "47": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/echo_lob_crd_02.jpg",
+      "localImage": "./assets/posters/47.jpg"
+    },
+    "48": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/agathaallalong_lob_crd_02.jpg",
+      "localImage": "./assets/posters/48.jpg"
+    },
+    "49": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagain_lob_crd_03.jpg",
+      "localImage": "./assets/posters/49.jpg"
     },
     "B1": {
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",

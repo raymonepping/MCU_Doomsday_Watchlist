@@ -34,8 +34,8 @@
     "noTimelineNote": "Geen tijdlijnnotitie beschikbaar."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_nl.md",
-  "generatedAt": "2026-05-01T10:17:34.810Z",
-  "count": 43,
+  "generatedAt": "2026-05-02T20:30:00.000Z",
+  "count": 49,
   "bonusCount": 3,
   "items": [
     {
@@ -692,7 +692,7 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
       "localImage": "./assets/posters/43.jpg",
       "phase": 6,
-      "chronologicalOrder": 42
+      "chronologicalOrder": 46
     },
     {
       "key": "44",
@@ -708,7 +708,7 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/44.jpg",
       "phase": 6,
-      "chronologicalOrder": 44
+      "chronologicalOrder": 50
     },
     {
       "key": "45",
@@ -740,7 +740,7 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B1.jpg",
       "phase": null,
-      "chronologicalOrder": 46
+      "chronologicalOrder": 49
     },
     {
       "key": "B2",
@@ -756,7 +756,7 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
       "localImage": "./assets/posters/B2.jpg",
       "phase": null,
-      "chronologicalOrder": 47
+      "chronologicalOrder": 50
     },
     {
       "key": "B3",
@@ -772,7 +772,71 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B3.jpg",
       "phase": null,
-      "chronologicalOrder": 48
+      "chronologicalOrder": 51
+    },
+    {
+      "key": "46",
+      "title": "Agent Carter — Seizoen 1 & 2",
+      "kind": "Serie",
+      "runtime": "~8 uur",
+      "bonus": false,
+      "phase": 2,
+      "what": "Peggy Carter werkt voor de Strategic Scientific Reserve in New York in 1946, vecht tegen vijanden van binnen en buiten terwijl ze navigeert door een door mannen gedomineerde werkplek.",
+      "why": "Legt de basis voor de vroege dagen van S.H.I.E.L.D. en Peggy Carter's rol in het vormgeven van de organisatie. Geeft context voor de erfenis die Captain America verbindt met de moderne MCU.",
+      "when": "1946 - Een jaar na Captain America: The First Avenger",
+      "who": "Hayley Atwell als Peggy Carter, James D'Arcy als Edwin Jarvis, Dominic Cooper als Howard Stark",
+      "officialUrl": "https://www.marvel.com/tv-shows/agent-carter/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/agentcarters2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/46.jpg",
+      "chronologicalOrder": 3
+    },
+    {
+      "key": "47",
+      "title": "Echo",
+      "kind": "Serie",
+      "runtime": "~3 uur",
+      "bonus": false,
+      "phase": 5,
+      "what": "Maya Lopez keert terug naar haar geboorteplaats om haar verleden onder ogen te zien, opnieuw verbinding te maken met haar Native American roots en de gevolgen van haar acties in New York te confronteren.",
+      "why": "Verkent de street-level MCU en Native American erfgoed. Maya's reis sluit aan bij de bredere thema's van identiteit en erfenis die door Fase 5 lopen.",
+      "when": "2026 - Na Hawkeye",
+      "who": "Alaqua Cox als Maya Lopez/Echo, Vincent D'Onofrio als Kingpin, Chaske Spencer als Henry Lopez",
+      "officialUrl": "https://www.marvel.com/tv-shows/echo/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/echo_lob_crd_02.jpg",
+      "localImage": "./assets/posters/47.jpg",
+      "chronologicalOrder": 45
+    },
+    {
+      "key": "48",
+      "title": "Agatha All Along",
+      "kind": "Serie",
+      "runtime": "~6 uur",
+      "bonus": false,
+      "phase": 5,
+      "what": "Agatha Harkness, beroofd van haar krachten, moet de Witches' Road navigeren met een coven van onwaarschijnlijke bondgenoten om terug te krijgen wat ze verloor.",
+      "why": "Breidt het magiesysteem uit dat in WandaVision werd geïntroduceerd. Agatha's kennis van hekserij en het multiversum geeft context voor de mystieke bedreigingen in Fase 6.",
+      "when": "2026 - Na Deadpool & Wolverine",
+      "who": "Kathryn Hahn als Agatha Harkness, Joe Locke als Teen, Aubrey Plaza als Rio Vidal",
+      "officialUrl": "https://www.marvel.com/tv-shows/agatha-all-along/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/agathaallalong_lob_crd_02.jpg",
+      "localImage": "./assets/posters/48.jpg",
+      "chronologicalOrder": 47
+    },
+    {
+      "key": "49",
+      "title": "Daredevil: Born Again — Seizoen 2",
+      "kind": "Serie",
+      "runtime": "~6 uur",
+      "bonus": false,
+      "phase": 6,
+      "what": "Matt Murdock opereert als Daredevil in een New York dat steeds politiek instabieler wordt, terwijl Kingpin zijn greep op de stad verstevigt.",
+      "why": "Politieke chaos als achtergrond voor Doomsday. Valentina's netwerk en Kingpin's controle over New York vormen een subplot die relevant is voor de bredere machtsstructuur. Chronologisch de meest recente MCU-titel — speelt zich af in ongeveer 2027.",
+      "when": "Na Wonder Man, kort voor Spider-Man: Brand New Day.",
+      "who": "Charlie Cox als Matt Murdock/Daredevil, Vincent D'Onofrio als Kingpin.",
+      "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
+      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
+      "localImage": "./assets/posters/49.jpg",
+      "chronologicalOrder": 49
     }
   ]
 }

@@ -34,8 +34,8 @@
     "noTimelineNote": "No timeline note available."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
-  "generatedAt": "2026-05-01T10:17:34.802Z",
-  "count": 45,
+  "generatedAt": "2026-05-02T20:30:00.000Z",
+  "count": 49,
   "bonusCount": 3,
   "items": [
     {
@@ -696,19 +696,19 @@
     },
     {
       "key": "42",
-      "title": "Daredevil: Born Again — Season 2",
+      "title": "Daredevil: Born Again — Season 1",
       "kind": "Series",
       "runtime": "~6 hours",
       "bonus": false,
-      "phase": 6,
-      "what": "Matt Murdock operates as Daredevil in a New York that is growing increasingly politically unstable, while Kingpin tightens his grip on the city.",
-      "why": "Political chaos as the backdrop for Doomsday. Valentina's network and Kingpin's control of New York form a subplot relevant to the broader power structure. Chronologically the most recent MCU title — set in approximately 2027.",
-      "when": "After Wonder Man, shortly before Spider-Man: Brand New Day.",
-      "who": "Charlie Cox as Matt Murdock/Daredevil, Vincent D'Onofrio as Kingpin.",
-      "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
-      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
+      "phase": 5,
+      "what": "Matt Murdock returns as Daredevil in a New York where Wilson Fisk is consolidating power and the city's criminal underworld is evolving.",
+      "why": "Reintroduces Daredevil to the MCU proper. The street-level perspective and Kingpin's political ambitions connect to the broader power struggles leading into Doomsday.",
+      "when": "2025 - Before Daredevil: Born Again Season 2",
+      "who": "Charlie Cox as Matt Murdock/Daredevil, Vincent D'Onofrio as Wilson Fisk/Kingpin, Jon Bernthal as Frank Castle/Punisher",
+      "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagain_lob_crd_03.jpg",
       "localImage": "./assets/posters/42.jpg",
-      "chronologicalOrder": 43
+      "chronologicalOrder": 48
     },
     {
       "key": "43",
@@ -724,7 +724,7 @@
       "officialUrl": "https://www.marvel.com/tv-shows/visionquest/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
       "localImage": "./assets/posters/43.jpg",
-      "chronologicalOrder": 42
+      "chronologicalOrder": 46
     },
     {
       "key": "44",
@@ -740,7 +740,7 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-brand-new-day",
       "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/44.jpg",
-      "chronologicalOrder": 44
+      "chronologicalOrder": 50
     },
     {
       "key": "45",
@@ -772,7 +772,7 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B1.jpg",
-      "chronologicalOrder": 46
+      "chronologicalOrder": 49
     },
     {
       "key": "B2",
@@ -788,7 +788,7 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
       "localImage": "./assets/posters/B2.jpg",
-      "chronologicalOrder": 47
+      "chronologicalOrder": 50
     },
     {
       "key": "B3",
@@ -804,7 +804,71 @@
       "officialUrl": "",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B3.jpg",
-      "chronologicalOrder": 48
+      "chronologicalOrder": 51
+    },
+    {
+      "key": "46",
+      "title": "Agent Carter — Seasons 1 & 2",
+      "kind": "Series",
+      "runtime": "~8 hours",
+      "bonus": false,
+      "phase": 2,
+      "what": "Peggy Carter works for the Strategic Scientific Reserve in 1946 New York, fighting enemies from within and without while navigating a male-dominated workplace.",
+      "why": "Establishes the early days of S.H.I.E.L.D. and Peggy Carter's role in shaping the organization. Provides context for the legacy that connects Captain America to the modern MCU.",
+      "when": "1946 - One year after Captain America: The First Avenger",
+      "who": "Hayley Atwell as Peggy Carter, James D'Arcy as Edwin Jarvis, Dominic Cooper as Howard Stark",
+      "officialUrl": "https://www.marvel.com/tv-shows/agent-carter/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/agentcarters2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/46.jpg",
+      "chronologicalOrder": 3
+    },
+    {
+      "key": "47",
+      "title": "Echo",
+      "kind": "Series",
+      "runtime": "~3 hours",
+      "bonus": false,
+      "phase": 5,
+      "what": "Maya Lopez returns to her hometown to confront her past, reconnect with her Native American roots, and face the consequences of her actions in New York.",
+      "why": "Explores the street-level MCU and Native American heritage. Maya's journey connects to the broader themes of identity and legacy that run through Phase 5.",
+      "when": "2026 - After Hawkeye",
+      "who": "Alaqua Cox as Maya Lopez/Echo, Vincent D'Onofrio as Kingpin, Chaske Spencer as Henry Lopez",
+      "officialUrl": "https://www.marvel.com/tv-shows/echo/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/echo_lob_crd_02.jpg",
+      "localImage": "./assets/posters/47.jpg",
+      "chronologicalOrder": 45
+    },
+    {
+      "key": "48",
+      "title": "Agatha All Along",
+      "kind": "Series",
+      "runtime": "~6 hours",
+      "bonus": false,
+      "phase": 5,
+      "what": "Agatha Harkness, stripped of her powers, must navigate the Witches' Road with a coven of unlikely allies to reclaim what she lost.",
+      "why": "Expands on the magic system introduced in WandaVision. Agatha's knowledge of witchcraft and the multiverse provides context for the mystical threats in Phase 6.",
+      "when": "2026 - After Deadpool & Wolverine",
+      "who": "Kathryn Hahn as Agatha Harkness, Joe Locke as Teen, Aubrey Plaza as Rio Vidal",
+      "officialUrl": "https://www.marvel.com/tv-shows/agatha-all-along/1",
+      "imageUrl": "https://cdn.marvel.com/content/2x/agathaallalong_lob_crd_02.jpg",
+      "localImage": "./assets/posters/48.jpg",
+      "chronologicalOrder": 47
+    },
+    {
+      "key": "49",
+      "title": "Daredevil: Born Again — Season 2",
+      "kind": "Series",
+      "runtime": "~6 hours",
+      "bonus": false,
+      "phase": 6,
+      "what": "Matt Murdock operates as Daredevil in a New York that is growing increasingly politically unstable, while Kingpin tightens his grip on the city.",
+      "why": "Political chaos as the backdrop for Doomsday. Valentina's network and Kingpin's control of New York form a subplot relevant to the broader power structure. Chronologically the most recent MCU title — set in approximately 2027.",
+      "when": "After Wonder Man, shortly before Spider-Man: Brand New Day.",
+      "who": "Charlie Cox as Matt Murdock/Daredevil, Vincent D'Onofrio as Kingpin.",
+      "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
+      "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
+      "localImage": "./assets/posters/49.jpg",
+      "chronologicalOrder": 49
     }
   ]
 }
