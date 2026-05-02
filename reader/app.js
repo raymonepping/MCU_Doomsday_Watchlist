@@ -602,6 +602,13 @@ function renderBlockView() {
 
   elements.timeline.replaceChildren(fragment);
   renderSearchResult(matches);
+  
+  // Re-apply enhancements after block view is rendered
+  if (window.MCUEnhancements) {
+    setTimeout(() => {
+      window.MCUEnhancements.applyBlockColors();
+    }, 50);
+  }
 }
 
 function renderTimeline() {
@@ -692,6 +699,15 @@ function renderTimeline() {
 
   elements.timeline.replaceChildren(fragment);
   renderSearchResult(matches);
+  
+  // Re-apply enhancements after timeline is rendered
+  if (window.MCUEnhancements) {
+    setTimeout(() => {
+      window.MCUEnhancements.applyBlockColors();
+      window.MCUEnhancements.addConceptBadges();
+      window.MCUEnhancements.addTriviaToCards();
+    }, 50);
+  }
 }
 
 function render() {
