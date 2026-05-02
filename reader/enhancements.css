@@ -1267,3 +1267,195 @@ h1 {
     font-size: 0.85rem;
   }
 }
+
+/* ============================================
+   PHASE 11: VISUAL TIMELINE BAR
+   ============================================ */
+
+.phase-timeline-bar {
+  position: relative;
+  width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, rgba(10, 10, 20, 0.95), rgba(20, 20, 40, 0.95));
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.phase-segment {
+  flex: 1;
+  min-height: 80px;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.phase-segment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.phase-segment:hover::before {
+  opacity: 1;
+}
+
+.phase-segment:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.phase-segment.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+}
+
+/* Phase Colors */
+.phase-1 {
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  border: 2px solid rgba(196, 30, 58, 0.5);
+}
+
+.phase-2 {
+  background: linear-gradient(135deg, #ff6b35 0%, #d4380d 100%);
+  border: 2px solid rgba(255, 107, 53, 0.5);
+}
+
+.phase-3 {
+  background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  border: 2px solid rgba(255, 215, 0, 0.5);
+}
+
+.phase-4 {
+  background: linear-gradient(135deg, #9b59b6 0%, #6c3483 100%);
+  border: 2px solid rgba(155, 89, 182, 0.5);
+}
+
+.phase-5 {
+  background: linear-gradient(135deg, #3498db 0%, #2874a6 100%);
+  border: 2px solid rgba(52, 152, 219, 0.5);
+}
+
+.phase-6 {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  border: 2px solid rgba(231, 76, 60, 0.5);
+}
+
+.phase-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.25rem;
+}
+
+.phase-years {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.phase-count {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.timeline-progress-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00ff88, #00ccff);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .phase-segment {
+    min-height: 70px;
+    padding: 0.5rem;
+  }
+  
+  .phase-label {
+    font-size: 0.8rem;
+  }
+  
+  .phase-years {
+    font-size: 0.7rem;
+  }
+  
+  .phase-count {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .phase-timeline-bar {
+    padding: 1rem 0.5rem;
+  }
+  
+  .timeline-track {
+    gap: 0.25rem;
+  }
+  
+  .phase-segment {
+    min-height: 60px;
+    padding: 0.4rem;
+  }
+  
+  .phase-label {
+    font-size: 0.7rem;
+  }
+  
+  .phase-years {
+    font-size: 0.65rem;
+  }
+  
+  .phase-count {
+    display: none; /* Hide on mobile to save space */
+  }
+}
+
+@media (max-width: 480px) {
+  .phase-segment {
+    min-height: 50px;
+    padding: 0.3rem;
+  }
+  
+  .phase-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .phase-years {
+    font-size: 0.6rem;
+  }
+}
