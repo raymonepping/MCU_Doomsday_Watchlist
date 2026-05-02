@@ -1,3 +1,394 @@
+/* ============================================
+   PHASE 16: CHARACTER NETWORK GRAPH STYLES
+   ============================================ */
+
+/* Network Graph Container */
+.character-network-container {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.95), rgba(40, 20, 60, 0.95));
+  border-radius: 16px;
+  border: 2px solid rgba(139, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.network-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.network-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  margin: 0;
+}
+
+.network-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Network Controls */
+.network-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.network-tab {
+  padding: 0.5rem 1rem;
+  background: rgba(139, 0, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  color: #ffd700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.network-tab:hover {
+  background: rgba(139, 0, 0, 0.5);
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.network-tab.active {
+  background: rgba(139, 0, 0, 0.8);
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Canvas Container */
+.network-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: rgba(10, 10, 20, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+#character-network-canvas {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+#character-network-canvas:active {
+  cursor: grabbing;
+}
+
+/* Network Legend */
+.network-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(10, 10, 20, 0.5);
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Infinity Stone Tracker */
+.infinity-stone-tracker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stone-card {
+  padding: 1rem;
+  background: rgba(10, 10, 20, 0.8);
+  border-radius: 12px;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.stone-card.space { border-color: #0066ff; }
+.stone-card.mind { border-color: #ffff00; }
+.stone-card.reality { border-color: #ff0000; }
+.stone-card.power { border-color: #9400d3; }
+.stone-card.time { border-color: #00ff00; }
+.stone-card.soul { border-color: #ffa500; }
+
+.stone-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  box-shadow: 0 0 20px currentColor;
+  animation: stone-pulse 2s ease-in-out infinite;
+}
+
+@keyframes stone-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.stone-card.space .stone-icon { background: #0066ff; }
+.stone-card.mind .stone-icon { background: #ffff00; }
+.stone-card.reality .stone-icon { background: #ff0000; }
+.stone-card.power .stone-icon { background: #9400d3; }
+.stone-card.time .stone-icon { background: #00ff00; }
+.stone-card.soul .stone-icon { background: #ffa500; }
+
+.stone-name {
+  font-weight: bold;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stone-appearances {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* Team Formation Timeline */
+.team-timeline {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.95), rgba(40, 20, 60, 0.95));
+  border-radius: 16px;
+  border: 2px solid rgba(139, 0, 0, 0.3);
+}
+
+.timeline-track {
+  position: relative;
+  padding: 2rem 0;
+  overflow-x: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    rgba(255, 215, 0, 0.3) 0%,
+    rgba(255, 215, 0, 0.8) 50%,
+    rgba(255, 215, 0, 0.3) 100%
+  );
+}
+
+.timeline-events {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.timeline-event {
+  flex: 0 0 200px;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffd700;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content {
+  padding: 1rem;
+  background: rgba(10, 10, 20, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.timeline-title {
+  font-weight: bold;
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-members {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+/* Villain Network Web */
+.villain-network {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(40, 0, 0, 0.95), rgba(60, 0, 20, 0.95));
+  border-radius: 16px;
+  border: 2px solid rgba(139, 0, 0, 0.5);
+}
+
+.villain-web-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.villain-node {
+  padding: 1.5rem;
+  background: rgba(10, 10, 20, 0.9);
+  border-radius: 12px;
+  border: 2px solid rgba(139, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.villain-node:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 0, 0, 0.8);
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.5);
+}
+
+.villain-central {
+  font-weight: bold;
+  color: #ff0000;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.villain-type {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(139, 0, 0, 0.3);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.villain-connections {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.villain-connections strong {
+  color: #ffd700;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Character Node Tooltip */
+.character-tooltip {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 10, 20, 0.95);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  max-width: 250px;
+}
+
+.tooltip-name {
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip-info {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .character-network-container {
+    padding: 1rem;
+  }
+  
+  .network-title {
+    font-size: 1.4rem;
+  }
+  
+  .network-canvas-wrapper {
+    height: 400px;
+  }
+  
+  .infinity-stone-tracker {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  
+  .timeline-events {
+    gap: 1rem;
+  }
+  
+  .timeline-event {
+    flex: 0 0 150px;
+  }
+  
+  .villain-web-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .network-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .network-controls {
+    width: 100%;
+  }
+  
+  .network-tab {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .network-canvas-wrapper {
+    height: 300px;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    PHASE 8: TIMELINE UI IMPROVEMENTS (JSX-INSPIRED)
    ═══════════════════════════════════════════════════════════════════════════ */
@@ -456,26 +847,12 @@ h1 {
   100% { transform: rotateY(0deg); }
 }
 
-/* ===== PULSE EFFECT FOR NEXT TO WATCH ===== */
+/* ===== NEXT TO WATCH HIGHLIGHT (NO ANIMATION) ===== */
 .timeline-card.next-to-watch {
-  animation: nextPulse 2s ease-in-out infinite;
   border-color: var(--gold);
-  box-shadow: 
+  box-shadow:
     0 10px 36px rgba(0, 0, 0, 0.28),
-    0 0 30px rgba(243, 201, 105, 0.4);
-}
-
-@keyframes nextPulse {
-  0%, 100% {
-    box-shadow: 
-      0 10px 36px rgba(0, 0, 0, 0.28),
-      0 0 30px rgba(243, 201, 105, 0.4);
-  }
-  50% {
-    box-shadow: 
-      0 10px 36px rgba(0, 0, 0, 0.28),
-      0 0 50px rgba(243, 201, 105, 0.6);
-  }
+    0 0 30px rgba(243, 201, 105, 0.5);
 }
 
 .timeline-card.next-to-watch::before {
@@ -491,12 +868,6 @@ h1 {
   letter-spacing: 0.1em;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(243, 201, 105, 0.4);
-  animation: nextBadgeBounce 1s ease-in-out infinite;
-}
-
-@keyframes nextBadgeBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
 }
 
 /* ===== SMOOTH VIEW TRANSITIONS ===== */
@@ -2587,22 +2958,32 @@ body.offline {
 /* Saga Arc Badge */
 .saga-arc-badge {
   position: absolute;
-  top: 0.5rem;
+  bottom: -0.75rem;
   left: 0.5rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 8px;
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 5;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.saga-infinity { color: #ff6b35; border-color: #ff6b35; }
-.saga-multiverse { color: #667eea; border-color: #667eea; }
+.saga-infinity {
+  color: #ff6b35;
+  border-color: #ff6b35;
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+.saga-multiverse {
+  color: #667eea;
+  border-color: #667eea;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
 
 /* Thematic Filter Chips */
 .theme-filters {

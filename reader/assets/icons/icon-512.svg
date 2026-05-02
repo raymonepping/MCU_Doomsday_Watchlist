@@ -1,0 +1,22 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#8b0000"/>
+  
+  <!-- Outer circle (gold) -->
+  <circle cx="256" cy="256" r="205" fill="none" stroke="#ffd700" stroke-width="24"/>
+  
+  <!-- Stylized "A" for Avengers -->
+  <g>
+    <!-- Triangle -->
+    <polygon points="256,128 171,384 341,384" fill="#ffd700"/>
+    <!-- Horizontal bar -->
+    <rect x="200" y="277" width="112" height="35" fill="#8b0000"/>
+    <!-- Inner circle cutout -->
+    <circle cx="256" cy="256" r="85" fill="#8b0000"/>
+  </g>
+  
+  <!-- Text "MCU" at bottom -->
+  <text x="256" y="462" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ffd700" text-anchor="middle">MCU</text>
+</svg>
+
+<!-- Made with Bob -->

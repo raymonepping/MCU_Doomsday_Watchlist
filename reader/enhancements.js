@@ -1,3 +1,402 @@
+// ============================================
+// PHASE 16: CHARACTER NETWORK GRAPH
+// ============================================
+
+let characterNetworkData = null;
+
+/**
+ * Load character network data
+ */
+async function loadCharacterNetwork() {
+  try {
+    const response = await fetch('./data/character-network.json');
+    characterNetworkData = await response.json();
+    console.log('[Network] Character network data loaded:', Object.keys(characterNetworkData.characters).length, 'characters');
+    return characterNetworkData;
+  } catch (error) {
+    console.error('[Network] Failed to load character network data:', error);
+    return null;
+  }
+}
+
+/**
+ * Create character network visualization container
+ */
+function createCharacterNetworkContainer() {
+  const container = document.createElement('div');
+  container.className = 'character-network-container';
+  container.innerHTML = `
+    <div class="network-header">
+      <div>
+        <h2 class="network-title">🕸️ Character Network Graph</h2>
+        <p class="network-subtitle">Explore connections, Infinity Stones, teams, and villain relationships</p>
+      </div>
+      <div class="network-controls">
+        <button class="network-tab active" data-view="connections">Character Connections</button>
+        <button class="network-tab" data-view="stones">Infinity Stones</button>
+        <button class="network-tab" data-view="teams">Team Formations</button>
+        <button class="network-tab" data-view="villains">Villain Networks</button>
+      </div>
+    </div>
+    <div class="network-content">
+      <!-- Content will be dynamically inserted here -->
+    </div>
+  `;
+  
+  // Add event listeners for tabs
+  const tabs = container.querySelectorAll('.network-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const view = tab.dataset.view;
+      updateNetworkView(view, container);
+    });
+  });
+  
+  return container;
+}
+
+/**
+ * Update network view based on selected tab
+ */
+function updateNetworkView(view, container) {
+  const contentDiv = container.querySelector('.network-content');
+  
+  switch(view) {
+    case 'connections':
+      contentDiv.innerHTML = createCharacterConnectionsView();
+      initializeCharacterCanvas();
+      break;
+    case 'stones':
+      contentDiv.innerHTML = createInfinityStonesView();
+      break;
+    case 'teams':
+      contentDiv.innerHTML = createTeamFormationsView();
+      break;
+    case 'villains':
+      contentDiv.innerHTML = createVillainNetworksView();
+      break;
+  }
+}
+
+/**
+ * Create character connections view with canvas
+ */
+function createCharacterConnectionsView() {
+  return `
+    <div class="network-canvas-wrapper">
+      <canvas id="character-network-canvas"></canvas>
+    </div>
+    <div class="network-legend">
+      <div class="legend-item">
+        <div class="legend-color" style="background: #c8102e;"></div>
+        <span>Heroes</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background: #4b0082;"></div>
+        <span>Villains</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background: #006400;"></div>
+        <span>Anti-Heroes</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background: rgba(255, 215, 0, 0.3); border-style: dashed;"></div>
+        <span>Connections</span>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Initialize character network canvas
+ */
+function initializeCharacterCanvas() {
+  const canvas = document.getElementById('character-network-canvas');
+  if (!canvas || !characterNetworkData) return;
+  
+  const ctx = canvas.getContext('2d');
+  const wrapper = canvas.parentElement;
+  
+  // Set canvas size
+  canvas.width = wrapper.clientWidth;
+  canvas.height = wrapper.clientHeight;
+  
+  // Prepare nodes
+  const characters = characterNetworkData.characters;
+  const nodes = Object.entries(characters).map(([id, char], index) => {
+    const angle = (index / Object.keys(characters).length) * Math.PI * 2;
+    const radius = Math.min(canvas.width, canvas.height) * 0.35;
+    return {
+      id,
+      x: canvas.width / 2 + Math.cos(angle) * radius,
+      y: canvas.height / 2 + Math.sin(angle) * radius,
+      radius: 8,
+      color: char.color,
+      name: char.name,
+      type: char.type,
+      connections: char.connections || []
+    };
+  });
+  
+  // Draw connections
+  ctx.strokeStyle = 'rgba(255, 215, 0, 0.2)';
+  ctx.lineWidth = 1;
+  nodes.forEach(node => {
+    node.connections.forEach(connId => {
+      const targetNode = nodes.find(n => n.id === connId);
+      if (targetNode) {
+        ctx.beginPath();
+        ctx.moveTo(node.x, node.y);
+        ctx.lineTo(targetNode.x, targetNode.y);
+        ctx.stroke();
+      }
+    });
+  });
+  
+  // Draw nodes
+  nodes.forEach(node => {
+    // Outer glow
+    const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * 2);
+    gradient.addColorStop(0, node.color + '80');
+    gradient.addColorStop(1, node.color + '00');
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, node.radius * 2, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Node circle
+    ctx.fillStyle = node.color;
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Border
+    ctx.strokeStyle = '#ffd700';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  });
+  
+  // Add interactivity
+  let tooltip = null;
+  canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const hoveredNode = nodes.find(node => {
+      const dx = x - node.x;
+      const dy = y - node.y;
+      return Math.sqrt(dx * dx + dy * dy) < node.radius * 2;
+    });
+    
+    if (hoveredNode) {
+      canvas.style.cursor = 'pointer';
+      showTooltip(hoveredNode, e.clientX, e.clientY);
+    } else {
+      canvas.style.cursor = 'grab';
+      hideTooltip();
+    }
+  });
+  
+  canvas.addEventListener('mouseleave', hideTooltip);
+  
+  function showTooltip(node, x, y) {
+    hideTooltip();
+    tooltip = document.createElement('div');
+    tooltip.className = 'character-tooltip';
+    tooltip.innerHTML = `
+      <div class="tooltip-name">${node.name}</div>
+      <div class="tooltip-info">
+        Type: ${node.type}<br>
+        Connections: ${node.connections.length}
+      </div>
+    `;
+    tooltip.style.left = x + 10 + 'px';
+    tooltip.style.top = y + 10 + 'px';
+    document.body.appendChild(tooltip);
+  }
+  
+  function hideTooltip() {
+    if (tooltip) {
+      tooltip.remove();
+      tooltip = null;
+    }
+  }
+  
+  console.log('[Network] Character canvas initialized with', nodes.length, 'nodes');
+}
+
+/**
+ * Create Infinity Stones tracking view
+ */
+function createInfinityStonesView() {
+  if (!characterNetworkData) return '<p>Loading...</p>';
+  
+  const stones = characterNetworkData.infinityStones;
+  let html = '<div class="infinity-stone-tracker">';
+  
+  Object.entries(stones).forEach(([id, stone]) => {
+    html += `
+      <div class="stone-card ${id}">
+        <div class="stone-icon"></div>
+        <div class="stone-name">${stone.name}</div>
+        <div class="stone-appearances">${stone.appearances.length} appearances</div>
+        <div class="stone-appearances">${stone.power}</div>
+      </div>
+    `;
+  });
+  
+  html += '</div>';
+  
+  // Add detailed timeline
+  html += '<div class="team-timeline"><h3 class="network-title">Infinity Stone Timeline</h3>';
+  html += '<div class="timeline-track"><div class="timeline-line"></div><div class="timeline-events">';
+  
+  // Collect all stone events
+  const events = [];
+  Object.entries(stones).forEach(([id, stone]) => {
+    stone.appearances.forEach(titleNum => {
+      events.push({
+        title: titleNum,
+        stone: stone.name,
+        color: stone.color
+      });
+    });
+  });
+  
+  // Sort by title number
+  events.sort((a, b) => a.title - b.title);
+  
+  // Group by title
+  const groupedEvents = {};
+  events.forEach(event => {
+    if (!groupedEvents[event.title]) {
+      groupedEvents[event.title] = [];
+    }
+    groupedEvents[event.title].push(event);
+  });
+  
+  Object.entries(groupedEvents).forEach(([titleNum, stoneEvents]) => {
+    html += `
+      <div class="timeline-event">
+        <div class="timeline-marker" style="background: ${stoneEvents[0].color};"></div>
+        <div class="timeline-content">
+          <div class="timeline-title">Title #${titleNum}</div>
+          <div class="timeline-members">
+            ${stoneEvents.map(e => e.stone.split(' ')[0]).join(', ')}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  html += '</div></div></div>';
+  
+  return html;
+}
+
+/**
+ * Create team formations timeline view
+ */
+function createTeamFormationsView() {
+  if (!characterNetworkData) return '<p>Loading...</p>';
+  
+  const teams = characterNetworkData.teams;
+  let html = '';
+  
+  Object.entries(teams).forEach(([teamId, team]) => {
+    html += `
+      <div class="team-timeline">
+        <h3 class="network-title" style="color: ${team.color};">${team.name}</h3>
+        <div class="timeline-track">
+          <div class="timeline-line" style="background: linear-gradient(90deg, 
+            ${team.color}30 0%, ${team.color}80 50%, ${team.color}30 100%);"></div>
+          <div class="timeline-events">
+    `;
+    
+    team.formations.forEach(formation => {
+      html += `
+        <div class="timeline-event">
+          <div class="timeline-marker" style="background: ${team.color};"></div>
+          <div class="timeline-content">
+            <div class="timeline-title">Title #${formation.title}</div>
+            <div class="timeline-title" style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">${formation.event}</div>
+            <div class="timeline-members">${formation.members.length} members</div>
+          </div>
+        </div>
+      `;
+    });
+    
+    html += '</div></div></div>';
+  });
+  
+  return html;
+}
+
+/**
+ * Create villain networks view
+ */
+function createVillainNetworksView() {
+  if (!characterNetworkData) return '<p>Loading...</p>';
+  
+  const villainNetworks = characterNetworkData.villainRelationships;
+  let html = '<div class="villain-network"><h3 class="network-title">Villain Relationship Webs</h3>';
+  html += '<div class="villain-web-container">';
+  
+  Object.entries(villainNetworks).forEach(([networkId, network]) => {
+    html += `
+      <div class="villain-node">
+        <div class="villain-central">${network.central.replace(/-/g, ' ').toUpperCase()}</div>
+        <div class="villain-type">${network.type}</div>
+        <div class="villain-connections">
+          <strong>Allies:</strong> ${network.allies.join(', ').replace(/-/g, ' ')}
+          <strong>Enemies:</strong> ${network.enemies.join(', ').replace(/-/g, ' ')}
+        </div>
+      </div>
+    `;
+  });
+  
+  html += '</div></div>';
+  return html;
+}
+
+/**
+ * Initialize Phase 16: Character Network Graph
+ */
+async function initializeCharacterNetwork() {
+  console.log('[Network] Initializing Phase 16: Character Network Graph...');
+  
+  // Load character network data
+  await loadCharacterNetwork();
+  
+  if (!characterNetworkData) {
+    console.error('[Network] Failed to initialize - no data loaded');
+    return;
+  }
+  
+  // Create network container
+  const networkContainer = createCharacterNetworkContainer();
+  
+  // Insert after convergence dashboard
+  const convergenceDashboard = document.querySelector('.convergence-dashboard');
+  if (convergenceDashboard) {
+    convergenceDashboard.after(networkContainer);
+  } else {
+    // Fallback: insert before watchlist
+    const watchlist = document.querySelector('.watchlist');
+    if (watchlist) {
+      watchlist.before(networkContainer);
+    }
+  }
+  
+  // Initialize default view (character connections)
+  updateNetworkView('connections', networkContainer);
+  
+  console.log('[Network] Phase 16 initialization complete!');
+}
+
 /* ============================================
    PHASE 15: CONVERGENCE ANALYSIS LAYER
    ============================================ */
@@ -2842,6 +3241,13 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initConvergenceLayer);
 } else {
   initConvergenceLayer();
+
+// Initialize Phase 16: Character Network Graph
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeCharacterNetwork);
+} else {
+  initializeCharacterNetwork();
+}
 }
   
   // Make phase segments clickable

@@ -1,0 +1,404 @@
+{
+  "characters": {
+    "iron-man": {
+      "name": "Tony Stark / Iron Man",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 1,
+      "lastAppearance": 22,
+      "connections": ["pepper-potts", "rhodey", "happy", "nick-fury", "captain-america", "thor", "hulk", "black-widow", "hawkeye", "spider-man", "doctor-strange", "nebula"],
+      "infinityStones": ["mind", "time", "space"],
+      "color": "#c8102e"
+    },
+    "captain-america": {
+      "name": "Steve Rogers / Captain America",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 5,
+      "lastAppearance": 22,
+      "connections": ["bucky", "peggy-carter", "iron-man", "thor", "hulk", "black-widow", "hawkeye", "falcon", "scarlet-witch", "vision", "black-panther"],
+      "infinityStones": ["mind", "soul", "space", "time", "reality", "power"],
+      "color": "#0066cc"
+    },
+    "thor": {
+      "name": "Thor Odinson",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 4,
+      "lastAppearance": 29,
+      "connections": ["loki", "odin", "jane-foster", "heimdall", "iron-man", "captain-america", "hulk", "valkyrie", "rocket", "groot", "star-lord"],
+      "infinityStones": ["reality", "space", "power"],
+      "color": "#ffd700"
+    },
+    "hulk": {
+      "name": "Bruce Banner / Hulk",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 2,
+      "lastAppearance": 34,
+      "connections": ["betty-ross", "iron-man", "captain-america", "thor", "black-widow", "valkyrie", "rocket", "smart-hulk"],
+      "infinityStones": ["mind", "time", "space"],
+      "color": "#228b22"
+    },
+    "black-widow": {
+      "name": "Natasha Romanoff / Black Widow",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 3,
+      "lastAppearance": 22,
+      "connections": ["hawkeye", "nick-fury", "iron-man", "captain-america", "hulk", "yelena", "red-guardian"],
+      "infinityStones": ["soul"],
+      "color": "#8b0000"
+    },
+    "hawkeye": {
+      "name": "Clint Barton / Hawkeye",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 4,
+      "lastAppearance": 32,
+      "connections": ["black-widow", "nick-fury", "iron-man", "captain-america", "scarlet-witch", "kate-bishop"],
+      "infinityStones": ["mind"],
+      "color": "#4b0082"
+    },
+    "spider-man": {
+      "name": "Peter Parker / Spider-Man",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 13,
+      "lastAppearance": 27,
+      "connections": ["iron-man", "happy", "ned", "mj", "doctor-strange", "nick-fury", "captain-america"],
+      "infinityStones": [],
+      "color": "#ff0000"
+    },
+    "doctor-strange": {
+      "name": "Stephen Strange / Doctor Strange",
+      "type": "hero",
+      "team": "Masters of Mystic Arts",
+      "firstAppearance": 14,
+      "lastAppearance": 28,
+      "connections": ["wong", "ancient-one", "iron-man", "spider-man", "scarlet-witch", "america-chavez"],
+      "infinityStones": ["time"],
+      "color": "#ff6347"
+    },
+    "black-panther": {
+      "name": "T'Challa / Black Panther",
+      "type": "hero",
+      "team": "Wakanda",
+      "firstAppearance": 13,
+      "lastAppearance": 30,
+      "connections": ["shuri", "okoye", "nakia", "captain-america", "bucky", "iron-man", "namor"],
+      "infinityStones": ["mind"],
+      "color": "#9400d3"
+    },
+    "scarlet-witch": {
+      "name": "Wanda Maximoff / Scarlet Witch",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 11,
+      "lastAppearance": 28,
+      "connections": ["vision", "quicksilver", "captain-america", "hawkeye", "doctor-strange", "america-chavez"],
+      "infinityStones": ["mind"],
+      "color": "#dc143c"
+    },
+    "vision": {
+      "name": "Vision",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 11,
+      "lastAppearance": 19,
+      "connections": ["scarlet-witch", "iron-man", "ultron", "captain-america", "white-vision"],
+      "infinityStones": ["mind"],
+      "color": "#ffa500"
+    },
+    "ant-man": {
+      "name": "Scott Lang / Ant-Man",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 12,
+      "lastAppearance": 33,
+      "connections": ["hope", "hank-pym", "janet", "cassie", "falcon", "captain-america", "wasp"],
+      "infinityStones": [],
+      "color": "#ff1493"
+    },
+    "wasp": {
+      "name": "Hope van Dyne / Wasp",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 12,
+      "lastAppearance": 33,
+      "connections": ["ant-man", "hank-pym", "janet", "cassie"],
+      "infinityStones": [],
+      "color": "#ffff00"
+    },
+    "captain-marvel": {
+      "name": "Carol Danvers / Captain Marvel",
+      "type": "hero",
+      "team": "Avengers",
+      "firstAppearance": 21,
+      "lastAppearance": 31,
+      "connections": ["nick-fury", "maria-rambeau", "monica-rambeau", "iron-man", "captain-america", "kamala-khan"],
+      "infinityStones": ["space"],
+      "color": "#00bfff"
+    },
+    "star-lord": {
+      "name": "Peter Quill / Star-Lord",
+      "type": "hero",
+      "team": "Guardians of the Galaxy",
+      "firstAppearance": 10,
+      "lastAppearance": 25,
+      "connections": ["gamora", "drax", "rocket", "groot", "mantis", "nebula", "thor", "iron-man"],
+      "infinityStones": ["power", "reality"],
+      "color": "#ff4500"
+    },
+    "gamora": {
+      "name": "Gamora",
+      "type": "hero",
+      "team": "Guardians of the Galaxy",
+      "firstAppearance": 10,
+      "lastAppearance": 25,
+      "connections": ["star-lord", "nebula", "thanos", "drax", "rocket", "groot"],
+      "infinityStones": ["soul"],
+      "color": "#32cd32"
+    },
+    "drax": {
+      "name": "Drax the Destroyer",
+      "type": "hero",
+      "team": "Guardians of the Galaxy",
+      "firstAppearance": 10,
+      "lastAppearance": 25,
+      "connections": ["star-lord", "gamora", "rocket", "groot", "mantis", "ronan"],
+      "infinityStones": [],
+      "color": "#808080"
+    },
+    "rocket": {
+      "name": "Rocket Raccoon",
+      "type": "hero",
+      "team": "Guardians of the Galaxy",
+      "firstAppearance": 10,
+      "lastAppearance": 25,
+      "connections": ["groot", "star-lord", "gamora", "drax", "thor", "nebula"],
+      "infinityStones": [],
+      "color": "#8b4513"
+    },
+    "groot": {
+      "name": "Groot",
+      "type": "hero",
+      "team": "Guardians of the Galaxy",
+      "firstAppearance": 10,
+      "lastAppearance": 25,
+      "connections": ["rocket", "star-lord", "gamora", "drax", "thor"],
+      "infinityStones": [],
+      "color": "#228b22"
+    },
+    "loki": {
+      "name": "Loki Laufeyson",
+      "type": "villain-turned-hero",
+      "team": "TVA",
+      "firstAppearance": 4,
+      "lastAppearance": 26,
+      "connections": ["thor", "odin", "thanos", "sylvie", "mobius", "he-who-remains"],
+      "infinityStones": ["space", "mind"],
+      "color": "#006400"
+    },
+    "thanos": {
+      "name": "Thanos",
+      "type": "villain",
+      "team": "Black Order",
+      "firstAppearance": 6,
+      "lastAppearance": 22,
+      "connections": ["gamora", "nebula", "loki", "ronan", "iron-man", "captain-america", "thor"],
+      "infinityStones": ["power", "space", "reality", "soul", "time", "mind"],
+      "color": "#4b0082"
+    },
+    "ultron": {
+      "name": "Ultron",
+      "type": "villain",
+      "team": "None",
+      "firstAppearance": 11,
+      "lastAppearance": 11,
+      "connections": ["iron-man", "vision", "scarlet-witch", "quicksilver"],
+      "infinityStones": ["mind"],
+      "color": "#696969"
+    },
+    "kang": {
+      "name": "Kang the Conqueror",
+      "type": "villain",
+      "team": "Council of Kangs",
+      "firstAppearance": 26,
+      "lastAppearance": 33,
+      "connections": ["ant-man", "wasp", "he-who-remains", "loki"],
+      "infinityStones": [],
+      "color": "#00008b"
+    },
+    "he-who-remains": {
+      "name": "He Who Remains",
+      "type": "villain",
+      "team": "TVA",
+      "firstAppearance": 26,
+      "lastAppearance": 26,
+      "connections": ["loki", "sylvie", "kang"],
+      "infinityStones": [],
+      "color": "#8b008b"
+    }
+  },
+  "infinityStones": {
+    "space": {
+      "name": "Space Stone (Tesseract)",
+      "color": "#0066ff",
+      "appearances": [1, 4, 5, 6, 7, 8, 17, 18, 19, 21, 22],
+      "holders": ["red-skull", "howard-stark", "shield", "loki", "thanos", "captain-america"],
+      "power": "Teleportation and space manipulation"
+    },
+    "mind": {
+      "name": "Mind Stone (Scepter)",
+      "color": "#ffff00",
+      "appearances": [6, 11, 13, 18, 19, 22],
+      "holders": ["loki", "hydra", "ultron", "vision", "thanos"],
+      "power": "Mind control and consciousness manipulation"
+    },
+    "reality": {
+      "name": "Reality Stone (Aether)",
+      "color": "#ff0000",
+      "appearances": [8, 18, 22],
+      "holders": ["malekith", "collector", "thanos"],
+      "power": "Reality manipulation"
+    },
+    "power": {
+      "name": "Power Stone (Orb)",
+      "color": "#9400d3",
+      "appearances": [10, 18, 22],
+      "holders": ["ronan", "nova-corps", "thanos"],
+      "power": "Energy manipulation and destruction"
+    },
+    "time": {
+      "name": "Time Stone (Eye of Agamotto)",
+      "color": "#00ff00",
+      "appearances": [14, 17, 18, 19, 22],
+      "holders": ["ancient-one", "doctor-strange", "thanos"],
+      "power": "Time manipulation"
+    },
+    "soul": {
+      "name": "Soul Stone",
+      "color": "#ffa500",
+      "appearances": [18, 22],
+      "holders": ["red-skull", "thanos"],
+      "power": "Soul manipulation and sacrifice"
+    }
+  },
+  "teams": {
+    "avengers": {
+      "name": "The Avengers",
+      "color": "#c8102e",
+      "formations": [
+        {
+          "title": 6,
+          "members": ["iron-man", "captain-america", "thor", "hulk", "black-widow", "hawkeye"],
+          "event": "Battle of New York"
+        },
+        {
+          "title": 11,
+          "members": ["iron-man", "captain-america", "thor", "hulk", "black-widow", "hawkeye", "scarlet-witch", "vision", "falcon", "war-machine"],
+          "event": "Battle of Sokovia"
+        },
+        {
+          "title": 13,
+          "members": ["iron-man", "spider-man", "vision", "black-widow", "war-machine", "black-panther"],
+          "event": "Civil War - Team Iron Man"
+        },
+        {
+          "title": 13,
+          "members": ["captain-america", "falcon", "scarlet-witch", "hawkeye", "ant-man", "bucky"],
+          "event": "Civil War - Team Cap"
+        },
+        {
+          "title": 18,
+          "members": ["iron-man", "doctor-strange", "spider-man", "wong", "bruce-banner"],
+          "event": "Defense of Earth"
+        },
+        {
+          "title": 19,
+          "members": ["captain-america", "black-widow", "falcon", "scarlet-witch", "vision", "war-machine"],
+          "event": "Avengers Compound"
+        },
+        {
+          "title": 22,
+          "members": ["iron-man", "captain-america", "thor", "hulk", "black-widow", "hawkeye", "war-machine", "rocket", "nebula", "ant-man", "captain-marvel"],
+          "event": "Time Heist & Final Battle"
+        }
+      ]
+    },
+    "guardians": {
+      "name": "Guardians of the Galaxy",
+      "color": "#ff4500",
+      "formations": [
+        {
+          "title": 10,
+          "members": ["star-lord", "gamora", "drax", "rocket", "groot"],
+          "event": "Formation on Knowhere"
+        },
+        {
+          "title": 16,
+          "members": ["star-lord", "gamora", "drax", "rocket", "groot", "mantis", "nebula", "yondu"],
+          "event": "Ego's Planet"
+        },
+        {
+          "title": 18,
+          "members": ["star-lord", "gamora", "drax", "rocket", "groot", "mantis", "nebula", "thor"],
+          "event": "Battle on Titan"
+        },
+        {
+          "title": 25,
+          "members": ["star-lord", "drax", "rocket", "groot", "mantis", "nebula", "kraglin", "cosmo", "adam-warlock"],
+          "event": "Counter-Earth Mission"
+        }
+      ]
+    },
+    "wakanda": {
+      "name": "Wakanda Forces",
+      "color": "#9400d3",
+      "formations": [
+        {
+          "title": 15,
+          "members": ["black-panther", "shuri", "okoye", "nakia", "mbaku"],
+          "event": "Wakanda Revealed"
+        },
+        {
+          "title": 19,
+          "members": ["black-panther", "shuri", "okoye", "mbaku", "captain-america", "bucky", "falcon", "hulk", "war-machine", "scarlet-witch", "vision"],
+          "event": "Battle of Wakanda"
+        },
+        {
+          "title": 30,
+          "members": ["shuri", "okoye", "nakia", "mbaku", "namor", "ironheart"],
+          "event": "Talokan Conflict"
+        }
+      ]
+    }
+  },
+  "villainRelationships": {
+    "thanos-network": {
+      "central": "thanos",
+      "allies": ["gamora", "nebula", "loki", "ronan", "ebony-maw", "cull-obsidian", "proxima-midnight", "corvus-glaive"],
+      "enemies": ["iron-man", "captain-america", "thor", "hulk", "guardians"],
+      "type": "conquest"
+    },
+    "hydra-network": {
+      "central": "red-skull",
+      "allies": ["winter-soldier", "arnim-zola", "alexander-pierce", "baron-strucker"],
+      "enemies": ["captain-america", "shield", "avengers"],
+      "type": "infiltration"
+    },
+    "kang-network": {
+      "central": "kang",
+      "allies": ["he-who-remains", "variants"],
+      "enemies": ["ant-man", "wasp", "loki", "avengers"],
+      "type": "temporal"
+    },
+    "multiverse-threats": {
+      "central": "he-who-remains",
+      "allies": ["kang-variants", "alioth"],
+      "enemies": ["loki", "sylvie", "tva"],
+      "type": "multiversal"
+    }
+  }
+}
