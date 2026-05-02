@@ -606,31 +606,40 @@
   line-height: 1;
 }
 
-/* Hide badges by default - higher specificity to override original styles */
-body:not(.show-saga-badges) .saga-arc-badge {
+/* Badge Visibility Toggle System - Phase 17 */
+/* Using :not() selector for higher specificity to hide by default */
+
+/* Hide saga arc badges when toggle is OFF */
+body:not(.show-saga-badges) .timeline-card .saga-arc-badge {
   display: none !important;
 }
 
-body:not(.show-governance-badges) .governance-badge {
+/* Hide governance badges when toggle is OFF */
+body:not(.show-governance-badges) .timeline-card .governance-badge {
   display: none !important;
 }
 
-body:not(.show-concept-badges) .concept-badge {
+/* Hide concept badges when toggle is OFF */
+body:not(.show-concept-badges) .timeline-card .concept-badge,
+body:not(.show-concept-badges) .card-body .concept-badge {
   display: none !important;
 }
 
-/* Show badges when their toggle is active */
-body.show-saga-badges .saga-arc-badge {
+/* Show saga arc badges when toggle is ON */
+body.show-saga-badges .timeline-card .saga-arc-badge {
   display: flex !important;
 }
 
-body.show-governance-badges .governance-badge {
+/* Show governance badges when toggle is ON */
+body.show-governance-badges .timeline-card .governance-badge {
   display: inline-flex !important;
   max-width: fit-content;
   width: auto;
 }
 
-body.show-concept-badges .concept-badge {
+/* Show concept badges when toggle is ON */
+body.show-concept-badges .timeline-card .concept-badge,
+body.show-concept-badges .card-body .concept-badge {
   display: inline-flex !important;
   max-width: fit-content;
   width: auto;
