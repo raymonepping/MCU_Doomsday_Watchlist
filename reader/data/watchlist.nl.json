@@ -1036,7 +1036,9 @@
       "when": "2002 - Before the MCU began",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Willem Dafoe as Green Goblin",
       "officialUrl": "https://www.marvel.com/movies/spider-man",
-      "chronologicalOrder": null
+      "chronologicalOrder": null,
+      "localImage": "./assets/posters/SM1.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man_lob_crd_01.jpg"
     },
     {
       "key": "SM2",
@@ -1053,7 +1055,9 @@
       "when": "2004 - The Raimi trilogy continues",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Alfred Molina as Doc Ock",
       "officialUrl": "https://www.marvel.com/movies/spider-man-2",
-      "chronologicalOrder": null
+      "chronologicalOrder": null,
+      "localImage": "./assets/posters/SM2.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man2_lob_crd_01.jpg"
     },
     {
       "key": "SM3",
@@ -1070,7 +1074,9 @@
       "when": "2007 - The Raimi trilogy concludes",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Thomas Haden Church as Sandman, Topher Grace as Venom, James Franco as New Goblin",
       "officialUrl": "https://www.marvel.com/movies/spider-man-3",
-      "chronologicalOrder": null
+      "chronologicalOrder": null,
+      "localImage": "./assets/posters/SM3.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man3_lob_crd_01.jpg"
     },
     {
       "key": "TASM1",
@@ -1087,7 +1093,9 @@
       "when": "2012 - The Amazing Spider-Man era begins",
       "who": "Andrew Garfield as Peter Parker/Spider-Man, Emma Stone as Gwen Stacy",
       "officialUrl": "https://www.marvel.com/movies/the-amazing-spider-man",
-      "chronologicalOrder": null
+      "chronologicalOrder": null,
+      "localImage": "./assets/posters/TASM1.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg"
     }
   ]
 }
