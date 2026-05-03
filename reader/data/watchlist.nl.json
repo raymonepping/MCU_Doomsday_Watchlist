@@ -34,8 +34,8 @@
     "noTimelineNote": "Geen tijdlijnnotitie beschikbaar."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_nl.md",
-  "generatedAt": "2026-05-03T06:31:32.154946Z",
-  "count": 49,
+  "generatedAt": "2026-05-03T08:46:36.249909Z",
+  "count": 53,
   "bonusCount": 3,
   "items": [
     {
@@ -355,7 +355,8 @@
       "chronologicalOrder": 17,
       "saga": [
         "infinity-saga",
-        "doomsday"
+        "doomsday",
+        "spider-man"
       ]
     },
     {
@@ -495,7 +496,8 @@
       "chronologicalOrder": 25,
       "saga": [
         "infinity-saga",
-        "doomsday"
+        "doomsday",
+        "spider-man"
       ]
     },
     {
@@ -635,7 +637,8 @@
       "chronologicalOrder": 29,
       "saga": [
         "multiverse-saga",
-        "doomsday"
+        "doomsday",
+        "spider-man"
       ]
     },
     {
@@ -860,7 +863,10 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/spidermanbrandnewday_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/44.jpg",
       "phase": 6,
-      "chronologicalOrder": 50
+      "chronologicalOrder": 50,
+      "saga": [
+        "spider-man"
+      ]
     },
     {
       "key": "45",
@@ -998,6 +1004,74 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
       "localImage": "./assets/posters/49.jpg",
       "chronologicalOrder": 52
+    },
+    {
+      "key": "SM1",
+      "title": "Spider-Man",
+      "kind": "Film",
+      "runtime": "2h 1m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "Average teenager Peter Parker is transformed into an extraordinary superhero after he is accidentally bitten by a radioactive spider. When his beloved uncle is savagely murdered during a robbery, young Peter vows to use his powers to avenge his death.",
+      "why": "The original Spider-Man film that launched the modern superhero movie era. Establishes Peter Parker's origin story and core values.",
+      "when": "2002 - Before the MCU began",
+      "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Willem Dafoe as Green Goblin",
+      "officialUrl": "https://www.marvel.com/movies/spider-man",
+      "chronologicalOrder": null
+    },
+    {
+      "key": "SM2",
+      "title": "Spider-Man 2",
+      "kind": "Film",
+      "runtime": "2h 7m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "Peter Parker is juggling the delicate balance of his dual life as college student and a superhuman crime fighter. Peter's life becomes even more complicated when he confronts a new nemesis, the brilliant Otto Octavius who has been reincarnated as the maniacal and multi-tentacled Doc Ock.",
+      "why": "Widely considered one of the best superhero films ever made. Explores the personal cost of being a hero.",
+      "when": "2004 - The Raimi trilogy continues",
+      "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Alfred Molina as Doc Ock",
+      "officialUrl": "https://www.marvel.com/movies/spider-man-2",
+      "chronologicalOrder": null
+    },
+    {
+      "key": "SM3",
+      "title": "Spider-Man 3",
+      "kind": "Film",
+      "runtime": "2h 19m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "Peter Parker finally has the girl of his dreams, Mary Jane Watson, and New York City is in the throes of Spider-mania! But when a strange alien symbiote turns Spider-Man's suit black, his darkest demons come to light.",
+      "why": "Introduces the symbiote and Venom. Concludes the Raimi trilogy.",
+      "when": "2007 - The Raimi trilogy concludes",
+      "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Thomas Haden Church as Sandman, Topher Grace as Venom, James Franco as New Goblin",
+      "officialUrl": "https://www.marvel.com/movies/spider-man-3",
+      "chronologicalOrder": null
+    },
+    {
+      "key": "TASM1",
+      "title": "The Amazing Spider-Man",
+      "kind": "Film",
+      "runtime": "2h 16m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "A teenage Peter Parker grapples with both high school and amazing super-human crises as his alter-ego Spider-Man.",
+      "why": "Reboot of the Spider-Man franchise with a new take on the origin story. Introduces Andrew Garfield's version of Peter Parker.",
+      "when": "2012 - The Amazing Spider-Man era begins",
+      "who": "Andrew Garfield as Peter Parker/Spider-Man, Emma Stone as Gwen Stacy",
+      "officialUrl": "https://www.marvel.com/movies/the-amazing-spider-man",
+      "chronologicalOrder": null
     }
   ]
 }

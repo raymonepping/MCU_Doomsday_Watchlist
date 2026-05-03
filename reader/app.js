@@ -57,6 +57,13 @@ const sagas = {
     icon: "✖️",
     color: "#4169E1",
     order: 4
+  },
+  "spider-man": {
+    name: "Spider-Man Complete",
+    description: "All Spider-Man films",
+    icon: "🕷️",
+    color: "#DC143C",
+    order: 5
   }
 };
 

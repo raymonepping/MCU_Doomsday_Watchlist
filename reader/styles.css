@@ -1622,6 +1622,12 @@ h3 {
 .saga-chip[data-saga="x-men"].is-active {
   background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
   border-color: #4169E1;
+
+.saga-chip[data-saga="spider-man"].is-active {
+  background: linear-gradient(135deg, #DC143C 0%, #B22222 100%);
+  border-color: #DC143C;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+}
   box-shadow: 0 4px 12px rgba(65, 105, 225, 0.4);
 }
 
