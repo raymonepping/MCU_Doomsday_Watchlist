@@ -168,14 +168,18 @@ def search_titles(titles: list[Title], watched: dict[str, str], query: str) -> N
         raise SystemExit("Search query cannot be empty.")
 
     matches = [title for title in titles if normalized in title.title.casefold()]
+    
     if not matches:
-        raise SystemExit(f"No watchlist entries match: {query}")
+        print(f"❌ Missing: '{query}' not found in watchlist")
+        return
 
+    print(f"✅ Found {len(matches)} result(s) for '{query}':\n")
+    
     width = max(len(title.key) for title in matches)
     for title in matches:
         marker = "x" if title.key in watched else " "
-        bonus = " bonus" if title.bonus else ""
-        suffix = f" watched {watched[title.key]}" if title.key in watched else ""
+        bonus = " (bonus)" if title.bonus else ""
+        suffix = f" — watched {watched[title.key]}" if title.key in watched else ""
         print(
             f"[{marker}] {title.key.rjust(width)}. {title.title} "
             f"({title.kind}, {title.runtime}{bonus}){suffix}"

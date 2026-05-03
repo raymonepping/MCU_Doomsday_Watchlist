@@ -69,6 +69,72 @@ scripts/MCU_tracker unwatched 1,2
 
 Progress is stored locally in `data/mcu-watch-progress.json`. This file is ignored by Git so every clone can maintain its own personal watched state.
 
+### 🛠️ Management Tools (`./scripts`)
+
+**`manage_watchlist.py`** — Python-based tool for managing watchlist entries.
+
+#### Commands
+
+Add a new title (interactive):
+```bash
+scripts/manage_watchlist.py add
+```
+
+Remove a title by key:
+```bash
+scripts/manage_watchlist.py remove 50
+```
+
+Swap two titles' keys and posters:
+```bash
+scripts/manage_watchlist.py swap 42 49
+```
+
+Validate watchlist integrity:
+```bash
+scripts/manage_watchlist.py validate
+```
+
+List all titles with chronological order:
+```bash
+scripts/manage_watchlist.py list
+```
+
+#### Features
+
+- **Interactive Add Mode** — Prompts for all metadata fields including:
+  - Title, kind (Film/Series), runtime, phase, bonus status
+  - Plot summary, relevance to Doomsday, timeline context, cast
+  - Official Marvel URL and image URL
+  - Chronological order position
+  - Automatic Dutch translation prompts
+  - Automatic poster image downloading
+
+- **Safe Remove** — Confirmation prompt before deletion, removes from both EN and NL files plus poster image
+
+- **Smart Swap** — Exchanges keys between two titles, updates both JSON files, and swaps poster images
+
+- **Comprehensive Validation** — Checks for:
+  - Duplicate keys
+  - Duplicate chronological orders
+  - Missing required fields
+  - Count mismatches
+  - Consistency between English and Dutch watchlists
+
+- **Automatic Updates** — Updates counts, timestamps, and maintains proper JSON formatting
+
+#### Web Admin Interface
+
+**`reader/admin.html`** — Browser-based management interface with:
+
+- **List Tab** — View all titles with filtering (All/Main/Bonus)
+- **Add Tab** — Form to add new titles with all metadata fields
+- **Edit Tab** — Edit existing titles or delete them
+- **Validate Tab** — Run validation checks in the browser
+- **Export Tab** — Generate updated JSON to copy/paste into files
+
+Access the admin interface by opening `reader/admin.html` in a web browser (requires running from a web server).
+
 ### 🌐 Reader App (`./reader`)
 
 Interactive browser-based reader with comprehensive progress tracking, multiple view modes, and advanced filtering.
@@ -226,8 +292,10 @@ MCU/
 │   ├── mcu-doomsday-watchlist_us.md
 │   └── mcu-doomsday-watchlist_nl.md
 ├── scripts/                       # CLI tools
-│   └── MCU_tracker               # Python tracker script
+│   ├── MCU_tracker               # Python tracker script
+│   └── manage_watchlist.py       # Watchlist management tool
 ├── reader/                        # Web reader app
+│   ├── admin.html                # Web-based admin interface
 │   ├── app.js                    # Frontend application logic
 │   ├── server.mjs                # Node.js development server
 │   ├── build-data.mjs            # Markdown to JSON converter

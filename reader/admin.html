@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MCU Watchlist Admin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #e0e0e0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    h1 {
+      color: #ff4444;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #999;
+      font-size: 0.9rem;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .tab {
+      padding: 12px 24px;
+      background: transparent;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      font-size: 1rem;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+    }
+    
+    .tab:hover {
+      color: #fff;
+    }
+    
+    .tab.active {
+      color: #ff4444;
+      border-bottom-color: #ff4444;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ccc;
+      font-weight: 500;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #ff4444;
+    }
+    
+    .btn {
+      padding: 12px 24px;
+      background: #ff4444;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn:hover {
+      background: #ff6666;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .title-list {
+      display: grid;
+      gap: 12px;
+    }
+    
+    .title-item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    
+    .title-item:hover {
+      border-color: #ff4444;
+      transform: translateX(4px);
+    }
+    
+    .title-info {
+      flex: 1;
+    }
+    
+    .title-name {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    
+    .title-meta {
+      font-size: 0.85rem;
+      color: #999;
+    }
+    
+    .title-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .btn-small {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+    
+    .validation-results {
+      margin-top: 20px;
+    }
+    
+    .error {
+      background: rgba(255, 68, 68, 0.1);
+      border: 1px solid #ff4444;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      color: #ff6666;
+    }
+    
+    .success {
+      background: rgba(68, 255, 68, 0.1);
+      border: 1px solid #44ff44;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      color: #66ff66;
+    }
+    
+    .warning {
+      background: rgba(255, 200, 68, 0.1);
+      border: 1px solid #ffc844;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      color: #ffdd66;
+    }
+    
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .export-box {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 16px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      max-height: 400px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 MCU Watchlist Admin</h1>
+      <p class="subtitle">Manage your MCU Doomsday watchlist entries</p>
+    </header>
+
+    <div class="warning">
+      ⚠️ <strong>Important:</strong> This admin interface works with your browser's local storage. 
+      Changes are NOT automatically saved to the JSON files. Use the "Export JSON" feature to get 
+      the updated data, then manually update the files on your server.
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="list">📋 List Titles</button>
+      <button class="tab" data-tab="add">➕ Add Title</button>
+      <button class="tab" data-tab="edit">✏️ Edit Title</button>
+      <button class="tab" data-tab="validate">✅ Validate</button>
+      <button class="tab" data-tab="export">💾 Export</button>
+    </div>
+
+    <!-- List Tab -->
+    <div class="tab-content active" id="list-tab">
+      <div class="card">
+        <h2 style="margin-bottom: 20px;">All Titles</h2>
+        <div class="form-group">
+          <label>Filter:</label>
+          <select id="filter-type">
+            <option value="all">All Titles</option>
+            <option value="main">Main Only</option>
+            <option value="bonus">Bonus Only</option>
+          </select>
+        </div>
+        <div id="title-list" class="title-list"></div>
+      </div>
+    </div>
+
+    <!-- Add Tab -->
+    <div class="tab-content" id="add-tab">
+      <div class="card">
+        <h2 style="margin-bottom: 20px;">Add New Title</h2>
+        <form id="add-form">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Key *</label>
+              <input type="text" id="add-key" required placeholder="e.g., 50 or B4">
+            </div>
+            <div class="form-group">
+              <label>Title *</label>
+              <input type="text" id="add-title" required placeholder="e.g., Avengers: Secret Wars">
+            </div>
+          </div>
+          
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Kind *</label>
+              <select id="add-kind" required>
+                <option value="Film">Film</option>
+                <option value="Series">Series</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Runtime *</label>
+              <input type="text" id="add-runtime" required placeholder="e.g., 2h 30m">
+            </div>
+          </div>
+          
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Phase</label>
+              <input type="number" id="add-phase" min="1" max="6" placeholder="1-6">
+            </div>
+            <div class="form-group">
+              <label>Chronological Order *</label>
+              <input type="number" id="add-chrono" required placeholder="e.g., 52">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="add-bonus" style="width: auto; margin-right: 8px;">
+              Bonus Title
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label>What (Plot Summary)</label>
+            <textarea id="add-what" placeholder="Brief plot description..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>Why (Relevance to Doomsday)</label>
+            <textarea id="add-why" placeholder="Why this is important for Doomsday..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>When (Timeline Context)</label>
+            <input type="text" id="add-when" placeholder="e.g., 2027 - After Thunderbolts">
+          </div>
+          
+          <div class="form-group">
+            <label>Who (Cast)</label>
+            <input type="text" id="add-who" placeholder="e.g., Actor Name as Character">
+          </div>
+          
+          <div class="form-group">
+            <label>Official URL</label>
+            <input type="url" id="add-url" placeholder="https://www.marvel.com/...">
+          </div>
+          
+          <div class="form-group">
+            <label>Image URL</label>
+            <input type="url" id="add-image" placeholder="https://cdn.marvel.com/...">
+          </div>
+          
+          <button type="submit" class="btn">Add Title</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Edit Tab -->
+    <div class="tab-content" id="edit-tab">
+      <div class="card">
+        <h2 style="margin-bottom: 20px;">Edit Title</h2>
+        <div class="form-group">
+          <label>Select Title to Edit:</label>
+          <select id="edit-select">
+            <option value="">-- Select a title --</option>
+          </select>
+        </div>
+        <div id="edit-form-container" style="display: none;">
+          <form id="edit-form">
+            <!-- Same fields as add form -->
+            <div class="grid-2">
+              <div class="form-group">
+                <label>Key *</label>
+                <input type="text" id="edit-key" required readonly style="opacity: 0.6;">
+              </div>
+              <div class="form-group">
+                <label>Title *</label>
+                <input type="text" id="edit-title" required>
+              </div>
+            </div>
+            
+            <div class="grid-2">
+              <div class="form-group">
+                <label>Kind *</label>
+                <select id="edit-kind" required>
+                  <option value="Film">Film</option>
+                  <option value="Series">Series</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Runtime *</label>
+                <input type="text" id="edit-runtime" required>
+              </div>
+            </div>
+            
+            <div class="grid-2">
+              <div class="form-group">
+                <label>Phase</label>
+                <input type="number" id="edit-phase" min="1" max="6">
+              </div>
+              <div class="form-group">
+                <label>Chronological Order *</label>
+                <input type="number" id="edit-chrono" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>
+                <input type="checkbox" id="edit-bonus" style="width: auto; margin-right: 8px;">
+                Bonus Title
+              </label>
+            </div>
+            
+            <div class="form-group">
+              <label>What (Plot Summary)</label>
+              <textarea id="edit-what"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Why (Relevance to Doomsday)</label>
+              <textarea id="edit-why"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>When (Timeline Context)</label>
+              <input type="text" id="edit-when">
+            </div>
+            
+            <div class="form-group">
+              <label>Who (Cast)</label>
+              <input type="text" id="edit-who">
+            </div>
+            
+            <div class="form-group">
+              <label>Official URL</label>
+              <input type="url" id="edit-url">
+            </div>
+            
+            <div class="form-group">
+              <label>Image URL</label>
+              <input type="url" id="edit-image">
+            </div>
+            
+            <div style="display: flex; gap: 12px;">
+              <button type="submit" class="btn">Save Changes</button>
+              <button type="button" class="btn btn-secondary" id="delete-btn">Delete Title</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validate Tab -->
+    <div class="tab-content" id="validate-tab">
+      <div class="card">
+        <h2 style="margin-bottom: 20px;">Validation Results</h2>
+        <button class="btn" id="run-validation">Run Validation</button>
+        <div id="validation-results" class="validation-results"></div>
+      </div>
+    </div>
+
+    <!-- Export Tab -->
+    <div class="tab-content" id="export-tab">
+      <div class="card">
+        <h2 style="margin-bottom: 20px;">Export Watchlist</h2>
+        <p style="margin-bottom: 20px; color: #999;">
+          Copy the JSON below and save it to <code>watchlist.en.json</code>
+        </p>
+        <button class="btn" id="generate-export" style="margin-bottom: 16px;">Generate Export</button>
+        <div id="export-output" class="export-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load watchlist from the main app
+    let watchlist = { items: [] };
+    
+    // Load from the actual JSON file
+    fetch('./data/watchlist.en.json')
+      .then(res => res.json())
+      .then(data => {
+        watchlist = data;
+        initializeApp();
+      })
+      .catch(err => {
+        console.error('Failed to load watchlist:', err);
+        alert('Failed to load watchlist. Make sure you are running this from a web server.');
+      });
+    
+    function initializeApp() {
+      renderTitleList();
+      populateEditSelect();
+      setupEventListeners();
+    }
+    
+    function setupEventListeners() {
+      // Tab switching
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabName = tab.dataset.tab;
+          switchTab(tabName);
+        });
+      });
+      
+      // Add form
+      document.getElementById('add-form').addEventListener('submit', handleAddTitle);
+      
+      // Edit form
+      document.getElementById('edit-select').addEventListener('change', handleEditSelect);
+      document.getElementById('edit-form').addEventListener('submit', handleEditTitle);
+      document.getElementById('delete-btn').addEventListener('click', handleDeleteTitle);
+      
+      // Filter
+      document.getElementById('filter-type').addEventListener('change', renderTitleList);
+      
+      // Validation
+      document.getElementById('run-validation').addEventListener('click', runValidation);
+      
+      // Export
+      document.getElementById('generate-export').addEventListener('click', generateExport);
+    }
+    
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+      document.getElementById(`${tabName}-tab`).classList.add('active');
+    }
+    
+    function renderTitleList() {
+      const filter = document.getElementById('filter-type').value;
+      const container = document.getElementById('title-list');
+      
+      let items = watchlist.items;
+      if (filter === 'main') items = items.filter(i => !i.bonus);
+      if (filter === 'bonus') items = items.filter(i => i.bonus);
+      
+      container.innerHTML = items.map(item => `
+        <div class="title-item">
+          <div class="title-info">
+            <div class="title-name">${item.key}. ${item.title}</div>
+            <div class="title-meta">
+              ${item.kind} • ${item.runtime} • Phase ${item.phase || '?'} • Chrono: ${item.chronologicalOrder}
+              ${item.bonus ? ' • <strong>BONUS</strong>' : ''}
+            </div>
+          </div>
+          <div class="title-actions">
+            <button class="btn btn-small" onclick="editTitle('${item.key}')">Edit</button>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    function populateEditSelect() {
+      const select = document.getElementById('edit-select');
+      select.innerHTML = '<option value="">-- Select a title --</option>' +
+        watchlist.items.map(item => 
+          `<option value="${item.key}">${item.key}. ${item.title}</option>`
+        ).join('');
+    }
+    
+    function handleAddTitle(e) {
+      e.preventDefault();
+      
+      const newItem = {
+        key: document.getElementById('add-key').value,
+        title: document.getElementById('add-title').value,
+        kind: document.getElementById('add-kind').value,
+        runtime: document.getElementById('add-runtime').value,
+        bonus: document.getElementById('add-bonus').checked,
+        phase: parseInt(document.getElementById('add-phase').value) || null,
+        what: document.getElementById('add-what').value,
+        why: document.getElementById('add-why').value,
+        when: document.getElementById('add-when').value,
+        who: document.getElementById('add-who').value,
+        officialUrl: document.getElementById('add-url').value,
+        imageUrl: document.getElementById('add-image').value,
+        localImage: `./assets/posters/${document.getElementById('add-key').value}.jpg`,
+        chronologicalOrder: parseInt(document.getElementById('add-chrono').value)
+      };
+      
+      watchlist.items.push(newItem);
+      updateCounts();
+      
+      alert(`✅ Added "${newItem.title}"!\n\nDon't forget to export the JSON and update your files.`);
+      
+      e.target.reset();
+      renderTitleList();
+      populateEditSelect();
+    }
+    
+    function handleEditSelect(e) {
+      const key = e.target.value;
+      if (!key) {
+        document.getElementById('edit-form-container').style.display = 'none';
+        return;
+      }
+      
+      const item = watchlist.items.find(i => i.key === key);
+      if (!item) return;
+      
+      document.getElementById('edit-key').value = item.key;
+      document.getElementById('edit-title').value = item.title;
+      document.getElementById('edit-kind').value = item.kind;
+      document.getElementById('edit-runtime').value = item.runtime;
+      document.getElementById('edit-phase').value = item.phase || '';
+      document.getElementById('edit-chrono').value = item.chronologicalOrder;
+      document.getElementById('edit-bonus').checked = item.bonus;
+      document.getElementById('edit-what').value = item.what || '';
+      document.getElementById('edit-why').value = item.why || '';
+      document.getElementById('edit-when').value = item.when || '';
+      document.getElementById('edit-who').value = item.who || '';
+      document.getElementById('edit-url').value = item.officialUrl || '';
+      document.getElementById('edit-image').value = item.imageUrl || '';
+      
+      document.getElementById('edit-form-container').style.display = 'block';
+    }
+    
+    function handleEditTitle(e) {
+      e.preventDefault();
+      
+      const key = document.getElementById('edit-key').value;
+      const item = watchlist.items.find(i => i.key === key);
+      if (!item) return;
+      
+      item.title = document.getElementById('edit-title').value;
+      item.kind = document.getElementById('edit-kind').value;
+      item.runtime = document.getElementById('edit-runtime').value;
+      item.phase = parseInt(document.getElementById('edit-phase').value) || null;
+      item.chronologicalOrder = parseInt(document.getElementById('edit-chrono').value);
+      item.bonus = document.getElementById('edit-bonus').checked;
+      item.what = document.getElementById('edit-what').value;
+      item.why = document.getElementById('edit-why').value;
+      item.when = document.getElementById('edit-when').value;
+      item.who = document.getElementById('edit-who').value;
+      item.officialUrl = document.getElementById('edit-url').value;
+      item.imageUrl = document.getElementById('edit-image').value;
+      
+      updateCounts();
+      
+      alert(`✅ Updated "${item.title}"!\n\nDon't forget to export the JSON and update your files.`);
+      
+      renderTitleList();
+      populateEditSelect();
+    }
+    
+    function handleDeleteTitle() {
+      const key = document.getElementById('edit-key').value;
+      const item = watchlist.items.find(i => i.key === key);
+      
+      if (!confirm(`Are you sure you want to delete "${item.title}"?`)) return;
+      
+      watchlist.items = watchlist.items.filter(i => i.key !== key);
+      updateCounts();
+      
+      alert(`✅ Deleted "${item.title}"!\n\nDon't forget to export the JSON and update your files.`);
+      
+      document.getElementById('edit-form-container').style.display = 'none';
+      document.getElementById('edit-select').value = '';
+      renderTitleList();
+      populateEditSelect();
+    }
+    
+    function editTitle(key) {
+      switchTab('edit');
+      document.getElementById('edit-select').value = key;
+      document.getElementById('edit-select').dispatchEvent(new Event('change'));
+    }
+    
+    function updateCounts() {
+      watchlist.count = watchlist.items.filter(i => !i.bonus).length;
+      watchlist.bonusCount = watchlist.items.filter(i => i.bonus).length;
+      watchlist.generatedAt = new Date().toISOString();
+    }
+    
+    function runValidation() {
+      const results = document.getElementById('validation-results');
+      const errors = [];
+      
+      // Check for duplicate keys
+      const keys = new Set();
+      watchlist.items.forEach(item => {
+        if (keys.has(item.key)) {
+          errors.push(`Duplicate key: ${item.key}`);
+        }
+        keys.add(item.key);
+      });
+      
+      // Check for duplicate chronological orders
+      const chronoOrders = {};
+      watchlist.items.forEach(item => {
+        const chrono = item.chronologicalOrder;
+        if (chronoOrders[chrono]) {
+          errors.push(`Duplicate chronologicalOrder ${chrono}: keys ${chronoOrders[chrono]} and ${item.key}`);
+        } else {
+          chronoOrders[chrono] = item.key;
+        }
+      });
+      
+      // Check required fields
+      watchlist.items.forEach(item => {
+        if (!item.key) errors.push(`Missing key for item: ${item.title}`);
+        if (!item.title) errors.push(`Missing title for key: ${item.key}`);
+        if (!item.chronologicalOrder) errors.push(`Missing chronologicalOrder for: ${item.key}`);
+      });
+      
+      // Check counts
+      const actualMain = watchlist.items.filter(i => !i.bonus).length;
+      const actualBonus = watchlist.items.filter(i => i.bonus).length;
+      
+      if (watchlist.count !== actualMain) {
+        errors.push(`Count mismatch: JSON says ${watchlist.count}, actual is ${actualMain}`);
+      }
+      if (watchlist.bonusCount !== actualBonus) {
+        errors.push(`Bonus count mismatch: JSON says ${watchlist.bonusCount}, actual is ${actualBonus}`);
+      }
+      
+      // Display results
+      if (errors.length === 0) {
+        results.innerHTML = '<div class="success">✅ All validation checks passed!</div>';
+      } else {
+        results.innerHTML = `
+          <div class="error">❌ Found ${errors.length} error(s):</div>
+          ${errors.map(err => `<div class="error">• ${err}</div>`).join('')}
+        `;
+      }
+    }
+    
+    function generateExport() {
+      const output = document.getElementById('export-output');
+      updateCounts();
+      output.textContent = JSON.stringify(watchlist, null, 2);
+    }
+    
+    // Make editTitle available globally
+    window.editTitle = editTitle;
+  </script>
+</body>
+</html>
