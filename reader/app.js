@@ -21,7 +21,42 @@ const state = {
   phaseFilter: "all", // "all" or phase number (1-6)
   typeFilter: "all", // "all", "film", or "series"
   timelineOrder: getInitialTimelineOrder(), // "release" or "chronological"
+  teamFilter: null, // null or team name
+  avengersAssembleActive: false, // special filter for core 15 Avengers
 };
+
+// Core Avengers - The 15 heroes from the "Avengers Assemble" filter
+const coreAvengers = [
+  "Iron Man",
+  "Tony Stark",
+  "Captain America",
+  "Steve Rogers",
+  "Thor",
+  "Hulk",
+  "Bruce Banner",
+  "Spider-Man",
+  "Peter Parker",
+  "Black Widow",
+  "Natasha Romanoff",
+  "Vision",
+  "Sam Wilson",
+  "Falcon",
+  "Hawkeye",
+  "Clint Barton",
+  "Scarlet Witch",
+  "Wanda Maximoff",
+  "Black Panther",
+  "T'Challa",
+  "Ant-Man",
+  "Scott Lang",
+  "Hope van Dyne",
+  "Wasp",
+  "Captain Marvel",
+  "Carol Danvers",
+  "War Machine",
+  "James Rhodes",
+  "Rhodey"
+];
 
 // Block definitions based on key ranges
 const blocks = [
@@ -56,6 +91,50 @@ const conceptMap = {
   // Legacy Threads
   "stark-legacy": [2, 7, 9, 11, 20, 24], // Homecoming, Infinity War, Far From Home, Falcon/Winter Soldier, Wakanda Forever, Thunderbolts
   "new-guard": [2, 9, 11, 12, 13, 14, 20, 24, 27], // Homecoming, Far From Home, Falcon/WS, Hawkeye, Shang-Chi, Love & Thunder, Wakanda Forever, Thunderbolts, Daredevil
+};
+
+// Team/Faction to title mapping
+// Each array contains the key numbers of titles that feature that team
+const teamMap = {
+  "avengers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 29, 30],
+  "fantastic-four": [25, 30], // Fantastic Four, Doomsday
+  "guardians": [3, 7, 8, 14, 21], // Ragnarok, Infinity War, Endgame, Love & Thunder, The Marvels
+  "defenders": [27, 42, 49], // Daredevil titles (street-level heroes)
+  "x-men": ["B1", "B2", "B3", 22, 30], // Bonus titles + Deadpool & Wolverine, Doomsday
+};
+
+// Team metadata with colors and descriptions
+const teams = {
+  "avengers": {
+    name: "Avengers",
+    color: "#e62429",
+    icon: "🦸",
+    url: "https://www.marvel.com/teams-and-groups/avengers"
+  },
+  "fantastic-four": {
+    name: "Fantastic Four",
+    color: "#4a90e2",
+    icon: "4️⃣",
+    url: "https://www.marvel.com/teams-and-groups/fantastic-four"
+  },
+  "guardians": {
+    name: "Guardians of the Galaxy",
+    color: "#f3c969",
+    icon: "🚀",
+    url: "https://www.marvel.com/teams-and-groups/guardians-of-the-galaxy"
+  },
+  "defenders": {
+    name: "Defenders",
+    color: "#55d68b",
+    icon: "🛡️",
+    url: "https://www.marvel.com/teams-and-groups/defenders"
+  },
+  "x-men": {
+    name: "X-Men",
+    color: "#9b59b6",
+    icon: "✖️",
+    url: "https://www.marvel.com/teams-and-groups/x-men"
+  }
 };
 
 // Concept scores for each title (number of concepts present)
@@ -132,6 +211,7 @@ const elements = {
   characterChips: document.querySelector("#characterChips"),
   blockChips: [...document.querySelectorAll("[data-block]")],
   conceptChips: [...document.querySelectorAll("[data-concept]")],
+  teamChips: [...document.querySelectorAll("[data-team]")],
   topSearchInput: document.querySelector("#topSearchInput"),
   phaseChips: [...document.querySelectorAll("[data-phase]")],
   typeChips: [...document.querySelectorAll("[data-type]")],
@@ -383,6 +463,12 @@ function matchesFilters(item) {
     (state.filter === "bonus" && item.bonus) ||
     (state.filter === "unread" && !state.read.has(item.key));
 
+  // Avengers Assemble filter - checks if any core Avenger appears in the title
+  const avengersAssembleMatch = !state.avengersAssembleActive || (() => {
+    const searchText = [item.title, item.who, item.what, item.why].join(" ").toLowerCase();
+    return coreAvengers.some(avenger => searchText.includes(avenger.toLowerCase()));
+  })();
+
   // Character filter searches in title, who, what, and why fields
   const characterMatch = !state.characterFilter ||
     [item.title, item.who, item.what, item.why]
@@ -402,6 +488,13 @@ function matchesFilters(item) {
     const conceptTitles = conceptMap[state.conceptFilter] || [];
     const keyNum = parseInt(item.key);
     return conceptTitles.includes(keyNum);
+  })();
+
+  // Team filter checks if item's key is in the team's title list
+  const teamMatch = !state.teamFilter || (() => {
+    const teamTitles = teamMap[state.teamFilter] || [];
+    // Handle both numeric keys and bonus keys (B1, B2, B3)
+    return teamTitles.includes(item.key) || teamTitles.includes(parseInt(item.key));
   })();
 
   // Phase filter - uses official MCU phase data from JSON
@@ -427,7 +520,7 @@ function matchesFilters(item) {
     return true;
   })();
 
-  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch && phaseMatch && typeMatch;
+  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch && teamMatch && phaseMatch && typeMatch;
 }
 
 function renderStaticText() {
@@ -949,6 +1042,38 @@ for (const chip of elements.conceptChips) {
     renderTimeline();
   });
 }
+
+// Team filter chips
+for (const chip of elements.teamChips) {
+  chip.addEventListener("click", () => {
+    const team = chip.dataset.team;
+    if (state.teamFilter === team) {
+      // Deselect if clicking the same team
+      state.teamFilter = null;
+      elements.teamChips.forEach(c => c.classList.remove("is-active"));
+    } else {
+      // Select new team
+      state.teamFilter = team;
+      elements.teamChips.forEach(c => {
+        c.classList.toggle("is-active", c.dataset.team === team);
+      });
+    }
+    renderTimeline();
+  });
+}
+
+// Avengers Assemble button event listener
+elements.avengersAssembleBtn.addEventListener("click", () => {
+  state.avengersAssembleActive = !state.avengersAssembleActive;
+  
+  if (state.avengersAssembleActive) {
+    elements.avengersAssembleBtn.classList.add("is-active");
+  } else {
+    elements.avengersAssembleBtn.classList.remove("is-active");
+  }
+  
+  renderTimeline();
+});
 
 // Initialize theme
 applyTheme(state.theme);

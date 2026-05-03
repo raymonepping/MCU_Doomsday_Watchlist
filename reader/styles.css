@@ -1538,3 +1538,233 @@ h3 {
   border-color: rgb(239 68 68 / 0.86);
   background: #ef4444; /* Red for Legacy */
 }
+
+
+/* Teams & Factions Filter */
+.team-filters-panel {
+  margin-top: 24px;
+}
+
+.team-filters-panel .panel-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.team-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px;
+}
+
+.team-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+}
+
+.team-chip:hover {
+  border-color: var(--blue);
+  background: rgba(95, 180, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.team-chip.is-active {
+  border-color: var(--blue);
+  background: rgba(95, 180, 255, 0.2);
+  box-shadow: 0 0 20px rgba(95, 180, 255, 0.3);
+}
+
+.team-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.team-name {
+  font-weight: 600;
+}
+
+/* Team-specific colors when active */
+.team-chip[data-team="avengers"].is-active {
+  border-color: #e62429;
+  background: rgba(230, 36, 41, 0.2);
+  box-shadow: 0 0 20px rgba(230, 36, 41, 0.3);
+}
+
+.team-chip[data-team="fantastic-four"].is-active {
+  border-color: #4a90e2;
+  background: rgba(74, 144, 226, 0.2);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+}
+
+.team-chip[data-team="guardians"].is-active {
+  border-color: #f3c969;
+  background: rgba(243, 201, 105, 0.2);
+  box-shadow: 0 0 20px rgba(243, 201, 105, 0.3);
+}
+
+.team-chip[data-team="defenders"].is-active {
+  border-color: #55d68b;
+  background: rgba(85, 214, 139, 0.2);
+  box-shadow: 0 0 20px rgba(85, 214, 139, 0.3);
+}
+
+.team-chip[data-team="x-men"].is-active {
+  border-color: #9b59b6;
+  background: rgba(155, 89, 182, 0.2);
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .team-filters {
+    gap: 10px;
+    padding: 12px;
+  }
+  
+  .team-chip {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+  
+  .team-icon {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Avengers Assemble Button */
+.avengers-assemble-section {
+  margin-bottom: 20px;
+  padding: 0 18px;
+}
+
+.avengers-assemble-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #e62429 0%, #c41e3a 100%);
+  border: 3px solid #ff4444;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(230, 36, 41, 0.4);
+  min-height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.avengers-assemble-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.avengers-assemble-btn:hover::before {
+  left: 100%;
+}
+
+.avengers-assemble-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(230, 36, 41, 0.6);
+  border-color: #ff6666;
+}
+
+.avengers-assemble-btn.is-active {
+  background: linear-gradient(135deg, #ff4444 0%, #ff6666 100%);
+  border-color: #ffaa00;
+  box-shadow: 0 0 40px rgba(255, 170, 0, 0.8), 0 8px 30px rgba(230, 36, 41, 0.6);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(255, 170, 0, 0.8), 0 8px 30px rgba(230, 36, 41, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 170, 0, 1), 0 8px 40px rgba(230, 36, 41, 0.8);
+  }
+}
+
+.assemble-icon {
+  font-size: 1.5rem;
+  animation: rotate-icon 3s linear infinite;
+}
+
+@keyframes rotate-icon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.avengers-assemble-btn.is-active .assemble-icon {
+  animation: pulse-icon 1s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.assemble-text {
+  flex: 1;
+  text-align: center;
+}
+
+.assemble-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .avengers-assemble-section {
+    padding: 0 12px;
+    margin-bottom: 16px;
+  }
+  
+  .avengers-assemble-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+    min-height: 52px;
+    gap: 10px;
+  }
+  
+  .assemble-icon {
+    font-size: 1.3rem;
+  }
+  
+  .assemble-count {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+}
