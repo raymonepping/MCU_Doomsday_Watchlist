@@ -148,12 +148,13 @@ const conceptMap = {
 
 // Team/Faction to title mapping
 // Each array contains the key numbers of titles that feature that team
+// Keys are matched based on title content and character appearances
 const teamMap = {
-  "avengers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 29, 30],
-  "fantastic-four": [25, 30], // Fantastic Four, Doomsday
-  "guardians": [3, 7, 8, 14, 21], // Ragnarok, Infinity War, Endgame, Love & Thunder, The Marvels
-  "defenders": [27, 42, 49], // Daredevil titles (street-level heroes)
-  "x-men": ["B1", "B2", "B3", 22, 30], // Bonus titles + Deadpool & Wolverine, Doomsday
+  "avengers": ["1", "4", "5", "6", "8", "11", "13", "17", "19", "22", "26", "33", "34", "38", "45"], // Avengers films + solo films of Avengers members
+  "fantastic-four": ["40"], // The Fantastic Four: First Steps
+  "guardians": ["10", "15"], // Guardians of the Galaxy Vol. 1 & 2
+  "defenders": ["42", "49"], // Daredevil: Born Again S1 & S2
+  "x-men": ["37", "B1", "B2", "B3"], // Deadpool & Wolverine + Fox X-Men trilogy
 };
 
 // Team metadata with colors and descriptions
