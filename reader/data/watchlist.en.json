@@ -56,7 +56,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2008-05-02"
     },
     {
       "key": "2",
@@ -76,7 +77,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2008-06-13"
     },
     {
       "key": "3",
@@ -96,7 +98,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2010-05-07"
     },
     {
       "key": "4",
@@ -116,7 +119,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2011-05-06"
     },
     {
       "key": "5",
@@ -136,7 +140,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2011-07-22"
     },
     {
       "key": "6",
@@ -156,7 +161,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2012-05-04"
     },
     {
       "key": "7",
@@ -176,7 +182,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2013-05-03"
     },
     {
       "key": "8",
@@ -196,7 +203,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2013-11-08"
     },
     {
       "key": "9",
@@ -216,7 +224,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2014-04-04"
     },
     {
       "key": "10",
@@ -236,7 +245,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2014-08-01"
     },
     {
       "key": "11",
@@ -256,7 +266,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2015-05-01"
     },
     {
       "key": "12",
@@ -276,7 +287,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2015-07-17"
     },
     {
       "key": "13",
@@ -296,7 +308,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2016-05-06"
     },
     {
       "key": "14",
@@ -316,7 +329,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2016-11-04"
     },
     {
       "key": "15",
@@ -336,7 +350,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2017-05-05"
     },
     {
       "key": "16",
@@ -357,7 +372,8 @@
         "infinity-saga",
         "doomsday",
         "spider-man"
-      ]
+      ],
+      "releaseDate": "2017-07-07"
     },
     {
       "key": "17",
@@ -377,7 +393,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2017-11-03"
     },
     {
       "key": "18",
@@ -397,7 +414,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2018-02-16"
     },
     {
       "key": "19",
@@ -417,7 +435,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2018-04-27"
     },
     {
       "key": "20",
@@ -437,7 +456,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2018-07-06"
     },
     {
       "key": "21",
@@ -457,7 +477,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2019-03-08"
     },
     {
       "key": "22",
@@ -477,7 +498,8 @@
       "saga": [
         "infinity-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2019-04-26"
     },
     {
       "key": "23",
@@ -498,7 +520,8 @@
         "infinity-saga",
         "doomsday",
         "spider-man"
-      ]
+      ],
+      "releaseDate": "2019-07-02"
     },
     {
       "key": "24",
@@ -518,7 +541,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-01-15"
     },
     {
       "key": "25",
@@ -538,7 +562,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-03-19"
     },
     {
       "key": "26",
@@ -558,7 +583,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-06-09"
     },
     {
       "key": "27",
@@ -578,7 +604,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-07-09"
     },
     {
       "key": "28",
@@ -598,7 +625,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-09-03"
     },
     {
       "key": "29",
@@ -618,7 +646,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2021-11-24"
     },
     {
       "key": "30",
@@ -639,7 +668,8 @@
         "multiverse-saga",
         "doomsday",
         "spider-man"
-      ]
+      ],
+      "releaseDate": "2021-12-17"
     },
     {
       "key": "31",
@@ -655,7 +685,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/moon-knight/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/moonknight_lob_crd_05.jpg",
       "localImage": "./assets/posters/31.jpg",
-      "chronologicalOrder": 28
+      "chronologicalOrder": 28,
+      "releaseDate": "2022-03-30"
     },
     {
       "key": "32",
@@ -671,7 +702,8 @@
       "officialUrl": "https://www.marvel.com/movies/doctor-strange-in-the-multiverse-of-madness",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrangeinthemultiverseofmadness_lob_mas_mob_08b.jpg",
       "localImage": "./assets/posters/32.jpg",
-      "chronologicalOrder": 30
+      "chronologicalOrder": 30,
+      "releaseDate": "2022-05-06"
     },
     {
       "key": "33",
@@ -687,7 +719,8 @@
       "officialUrl": "https://www.marvel.com/movies/thor-love-and-thunder",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorloveandthunder_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/33.jpg",
-      "chronologicalOrder": 31
+      "chronologicalOrder": 31,
+      "releaseDate": "2022-07-08"
     },
     {
       "key": "34",
@@ -703,7 +736,8 @@
       "officialUrl": "https://www.marvel.com/movies/black-panther-wakanda-forever",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpantherwakandaforever_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/34.jpg",
-      "chronologicalOrder": 35
+      "chronologicalOrder": 35,
+      "releaseDate": "2022-11-11"
     },
     {
       "key": "35",
@@ -719,7 +753,8 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania",
       "imageUrl": "https://cdn.marvel.com/content/2x/antmanandthewaspquantumania_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/35.jpg",
-      "chronologicalOrder": 34
+      "chronologicalOrder": 34,
+      "releaseDate": "2023-02-17"
     },
     {
       "key": "36",
@@ -735,7 +770,8 @@
       "officialUrl": "https://www.marvel.com/movies/the-marvels",
       "imageUrl": "https://cdn.marvel.com/content/2x/themarvels_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/36.jpg",
-      "chronologicalOrder": 36
+      "chronologicalOrder": 36,
+      "releaseDate": "2023-11-10"
     },
     {
       "key": "37",
@@ -755,7 +791,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2024-07-26"
     },
     {
       "key": "38",
@@ -771,7 +808,8 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-brave-new-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericabravenewworld_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/38.jpg",
-      "chronologicalOrder": 38
+      "chronologicalOrder": 38,
+      "releaseDate": "2025-02-14"
     },
     {
       "key": "39",
@@ -787,7 +825,8 @@
       "officialUrl": "https://www.marvel.com/movies/thunderbolts",
       "imageUrl": "https://cdn.marvel.com/content/2x/thenewavengers_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/39.jpg",
-      "chronologicalOrder": 39
+      "chronologicalOrder": 39,
+      "releaseDate": "2025-05-02"
     },
     {
       "key": "40",
@@ -807,7 +846,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2025-07-25"
     },
     {
       "key": "41",
@@ -823,7 +863,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/wonder-man/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
       "localImage": "./assets/posters/41.jpg",
-      "chronologicalOrder": 41
+      "chronologicalOrder": 41,
+      "releaseDate": "2025-12-01"
     },
     {
       "key": "42",
@@ -843,7 +884,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2025-03-04"
     },
     {
       "key": "43",
@@ -859,7 +901,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/visionquest/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
       "localImage": "./assets/posters/43.jpg",
-      "chronologicalOrder": 46
+      "chronologicalOrder": 46,
+      "releaseDate": "2026-01-01"
     },
     {
       "key": "44",
@@ -878,7 +921,8 @@
       "chronologicalOrder": 50,
       "saga": [
         "spider-man"
-      ]
+      ],
+      "releaseDate": "2026-07-24"
     },
     {
       "key": "45",
@@ -894,7 +938,8 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-doomsday",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/45.jpg",
-      "chronologicalOrder": 51
+      "chronologicalOrder": 51,
+      "releaseDate": "2026-05-01"
     },
     {
       "key": "B1",
@@ -913,7 +958,8 @@
       "chronologicalOrder": 100,
       "saga": [
         "x-men"
-      ]
+      ],
+      "releaseDate": "2000-07-14"
     },
     {
       "key": "B2",
@@ -932,7 +978,8 @@
       "chronologicalOrder": 101,
       "saga": [
         "x-men"
-      ]
+      ],
+      "releaseDate": "2003-05-02"
     },
     {
       "key": "B3",
@@ -951,7 +998,8 @@
       "chronologicalOrder": 102,
       "saga": [
         "x-men"
-      ]
+      ],
+      "releaseDate": "2014-05-23"
     },
     {
       "key": "46",
@@ -967,7 +1015,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/agent-carter/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/agentcarters2_lob_crd_03.jpg",
       "localImage": "./assets/posters/46.jpg",
-      "chronologicalOrder": 2
+      "chronologicalOrder": 2,
+      "releaseDate": "2015-01-06"
     },
     {
       "key": "47",
@@ -983,7 +1032,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/echo/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/echo_lob_crd_02.jpg",
       "localImage": "./assets/posters/47.jpg",
-      "chronologicalOrder": 44
+      "chronologicalOrder": 44,
+      "releaseDate": "2024-01-10"
     },
     {
       "key": "48",
@@ -999,7 +1049,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/agatha-all-along/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/agathaallalong_lob_crd_02.jpg",
       "localImage": "./assets/posters/48.jpg",
-      "chronologicalOrder": 47
+      "chronologicalOrder": 47,
+      "releaseDate": "2024-09-18"
     },
     {
       "key": "49",
@@ -1019,7 +1070,8 @@
       "saga": [
         "multiverse-saga",
         "doomsday"
-      ]
+      ],
+      "releaseDate": "2026-03-01"
     },
     {
       "key": "SM1",
@@ -1036,9 +1088,10 @@
       "when": "2002 - Before the MCU began",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Willem Dafoe as Green Goblin",
       "officialUrl": "https://www.marvel.com/movies/spider-man",
-      "chronologicalOrder": null,
+      "chronologicalOrder": 28.1,
       "localImage": "./assets/posters/SM1.jpg",
-      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man_lob_crd_01.jpg"
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man_lob_crd_01.jpg",
+      "releaseDate": "2002-05-03"
     },
     {
       "key": "SM2",
@@ -1055,9 +1108,10 @@
       "when": "2004 - The Raimi trilogy continues",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Alfred Molina as Doc Ock",
       "officialUrl": "https://www.marvel.com/movies/spider-man-2",
-      "chronologicalOrder": null,
+      "chronologicalOrder": 28.2,
       "localImage": "./assets/posters/SM2.jpg",
-      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man2_lob_crd_01.jpg"
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man2_lob_crd_01.jpg",
+      "releaseDate": "2004-06-30"
     },
     {
       "key": "SM3",
@@ -1074,9 +1128,10 @@
       "when": "2007 - The Raimi trilogy concludes",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Thomas Haden Church as Sandman, Topher Grace as Venom, James Franco as New Goblin",
       "officialUrl": "https://www.marvel.com/movies/spider-man-3",
-      "chronologicalOrder": null,
+      "chronologicalOrder": 28.3,
       "localImage": "./assets/posters/SM3.jpg",
-      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man3_lob_crd_01.jpg"
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man3_lob_crd_01.jpg",
+      "releaseDate": "2007-05-04"
     },
     {
       "key": "TASM1",
@@ -1093,9 +1148,10 @@
       "when": "2012 - The Amazing Spider-Man era begins",
       "who": "Andrew Garfield as Peter Parker/Spider-Man, Emma Stone as Gwen Stacy",
       "officialUrl": "https://www.marvel.com/movies/the-amazing-spider-man",
-      "chronologicalOrder": null,
+      "chronologicalOrder": 28.4,
       "localImage": "./assets/posters/TASM1.jpg",
-      "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg"
+      "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg",
+      "releaseDate": "2012-07-03"
     }
   ]
 }

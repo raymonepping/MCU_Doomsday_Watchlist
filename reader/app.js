@@ -807,11 +807,11 @@ function renderTimeline() {
       return orderA - orderB;
     });
   } else {
-    // Release order - sort by key (which is already in release order)
+    // Release order - sort by releaseDate (ISO 8601 format sorts correctly as strings)
     matches = matches.sort((a, b) => {
-      const keyA = a.key.startsWith('B') ? parseInt(a.key.substring(1)) + 1000 : parseInt(a.key);
-      const keyB = b.key.startsWith('B') ? parseInt(b.key.substring(1)) + 1000 : parseInt(b.key);
-      return keyA - keyB;
+      const dateA = a.releaseDate || '9999-12-31'; // Future items without dates go to end
+      const dateB = b.releaseDate || '9999-12-31';
+      return dateA.localeCompare(dateB);
     });
   }
   
