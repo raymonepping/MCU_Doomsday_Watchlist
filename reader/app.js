@@ -584,9 +584,12 @@ function matchesFilters(item) {
   })();
 
   // Saga filter - checks if item belongs to any of the selected sagas
-  const sagaMatch = state.sagaFilters.size === 0 || (() => {
-    // If no sagas selected, show nothing (shouldn't happen with default)
-    if (!item.saga || !Array.isArray(item.saga)) return false;
+  const sagaMatch = (() => {
+    // If no sagas selected, show all items
+    if (state.sagaFilters.size === 0) return true;
+    
+    // If item has no saga tags, show it (for items not yet tagged)
+    if (!item.saga || !Array.isArray(item.saga) || item.saga.length === 0) return true;
     
     // Check if item belongs to any of the selected sagas
     return item.saga.some(saga => state.sagaFilters.has(saga));
@@ -1186,12 +1189,8 @@ for (const chip of elements.sagaChips) {
       chip.classList.add("is-active");
     }
     
-    // Ensure at least one saga is always selected
-    if (state.sagaFilters.size === 0) {
-      // Re-add the saga that was just removed
-      state.sagaFilters.add(saga);
-      chip.classList.add("is-active");
-    }
+    // Allow deselecting all sagas - will show everything
+    // No minimum requirement anymore
     
     renderTimeline();
   });

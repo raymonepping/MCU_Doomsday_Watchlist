@@ -751,7 +751,11 @@
       "officialUrl": "https://www.marvel.com/movies/deadpool-and-wolverine",
       "imageUrl": "https://cdn.marvel.com/content/2x/deadpoolandwolverine_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/37.jpg",
-      "chronologicalOrder": 37
+      "chronologicalOrder": 37,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "38",
@@ -799,7 +803,11 @@
       "officialUrl": "https://www.marvel.com/movies/the-fantastic-four-first-steps",
       "imageUrl": "https://cdn.marvel.com/content/2x/thefantasticfourfirststeps_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/40.jpg",
-      "chronologicalOrder": 40
+      "chronologicalOrder": 40,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "41",
@@ -831,7 +839,11 @@
       "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagain_lob_crd_03.jpg",
       "localImage": "./assets/posters/42.jpg",
-      "chronologicalOrder": 48
+      "chronologicalOrder": 48,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "43",
@@ -1003,7 +1015,11 @@
       "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
       "localImage": "./assets/posters/49.jpg",
-      "chronologicalOrder": 52
+      "chronologicalOrder": 52,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "SM1",
