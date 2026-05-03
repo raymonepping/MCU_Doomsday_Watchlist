@@ -43,6 +43,18 @@ def parse_watchlist() -> list[Title]:
 
     titles: list[Title] = []
     for item in items:
+        # Handle chronologicalOrder - can be None for non-MCU films
+        chrono_order = item.get("chronologicalOrder")
+        if chrono_order is None:
+            # For items without chronological order, use key if numeric, else 999
+            key = item.get("key", "0")
+            try:
+                chrono_order = int(key)
+            except (ValueError, TypeError):
+                chrono_order = 999  # Put non-MCU films at the end
+        else:
+            chrono_order = int(chrono_order)
+        
         titles.append(
             Title(
                 key=str(item.get("key", "")),
@@ -50,7 +62,7 @@ def parse_watchlist() -> list[Title]:
                 kind=str(item.get("kind", "Unknown")),
                 runtime=str(item.get("runtime", "unknown runtime")),
                 bonus=bool(item.get("bonus", False)),
-                chronological_order=int(item.get("chronologicalOrder", item.get("key", "0"))),
+                chronological_order=chrono_order,
             )
         )
 
