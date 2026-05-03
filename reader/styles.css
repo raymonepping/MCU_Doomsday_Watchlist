@@ -1767,4 +1767,123 @@ h3 {
     font-size: 0.8rem;
     padding: 3px 8px;
   }
+
+/* ============================================
+   DEFENDERS ASSEMBLE BUTTON
+   ============================================ */
+
+.defenders-assemble-section {
+  margin-bottom: 16px;
+}
+
+.defenders-assemble-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: 2px solid #7f8c8d;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  animation: pulse-glow-defenders 2s ease-in-out infinite;
+}
+
+.defenders-assemble-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.defenders-assemble-btn:hover::before {
+  left: 100%;
+}
+
+.defenders-assemble-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 25px rgba(44, 62, 80, 0.5);
+  border-color: #95a5a6;
+}
+
+.defenders-assemble-btn.is-active {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border-color: #ecf0f1;
+  box-shadow: 0 0 30px rgba(236, 240, 241, 0.6), 0 6px 25px rgba(44, 62, 80, 0.5);
+  animation: pulse-glow-defenders-active 1.5s ease-in-out infinite;
+}
+
+.defenders-assemble-btn .assemble-icon {
+  font-size: 24px;
+  animation: rotate-icon 3s linear infinite;
+}
+
+.defenders-assemble-btn.is-active .assemble-icon {
+  animation: pulse-icon 1s ease-in-out infinite;
+}
+
+.defenders-assemble-btn .assemble-text {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.defenders-assemble-btn .assemble-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse-glow-defenders {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(127, 140, 141, 0.5);
+  }
+}
+
+@keyframes pulse-glow-defenders-active {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(236, 240, 241, 0.6), 0 6px 25px rgba(44, 62, 80, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 240, 241, 0.8), 0 6px 30px rgba(44, 62, 80, 0.7);
+  }
+}
+
+/* Mobile optimizations for Defenders button */
+@media (max-width: 768px) {
+  .defenders-assemble-btn {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .defenders-assemble-btn .assemble-icon {
+    font-size: 20px;
+  }
+  
+  .defenders-assemble-btn .assemble-text {
+    font-size: 14px;
+  }
+  
+  .defenders-assemble-btn .assemble-count {
+    font-size: 10px;
+  }
+}
 }

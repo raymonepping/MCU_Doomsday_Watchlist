@@ -23,6 +23,7 @@ const state = {
   timelineOrder: getInitialTimelineOrder(), // "release" or "chronological"
   teamFilter: null, // null or team name
   avengersAssembleActive: false, // special filter for core 15 Avengers
+  defendersAssembleActive: false, // special filter for core 4 Defenders
 };
 
 // Core Avengers - The 15 heroes from the "Avengers Assemble" filter
@@ -56,6 +57,17 @@ const coreAvengers = [
   "War Machine",
   "James Rhodes",
   "Rhodey"
+];
+
+// Core Defenders - The 4 street-level heroes from the "Defenders Assemble" filter
+const coreDefenders = [
+  "Iron Fist",
+  "Danny Rand",
+  "Luke Cage",
+  "Jessica Jones",
+  "Daredevil",
+  "Matthew Murdock",
+  "Matt Murdock"
 ];
 
 // Block definitions based on key ranges
@@ -212,6 +224,8 @@ const elements = {
   blockChips: [...document.querySelectorAll("[data-block]")],
   conceptChips: [...document.querySelectorAll("[data-concept]")],
   teamChips: [...document.querySelectorAll("[data-team]")],
+  avengersAssembleBtn: document.querySelector("#avengersAssembleBtn"),
+  defendersAssembleBtn: document.querySelector("#defendersAssembleBtn"),
   topSearchInput: document.querySelector("#topSearchInput"),
   phaseChips: [...document.querySelectorAll("[data-phase]")],
   typeChips: [...document.querySelectorAll("[data-type]")],
@@ -469,6 +483,12 @@ function matchesFilters(item) {
     return coreAvengers.some(avenger => searchText.includes(avenger.toLowerCase()));
   })();
 
+  // Defenders Assemble filter - checks if any core Defender appears in the title
+  const defendersAssembleMatch = !state.defendersAssembleActive || (() => {
+    const searchText = [item.title, item.who, item.what, item.why].join(" ").toLowerCase();
+    return coreDefenders.some(defender => searchText.includes(defender.toLowerCase()));
+  })();
+
   // Character filter searches in title, who, what, and why fields
   const characterMatch = !state.characterFilter ||
     [item.title, item.who, item.what, item.why]
@@ -520,7 +540,18 @@ function matchesFilters(item) {
     return true;
   })();
 
-  return textMatch && filterMatch && characterMatch && blockMatch && conceptMatch && teamMatch && phaseMatch && typeMatch;
+  return (
+    textMatch &&
+    filterMatch &&
+    characterMatch &&
+    avengersAssembleMatch &&
+    defendersAssembleMatch &&
+    blockMatch &&
+    conceptMatch &&
+    teamMatch &&
+    phaseMatch &&
+    typeMatch
+  );
 }
 
 function renderStaticText() {
@@ -1070,6 +1101,19 @@ elements.avengersAssembleBtn.addEventListener("click", () => {
     elements.avengersAssembleBtn.classList.add("is-active");
   } else {
     elements.avengersAssembleBtn.classList.remove("is-active");
+  }
+  
+  renderTimeline();
+});
+
+// Defenders Assemble button event listener
+elements.defendersAssembleBtn.addEventListener("click", () => {
+  state.defendersAssembleActive = !state.defendersAssembleActive;
+  
+  if (state.defendersAssembleActive) {
+    elements.defendersAssembleBtn.classList.add("is-active");
+  } else {
+    elements.defendersAssembleBtn.classList.remove("is-active");
   }
   
   renderTimeline();
