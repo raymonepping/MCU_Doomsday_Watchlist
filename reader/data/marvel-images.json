@@ -205,6 +205,26 @@
     "B3": {
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B3.jpg"
+    },
+    "46": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/agentcarters2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/46.jpg"
+    },
+    "SM1": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man_lob_crd_01.jpg",
+      "localImage": "./assets/posters/SM1.jpg"
+    },
+    "SM2": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man2_lob_crd_01.jpg",
+      "localImage": "./assets/posters/SM2.jpg"
+    },
+    "SM3": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/spider-man3_lob_crd_01.jpg",
+      "localImage": "./assets/posters/SM3.jpg"
+    },
+    "TASM1": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg",
+      "localImage": "./assets/posters/TASM1.jpg"
     }
   }
 }
