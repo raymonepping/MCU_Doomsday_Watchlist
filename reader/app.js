@@ -532,11 +532,13 @@ function matchesFilters(item) {
     return coreDefenders.some(defender => searchText.includes(defender.toLowerCase()));
   })();
 
-  // Character filter searches in title, who, what, and why fields
+  // Character filter searches primarily in title and who fields
+  // This ensures selecting "Spider-Man" only shows Spider-Man titles, not mentions
   const characterMatch = !state.characterFilter ||
-    [item.title, item.who, item.what, item.why]
+    [item.title, item.who]
       .join(" ")
-      .includes(state.characterFilter);
+      .toLowerCase()
+      .includes(state.characterFilter.toLowerCase());
 
   // Block filter checks if item is in selected block range
   const blockMatch = !state.blockFilter || (() => {
