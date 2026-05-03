@@ -24,6 +24,40 @@ const state = {
   teamFilter: null, // null or team name
   avengersAssembleActive: false, // special filter for core 15 Avengers
   defendersAssembleActive: false, // special filter for core 4 Defenders
+  sagaFilters: new Set(["doomsday"]), // Set of active saga filters (default: doomsday only)
+};
+
+// Saga definitions - categorize content into different timelines/collections
+const sagas = {
+  "infinity-saga": {
+    name: "The Infinity Saga",
+    description: "Phases 1-3 (2008-2019)",
+    icon: "💎",
+    color: "#FFD700",
+    order: 1
+  },
+  "multiverse-saga": {
+    name: "The Multiverse Saga",
+    description: "Phases 4-6 (2021-2026)",
+    icon: "🌌",
+    color: "#5fb4ff",
+    order: 2
+  },
+  "doomsday": {
+    name: "Doomsday Timeline",
+    description: "Road to Avengers: Doomsday",
+    icon: "⏰",
+    color: "#e62429",
+    order: 3,
+    default: true
+  },
+  "x-men": {
+    name: "X-Men Universe",
+    description: "Fox X-Men timeline",
+    icon: "✖️",
+    color: "#4169E1",
+    order: 4
+  }
 };
 
 // Core Avengers - The 15 heroes from the "Avengers Assemble" filter
@@ -224,6 +258,7 @@ const elements = {
   blockChips: [...document.querySelectorAll("[data-block]")],
   conceptChips: [...document.querySelectorAll("[data-concept]")],
   teamChips: [...document.querySelectorAll("[data-team]")],
+  sagaChips: [...document.querySelectorAll("[data-saga]")],
   avengersAssembleBtn: document.querySelector("#avengersAssembleBtn"),
   defendersAssembleBtn: document.querySelector("#defendersAssembleBtn"),
   topSearchInput: document.querySelector("#topSearchInput"),
@@ -540,6 +575,15 @@ function matchesFilters(item) {
     return true;
   })();
 
+  // Saga filter - checks if item belongs to any of the selected sagas
+  const sagaMatch = state.sagaFilters.size === 0 || (() => {
+    // If no sagas selected, show nothing (shouldn't happen with default)
+    if (!item.saga || !Array.isArray(item.saga)) return false;
+    
+    // Check if item belongs to any of the selected sagas
+    return item.saga.some(saga => state.sagaFilters.has(saga));
+  })();
+
   return (
     textMatch &&
     filterMatch &&
@@ -550,7 +594,8 @@ function matchesFilters(item) {
     conceptMatch &&
     teamMatch &&
     phaseMatch &&
-    typeMatch
+    typeMatch &&
+    sagaMatch
   );
 }
 
@@ -1118,6 +1163,31 @@ elements.defendersAssembleBtn.addEventListener("click", () => {
   
   renderTimeline();
 });
+
+// Saga filter chips - multiple selection allowed
+for (const chip of elements.sagaChips) {
+  chip.addEventListener("click", () => {
+    const saga = chip.dataset.saga;
+    
+    // Toggle saga in the Set
+    if (state.sagaFilters.has(saga)) {
+      state.sagaFilters.delete(saga);
+      chip.classList.remove("is-active");
+    } else {
+      state.sagaFilters.add(saga);
+      chip.classList.add("is-active");
+    }
+    
+    // Ensure at least one saga is always selected
+    if (state.sagaFilters.size === 0) {
+      // Re-add the saga that was just removed
+      state.sagaFilters.add(saga);
+      chip.classList.add("is-active");
+    }
+    
+    renderTimeline();
+  });
+}
 
 // Initialize theme
 applyTheme(state.theme);

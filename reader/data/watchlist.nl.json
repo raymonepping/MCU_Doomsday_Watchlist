@@ -52,7 +52,11 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman_lob_crd_01_4.jpg",
       "localImage": "./assets/posters/01.jpg",
-      "chronologicalOrder": 3
+      "chronologicalOrder": 3,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "2",
@@ -68,7 +72,11 @@
       "officialUrl": "https://www.marvel.com/movies/the-incredible-hulk",
       "imageUrl": "https://cdn.marvel.com/content/2x/theincrediblehulk_lob_crd_03.jpg",
       "localImage": "./assets/posters/02.jpg",
-      "chronologicalOrder": 4
+      "chronologicalOrder": 4,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "3",
@@ -84,7 +92,11 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman2_lob_crd_01_4.jpg",
       "localImage": "./assets/posters/03.jpg",
-      "chronologicalOrder": 5
+      "chronologicalOrder": 5,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "4",
@@ -100,7 +112,11 @@
       "officialUrl": "https://www.marvel.com/movies/thor",
       "imageUrl": "https://cdn.marvel.com/content/2x/thor_lob_crd_01_1.jpg",
       "localImage": "./assets/posters/04.jpg",
-      "chronologicalOrder": 6
+      "chronologicalOrder": 6,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "5",
@@ -116,7 +132,11 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-first-avenger",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathefirstavenger_lob_crd_01_0.jpg",
       "localImage": "./assets/posters/05.jpg",
-      "chronologicalOrder": 1
+      "chronologicalOrder": 1,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "6",
@@ -132,7 +152,11 @@
       "officialUrl": "https://www.marvel.com/movies/the-avengers",
       "imageUrl": "https://cdn.marvel.com/content/2x/theavengers_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/06.jpg",
-      "chronologicalOrder": 7
+      "chronologicalOrder": 7,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "7",
@@ -148,7 +172,11 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man-3",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman3_lob_crd_01_11.jpg",
       "localImage": "./assets/posters/07.jpg",
-      "chronologicalOrder": 8
+      "chronologicalOrder": 8,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "8",
@@ -164,7 +192,11 @@
       "officialUrl": "https://www.marvel.com/movies/thor-the-dark-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorthedarkworld_lob_crd_02.jpg",
       "localImage": "./assets/posters/08.jpg",
-      "chronologicalOrder": 9
+      "chronologicalOrder": 9,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "9",
@@ -180,7 +212,11 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-winter-soldier",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathewintersoldier_lob_crd_01_2.jpg",
       "localImage": "./assets/posters/09.jpg",
-      "chronologicalOrder": 10
+      "chronologicalOrder": 10,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "10",
@@ -196,7 +232,11 @@
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxy_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/10.jpg",
-      "chronologicalOrder": 11
+      "chronologicalOrder": 11,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "11",
@@ -212,7 +252,11 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-age-of-ultron",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersageofultron_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/11.jpg",
-      "chronologicalOrder": 12
+      "chronologicalOrder": 12,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "12",
@@ -228,7 +272,11 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-man_lob_crd_01_9.jpg",
       "localImage": "./assets/posters/12.jpg",
-      "chronologicalOrder": 13
+      "chronologicalOrder": 13,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "13",
@@ -244,7 +292,11 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-civil-war",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericacivilwar_lob_crd_01_10.jpg",
       "localImage": "./assets/posters/13.jpg",
-      "chronologicalOrder": 14
+      "chronologicalOrder": 14,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "14",
@@ -260,7 +312,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
       "localImage": "./assets/posters/14.jpg",
       "phase": 3,
-      "chronologicalOrder": 16
+      "chronologicalOrder": 16,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "15",
@@ -276,7 +332,11 @@
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy-vol-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxyvol.2_lob_crd_01_0.jpg",
       "localImage": "./assets/posters/15.jpg",
-      "chronologicalOrder": 18
+      "chronologicalOrder": 18,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "16",
@@ -292,7 +352,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manhomecoming_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/16.jpg",
       "phase": 3,
-      "chronologicalOrder": 17
+      "chronologicalOrder": 17,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "17",
@@ -308,7 +372,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/thorragnarok_lob_mas_hlf_01_2.jpg",
       "localImage": "./assets/posters/17.jpg",
       "phase": 3,
-      "chronologicalOrder": 19
+      "chronologicalOrder": 19,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "18",
@@ -324,7 +392,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpanther_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/18.jpg",
       "phase": 3,
-      "chronologicalOrder": 15
+      "chronologicalOrder": 15,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "19",
@@ -340,7 +412,11 @@
       "imageUrl": "https://cdn.marvel.com/content/prod/1x/avengersinfinitywar_lob_crd_02.jpg",
       "localImage": "./assets/posters/19.jpg",
       "phase": 3,
-      "chronologicalOrder": 21
+      "chronologicalOrder": 21,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "20",
@@ -356,7 +432,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-manandthewasp_lob_mas_hlf_01_0.jpg",
       "localImage": "./assets/posters/20.jpg",
       "phase": 3,
-      "chronologicalOrder": 20
+      "chronologicalOrder": 20,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "21",
@@ -372,7 +452,11 @@
       "officialUrl": "https://www.marvel.com/movies/captain-marvel",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainmarvel_lob_crd_06.jpg",
       "localImage": "./assets/posters/21.jpg",
-      "chronologicalOrder": 2.5
+      "chronologicalOrder": 2.5,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "22",
@@ -388,7 +472,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersendgame_lob_mas_mob_01.jpg",
       "localImage": "./assets/posters/22.jpg",
       "phase": 3,
-      "chronologicalOrder": 22
+      "chronologicalOrder": 22,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "23",
@@ -404,7 +492,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manfarfromhome_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/23.jpg",
       "phase": 4,
-      "chronologicalOrder": 25
+      "chronologicalOrder": 25,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "24",
@@ -420,7 +512,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/wandavision_lob_crd_06.jpg",
       "localImage": "./assets/posters/24.jpg",
       "phase": 4,
-      "chronologicalOrder": 23
+      "chronologicalOrder": 23,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "25",
@@ -436,7 +532,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
       "localImage": "./assets/posters/25.jpg",
       "phase": 4,
-      "chronologicalOrder": 24
+      "chronologicalOrder": 24,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "26",
@@ -452,7 +552,11 @@
       "officialUrl": "https://www.marvel.com/tv-shows/loki",
       "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_03.jpg",
       "localImage": "./assets/posters/26.jpg",
-      "chronologicalOrder": 33
+      "chronologicalOrder": 33,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "27",
@@ -468,7 +572,11 @@
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/blackwidow_lob_mas_mob_05.jpg",
       "localImage": "./assets/posters/27.jpg",
       "phase": 4,
-      "chronologicalOrder": 32
+      "chronologicalOrder": 32,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "28",
@@ -484,7 +592,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
       "localImage": "./assets/posters/28.jpg",
       "phase": 4,
-      "chronologicalOrder": 26
+      "chronologicalOrder": 26,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "29",
@@ -500,7 +612,11 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/hawkeye_lob_crd_04.jpg",
       "localImage": "./assets/posters/29.jpg",
       "phase": 4,
-      "chronologicalOrder": 27
+      "chronologicalOrder": 27,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "30",
@@ -516,7 +632,11 @@
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/serenitynowtitle_mas_mob.jpg",
       "localImage": "./assets/posters/30.jpg",
       "phase": 4,
-      "chronologicalOrder": 29
+      "chronologicalOrder": 29,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ]
     },
     {
       "key": "31",
@@ -772,7 +892,10 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B1.jpg",
       "phase": null,
-      "chronologicalOrder": 100
+      "chronologicalOrder": 100,
+      "saga": [
+        "x-men"
+      ]
     },
     {
       "key": "B2",
@@ -788,7 +911,10 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDk0NjYxMzIzOF5BMl5BanBnXkFtZTYwMTc1MjU3._V1_.jpg",
       "localImage": "./assets/posters/B2.jpg",
       "phase": null,
-      "chronologicalOrder": 101
+      "chronologicalOrder": 101,
+      "saga": [
+        "x-men"
+      ]
     },
     {
       "key": "B3",
@@ -804,7 +930,10 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "localImage": "./assets/posters/B3.jpg",
       "phase": null,
-      "chronologicalOrder": 51
+      "chronologicalOrder": 51,
+      "saga": [
+        "x-men"
+      ]
     },
     {
       "key": "46",

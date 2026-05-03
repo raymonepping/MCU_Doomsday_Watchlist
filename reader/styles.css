@@ -1540,6 +1540,111 @@ h3 {
 }
 
 
+/* ============================================
+   SAGA / TIMELINE FILTER
+   ============================================ */
+
+.saga-filters-panel {
+  margin-top: 24px;
+}
+
+.saga-filters-panel .panel-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.saga-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.saga-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.saga-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+.saga-chip.is-active {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(230, 36, 41, 0.3);
+}
+
+.saga-chip .saga-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.saga-chip .saga-name {
+  font-size: 0.9rem;
+}
+
+/* Saga-specific colors when active */
+.saga-chip[data-saga="infinity-saga"].is-active {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  border-color: #FFD700;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.saga-chip[data-saga="multiverse-saga"].is-active {
+  background: linear-gradient(135deg, #5fb4ff 0%, #4a9eff 100%);
+  border-color: #5fb4ff;
+  box-shadow: 0 4px 12px rgba(95, 180, 255, 0.4);
+}
+
+.saga-chip[data-saga="doomsday"].is-active {
+  background: linear-gradient(135deg, #e62429 0%, #c41e3a 100%);
+  border-color: #e62429;
+  box-shadow: 0 4px 12px rgba(230, 36, 41, 0.4);
+}
+
+.saga-chip[data-saga="x-men"].is-active {
+  background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+  border-color: #4169E1;
+  box-shadow: 0 4px 12px rgba(65, 105, 225, 0.4);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .saga-filters {
+    gap: 8px;
+  }
+  
+  .saga-chip {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .saga-chip .saga-icon {
+    font-size: 1rem;
+  }
+  
+  .saga-chip .saga-name {
+    font-size: 0.85rem;
+  }
+}
+
 /* Teams & Factions Filter */
 .team-filters-panel {
   margin-top: 24px;
