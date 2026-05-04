@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -226,3 +225,12 @@ medium/
 
 # macOS
 .DS_Store
+
+# MCU Project - Automation Scripts
+# These Python scripts are for local dataset management only
+reader/data/add_*.py
+reader/data/analyze_*.py
+reader/data/enhance_*.py
+reader/data/*.backup
+
+# Made with Bob
