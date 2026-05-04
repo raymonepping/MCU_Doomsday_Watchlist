@@ -34,8 +34,8 @@
     "noTimelineNote": "No timeline note available."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
-  "generatedAt": "2026-05-03T08:46:36.248262Z",
-  "count": 53,
+  "generatedAt": "2026-05-04T14:20:00.000000Z",
+  "count": 64,
   "bonusCount": 3,
   "items": [
     {
@@ -52,12 +52,14 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman_lob_crd_01_4.jpg",
       "localImage": "./assets/posters/01.jpg",
-      "chronologicalOrder": 3,
+      "chronologicalOrder": 9,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2008-05-02"
+      "releaseDate": "2008-05-02",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "2",
@@ -73,12 +75,14 @@
       "officialUrl": "https://www.marvel.com/movies/the-incredible-hulk",
       "imageUrl": "https://cdn.marvel.com/content/2x/theincrediblehulk_lob_crd_03.jpg",
       "localImage": "./assets/posters/02.jpg",
-      "chronologicalOrder": 4,
+      "chronologicalOrder": 11,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2008-06-13"
+      "releaseDate": "2008-06-13",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "3",
@@ -94,12 +98,14 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman2_lob_crd_01_4.jpg",
       "localImage": "./assets/posters/03.jpg",
-      "chronologicalOrder": 5,
+      "chronologicalOrder": 10,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2010-05-07"
+      "releaseDate": "2010-05-07",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "4",
@@ -115,12 +121,14 @@
       "officialUrl": "https://www.marvel.com/movies/thor",
       "imageUrl": "https://cdn.marvel.com/content/2x/thor_lob_crd_01_1.jpg",
       "localImage": "./assets/posters/04.jpg",
-      "chronologicalOrder": 6,
+      "chronologicalOrder": 12,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2011-05-06"
+      "releaseDate": "2011-05-06",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "5",
@@ -136,12 +144,14 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-first-avenger",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathefirstavenger_lob_crd_01_0.jpg",
       "localImage": "./assets/posters/05.jpg",
-      "chronologicalOrder": 1,
+      "chronologicalOrder": 5,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2011-07-22"
+      "releaseDate": "2011-07-22",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "6",
@@ -157,12 +167,14 @@
       "officialUrl": "https://www.marvel.com/movies/the-avengers",
       "imageUrl": "https://cdn.marvel.com/content/2x/theavengers_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/06.jpg",
-      "chronologicalOrder": 7,
+      "chronologicalOrder": 13,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2012-05-04"
+      "releaseDate": "2012-05-04",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "7",
@@ -178,12 +190,14 @@
       "officialUrl": "https://www.marvel.com/movies/iron-man-3",
       "imageUrl": "https://cdn.marvel.com/content/2x/ironman3_lob_crd_01_11.jpg",
       "localImage": "./assets/posters/07.jpg",
-      "chronologicalOrder": 8,
+      "chronologicalOrder": 14,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2013-05-03"
+      "releaseDate": "2013-05-03",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "8",
@@ -199,12 +213,14 @@
       "officialUrl": "https://www.marvel.com/movies/thor-the-dark-world",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorthedarkworld_lob_crd_02.jpg",
       "localImage": "./assets/posters/08.jpg",
-      "chronologicalOrder": 9,
+      "chronologicalOrder": 16,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2013-11-08"
+      "releaseDate": "2013-11-08",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "9",
@@ -220,12 +236,14 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-the-winter-soldier",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericathewintersoldier_lob_crd_01_2.jpg",
       "localImage": "./assets/posters/09.jpg",
-      "chronologicalOrder": 10,
+      "chronologicalOrder": 17,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2014-04-04"
+      "releaseDate": "2014-04-04",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "10",
@@ -241,12 +259,14 @@
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxy_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/10.jpg",
-      "chronologicalOrder": 11,
+      "chronologicalOrder": 18,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2014-08-01"
+      "releaseDate": "2014-08-01",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "11",
@@ -262,12 +282,14 @@
       "officialUrl": "https://www.marvel.com/movies/avengers-age-of-ultron",
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersageofultron_lob_crd_03_0.jpg",
       "localImage": "./assets/posters/11.jpg",
-      "chronologicalOrder": 12,
+      "chronologicalOrder": 22,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2015-05-01"
+      "releaseDate": "2015-05-01",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "12",
@@ -283,12 +305,14 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man",
       "imageUrl": "https://cdn.marvel.com/content/2x/ant-man_lob_crd_01_9.jpg",
       "localImage": "./assets/posters/12.jpg",
-      "chronologicalOrder": 13,
+      "chronologicalOrder": 23,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2015-07-17"
+      "releaseDate": "2015-07-17",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "13",
@@ -304,12 +328,14 @@
       "officialUrl": "https://www.marvel.com/movies/captain-america-civil-war",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericacivilwar_lob_crd_01_10.jpg",
       "localImage": "./assets/posters/13.jpg",
-      "chronologicalOrder": 14,
+      "chronologicalOrder": 26,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2016-05-06"
+      "releaseDate": "2016-05-06",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "14",
@@ -325,12 +351,14 @@
       "officialUrl": "https://www.marvel.com/movies/doctor-strange",
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrange_lob_mas_hlf_01_4.jpg",
       "localImage": "./assets/posters/14.jpg",
-      "chronologicalOrder": 16,
+      "chronologicalOrder": 31,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2016-11-04"
+      "releaseDate": "2016-11-04",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "ESSENTIAL"
     },
     {
       "key": "15",
@@ -346,12 +374,14 @@
       "officialUrl": "https://www.marvel.com/movies/guardians-of-the-galaxy-vol-2",
       "imageUrl": "https://cdn.marvel.com/content/2x/guardiansofthegalaxyvol.2_lob_crd_01_0.jpg",
       "localImage": "./assets/posters/15.jpg",
-      "chronologicalOrder": 18,
+      "chronologicalOrder": 19,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2017-05-05"
+      "releaseDate": "2017-05-05",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "16",
@@ -367,13 +397,15 @@
       "officialUrl": "https://www.marvel.com/movies/spider-man-homecoming",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-manhomecoming_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/16.jpg",
-      "chronologicalOrder": 17,
+      "chronologicalOrder": 29,
       "saga": [
         "infinity-saga",
         "doomsday",
         "spider-man"
       ],
-      "releaseDate": "2017-07-07"
+      "releaseDate": "2017-07-07",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "17",
@@ -394,7 +426,9 @@
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2017-11-03"
+      "releaseDate": "2017-11-03",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "18",
@@ -410,12 +444,14 @@
       "officialUrl": "https://www.marvel.com/movies/black-panther",
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpanther_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/18.jpg",
-      "chronologicalOrder": 15,
+      "chronologicalOrder": 32,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2018-02-16"
+      "releaseDate": "2018-02-16",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "19",
@@ -436,7 +472,9 @@
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2018-04-27"
+      "releaseDate": "2018-04-27",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "20",
@@ -457,7 +495,9 @@
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2018-07-06"
+      "releaseDate": "2018-07-06",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "21",
@@ -473,12 +513,14 @@
       "officialUrl": "https://www.marvel.com/movies/captain-marvel",
       "imageUrl": "https://cdn.marvel.com/content/2x/captainmarvel_lob_crd_06.jpg",
       "localImage": "./assets/posters/21.jpg",
-      "chronologicalOrder": 2.5,
+      "chronologicalOrder": 7,
       "saga": [
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2019-03-08"
+      "releaseDate": "2019-03-08",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "22",
@@ -499,7 +541,9 @@
         "infinity-saga",
         "doomsday"
       ],
-      "releaseDate": "2019-04-26"
+      "releaseDate": "2019-04-26",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "23",
@@ -521,7 +565,9 @@
         "doomsday",
         "spider-man"
       ],
-      "releaseDate": "2019-07-02"
+      "releaseDate": "2019-07-02",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "24",
@@ -542,7 +588,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-01-15"
+      "releaseDate": "2021-01-15",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "25",
@@ -563,7 +611,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-03-19"
+      "releaseDate": "2021-03-19",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "26",
@@ -584,7 +634,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-06-09"
+      "releaseDate": "2021-06-09",
+      "earth": "TVA / Multiverse",
+      "status": "Optional"
     },
     {
       "key": "27",
@@ -600,12 +652,14 @@
       "officialUrl": "https://www.marvel.com/movies/black-widow",
       "imageUrl": "https://cdn.marvel.com/content/prod/2x/blackwidow_lob_mas_mob_05.jpg",
       "localImage": "./assets/posters/27.jpg",
-      "chronologicalOrder": 32,
+      "chronologicalOrder": 27,
       "saga": [
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-07-09"
+      "releaseDate": "2021-07-09",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "28",
@@ -621,12 +675,14 @@
       "officialUrl": "https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings",
       "imageUrl": "https://cdn.marvel.com/content/2x/shangchi_lob_crd_07.jpg",
       "localImage": "./assets/posters/28.jpg",
-      "chronologicalOrder": 26,
+      "chronologicalOrder": 50,
       "saga": [
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-09-03"
+      "releaseDate": "2021-09-03",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "29",
@@ -642,12 +698,14 @@
       "officialUrl": "https://www.marvel.com/tv-shows/hawkeye/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/hawkeye_lob_crd_04.jpg",
       "localImage": "./assets/posters/29.jpg",
-      "chronologicalOrder": 27,
+      "chronologicalOrder": 53,
       "saga": [
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2021-11-24"
+      "releaseDate": "2021-11-24",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "30",
@@ -669,7 +727,9 @@
         "doomsday",
         "spider-man"
       ],
-      "releaseDate": "2021-12-17"
+      "releaseDate": "2021-12-17",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "31",
@@ -685,8 +745,10 @@
       "officialUrl": "https://www.marvel.com/tv-shows/moon-knight/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/moonknight_lob_crd_05.jpg",
       "localImage": "./assets/posters/31.jpg",
-      "chronologicalOrder": 28,
-      "releaseDate": "2022-03-30"
+      "chronologicalOrder": 54,
+      "releaseDate": "2022-03-30",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "32",
@@ -703,7 +765,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/doctorstrangeinthemultiverseofmadness_lob_mas_mob_08b.jpg",
       "localImage": "./assets/posters/32.jpg",
       "chronologicalOrder": 30,
-      "releaseDate": "2022-05-06"
+      "releaseDate": "2022-05-06",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "33",
@@ -719,8 +783,10 @@
       "officialUrl": "https://www.marvel.com/movies/thor-love-and-thunder",
       "imageUrl": "https://cdn.marvel.com/content/2x/thorloveandthunder_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/33.jpg",
-      "chronologicalOrder": 31,
-      "releaseDate": "2022-07-08"
+      "chronologicalOrder": 59,
+      "releaseDate": "2022-07-08",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "34",
@@ -737,7 +803,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/blackpantherwakandaforever_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/34.jpg",
       "chronologicalOrder": 35,
-      "releaseDate": "2022-11-11"
+      "releaseDate": "2022-11-11",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "35",
@@ -753,8 +821,10 @@
       "officialUrl": "https://www.marvel.com/movies/ant-man-and-the-wasp-quantumania",
       "imageUrl": "https://cdn.marvel.com/content/2x/antmanandthewaspquantumania_lob_mas_mob_04.jpg",
       "localImage": "./assets/posters/35.jpg",
-      "chronologicalOrder": 34,
-      "releaseDate": "2023-02-17"
+      "chronologicalOrder": 63,
+      "releaseDate": "2023-02-17",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "36",
@@ -770,8 +840,10 @@
       "officialUrl": "https://www.marvel.com/movies/the-marvels",
       "imageUrl": "https://cdn.marvel.com/content/2x/themarvels_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/36.jpg",
-      "chronologicalOrder": 36,
-      "releaseDate": "2023-11-10"
+      "chronologicalOrder": 66,
+      "releaseDate": "2023-11-10",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "37",
@@ -792,7 +864,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2024-07-26"
+      "releaseDate": "2024-07-26",
+      "earth": "Multiverse",
+      "status": "Optional"
     },
     {
       "key": "38",
@@ -809,7 +883,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/captainamericabravenewworld_lob_mas_mob_03.jpg",
       "localImage": "./assets/posters/38.jpg",
       "chronologicalOrder": 38,
-      "releaseDate": "2025-02-14"
+      "releaseDate": "2025-02-14",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "39",
@@ -826,7 +902,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/thenewavengers_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/39.jpg",
       "chronologicalOrder": 39,
-      "releaseDate": "2025-05-02"
+      "releaseDate": "2025-05-02",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "40",
@@ -847,7 +925,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2025-07-25"
+      "releaseDate": "2025-07-25",
+      "earth": "Earth-828",
+      "status": "Optional"
     },
     {
       "key": "41",
@@ -864,7 +944,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
       "localImage": "./assets/posters/41.jpg",
       "chronologicalOrder": 41,
-      "releaseDate": "2025-12-01"
+      "releaseDate": "2025-12-01",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "42",
@@ -885,7 +967,9 @@
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2025-03-04"
+      "releaseDate": "2025-03-04",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
     },
     {
       "key": "43",
@@ -902,7 +986,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/visionquest_lob_crd_01.jpg",
       "localImage": "./assets/posters/43.jpg",
       "chronologicalOrder": 46,
-      "releaseDate": "2026-01-01"
+      "releaseDate": "2026-01-01",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "44",
@@ -922,7 +1008,9 @@
       "saga": [
         "spider-man"
       ],
-      "releaseDate": "2026-07-24"
+      "releaseDate": "2026-07-24",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "45",
@@ -939,7 +1027,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/avengersdoomsday_lob_mas_mob_02.jpg",
       "localImage": "./assets/posters/45.jpg",
       "chronologicalOrder": 51,
-      "releaseDate": "2026-05-01"
+      "releaseDate": "2026-05-01",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "B1",
@@ -959,7 +1049,9 @@
       "saga": [
         "x-men"
       ],
-      "releaseDate": "2000-07-14"
+      "releaseDate": "2000-07-14",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "B2",
@@ -979,7 +1071,9 @@
       "saga": [
         "x-men"
       ],
-      "releaseDate": "2003-05-02"
+      "releaseDate": "2003-05-02",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "B3",
@@ -999,7 +1093,9 @@
       "saga": [
         "x-men"
       ],
-      "releaseDate": "2014-05-23"
+      "releaseDate": "2014-05-23",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "46",
@@ -1016,7 +1112,9 @@
       "imageUrl": "https://cdn.marvel.com/content/2x/agentcarters2_lob_crd_03.jpg",
       "localImage": "./assets/posters/46.jpg",
       "chronologicalOrder": 2,
-      "releaseDate": "2015-01-06"
+      "releaseDate": "2015-01-06",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "47",
@@ -1032,8 +1130,10 @@
       "officialUrl": "https://www.marvel.com/tv-shows/echo/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/echo_lob_crd_02.jpg",
       "localImage": "./assets/posters/47.jpg",
-      "chronologicalOrder": 44,
-      "releaseDate": "2024-01-10"
+      "chronologicalOrder": 56,
+      "releaseDate": "2024-01-09",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "48",
@@ -1049,8 +1149,10 @@
       "officialUrl": "https://www.marvel.com/tv-shows/agatha-all-along/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/agathaallalong_lob_crd_02.jpg",
       "localImage": "./assets/posters/48.jpg",
-      "chronologicalOrder": 47,
-      "releaseDate": "2024-09-18"
+      "chronologicalOrder": 70,
+      "releaseDate": "2024-09-18",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
     },
     {
       "key": "49",
@@ -1066,12 +1168,267 @@
       "officialUrl": "https://www.marvel.com/tv-shows/daredevil-born-again/2",
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagains2_lob_crd_01.jpg",
       "localImage": "./assets/posters/49.jpg",
-      "chronologicalOrder": 52,
+      "chronologicalOrder": 49,
       "saga": [
         "multiverse-saga",
         "doomsday"
       ],
-      "releaseDate": "2026-03-01"
+      "releaseDate": "2026-03-01",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "50",
+      "title": "Marvel's The Punisher — Season 1",
+      "kind": "Series",
+      "runtime": "~9 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "After the murder of his family, Frank Castle is haunted, hunted, and drawn deeper into the criminal underworld where he becomes known as the Punisher.",
+      "why": "Sets up Frank Castle as the street-level vigilante who later returns in Daredevil: Born Again. It gives his violence, grief and code enough context before his MCU re-entry alongside Matt Murdock and Kingpin.",
+      "when": "2017 - Netflix-era street-level story after Frank Castle's earlier appearances and before the Infinity War endpoint.",
+      "who": "Jon Bernthal as Frank Castle/The Punisher",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-the-punisher/1",
+      "chronologicalOrder": 19.5,
+      "localImage": "./assets/posters/50.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunishers1_lob_crd_04.jpg",
+      "releaseDate": "2017-11-17",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "51",
+      "title": "Marvel's The Punisher — Season 2",
+      "kind": "Series",
+      "runtime": "~8 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Frank Castle has been living quietly on the road until the attempted murder of a young girl pulls him into a conspiracy and forces old and new enemies back into his path.",
+      "why": "Continues Frank Castle's arc toward accepting the Punisher identity. It strengthens the street-level context for his later involvement in Daredevil: Born Again.",
+      "when": "2018 - Later Netflix-era Frank Castle story, best watched after Season 1 and before the post-snap MCU picks up.",
+      "who": "Jon Bernthal as Frank Castle/The Punisher, Giorgia Whigham as Amy Bendix",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-the-punisher/2",
+      "chronologicalOrder": 20.5,
+      "localImage": "./assets/posters/51.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunishers2_lob_crd_04.jpg",
+      "releaseDate": "2019-01-18",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "52",
+      "title": "Marvel's Jessica Jones — Season 1",
+      "kind": "Series",
+      "runtime": "~11 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Jessica Jones works as a private investigator in New York while trying to rebuild her life after trauma, only to be pulled back toward Kilgrave and the people he has damaged.",
+      "why": "Introduces Jessica Jones, one of the core street-level Defenders, and establishes the darker New York corner that later overlaps with Luke Cage, Iron Fist and Daredevil.",
+      "when": "2015 - Netflix-era street-level story after Ant-Man and before Civil War.",
+      "who": "Krysten Ritter as Jessica Jones, Mike Colter as Luke Cage, Rachael Taylor as Trish Walker, Carrie-Anne Moss as Jeri Hogarth, David Tennant as Kilgrave",
+      "officialUrl": "https://en.wikipedia.org/wiki/Jessica_Jones_season_1",
+      "chronologicalOrder": 13.5,
+      "localImage": "./assets/posters/52.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/Jessica_Jones_season_1_poster.jpg",
+      "releaseDate": "2015-11-20",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "53",
+      "title": "Marvel's Iron Fist — Season 1",
+      "kind": "Series",
+      "runtime": "~10 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Danny Rand returns to New York City after being missing for years and fights the criminal forces corrupting the city with martial arts mastery and the power of the Iron Fist.",
+      "why": "Introduces Danny Rand and completes the core Defenders lineup before the street-level Netflix heroes converge. His mystical training adds a different branch of power to the New York stories.",
+      "when": "2017 - Netflix-era street-level story before the later Punisher and Defenders-adjacent threads.",
+      "who": "Finn Jones as Danny Rand/Iron Fist",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-iron-fist/1",
+      "chronologicalOrder": 17.8,
+      "localImage": "./assets/posters/53.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironfists1_lob_crd_03.jpg",
+      "releaseDate": "2017-03-17",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "54",
+      "title": "Marvel's Jessica Jones — Season 2",
+      "kind": "Series",
+      "runtime": "~11 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Jessica Jones keeps working as a private investigator in New York while cases involving people with extraordinary abilities force her to confront the origin of her own powers.",
+      "why": "Deepens Jessica's trauma, powers and relationships after the Defenders era. It keeps the street-level New York thread active before the later Kingpin and Punisher material.",
+      "when": "2018 - Netflix-era street-level story after Season 1 and before the Infinity War endpoint.",
+      "who": "Krysten Ritter as Jessica Jones",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-jessica-jones/2",
+      "chronologicalOrder": 19.6,
+      "localImage": "./assets/posters/54.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/jessicajoness2_lob_crd_03.jpg",
+      "releaseDate": "2018-03-08",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "55",
+      "title": "Marvel's Iron Fist — Season 2",
+      "kind": "Series",
+      "runtime": "~8 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Danny Rand and Colleen Wing try to keep peace among New York's warring gangs, while Davos returns after the loss of K'un-Lun and challenges Danny over the legacy of the Iron Fist.",
+      "why": "Continues Danny and Colleen's street-level arc and connects the martial arts side of the Defenders world to Misty Knight and the wider New York criminal network.",
+      "when": "2018 - Netflix-era street-level story after Season 1 and before the post-snap MCU picks up.",
+      "who": "Finn Jones as Danny Rand/Iron Fist",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-iron-fist/2",
+      "chronologicalOrder": 20.6,
+      "localImage": "./assets/posters/55.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironfists2_lob_crd_02.jpg",
+      "releaseDate": "2018-09-07",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "56",
+      "title": "Marvel's Jessica Jones — Season 3",
+      "kind": "Series",
+      "runtime": "~11 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Jessica Jones faces a new threat while her relationships with Trish Walker, Jeri Hogarth and Malcolm Ducasse push her toward difficult choices about heroism and accountability.",
+      "why": "Closes Jessica's Netflix-era arc and rounds out the Defenders-side street-level context before the MCU later reopens that world through Daredevil, Kingpin and Punisher.",
+      "when": "2018 - Final Netflix-era Jessica Jones story, best watched after Season 2 and before the later street-level MCU revival.",
+      "who": "Krysten Ritter as Jessica Jones, Rachael Taylor as Trish Walker, Carrie-Anne Moss as Jeri Hogarth, Eka Darville as Malcolm Ducasse",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-jessica-jones/3",
+      "chronologicalOrder": 20.7,
+      "localImage": "./assets/posters/56.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/jessicajoness3_lob_crd_04.jpg",
+      "releaseDate": "2019-06-14",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "57",
+      "title": "Marvel's Luke Cage — Season 1",
+      "kind": "Series",
+      "runtime": "~11 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Luke Cage tries to rebuild his life in Harlem after gaining super strength and unbreakable skin, but local crime and corruption pull him into becoming a reluctant neighborhood hero.",
+      "why": "Introduces Luke Cage's Harlem story after his Jessica Jones debut and fills in another core Defender. It also expands the New York street-level world through Misty Knight, Claire Temple and Harlem's criminal power structure.",
+      "when": "2016 - Netflix-era street-level story after Jessica Jones Season 1 and around the post-Civil War New York period.",
+      "who": "Mike Colter as Luke Cage, Mahershala Ali as Cornell Stokes/Cottonmouth, Simone Missick as Misty Knight, Theo Rossi as Shades, Rosario Dawson as Claire Temple, Alfre Woodard as Mariah Dillard",
+      "officialUrl": "https://en.wikipedia.org/wiki/Luke_Cage_season_1",
+      "chronologicalOrder": 14.5,
+      "localImage": "./assets/posters/57.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/37/Luke_Cage_season_1_poster.jpeg",
+      "releaseDate": "2016-09-30",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "58",
+      "title": "Marvel's Luke Cage — Season 2",
+      "kind": "Series",
+      "runtime": "~11 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Luke Cage is now a free man and reluctant hero trying to keep Harlem safe in a city where everyone knows his name and every criminal faction wants a piece of the neighborhood.",
+      "why": "Continues Luke's Harlem arc and the Defenders-side street-level network before the later MCU revival through Daredevil, Kingpin and Punisher.",
+      "when": "2018 - Netflix-era street-level story after Season 1 and before the post-snap MCU picks up.",
+      "who": "Mike Colter as Luke Cage",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-luke-cage/2",
+      "chronologicalOrder": 19.7,
+      "localImage": "./assets/posters/58.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/lukecages2_lob_crd_03.jpg",
+      "releaseDate": "2018-06-22",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "59",
+      "title": "Marvel's The Defenders — Season 1",
+      "kind": "Series",
+      "runtime": "~7 hours",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "infinity-saga",
+        "doomsday"
+      ],
+      "what": "Daredevil, Jessica Jones, Luke Cage and Iron Fist reluctantly come together in New York City when their separate battles collide around a threat none of them can stop alone.",
+      "why": "This is the actual Defenders team-up, joining the four Netflix-era street-level heroes before the later solo fallout and the MCU's renewed focus on Daredevil, Kingpin and Punisher.",
+      "when": "2017 - Netflix-era crossover after the first Daredevil, Jessica Jones, Luke Cage and Iron Fist setup seasons.",
+      "who": "Charlie Cox as Matt Murdock/Daredevil, Krysten Ritter as Jessica Jones, Mike Colter as Luke Cage, Finn Jones as Danny Rand/Iron Fist",
+      "officialUrl": "https://www.marvel.com/tv-shows/marvel-s-the-defenders/1",
+      "chronologicalOrder": 18.5,
+      "localImage": "./assets/posters/59.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/defenderss1_lob_crd_03.jpg",
+      "releaseDate": "2017-08-18",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
+    },
+    {
+      "key": "60",
+      "title": "The Punisher: One Last Kill",
+      "kind": "Special",
+      "runtime": "TBA",
+      "bonus": false,
+      "phase": 6,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Frank Castle returns in a Marvel Television Special Presentation centered on the Punisher after his renewed MCU street-level presence.",
+      "why": "Continues Jon Bernthal's Frank Castle after Daredevil: Born Again and keeps the Punisher thread active in the final street-level stretch before Doomsday.",
+      "when": "2026 - After Daredevil: Born Again, as a Marvel Television Special Presentation on Disney+.",
+      "who": "Jon Bernthal as Frank Castle/The Punisher",
+      "officialUrl": "https://www.marvel.com/tv-shows/the-punisher-one-last-kill/1",
+      "chronologicalOrder": 49.5,
+      "localImage": "./assets/posters/60.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunisheronelastkill_lob_crd_01.jpg",
+      "releaseDate": "2026-05-12",
+      "earth": "Netflix Defenders Saga",
+      "status": "Optional"
     },
     {
       "key": "SM1",
@@ -1088,10 +1445,12 @@
       "when": "2002 - Raimi universe origin story. Best watched before No Way Home as legacy context for Tobey Maguire's Peter Parker and Norman Osborn/Green Goblin.",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Willem Dafoe as Norman Osborn/Green Goblin, James Franco as Harry Osborn, Cliff Robertson as Uncle Ben, Rosemary Harris as Aunt May",
       "officialUrl": "https://www.marvel.com/movies/spider-man",
-      "chronologicalOrder": 28.1,
+      "chronologicalOrder": 1,
       "localImage": "./assets/posters/SM1.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-man_lob_crd_01.jpg",
-      "releaseDate": "2002-05-03"
+      "releaseDate": "2002-05-03",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "SM2",
@@ -1108,10 +1467,12 @@
       "when": "2004 - Raimi universe continuation. Watch after Spider-Man and before No Way Home for Doctor Octopus and mature-Peter context.",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, Alfred Molina as Otto Octavius/Doctor Octopus, James Franco as Harry Osborn, Rosemary Harris as Aunt May, J.K. Simmons as J. Jonah Jameson",
       "officialUrl": "https://www.marvel.com/movies/spider-man-2",
-      "chronologicalOrder": 28.2,
+      "chronologicalOrder": 2,
       "localImage": "./assets/posters/SM2.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-man2_lob_crd_01.jpg",
-      "releaseDate": "2004-06-30"
+      "releaseDate": "2004-06-30",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "SM3",
@@ -1128,10 +1489,12 @@
       "when": "2007 - Raimi trilogy finale. Watch after Spider-Man 2 and before No Way Home to understand where Tobey's Peter emotionally ends up.",
       "who": "Tobey Maguire as Peter Parker/Spider-Man, Kirsten Dunst as Mary Jane Watson, James Franco as Harry Osborn/New Goblin, Thomas Haden Church as Flint Marko/Sandman, Topher Grace as Eddie Brock/Venom, Bryce Dallas Howard as Gwen Stacy",
       "officialUrl": "https://www.marvel.com/movies/spider-man-3",
-      "chronologicalOrder": 28.3,
+      "chronologicalOrder": 3,
       "localImage": "./assets/posters/SM3.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/spider-man3_lob_crd_01.jpg",
-      "releaseDate": "2007-05-04"
+      "releaseDate": "2007-05-04",
+      "earth": "Earth-96283",
+      "status": "Optional"
     },
     {
       "key": "TASM1",
@@ -1148,10 +1511,12 @@
       "when": "2012 - Amazing Spider-Man universe origin story. Watch before No Way Home as setup for Andrew Garfield's Peter Parker and the Lizard.",
       "who": "Andrew Garfield as Peter Parker/Spider-Man, Emma Stone as Gwen Stacy, Rhys Ifans as Dr. Curt Connors/The Lizard, Denis Leary as Captain Stacy, Martin Sheen as Uncle Ben, Sally Field as Aunt May",
       "officialUrl": "https://www.marvel.com/movies/the-amazing-spider-man",
-      "chronologicalOrder": 28.4,
+      "chronologicalOrder": 8,
       "localImage": "./assets/posters/TASM1.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg",
-      "releaseDate": "2012-07-03"
+      "releaseDate": "2012-07-03",
+      "earth": "Earth-96283",
+      "status": "Optional"
     }
   ]
 }
