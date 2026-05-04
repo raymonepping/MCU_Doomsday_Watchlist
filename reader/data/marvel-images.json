@@ -293,6 +293,14 @@
     "65": {
       "imageUrl": "https://cdn.marvel.com/content/2x/ironheart_lob_crd_04.jpg",
       "localImage": "./assets/posters/65.jpg"
+    },
+    "66": {
+      "imageUrl": "https://cdn.marvel.com/content/1x/loki_lob_crd_04.jpg",
+      "localImage": "./assets/posters/66.jpg"
+    },
+    "67": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_04.jpg",
+      "localImage": "./assets/posters/67.jpg"
     }
   }
 }

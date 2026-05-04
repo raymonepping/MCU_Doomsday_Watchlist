@@ -34,8 +34,8 @@
     "noTimelineNote": "No timeline note available."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
-  "generatedAt": "2026-05-04T14:40:00.000000Z",
-  "count": 73,
+  "generatedAt": "2026-05-04T14:55:00.000000Z",
+  "count": 74,
   "bonusCount": 3,
   "items": [
     {
@@ -616,29 +616,6 @@
       "status": "Optional"
     },
     {
-      "key": "26",
-      "title": "Loki — Season 1 & 2 ★",
-      "kind": "Series",
-      "runtime": "~10 hours",
-      "bonus": false,
-      "phase": 4,
-      "what": "A variant version of Loki is captured by the Time Variance Authority. He discovers the TVA is hiding far more than it lets on.",
-      "why": "The single most essential series for Doomsday. The TVA, the concept of variants, the Sacred Timeline, and what happens when timelines fall out of balance — all of it is explained here. Season 2 brings Loki to a sacrifice that fundamentally changes the structure of the multiverse. Loki is confirmed for Doomsday.",
-      "when": "Start of Block 3, before everything that follows.",
-      "who": "Tom Hiddleston as Loki, Owen Wilson as Mobius, Sophia Di Martino as Sylvie.",
-      "officialUrl": "https://www.marvel.com/tv-shows/loki",
-      "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_03.jpg",
-      "localImage": "./assets/posters/26.jpg",
-      "chronologicalOrder": 33,
-      "saga": [
-        "multiverse-saga",
-        "doomsday"
-      ],
-      "releaseDate": "2021-06-09",
-      "earth": "TVA / Multiverse",
-      "status": "Optional"
-    },
-    {
       "key": "27",
       "title": "Black Widow",
       "kind": "Film",
@@ -931,7 +908,7 @@
     },
     {
       "key": "41",
-      "title": "Wonder Man",
+      "title": "Wonder Man — Season 1",
       "kind": "Series",
       "runtime": "~6 hours",
       "bonus": false,
@@ -943,8 +920,8 @@
       "officialUrl": "https://www.marvel.com/tv-shows/wonder-man/1",
       "imageUrl": "https://cdn.marvel.com/content/2x/wonderman_lob_crd_03.jpg",
       "localImage": "./assets/posters/41.jpg",
-      "chronologicalOrder": 41,
-      "releaseDate": "2025-12-01",
+      "chronologicalOrder": 78,
+      "releaseDate": "2026-01-27",
       "earth": "Earth-199999 / Earth-616",
       "status": "Optional"
     },
@@ -1654,6 +1631,52 @@
       "releaseDate": "2025-06-24",
       "earth": "Earth-199999 / Earth-616",
       "status": "Optional"
+    },
+    {
+      "key": "66",
+      "title": "Loki — Season 1 ★",
+      "kind": "Series",
+      "runtime": "~5 hours",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "The mercurial villain Loki resumes his role as the God of Mischief after the events of Avengers: Endgame. A variant version of Loki is captured by the Time Variance Authority and discovers the TVA is hiding far more than it lets on.",
+      "why": "Essential for Doomsday. Introduces the TVA, variants, the Sacred Timeline, and what happens when timelines fall out of balance. Sets up the multiverse crisis.",
+      "when": "Outside linear time - After Endgame, Loki escapes with the Tesseract and is captured by the TVA.",
+      "who": "Tom Hiddleston as Loki, Owen Wilson as Mobius, Sophia Di Martino as Sylvie, Gugu Mbatha-Raw as Ravonna Renslayer, Wunmi Mosaku as Hunter B-15",
+      "officialUrl": "https://www.marvel.com/characters/loki",
+      "chronologicalOrder": 47,
+      "localImage": "./assets/posters/66.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/1x/loki_lob_crd_04.jpg",
+      "releaseDate": "2021-06-09",
+      "earth": "TVA / Multiverse",
+      "status": "ESSENTIAL"
+    },
+    {
+      "key": "67",
+      "title": "Loki — Season 2 ★",
+      "kind": "Series",
+      "runtime": "~5 hours",
+      "bonus": false,
+      "phase": 5,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Loki finds himself in a battle for the soul of the Time Variance Authority. He navigates an ever-expanding and increasingly dangerous Multiverse in search of Sylvie, Judge Renslayer, Miss Minutes, and the truth of what it means to possess free will and glorious purpose.",
+      "why": "THE most essential series for Doomsday. Season 2 brings Loki to a sacrifice that fundamentally changes the structure of the multiverse - he becomes the living embodiment of the multiverse tree, holding all timelines together. Loki is confirmed for Doomsday.",
+      "when": "Outside linear time - Loki must prevent the collapse of all timelines and makes the ultimate sacrifice.",
+      "who": "Tom Hiddleston as Loki, Sophia Di Martino as Sylvie, Gugu Mbatha-Raw as Ravonna Renslayer, Wunmi Mosaku as Hunter B-15, Owen Wilson as Mobius, Ke Huy Quan as Ouroboros, Jonathan Majors as Victor Timely",
+      "officialUrl": "https://www.marvel.com/tv-shows/loki",
+      "chronologicalOrder": 67,
+      "localImage": "./assets/posters/67.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/lokis2_lob_crd_04.jpg",
+      "releaseDate": "2023-10-05",
+      "earth": "TVA / Multiverse",
+      "status": "ESSENTIAL"
     }
   ]
 }
