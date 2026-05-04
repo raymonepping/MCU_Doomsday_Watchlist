@@ -24,7 +24,7 @@ class Title:
     kind: str
     runtime: str
     bonus: bool
-    chronological_order: int
+    chronological_order: float
 
 
 def parse_watchlist() -> list[Title]:
@@ -49,11 +49,11 @@ def parse_watchlist() -> list[Title]:
             # For items without chronological order, use key if numeric, else 999
             key = item.get("key", "0")
             try:
-                chrono_order = int(key)
+                chrono_order = float(key)
             except (ValueError, TypeError):
-                chrono_order = 999  # Put non-MCU films at the end
+                chrono_order = 999.0  # Put non-MCU films at the end
         else:
-            chrono_order = int(chrono_order)
+            chrono_order = float(chrono_order)
         
         titles.append(
             Title(
@@ -136,10 +136,13 @@ def print_list(
     # Sort by chronological order if requested
     if order == "chronological":
         visible = sorted(visible, key=lambda t: t.chronological_order)
+
+    def format_position(value: float) -> str:
+        return str(int(value)) if value.is_integer() else str(value)
     
     # Calculate width for position display
     if order == "chronological":
-        width = max(len(str(title.chronological_order)) for title in visible)
+        width = max(len(format_position(title.chronological_order)) for title in visible)
     else:
         width = max(len(title.key) for title in visible)
 
@@ -148,7 +151,7 @@ def print_list(
         suffix = f" watched {watched[title.key]}" if title.key in watched else ""
         
         # Display position based on order
-        position = str(title.chronological_order) if order == "chronological" else title.key
+        position = format_position(title.chronological_order) if order == "chronological" else title.key
         
         print(
             f"[{marker}] {position.rjust(width)}. {title.title} "

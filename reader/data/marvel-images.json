@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02T20:38:50.167Z",
+  "generatedAt": "2026-05-04T00:00:00.000Z",
   "source": "Marvel.com page metadata and IMDB for X-Men bonus titles",
   "images": {
     "1": {
@@ -193,6 +193,50 @@
     "49": {
       "imageUrl": "https://cdn.marvel.com/content/2x/daredevilbornagain_lob_crd_03.jpg",
       "localImage": "./assets/posters/49.jpg"
+    },
+    "50": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunishers1_lob_crd_04.jpg",
+      "localImage": "./assets/posters/50.jpg"
+    },
+    "51": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunishers2_lob_crd_04.jpg",
+      "localImage": "./assets/posters/51.jpg"
+    },
+    "52": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/Jessica_Jones_season_1_poster.jpg",
+      "localImage": "./assets/posters/52.jpg"
+    },
+    "53": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironfists1_lob_crd_03.jpg",
+      "localImage": "./assets/posters/53.jpg"
+    },
+    "54": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/jessicajoness2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/54.jpg"
+    },
+    "55": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironfists2_lob_crd_02.jpg",
+      "localImage": "./assets/posters/55.jpg"
+    },
+    "56": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/jessicajoness3_lob_crd_04.jpg",
+      "localImage": "./assets/posters/56.jpg"
+    },
+    "57": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/37/Luke_Cage_season_1_poster.jpeg",
+      "localImage": "./assets/posters/57.jpg"
+    },
+    "58": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/lukecages2_lob_crd_03.jpg",
+      "localImage": "./assets/posters/58.jpg"
+    },
+    "59": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/defenderss1_lob_crd_03.jpg",
+      "localImage": "./assets/posters/59.jpg"
+    },
+    "60": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/thepunisheronelastkill_lob_crd_01.jpg",
+      "localImage": "./assets/posters/60.jpg"
     },
     "B1": {
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BZmIyMDk5NGYtYjQ5NS00ZWQxLTg2YzQtZDk1ZmM4ZDBlN2E3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",

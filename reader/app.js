@@ -153,7 +153,7 @@ const teamMap = {
   "avengers": ["1", "4", "5", "6", "8", "11", "13", "17", "19", "22", "26", "33", "34", "38", "45"], // Avengers films + solo films of Avengers members
   "fantastic-four": ["40"], // The Fantastic Four: First Steps
   "guardians": ["10", "15"], // Guardians of the Galaxy Vol. 1 & 2
-  "defenders": ["42", "49"], // Daredevil: Born Again S1 & S2
+  "defenders": ["42", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"], // Daredevil + Netflix-era street-level heroes
   "x-men": ["37", "B1", "B2", "B3"], // Deadpool & Wolverine + Fox X-Men trilogy
 };
 
