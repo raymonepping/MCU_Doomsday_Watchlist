@@ -34,8 +34,8 @@
     "noTimelineNote": "No timeline note available."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
-  "generatedAt": "2026-05-04T14:20:00.000000Z",
-  "count": 64,
+  "generatedAt": "2026-05-04T14:30:00.000000Z",
+  "count": 68,
   "bonusCount": 3,
   "items": [
     {
@@ -1515,7 +1515,29 @@
       "localImage": "./assets/posters/TASM1.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg",
       "releaseDate": "2012-07-03",
-      "earth": "Earth-96283",
+      "earth": "Earth-120703",
+      "status": "Optional"
+    },
+    {
+      "key": "TASM2",
+      "title": "The Amazing Spider-Man 2",
+      "kind": "Film",
+      "runtime": "2h 22m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "Peter Parker faces new threats as Electro and Harry Osborn's Green Goblin while trying to uncover the truth about his parents and maintain his relationship with Gwen Stacy.",
+      "why": "Completes Andrew Garfield's Spider-Man arc with Gwen Stacy's death, which becomes his defining trauma and motivation in No Way Home. Essential context for understanding his redemption arc.",
+      "when": "2014 - Amazing Spider-Man universe sequel. Watch before No Way Home to understand Andrew Garfield's grief and need for redemption.",
+      "who": "Andrew Garfield as Peter Parker/Spider-Man, Emma Stone as Gwen Stacy, Jamie Foxx as Max Dillon/Electro, Dane DeHaan as Harry Osborn/Green Goblin, Sally Field as Aunt May",
+      "officialUrl": "https://marvel.fandom.com/wiki/The_Amazing_Spider-Man_2_(film)",
+      "chronologicalOrder": 15,
+      "localImage": "./assets/posters/TASM2.jpg",
+      "imageUrl": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/The_Amazing_Spider-Man_2_%28film%29_poster_005.jpg",
+      "releaseDate": "2014-05-02",
+      "earth": "Earth-120703",
       "status": "Optional"
     }
   ]

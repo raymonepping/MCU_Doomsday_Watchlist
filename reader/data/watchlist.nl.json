@@ -34,8 +34,8 @@
     "noTimelineNote": "Geen tijdlijnnotitie beschikbaar."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_nl.md",
-  "generatedAt": "2026-05-04T14:20:00.000000Z",
-  "count": 64,
+  "generatedAt": "2026-05-04T14:30:00.000000Z",
+  "count": 68,
   "bonusCount": 3,
   "items": [
     {
@@ -1515,7 +1515,29 @@
       "localImage": "./assets/posters/TASM1.jpg",
       "imageUrl": "https://cdn.marvel.com/content/2x/theamazingspider-man_lob_crd_01.jpg",
       "releaseDate": "2012-07-03",
-      "earth": "Earth-96283",
+      "earth": "Earth-120703",
+      "status": "Optional"
+    },
+    {
+      "key": "TASM2",
+      "title": "The Amazing Spider-Man 2",
+      "kind": "Film",
+      "runtime": "2h 22m",
+      "bonus": false,
+      "phase": null,
+      "saga": [
+        "spider-man"
+      ],
+      "what": "Peter Parker krijgt te maken met nieuwe bedreigingen zoals Electro en Harry Osborn's Green Goblin, terwijl hij de waarheid over zijn ouders probeert te achterhalen en zijn relatie met Gwen Stacy in stand probeert te houden.",
+      "why": "Voltooit Andrew Garfield's Spider-Man verhaal met Gwen Stacy's dood, wat zijn bepalende trauma en motivatie wordt in No Way Home. Essentiële context voor het begrijpen van zijn verlossingsarc.",
+      "when": "2014 - Amazing Spider-Man universum vervolg. Kijk voor No Way Home om Andrew Garfield's verdriet en behoefte aan verlossing te begrijpen.",
+      "who": "Andrew Garfield als Peter Parker/Spider-Man, Emma Stone als Gwen Stacy, Jamie Foxx als Max Dillon/Electro, Dane DeHaan als Harry Osborn/Green Goblin, Sally Field als Tante May",
+      "officialUrl": "https://marvel.fandom.com/wiki/The_Amazing_Spider-Man_2_(film)",
+      "chronologicalOrder": 15,
+      "localImage": "./assets/posters/TASM2.jpg",
+      "imageUrl": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/The_Amazing_Spider-Man_2_%28film%29_poster_005.jpg",
+      "releaseDate": "2014-05-02",
+      "earth": "Earth-120703",
       "status": "Optional"
     }
   ]
