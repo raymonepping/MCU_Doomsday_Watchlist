@@ -273,6 +273,26 @@
     "TASM2": {
       "imageUrl": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/The_Amazing_Spider-Man_2_%28film%29_poster_005.jpg",
       "localImage": "./assets/posters/TASM2.jpg"
+    },
+    "61": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
+      "localImage": "./assets/posters/61.jpg"
+    },
+    "62": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/msmarvel_lob_crd_04.jpg",
+      "localImage": "./assets/posters/62.jpg"
+    },
+    "63": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/shehulk_lob_crd_04.jpg",
+      "localImage": "./assets/posters/63.jpg"
+    },
+    "64": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/secretinvasion_lob_crd_04.jpg",
+      "localImage": "./assets/posters/64.jpg"
+    },
+    "65": {
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironheart_lob_crd_04.jpg",
+      "localImage": "./assets/posters/65.jpg"
     }
   }
 }

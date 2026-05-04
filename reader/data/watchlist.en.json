@@ -34,8 +34,8 @@
     "noTimelineNote": "No timeline note available."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_us.md",
-  "generatedAt": "2026-05-04T14:30:00.000000Z",
-  "count": 68,
+  "generatedAt": "2026-05-04T14:40:00.000000Z",
+  "count": 73,
   "bonusCount": 3,
   "items": [
     {
@@ -1538,6 +1538,121 @@
       "imageUrl": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/The_Amazing_Spider-Man_2_%28film%29_poster_005.jpg",
       "releaseDate": "2014-05-02",
       "earth": "Earth-120703",
+      "status": "Optional"
+    },
+    {
+      "key": "61",
+      "title": "The Falcon and the Winter Soldier",
+      "kind": "Series",
+      "runtime": "~5 hours",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Following the events of Avengers: Endgame, Sam Wilson/Falcon and Bucky Barnes/Winter Soldier team up in a global adventure that tests their abilities and their patience.",
+      "why": "Shows Sam Wilson's journey to becoming the new Captain America, essential for understanding his role in Brave New World. Introduces the Flag-Smashers and explores the legacy of the super-soldier serum.",
+      "when": "2023 - Six months after Endgame. Sam struggles with Steve Rogers' legacy while Bucky seeks redemption.",
+      "who": "Anthony Mackie as Sam Wilson/Falcon, Sebastian Stan as Bucky Barnes/Winter Soldier, Daniel Brühl as Zemo, Emily VanCamp as Sharon Carter, Wyatt Russell as John Walker",
+      "officialUrl": "https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1",
+      "chronologicalOrder": 46,
+      "localImage": "./assets/posters/61.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
+      "releaseDate": "2021-03-19",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "62",
+      "title": "Ms. Marvel",
+      "kind": "Series",
+      "runtime": "~4 hours",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Kamala Khan, a Muslim American teenager from Jersey City, discovers she has polymorphic powers and must balance her superhero identity with her family and cultural heritage.",
+      "why": "Introduces Kamala Khan/Ms. Marvel, who becomes a key member of The Marvels team. Her powers connect to the Noor dimension and the Quantum Bands, linking to Captain Marvel's story.",
+      "when": "2025 - Kamala discovers her powers and learns about her family's connection to the Partition of India and the Clandestines.",
+      "who": "Iman Vellani as Kamala Khan/Ms. Marvel, Aramis Knight, Saagar Shaikh, Rish Shah, Zenobia Shroff, Mohan Kapur, Matt Lintz, Yasmeen Fletcher",
+      "officialUrl": "https://www.marvel.com/tv-shows/ms-marvel/1",
+      "chronologicalOrder": 58,
+      "localImage": "./assets/posters/62.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/msmarvel_lob_crd_04.jpg",
+      "releaseDate": "2022-06-08",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "63",
+      "title": "She-Hulk: Attorney at Law",
+      "kind": "Series",
+      "runtime": "~6 hours",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Jennifer Walters, an attorney specializing in superhuman-oriented legal cases, must navigate the complicated life of a single 30-something who also happens to be a green 6-foot-7-inch superpowered Hulk.",
+      "why": "Introduces She-Hulk and expands the legal side of the superhuman world. Features Daredevil's return and explores the consequences of superhero actions through a legal lens.",
+      "when": "2025 - Jennifer Walters gains Hulk powers from Bruce Banner's blood and starts her superhuman law division.",
+      "who": "Tatiana Maslany as Jennifer Walters/She-Hulk, Mark Ruffalo as Bruce Banner/Hulk, Tim Roth as Emil Blonsky/Abomination, Benedict Wong as Wong, Charlie Cox as Matt Murdock/Daredevil",
+      "officialUrl": "https://www.marvel.com/tv-shows/she-hulk-attorney-at-law/1",
+      "chronologicalOrder": 57,
+      "localImage": "./assets/posters/63.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/shehulk_lob_crd_04.jpg",
+      "releaseDate": "2022-08-18",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "64",
+      "title": "Secret Invasion",
+      "kind": "Series",
+      "runtime": "~5 hours",
+      "bonus": false,
+      "phase": 5,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Nick Fury learns of a clandestine invasion of Earth by a faction of shapeshifting Skrulls. He joins allies including Everett Ross, Maria Hill, and Talos to race against time to thwart the invasion.",
+      "why": "Reveals the Skrull infiltration of Earth and shows Fury's struggle with trust. The series has major consequences for the MCU's political landscape and sets up future conflicts.",
+      "when": "2026 - Present-day MCU. Fury returns from space to deal with the Skrull threat on Earth.",
+      "who": "Samuel L. Jackson as Nick Fury, Ben Mendelsohn as Talos, Cobie Smulders as Maria Hill, Martin Freeman as Everett Ross, Kingsley Ben-Adir as Gravik, Emilia Clarke as G'iah, Olivia Colman as Sonya Falsworth",
+      "officialUrl": "https://www.marvel.com/tv-shows/secret-invasion/1",
+      "chronologicalOrder": 65,
+      "localImage": "./assets/posters/64.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/secretinvasion_lob_crd_04.jpg",
+      "releaseDate": "2023-06-21",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "65",
+      "title": "Ironheart",
+      "kind": "Series",
+      "runtime": "~6 hours",
+      "bonus": false,
+      "phase": 6,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Set after Black Panther: Wakanda Forever, Riri Williams returns to Chicago where her genius for building iron suits puts her in conflict with the mysterious Parker Robbins aka The Hood.",
+      "why": "Continues Riri Williams' story from Wakanda Forever and explores the intersection of technology and magic. Sets up her role in future Avengers films.",
+      "when": "2025 - Riri returns to Chicago after her adventures in Wakanda and faces new threats combining tech and mysticism.",
+      "who": "Dominique Thorne as Riri Williams/Ironheart, Anthony Ramos as Parker Robbins/The Hood, Lyric Ross, Alden Ehrenreich, Manny Montana",
+      "officialUrl": "https://www.marvel.com/tv-shows/ironheart/1",
+      "chronologicalOrder": 75,
+      "localImage": "./assets/posters/65.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironheart_lob_crd_04.jpg",
+      "releaseDate": "2025-06-24",
+      "earth": "Earth-199999 / Earth-616",
       "status": "Optional"
     }
   ]

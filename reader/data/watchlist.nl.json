@@ -34,8 +34,8 @@
     "noTimelineNote": "Geen tijdlijnnotitie beschikbaar."
   },
   "generatedFrom": "../docs/mcu-doomsday-watchlist_nl.md",
-  "generatedAt": "2026-05-04T14:30:00.000000Z",
-  "count": 68,
+  "generatedAt": "2026-05-04T14:40:00.000000Z",
+  "count": 73,
   "bonusCount": 3,
   "items": [
     {
@@ -1538,6 +1538,121 @@
       "imageUrl": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/The_Amazing_Spider-Man_2_%28film%29_poster_005.jpg",
       "releaseDate": "2014-05-02",
       "earth": "Earth-120703",
+      "status": "Optional"
+    },
+    {
+      "key": "61",
+      "title": "The Falcon and the Winter Soldier",
+      "kind": "Series",
+      "runtime": "~5 uur",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Na de gebeurtenissen van Avengers: Endgame werken Sam Wilson/Falcon en Bucky Barnes/Winter Soldier samen in een wereldwijd avontuur dat hun vaardigheden en geduld op de proef stelt.",
+      "why": "Toont Sam Wilson's reis om de nieuwe Captain America te worden, essentieel voor het begrijpen van zijn rol in Brave New World. Introduceert de Flag-Smashers en verkent de erfenis van het super-soldaten serum.",
+      "when": "2023 - Zes maanden na Endgame. Sam worstelt met Steve Rogers' erfenis terwijl Bucky verlossing zoekt.",
+      "who": "Anthony Mackie als Sam Wilson/Falcon, Sebastian Stan als Bucky Barnes/Winter Soldier, Daniel Brühl als Zemo, Emily VanCamp als Sharon Carter, Wyatt Russell als John Walker",
+      "officialUrl": "https://www.marvel.com/tv-shows/the-falcon-and-the-winter-soldier/1",
+      "chronologicalOrder": 46,
+      "localImage": "./assets/posters/61.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/falcws_lob_crd_03.jpg",
+      "releaseDate": "2021-03-19",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "62",
+      "title": "Ms. Marvel",
+      "kind": "Series",
+      "runtime": "~4 uur",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Kamala Khan, een moslim-Amerikaanse tiener uit Jersey City, ontdekt dat ze polymorfe krachten heeft en moet haar superhelden-identiteit in balans brengen met haar familie en culturele erfgoed.",
+      "why": "Introduceert Kamala Khan/Ms. Marvel, die een belangrijk lid wordt van The Marvels team. Haar krachten zijn verbonden met de Noor dimensie en de Quantum Bands, wat linkt aan Captain Marvel's verhaal.",
+      "when": "2025 - Kamala ontdekt haar krachten en leert over de connectie van haar familie met de Deling van India en de Clandestines.",
+      "who": "Iman Vellani als Kamala Khan/Ms. Marvel, Aramis Knight, Saagar Shaikh, Rish Shah, Zenobia Shroff, Mohan Kapur, Matt Lintz, Yasmeen Fletcher",
+      "officialUrl": "https://www.marvel.com/tv-shows/ms-marvel/1",
+      "chronologicalOrder": 58,
+      "localImage": "./assets/posters/62.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/msmarvel_lob_crd_04.jpg",
+      "releaseDate": "2022-06-08",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "63",
+      "title": "She-Hulk: Attorney at Law",
+      "kind": "Series",
+      "runtime": "~6 uur",
+      "bonus": false,
+      "phase": 4,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Jennifer Walters, een advocaat gespecialiseerd in superhuman-georiënteerde rechtszaken, moet het gecompliceerde leven navigeren van een alleenstaande dertiger die ook een groene 2 meter lange superkrachtige Hulk is.",
+      "why": "Introduceert She-Hulk en breidt de juridische kant van de superhuman wereld uit. Bevat Daredevil's terugkeer en verkent de gevolgen van superhelden acties door een juridische lens.",
+      "when": "2025 - Jennifer Walters krijgt Hulk krachten van Bruce Banner's bloed en start haar superhuman juridische afdeling.",
+      "who": "Tatiana Maslany als Jennifer Walters/She-Hulk, Mark Ruffalo als Bruce Banner/Hulk, Tim Roth als Emil Blonsky/Abomination, Benedict Wong als Wong, Charlie Cox als Matt Murdock/Daredevil",
+      "officialUrl": "https://www.marvel.com/tv-shows/she-hulk-attorney-at-law/1",
+      "chronologicalOrder": 57,
+      "localImage": "./assets/posters/63.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/shehulk_lob_crd_04.jpg",
+      "releaseDate": "2022-08-18",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "64",
+      "title": "Secret Invasion",
+      "kind": "Series",
+      "runtime": "~5 uur",
+      "bonus": false,
+      "phase": 5,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Nick Fury ontdekt een geheime invasie van de Aarde door een factie van gedaanteverwisselende Skrulls. Hij sluit zich aan bij bondgenoten waaronder Everett Ross, Maria Hill en Talos om de invasie te verijdelen.",
+      "why": "Onthult de Skrull infiltratie van de Aarde en toont Fury's worsteling met vertrouwen. De serie heeft grote gevolgen voor het politieke landschap van de MCU en zet toekomstige conflicten op.",
+      "when": "2026 - Huidig MCU tijdperk. Fury keert terug uit de ruimte om de Skrull dreiging op Aarde aan te pakken.",
+      "who": "Samuel L. Jackson als Nick Fury, Ben Mendelsohn als Talos, Cobie Smulders als Maria Hill, Martin Freeman als Everett Ross, Kingsley Ben-Adir als Gravik, Emilia Clarke als G'iah, Olivia Colman als Sonya Falsworth",
+      "officialUrl": "https://www.marvel.com/tv-shows/secret-invasion/1",
+      "chronologicalOrder": 65,
+      "localImage": "./assets/posters/64.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/secretinvasion_lob_crd_04.jpg",
+      "releaseDate": "2023-06-21",
+      "earth": "Earth-199999 / Earth-616",
+      "status": "Optional"
+    },
+    {
+      "key": "65",
+      "title": "Ironheart",
+      "kind": "Series",
+      "runtime": "~6 uur",
+      "bonus": false,
+      "phase": 6,
+      "saga": [
+        "multiverse-saga",
+        "doomsday"
+      ],
+      "what": "Na Black Panther: Wakanda Forever keert Riri Williams terug naar Chicago waar haar genialiteit voor het bouwen van ijzeren pakken haar in conflict brengt met de mysterieuze Parker Robbins aka The Hood.",
+      "why": "Vervolgt Riri Williams' verhaal uit Wakanda Forever en verkent de kruising van technologie en magie. Zet haar rol in toekomstige Avengers films op.",
+      "when": "2025 - Riri keert terug naar Chicago na haar avonturen in Wakanda en wordt geconfronteerd met nieuwe bedreigingen die tech en mysticisme combineren.",
+      "who": "Dominique Thorne als Riri Williams/Ironheart, Anthony Ramos als Parker Robbins/The Hood, Lyric Ross, Alden Ehrenreich, Manny Montana",
+      "officialUrl": "https://www.marvel.com/tv-shows/ironheart/1",
+      "chronologicalOrder": 75,
+      "localImage": "./assets/posters/65.jpg",
+      "imageUrl": "https://cdn.marvel.com/content/2x/ironheart_lob_crd_04.jpg",
+      "releaseDate": "2025-06-24",
+      "earth": "Earth-199999 / Earth-616",
       "status": "Optional"
     }
   ]
